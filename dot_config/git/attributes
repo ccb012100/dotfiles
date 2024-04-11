@@ -1,0 +1,20 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+* text=auto
+
+~/.config/git/attributes text eol=lf
+
+#.gitignore text eol=lf
+
+# Force shell scripts/configs to always use lf line endings
+*.bashrc text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.fish text eol=lf
+*.zsh text eol=lf
+*.zshrc text eol=lf
+
+# Force batch scripts to always use CRLF line endings
+*.{bat,[bB][aA][tT]} text eol=crlf
+*.{cmd,[cC][mM][dD]} text eol=crlf

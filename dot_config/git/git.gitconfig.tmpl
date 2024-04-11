@@ -1,0 +1,53 @@
+[advice]
+    addIgnoredFile = false
+[core]
+    attributesfile = ~/.config/git/attributes
+    autocrlf = false
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+    filemode = false
+    fsmonitor = true
+    untrackedCache = true
+[commit]
+    gpgsign = true
+    verbose = true
+[credential]
+    helper = wincred
+{{- if ne .chezmoi.hostname "8901-75SCSV3" }}
+[credential "https://dev.azure.com"]
+    usehttppath = true
+{{- end}}
+[fetch]
+    prune = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
+[gpg]
+    # vscode doesn't support ssh signing at the moment: <https://github.com/microsoft/vscode/issues/179517>
+    # format = ssh
+    format = openpgp
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+[help]
+    autoCorrect = prompt
+[http]
+    sslbackend = openssl
+[init]
+    defaultBranch = main
+[pull]
+    ff = only
+    rebase = true
+[push]
+    autoSetupRemote = true
+    default = simple
+    useForceIfIncludes = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+[status]
+    showUntrackedFiles = all
+[tag]
+    gpgsign = true
+

@@ -1,0 +1,57 @@
+# diff/merge/sequence tools
+[diff]
+    colorMoved = zebra
+    colormovedws = "allow-indentation-change"
+    tool = meld
+[difftool]
+    prompt = false
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[merge]
+    tool = meld
+[pager]
+    diff = delta
+    difftool = true
+    log = delta
+    reflog = delta
+    show = delta
+
+## delta
+[delta]
+	commit-decoration-style = magenta box ul
+	commit-regex = > [0-9a-f]{7,}
+    features = line-numbers decorations
+	file-decoration-style = yellow box
+	file-style = brightyellow italic
+	hyperlinks = true
+	line-numbers-minus-style = red
+	line-numbers-plus-style = green
+	line-numbers-zero-style = white
+    syntax-theme = TwoDark
+	whitespace-error-style = 22 reverse
+    # keep-plus-minus-markers = true
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[delta "sbs"]
+	side-by-side = true
+## difftastic
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+## meld
+[difftool "meld"]
+    cmd = meld "$REMOTE" "$LOCAL"
+[mergetool "meld"]
+    cmd = meld "$REMOTE" "$BASE" "$LOCAL" --output "$MERGED"
+## vscode
+[difftool "vscode"]
+    cmd = code --new-window --wait --diff $REMOTE $LOCAL
+[mergetool "vscode"]
+    cmd = code --new-window --wait --merge $REMOTE $LOCAL $BASE $MERGED

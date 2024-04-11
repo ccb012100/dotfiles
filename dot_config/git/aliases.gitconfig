@@ -1,0 +1,147 @@
+## aliases
+[alias]
+    ## add
+    aa      = ! git add --all && git status --short
+    af      = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
+    au      = ! git add --update && git status --short
+
+    ## branch
+    b       = branch
+    bdf     = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es)
+    bdff    = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es)
+    bl      = branch --list
+    bv      = branch -v
+    br      = branch --remote
+    brv     = branch --remote -v
+    delete  = delete-merged-branches    # <https://github.com/hartwork/git-delete-merged-branches>
+    swc     = switch --create           # create new branch and switch to it
+
+    ## checkout
+    back    = checkout - # checkout previous branch
+    co      = checkout
+    cob     = checkout -b # create and checkout a new branch
+    cof     = ! git --no-pager branch | fzf | xargs --no-run-if-empty git checkout # checkout local branch
+    corf    = ! git --no-pager branch --remote | fzf | sed 's_^origin/__g' | xargs --no-run-if-empty git checkout # checkout remote branch
+    main    = checkout main
+    master  = checkout master
+
+    ## commit
+    amend   = commit --amend
+    c       = commit
+    ca      = commit --amend
+    call    = commit --all
+    can     = ca --no-edit
+    cherry  = cherry-pick
+    cnv     = c --no-verify
+    contrib = shortlog -s
+    fix     = commit --fixup
+    fixup   = commit --fixup
+    pick    = cherry-pick
+
+    ## diff
+    d       = diff
+    dm      = diff main..
+    dom     = diff origin/main..
+    ds      = diff --staged
+    dt      = difftool
+    dts     = difftool --staged
+
+    ## fetch
+    f       = fetch --all --verbose
+    fm      = fetch --verbose origin main:main # update local main branch to match origin
+
+    ## forgit
+    foa      = forgit add
+    fobd     = forgit branch_delete
+    foblame  = forgit blame
+    foclean  = forgit clean
+    foco     = forgit checkout_branch
+    fococ    = forgit checkout_commit
+    focof    = forgit checkout_file
+    focot    = forgit checkout_tag
+    fof      = forgit fixup
+    foi      = forgit ignore
+    fol      = forgit log
+    fopick   = forgit cherry_pick
+    fopickb  = forgit cherry_pick_from_branch
+    for      = forgit rebase
+    forc     = forgit revert_commit
+    foreset  = forgit reset_head
+    fos      = forgit stash_show
+    fosp     = forgit stash_push
+
+    ## log
+    logfp   = log --first-parent
+    logm    = log --merges
+    lognm   = log --no-merges
+    lp      = log --patch --compact-summary # show diffs
+    ls      = ls-files
+
+    ## merge
+    m       = merge
+    ma      = merge --abort
+    mc      = merge --continue
+    mt      = mergetool
+
+    ## pull
+    p       = pull
+    pa      = pull --autostash
+    pr      = pull --rebase
+    pra     = pull --rebase --autostash
+
+    ## push
+    ps      = push
+    psf     = push -v --force-with-lease
+    psnv    = push -v --no-verify # bypass pre-push hook
+    publish = push -v --set-upstream origin HEAD
+
+    ## rebase
+    r           = rebase
+    ra          = rebase --abort
+    rc          = rebase --continue
+    remain      = ! git fetch origin main:main && git rebase --interactive origin/main
+    remaster    = ! git fetch origin master:master && git rebase --interactive origin/master
+    reorigin    = ! git fetch origin master:master && git rebase --interactive origin/`git branch --show-current`
+    ri          = rebase --interactive
+
+    ## reset
+    rt      = reset
+    rtm     = reset --mixed
+    rts     = reset --soft
+    rth     = reset --hard
+
+    ## stash
+    checkpoint  = !git stash push --include-untracked && git stash apply # stash changes but keep them in staging area
+    pop         = stash pop
+    stc         = checkpoint
+    stl         = stash list
+    stp         = stash push --include-untracked # *not* stash push --all, which includes ignored files
+
+    ## status
+    s   = ss
+    sl  = status --long
+    ss  = status --short
+    ssb = status --short --branch
+    sv  = svv
+    svv = status -vv
+
+    ## tag
+    current-tags    = tag --list --points-at HEAD
+    t               = current-tags
+
+    ## worktree
+    w   =   worktree
+    wl  =   worktree list
+    wa  =   worktree add
+    wm  =   worktree move
+    wp  =   worktree prune
+    wr  =   worktree remove
+
+    ## misc
+    chx     = update-index --chmod=+x
+    date    = ! git commit --amend --no-edit --date=now
+    difft   = difftool --tool=difftastic
+    fg      = forgit
+    nuke    = clean -fdx
+    sbs     = ! DELTA_FEATURES=sbs git # use delta in side-by-side mode
+    ui      = ! gitui
