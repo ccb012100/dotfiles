@@ -4,7 +4,7 @@ Host github.com
     IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
     AddKeysToAgent yes
-{{- if ne .chezmoi.hostname "8901-75SCSV3" }}
+{{- if eq .chezmoi.hostname "8901-75SCSV3" }}
 
 Host github-work
     HostName github.com
@@ -12,4 +12,5 @@ Host github-work
     IdentityFile ~/.ssh/work_ed25519
     IdentitiesOnly yes
     AddKeysToAgent yes
+
 {{- end}}

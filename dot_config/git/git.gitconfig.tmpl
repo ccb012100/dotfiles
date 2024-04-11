@@ -13,7 +13,7 @@
     verbose = true
 [credential]
     helper = wincred
-{{- if ne .chezmoi.hostname "8901-75SCSV3" }}
+{{- if eq .chezmoi.hostname "8901-75SCSV3" }}
 [credential "https://dev.azure.com"]
     usehttppath = true
 {{- end}}
