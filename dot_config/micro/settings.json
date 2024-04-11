@@ -1,0 +1,13 @@
+{
+    "*.ts": {
+        "commenttype": "// *s"
+    },
+    "autoclose": false,
+    "colorscheme": "simple",
+    "savecursor": true,
+    "scrollbar": true,
+    "softwrap": true,
+    "status": true,
+    "statusformatr": "",
+    "wordwrap": true
+}

@@ -1,0 +1,10 @@
+# ripgrep configuration file
+# ripgrep uses the RIPGREP_CONFIG_PATH environment variable to
+# set the name/location of the config file
+--max-columns=500
+--max-columns-preview
+
+--glob=!pnpm-lock.yaml
+--glob=!package-lock.json
+
+--smart-case
