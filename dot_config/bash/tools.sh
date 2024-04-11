@@ -44,23 +44,17 @@ export FZF_CTRL_T_OPTS="
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 #: keybindings
-#: https://github.com/junegunn/fzf/blob/master/shell/key-bindings.bash
+#: synced by chezmoi
 fzfkeybinds="$HOME"/bin/fzf-keybindings.bash
 if [[ ! -f "$fzfkeybinds" ]]; then
-  curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash --output "$fzfkeybinds"
-fi
-source "$fzfkeybinds"
-
-#: bash completions
-#: https://github.com/junegunn/fzf/blob/master/shell/completion.bash
-fzfcompletions="$HOME/.local/share/bash-completion/completions/fzf"
-if [[ ! -f "$fzfcompletions" ]]; then
-  curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash --output "$fzfcompletions"
+  echo "$fzfkeybinds does not exist!"
+else
+  source "$fzfkeybinds"
 fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
