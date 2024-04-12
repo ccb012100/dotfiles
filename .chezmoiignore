@@ -1,6 +1,7 @@
 LICENSE.txt
 README.md
-.config/git/work.gitconfig
+{{- /* ignore these if not running on work machine */ -}}
 {{- if ne .chezmoi.hostname "8901-75SCSV3" }}
+.config/git/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
