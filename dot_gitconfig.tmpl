@@ -2,6 +2,7 @@
     path = .config/git/git.gitconfig
     path = .config/git/aliases.gitconfig
     path = .config/git/tools.gitconfig
+{{- /* only include these if running on work machine */ -}}
 {{- if eq .chezmoi.hostname "8901-75SCSV3" }}
 [includeIf "gitdir:~/src/"]
     path = .config/git/personal.gitconfig
