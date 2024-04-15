@@ -8,15 +8,15 @@
 # copy shell/key-bindings.fish from fzf master
 ["bin/fzf-key-bindings.fish"]
     type = "file"
-    url = "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.fish"
+    url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.fish"
     refreshPeriod = "168h"
 # copy shell/key-bindings.bash from fzf master
 ["bin/fzf-key-bindings.bash"]
     type = "file"
-    url = "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.bash"
+    url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash"
     refreshPeriod = "168h"
 # copy shell/completion.bash from fzf master
 [".local/share/bash-completion/completions/fzf.bash"]
     type = "file"
-    url = "https://github.com/junegunn/fzf/blob/master/shell/completion.bash"
+    url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
     refreshPeriod = "168h"
