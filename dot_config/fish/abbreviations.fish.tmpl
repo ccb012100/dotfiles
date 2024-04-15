@@ -115,11 +115,18 @@ abbr --add zo zoxide
 # vs code
 abbr --add c code
 abbr --add c. 'code .' # open current directory in VS Code
-abbr --add cconf "code $HOME/.config"
-abbr --add cfish "code $__fish_config_dir" # open fish config directory in vscode
-abbr --add cgit "code $HOME/.config/git"
-# wslu
-abbr --add open wslview
+#abbr --add cconf "code $HOME/.config"
+#abbr --add cfish "code $__fish_config_dir" # open fish config directory in vscode
+#abbr --add cgit "code $HOME/.config/git"
+abbr --add cconf 'echo use chezmoi to edit'
+abbr --add cfish 'echo use chezmoi to edit'
+abbr --add cgit 'echo use chezmoi to edit'
+# systemctl
 abbr --add sctl sysmtemctl
 # zoxide
 abbr --add jq zoxide query
+
+{{- /* WSL2 requires running 1Password as a service account */ -}}
+{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) -}}
+abbr --add open wslview # wslu
+{{- end }}
