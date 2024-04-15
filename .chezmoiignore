@@ -5,3 +5,11 @@ README.md
 .config/git/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
+.config/fish/completions
+.config/fish/conf.d
+.config/fish/fish_variables
+.config/fish/functions/_*
+.config/fish/functions/_fzf*
+.config/fish/functions/fisher.fish
+.config/fish/functions/fzf_configure_bindings.fish
+.config/kmonad/nohup.out
