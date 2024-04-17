@@ -4,7 +4,7 @@ Host github.com
     IdentityFile ~/.ssh/id_ed25519
     IdentitiesOnly yes
     AddKeysToAgent yes
-{{/* only include this if running on work machine */}}
+{{- /* IF on work machine, THEN include this */ -}}
 {{- if eq .chezmoi.hostname "8901-75SCSV3" }}
 Host github-work
     HostName github.com

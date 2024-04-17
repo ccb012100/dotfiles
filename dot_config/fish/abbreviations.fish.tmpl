@@ -126,7 +126,7 @@ abbr --add sctl sysmtemctl
 # zoxide
 abbr --add jq zoxide query
 
-{{- /* WSL2 requires running 1Password as a service account */ -}}
+{{- /* IF on WSL2, THEN run 1Password as a service account */ -}}
 {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) -}}
 abbr --add open wslview # wslu
 {{- end }}
