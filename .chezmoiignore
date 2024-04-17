@@ -1,10 +1,15 @@
 LICENSE.txt
 README.md
 miscellaneous/*
-{{- /* ignore these if not running on work machine */ -}}
+{{- /* IF not on work machine, THEN ignore these */ -}}
 {{- if ne .chezmoi.hostname "8901-75SCSV3" }}
 .config/git/work.gitconfig
 .config/git/personal.gitconfig
+{{- end}}
+{{- /* IF not on macOS, THEN ignore these */ -}}
+{{- if ne .chezmoi.os "darwin" -}}
+.config/kmonad/apple.kbd
+.config/kmonad/logi_mx_keys.kbd
 {{- end}}
 .config/fish/completions
 .config/fish/conf.d

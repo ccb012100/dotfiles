@@ -1,0 +1,42 @@
+#|
+  kmonad configuration for
+  Logitech MX Keys for Mac
+  wireless keyboard
+|#
+
+(defcfg
+  input  (low-level-hook)
+  output (send-event-sink)
+  fallthrough true
+  allow-cmd false)
+
+;; NOTE: keycodes can be found in the kmonad repo at 'src/KMonad/Keyboard/Keycode.hs' (search for 'aliases')
+(defsrc
+  esc    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  KeyEjectCd  f13   f14      f15   f16     f17         f18     f19
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc                KeyHome  pgup  nlck    KeyKpEqual  kp/     kp*
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]    \           del   KeyEnd   pgdn  KeyKp7  KeyKp8      KeyKp9  kp-
+  caps     a    s    d    f    g    h    j    k    l    ;    '    return                              KeyKp4  KeyKp5      KeyKp6  kp+
+  lsft       z    x    c    v    b    n    m    ,    .    bksl  rsft                   up             KeyKp1  KeyKp2      KeyKp3
+  lctl  lalt   lmet           spc                      rmet ralt  rctl           left  down     rght  KeyKp0              kp.     kprt
+)
+(deflayer default
+  _      _    _    _    _    _    _    _    _    _    _    _    _    pp          ssrq  _        _     _       _           _       _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _                   _        _     _       _           _       _
+  _      _    _    _    _    _    _    _    _    _    _    _    _    _           _     _        _     _       _           _       _
+  _        _    _    _    @_f  _    _    @_j  _    _    _    _    _                                   _       _           _       _
+  _          _    _    _    @l_m _    _    @r_m _    _    _     _                      _              _       _           _
+  lmet  @meta  lalt           @spc                     ralt @meta rmet           _     _        _     _                   _       _
+)
+(defalias
+  caps esc ;; remap caps to escape
+  spc (tap-hold-next-release 200 spc lctl) ;; hold space for l-ctrl
+  meta (tap-hold-next-release 275 v S-C-lalt) ;; Meta key
+)
+;; (deflayer blank
+;;   _      _    _    _    _    _    _    _    _    _    _    _    _    _        _     _        _     _       _           _       _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _                _        _     _       _           _       _
+;;   _      _    _    _    _    _    _    _    _    _    _    _    _    _        _     _        _     _       _           _       _
+;;   _        _    _    _    _    _    _    _    _    _    _    _    _                                _       _           _       _
+;;   _          _    _    _    _    _    _    _    _    _    _     _                   _              _       _           _
+;;   _     _      _              _                        _    _     _           _     _        _     _                   _       _
+;; )
