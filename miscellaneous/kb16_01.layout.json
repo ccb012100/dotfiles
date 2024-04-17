@@ -94,13 +94,13 @@
   ],
   "encoders": [
     [
-      ["KC_MPRV", "KC_MNXT"],
+      ["KC_PGUP", "KC_PGDN"],
       ["KC_TRNS", "KC_TRNS"],
       ["KC_TRNS", "KC_TRNS"],
       ["RGB_HUD", "RGB_HUI"]
     ],
     [
-      ["KC_PGDN", "KC_PGUP"],
+      ["KC_MS_WH_UP", "KC_MS_WH_DOWN"],
       ["KC_TRNS", "KC_TRNS"],
       ["KC_TRNS", "KC_TRNS"],
       ["RGB_SAD", "RGB_SAI"]
