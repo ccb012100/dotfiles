@@ -8,7 +8,7 @@
     filemode = false
     fsmonitor = true
     untrackedCache = true
-{{- /* IF not on work machine, THEN include these */ -}}
+{{- /* IF NOT on work machine, THEN include these */ -}}
 {{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
     hooksPath = ~/.hooks
 [user]

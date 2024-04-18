@@ -1,12 +1,12 @@
 LICENSE.txt
 README.md
 miscellaneous/*
-{{/* IF not on work machine, THEN ignore these */ -}}
-{{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
+{{/* IF NOT on work machine, THEN ignore these */ -}}
+{{- if (ne .chezmoi.hostname "8901-75SCSV3") }}
 .local/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
-{{- /* IF not on macOS, THEN ignore these */ -}}
+{{- /* IF NOT on macOS, THEN ignore these */ -}}
 {{- if ne .chezmoi.os "darwin" -}}
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd
