@@ -3,33 +3,27 @@
 # Put homebrew first because some tools are in the homebrew path
 
 # homebrew
+
+{{if eq .chezmoi.os "darwin" -}}
+set PATH /opt/homebrew/bin $PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+{{else}}
 set PATH /home/linuxbrew/.linuxbrew/bin $PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+{{- end}}
 
 # atuin
 atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent binding it to autin search
 
-# Base16 Shell
-set BASE16_SHELL "$HOME/.config/base16-shell/"
-
-# should be synced by chezmoi
-if not test -d "$BASE16_SHELL"
-    echo "$BASE16_SHELL does not exist!"
-else
-    source "$BASE16_SHELL/profile_helper.fish"
-end
-
-# base16-classic-dark
-#base16-gruvbox-dark-hard
-base16-material-darker
-# base16-material-palenight
-# base16-mellow-purple
-# base16-outrun-dark
-# base16-paraiso
-# base16-phd
-
 # dotnet CLI
 complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+
+# coreutils
+{{if eq .chezmoi.os "darwin" -}}
+set PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
+{{else}}
+set PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
+{{- end}}
 
 # GPG (GNU Privacy Guard or GnuPG)
 export GPG_TTY=$(tty)
@@ -53,10 +47,6 @@ function __fish_pipe_to_fzf -d "Pipe the current command to fzf"
     fish_commandline_append " &| $cmd"
 end
 
-# forgit
-export FORGIT_NO_ALIASES=true # disable default aliases
-set PATH $PATH $HOME/tools/forgit/bin/ # use forgit as a git command (e.g. `git forgit add`)
-
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
 set fzf_fd_opts --hidden # include hidden files
@@ -75,9 +65,6 @@ function __fish_pipe_to_ripgrep -d "Pipe the current command to ripgrep"
     fish_commandline_append " &| $cmd"
 end
 
-# micro text editor
-set MICRO_TRUECOLOR 1
-
 # Ripgrep
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 
@@ -90,7 +77,3 @@ enable_transience
 
 # zoxide
 zoxide init --cmd j fish | source
-
-# forgit
-export FORGIT_NO_ALIASES=true # disable default aliases
-set PATH $PATH $HOME/tools/forgit/bin/ # use forgit as a git command (e.g. `git forgit add`)

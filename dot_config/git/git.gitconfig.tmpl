@@ -8,6 +8,14 @@
     filemode = false
     fsmonitor = true
     untrackedCache = true
+{{- /* IF not on work machine, THEN include these */ -}}
+{{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
+    hooksPath = ~/.hooks
+[user]
+    name = Christopher Bocardo
+    email = 397636+ccb012100@users.noreply.github.com
+    signingkey = ~/.ssh/id_ed25519
+{{- end}}
 [commit]
     gpgsign = true
     verbose = true
@@ -50,4 +58,5 @@
     showUntrackedFiles = all
 [tag]
     gpgsign = true
-
+[url "git@github.com:"]
+    insteadof = https://github.com/

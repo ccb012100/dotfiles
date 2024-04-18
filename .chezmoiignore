@@ -1,9 +1,9 @@
 LICENSE.txt
 README.md
 miscellaneous/*
-{{- /* IF not on work machine, THEN ignore these */ -}}
-{{- if ne .chezmoi.hostname "8901-75SCSV3" }}
-.config/git/work.gitconfig
+{{/* IF not on work machine, THEN ignore these */ -}}
+{{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
+.local/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
 {{- /* IF not on macOS, THEN ignore these */ -}}
@@ -11,8 +11,8 @@ miscellaneous/*
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd
 {{- end}}
-{{- /* IF ON WSL2, THEN ignore these */ -}}
-{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) -}}
+{{/* IF ON WSL2, THEN ignore these */ -}}
+{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
 .config/kitty/*
 {{- end -}}
 .config/fish/completions

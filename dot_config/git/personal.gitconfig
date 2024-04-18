@@ -3,7 +3,4 @@
 [user]
     name = Christopher Bocardo
     email = 397636+ccb012100@users.noreply.github.com
-    # signingkey = ~/.ssh/id_ed25519
-    signingkey = 8EC2B6509962832B
-[url "git@github.com:"]
-    insteadof = https://github.com/
+    signingkey = ~/.ssh/id_ed25519

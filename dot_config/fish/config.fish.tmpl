@@ -4,9 +4,9 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     set PATH $HOME/bin $PATH
     set PATH $PATH $HOME/.local/bin
-    set PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
-
+    {{ if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
     # symlinks to Windows binaries
+
     if not test -f $HOME/bin/chrome
         ln -sv '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe' $HOME/bin/chrome
     end
@@ -26,7 +26,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     if not test -f $HOME/bin/pwsh-win
         ln -sv '/mnt/c/Program Files/PowerShell/7/pwsh.exe' $HOME/bin/pwsh-win
     end
-
+    {{- end }}
     # less configuration
     #: -X leaves file contents on the screen when less exits.
     #: -F makes less quit if the entire output can be displayed on one screen.
@@ -54,8 +54,9 @@ if status is-interactive # Commands to run in interactive sessions can go here
     bind \cr _atuin_search # bind search to Ctrl-r; this has to to be done _after_ calling fzf_key_bindings
 
     set fzf_preview_file_cmd bat
-
+    {{/* IF ON WSL2, THEN run these */ -}}
+    {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
     eval $(keychain --eval ~/.ssh/*_ed25519) # get ssh key credentials from the running instance of ssh-agent
-
+    {{- end}}
     echo Loaded config.fish # DONE
 end

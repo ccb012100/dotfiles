@@ -2,8 +2,8 @@
     path = .config/git/git.gitconfig
     path = .config/git/aliases.gitconfig
     path = .config/git/tools.gitconfig
-{{- /* IF on work machine, THEN include these */ -}}
-{{- if eq .chezmoi.hostname "8901-75SCSV3" }}
+{{/* IF on work machine, THEN include these */ -}}
+{{- if (or (eq .chezmoi.hostname "F9GRXCQDGC") (eq .chezmoi.hostname "8901-75SCSV3")) }}
 [includeIf "gitdir:~/src/"]
     path = .config/git/personal.gitconfig
 [includeIf "gitdir:~/win/src/"]
@@ -17,7 +17,7 @@
 [includeIf "gitdir:~/win/.config/ahk/"]
     path = .config/git/personal.gitconfig
 [includeIf "gitdir:~/work/"]
-    path = .config/git/work.gitconfig
+    path = .local/share/work.gitconfig
 [includeIf "gitdir:~/win/work/"]
     path = .config/git/work.gitconfig
 {{- end }}
