@@ -1,0 +1,43 @@
+buttons: u 8 o
+cursor_color: #00FF00
+
+# history
+history: ; h
+hist_forward: C-f
+hist_back: C-o
+
+# indicator
+indicator: topright
+indicator_size: 20
+indicator_color: #DFFF00
+
+# hints
+hint_activation_key: S-A-C-;
+hint_bgcolor: #282828
+hint_chars: asdfghjkl;'zxcvnm,./qwertuiopby
+hint_fgcolor: #FFB000
+hint_font: JetBrains Mono
+hint: H x
+hint2_activation_key: S-A-C-l 
+hint2_chars: uiojklm,.
+hint2: z
+
+# scroll
+scroll_down: f m n
+scroll_up: b . p
+
+# cursor movement in Normal mode
+down: k
+left: j
+right: l
+up: i
+
+# grid
+grid_activation_key: S-A-C-g
+grid_border_color: #00ff00
+grid_color: #00ff00
+grid_down: k
+grid_left: j
+grid_right: l
+grid_up: i
+grid_keys: e r d f

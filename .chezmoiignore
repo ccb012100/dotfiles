@@ -8,8 +8,11 @@ miscellaneous/*
 {{- end}}
 {{- /* IF NOT on macOS, THEN ignore these */ -}}
 {{- if ne .chezmoi.os "darwin" -}}
+.config/karabiner/*
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd
+.config/RectangleConfig.json
+.config/warpd/config
 {{- end}}
 {{/* IF ON WSL2, THEN ignore these */ -}}
 {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
