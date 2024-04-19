@@ -14,3 +14,9 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscel
   - Use [**Revision 2**](https://github.com/qmk/qmk_firmware/tree/master/keyboards/doio/kb16/rev2)
 - Firmware should be donwloaded from the [**VIA** site](https://www.caniusevia.com/docs/download_firmware).
   - [direct link](https://raw.githubusercontent.com/the-via/firmware/master/doio_kb16_rev2_via.bin) to firmware download
+
+## Rectangle
+
+[Rectangle](https://rectangleapp.com/) window manager.
+
+To import the settings, open **Rectangle**'s settings, click the gear icon in the top bar, then click _Import_ on the bottom.

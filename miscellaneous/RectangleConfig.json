@@ -95,7 +95,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-      "string" : "[3,{\"action\":16},5,{\"compound\":-3},2,{\"action\":2},6,{\"action\":13},4,{\"compound\":-2},7,{\"action\":10},1,{\"action\":15},8,{\"action\":14}]"
+      "string" : "[3,{\"action\":16},5,{\"compound\":-3},2,{\"action\":11},6,{\"action\":13},4,{\"compound\":-2},7,{\"action\":10},1,{\"action\":15},8,{\"action\":14}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -128,7 +128,7 @@
       "int" : 0
     },
     "portraitSnapAreas" : {
-
+      "string" : "[8,{\"action\":14},5,{\"compound\":-5},7,{\"action\":10},1,{\"action\":15},2,{\"action\":11},3,{\"action\":16},4,{\"compound\":-5},6,{\"action\":13}]"
     },
     "relaunchOpensMenu" : {
       "bool" : false
