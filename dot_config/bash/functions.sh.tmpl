@@ -121,11 +121,9 @@ function g() {
         ;;
     esac
 }
-# Git Bash doesn't have the `man` command
-function man() {
-    echo 'using --help'
-    "$@" --help | less
-}
+
+{{- /* IF ON WSL2, THEN run 1Password as a service account */ -}}
+{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
 # use built-in Windows 'open' command
 function open() {
     if [[ -n "${*}" ]]; then
@@ -134,3 +132,4 @@ function open() {
         start .
     fi
 }
+{{- end -}}

@@ -9,7 +9,7 @@ alias back='cd -'
 alias cls=clear
 alias cp='cp -iv'
 alias cpr='cp -r'
-alias ez='exec zsh'
+alias ezsh='exec zsh'
 alias grep='grep --color=auto'
 alias his=history
 alias jctl=journalctl
@@ -22,7 +22,6 @@ alias path='sed "s/:/\n/g" <<< "$PATH"'
 alias rm='rm -I'
 alias rmdir='rmdir -v'
 alias rmr='rm -r'
-alias trash='gio trash'
 alias uuid='uuidgen --random'
 
 ## cd
@@ -32,15 +31,15 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 ## ls
-# replace ls with exa
-alias ls='exa --git --icons --group-directories-first -F'
-alias tree='exa --tree'
+# replace ls with eza
+alias ls='eza --git --icons --group-directories-first -F'
+alias tree='eza --tree'
 alias la='ls -a'
 alias ll='ls -l'
 alias lal='ls -al'
 alias lla='ls -la'
-alias llt='exa -l -t modified --sort newest'
-alias llat='exa -al -t modified --sort newest'
+alias llt='eza -l -t modified --sort newest'
+alias llat='eza -al -t modified --sort newest'
 
 ### external tools
 alias bat=batcat
@@ -59,13 +58,9 @@ alias fd='fd -H'
 alias gob='go build .'
 # run the go project in the cwd
 alias gor='go run .'
-alias info='pinfo'
 alias jl=jless
 # colorize json
 alias jq='jq -C'
-alias kc=kubectl
-alias m=micro
-alias md=mdcat
 # run local version of ts-node
 alias nts='npx ts-node'
 alias py=python3
@@ -75,8 +70,6 @@ alias python=python3
 alias rgf='rg -F'
 # case-insensitive search
 alias rgi='rg -i'
-# keep making this typo for some reason
-alias rust='echo -e "\nthink you mean _rusH_"'
 alias sesh='tmux new-session -A -s sesh'
 alias v=nvim
 alias vi=nvim
@@ -105,27 +98,3 @@ alias nrl='npm run lint'
 alias nrestart='npm run build && npm run start'
 alias nrs='npm run start'
 alias nrt='npm run test'
-
-## zsh-z
-alias za='z --add' # add directory to db
-alias zc='z -c'    # only match subdirs of pwd
-alias ze='z -e'    # echo best match without jumping
-alias zl='z -l'    # list matches without jumping
-alias zr='z -r'    # match by rank
-alias zs='z -s'    # only match subdirs of pwd
-alias zt='z -t'    # match by time
-alias zt='z -x'    # remove directory from db (defaults to pwd)
-alias zxr='x -xR'  # remove dir and all subdirs from db (defaults to pwd)
-
-alias aptup='sudo apt update && sudo apt upgrade --yes'
-alias audio-reload='systemctl --user restart pipewire pipewire-pulse'
-alias guake-export="guake --save-preferences ~/.dotfiles/app-exports/guake-preferences"
-alias kmonad-reload="pkill kmonad && nohup kmonad $HOME/.config/kmonad/dell_latitude.kbd &"
-alias snap-store-refresh='pkill snap-store && sudo snap refresh snap-store'
-alias update='sudo apt update && sudo apt upgrade --yes && brew upgrade && flatpak update'
-
-# search Spotify playlists
-alias sm="$HOME/bin/playlist-search.sh"
-alias sp="$HOME/bin/playlist-search.py"
-alias spd="sp --sort date"
-alias spalb="sp --type album"

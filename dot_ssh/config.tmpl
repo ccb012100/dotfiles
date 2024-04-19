@@ -6,7 +6,7 @@ Host github.com
     AddKeysToAgent yes
 {{/* IF on work machine, THEN include this */ -}}
 {{- if (or (eq .chezmoi.hostname "F9GRXCQDGC") (eq .chezmoi.hostname "8901-75SCSV3")) }}
-Host github-work
+Host github-work.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/work_ed25519

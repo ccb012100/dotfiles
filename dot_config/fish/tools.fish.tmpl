@@ -1,9 +1,8 @@
 #!/usr/bin/env fish
 
-# Put homebrew first because some tools are in the homebrew path
+# IMPORTANT! Put homebrew first because some tools are in the homebrew path
 
 # homebrew
-
 {{if eq .chezmoi.os "darwin" -}}
 set PATH /opt/homebrew/bin $PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -11,7 +10,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 set PATH /home/linuxbrew/.linuxbrew/bin $PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{- end}}
-
 # atuin
 atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent binding it to autin search
 
@@ -24,7 +22,6 @@ set PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
 {{else}}
 set PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
 {{- end}}
-
 # GPG (GNU Privacy Guard or GnuPG)
 export GPG_TTY=$(tty)
 
