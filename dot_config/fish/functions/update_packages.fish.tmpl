@@ -1,6 +1,12 @@
 function update_packages --description 'Update various system packages'
-
     set_color purple
+{{- if eq .chezmoi.os "darwin" }}
+    echo 'Updating brew & fisher packages...'
+    set_color normal
+
+    brew upgrade
+    and fisher update
+{{- else }}
     echo 'Updating {apt,brew,gh,fisher} packages...'
     set_color normal
 
@@ -10,6 +16,7 @@ function update_packages --description 'Update various system packages'
     and brew upgrade
     and gh extension upgrade --all
     and fisher update
+{{ end }}
 
     if test $status -ne 0
         set_color brred
