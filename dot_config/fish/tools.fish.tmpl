@@ -4,10 +4,10 @@
 
 # homebrew
 {{if eq .chezmoi.os "darwin" -}}
-set PATH /opt/homebrew/bin $PATH
+set --global --export PATH /opt/homebrew/bin $PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{else}}
-set PATH /home/linuxbrew/.linuxbrew/bin $PATH
+set --global --export PATH /home/linuxbrew/.linuxbrew/bin $PATH
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{- end}}
 # atuin
@@ -18,9 +18,9 @@ complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
 
 # coreutils
 {{if eq .chezmoi.os "darwin" -}}
-set PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
+set --global --export PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
 {{else}}
-set PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
+set --global --export PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
 {{- end}}
 # GPG (GNU Privacy Guard or GnuPG)
 export GPG_TTY=$(tty)
@@ -40,33 +40,33 @@ function _fzf_compgen_dir
 end
 
 function __fish_pipe_to_fzf -d "Pipe the current command to fzf"
-    set -l cmd fzf
+    set --local cmd fzf
     fish_commandline_append " &| $cmd"
 end
 
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
-set fzf_fd_opts --hidden # include hidden files
+set --export --global fzf_fd_opts --hidden # include hidden files
 
-export FZF_COMPLETION_TRIGGER=';;'
-export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
+set --export --global FZF_COMPLETION_TRIGGER ';;'
+set --export --global FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix'
 #: dracula theme
-export FZF_DEFAULT_OPTS='--ansi --cycle --height=50% --reverse --info=inline --border=rounded --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'
+set --export --global FZF_DEFAULT_OPTS '--ansi --cycle --height=50% --reverse --info=inline --border=rounded --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+set --export --global FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+set --export --global FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+set --export --global FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 
 function __fish_pipe_to_ripgrep -d "Pipe the current command to ripgrep"
-    set -l cmd rg
+    set --local cmd rg
     fish_commandline_append " &| $cmd"
 end
 
 # Ripgrep
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+set --global --export RIPGREP_CONFIG_PATH "$HOME/.config/ripgreprc"
 
 # Rust
-set PATH $HOME/.cargo/bin $PATH
+set --global --export PATH $HOME/.cargo/bin $PATH
 
 # starship.rs
 starship init fish | source

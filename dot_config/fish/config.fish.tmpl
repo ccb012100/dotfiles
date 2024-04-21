@@ -1,9 +1,9 @@
 if status is-interactive # Commands to run in interactive sessions can go here
     echo Loading config.fish...
-    set EDITOR nvim
+    set --global --export EDITOR nvim
 
-    set PATH $HOME/bin $PATH
-    set PATH $PATH $HOME/.local/bin
+    set --global --export PATH $HOME/bin $PATH
+    set --global --export PATH $PATH $HOME/.local/bin
     {{ if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
     # symlinks to Windows binaries
 
@@ -31,9 +31,9 @@ if status is-interactive # Commands to run in interactive sessions can go here
     #: -X leaves file contents on the screen when less exits.
     #: -F makes less quit if the entire output can be displayed on one screen.
     #: -R displays ANSI color escape sequences in "raw" form.
-    export LESS="-XFR"
+    set --global --export LESS "-XFR"
 
-    export GPG_TTY="$(tty)"
+    set --global --export GPG_TTY "$(tty)"
 
     stty -ixon # disable XON/XOFF control flow
 
@@ -53,7 +53,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
     bind \cr _atuin_search # bind search to Ctrl-r; this has to to be done _after_ calling fzf_key_bindings
 
-    set fzf_preview_file_cmd bat
+    set --global --export fzf_preview_file_cmd bat
     {{/* IF ON WSL2, THEN run these */ -}}
     {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
     eval $(keychain --eval ~/.ssh/*_ed25519) # get ssh key credentials from the running instance of ssh-agent
