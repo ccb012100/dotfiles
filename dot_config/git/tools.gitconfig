@@ -8,6 +8,7 @@
 [interactive]
     diffFilter = delta --color-only --features=interactive
 [merge]
+    conflictStyle = zdiff3
     tool = meld
 [pager]
     diff = delta
@@ -48,6 +49,7 @@
 ## meld
 [difftool "meld"]
     cmd = meld "$REMOTE" "$LOCAL"
+    useAutoMerge = true
 [mergetool "meld"]
     cmd = meld "$REMOTE" "$BASE" "$LOCAL" --output "$MERGED"
 ## vscode
