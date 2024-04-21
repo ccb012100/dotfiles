@@ -3,6 +3,14 @@
 # call functions
 abbr --add update update_packages
 
+# jump to directory
+abbr --add chez __zoxide_z $HOME/.local/share/chezmoi
+abbr --add config __zoxide_z $HOME/config
+abbr --add dotfiles __zoxide_z $HOME/.local/share/chezmoi
+abbr --add local __zoxide_z $HOME/.local
+abbr --add src __zoxide_z $HOME/src
+abbr --add work __zoxide_z $HOME/work
+
 # fish
 abbr --add efish exec fish
 abbr --add func functions
@@ -37,15 +45,16 @@ abbr --add jjb cargo build
 abbr --add jjr cargo run
 # chezmoi
 abbr --add cm chezmoi
+abbr --add cma chezmoi apply
 abbr --add cmad chezmoi add
-abbr --add cmapi chezmoi apply --interactive
-abbr --add cmap chezmoi apply
-abbr --add cmat chezmoi add --template
+abbr --add cmadt chezmoi add --template
+abbr --add cmai chezmoi apply --interactive
 abbr --add cmch chezmoi chattr +template
 abbr --add cmd chezmoi diff
 abbr --add cme chezmoi edit
 abbr --add cmi chezmoi ignored
 abbr --add cmm chezmoi merge
+abbr --add cmr chezmoi re-add
 abbr --add cms chezmoi status
 # cht.sh
 abbr --add ch cht.sh
@@ -116,25 +125,21 @@ abbr --add trash trash-put
 # ts-node
 abbr --add tsn 'npx ts-node' # run local version of ts-node
 # uuidgen
-abbr --add uuid uuidgen --random
+abbr --add uuid uuidgen {{- if (eq .chezmoi.os "linux")}} --random {{- end }}
 # vim
 abbr --add v vim
 abbr --add vi vim
-abbr --add zd z dotfiles
-abbr --add zo zoxide
 # vs code
 abbr --add c code
 abbr --add c. 'code .' # open current directory in VS Code
-#abbr --add cconf "code $HOME/.config"
-#abbr --add cfish "code $__fish_config_dir" # open fish config directory in vscode
-#abbr --add cgit "code $HOME/.config/git"
-abbr --add cconf 'echo use chezmoi to edit'
-abbr --add cfish 'echo use chezmoi to edit'
-abbr --add cgit 'echo use chezmoi to edit'
+abbr --add notes code $HOME/.local/notes.code-workspace
+{{- if (eq .chezmoi.os "linux")}}
 # systemctl
 abbr --add sctl sysmtemctl
+{{- end }}
 # zoxide
 abbr --add jq zoxide query
+abbr --add zo zoxide
 
 {{/* IF on WSL2, THEN run 1Password as a service account */ -}}
 {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
