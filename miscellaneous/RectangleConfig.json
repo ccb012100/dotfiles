@@ -68,7 +68,7 @@
       "float" : 0.3
     },
     "footprintAnimationDurationMultiplier" : {
-      "float" : 0
+      "float" : 0.75
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -225,17 +225,61 @@
     }
   },
   "shortcuts" : {
-    "bottomLeft" : {
-      "keyCode" : 38,
-      "modifierFlags" : 786432
+    "almostMaximize" : {
+      "keyCode" : 45,
+      "modifierFlags" : 917504
+    },
+    "bottomHalf" : {
+      "keyCode" : 11,
+      "modifierFlags" : 917504
+    },
+    "center" : {
+      "keyCode" : 8,
+      "modifierFlags" : 917504
+    },
+    "larger" : {
+      "keyCode" : 24,
+      "modifierFlags" : 917504
+    },
+    "leftHalf" : {
+      "keyCode" : 37,
+      "modifierFlags" : 917504
+    },
+    "maximize" : {
+      "keyCode" : 46,
+      "modifierFlags" : 917504
+    },
+    "maximizeHeight" : {
+      "keyCode" : 9,
+      "modifierFlags" : 917504
+    },
+    "nextDisplay" : {
+      "keyCode" : 47,
+      "modifierFlags" : 917504
+    },
+    "previousDisplay" : {
+      "keyCode" : 43,
+      "modifierFlags" : 917504
     },
     "reflowTodo" : {
       "keyCode" : 45,
       "modifierFlags" : 786432
     },
+    "rightHalf" : {
+      "keyCode" : 15,
+      "modifierFlags" : 917504
+    },
+    "smaller" : {
+      "keyCode" : 27,
+      "modifierFlags" : 917504
+    },
     "toggleTodo" : {
       "keyCode" : 11,
       "modifierFlags" : 786432
+    },
+    "topHalf" : {
+      "keyCode" : 17,
+      "modifierFlags" : 917504
     }
   },
   "version" : "82"
