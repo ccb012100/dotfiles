@@ -1,0 +1,37 @@
+# A list of all built-in modifier and literal keywords can be found at https://github.com/koekeishiya/skhd/issues/1
+#
+# To specify a NOP, use "true" or ":"
+
+# prevent skhd from monitoring events for specific applications.
+#
+# .blacklist [
+#    "kitty"
+#    "terminal"
+#    "qutebrowser"
+# ]
+
+# s: (S)potify
+meh - s [
+	# go to "Now Playing"
+	"spotify"	: skhd -k "alt - shift - j"
+	*			: open /Applications/Spotify.app
+]
+
+# f: (F)inder
+meh - f [
+	"finder"	: :
+	*			: open ~
+]
+
+# k: launch (K)itty
+meh - k : open /Applications/kitty.app
+
+# meh+tab -> ctrl+tab
+meh - tab : skhd -k "ctrl - tab"
+shift + meh - tab : skhd -k "shift + ctrl - tab"
+
+meh - h [
+	"code" : osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
+	"kitty" : osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
+	* : skhd -k "cmd - h"
+]
