@@ -17,6 +17,21 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscel
 
 ## Rectangle
 
-[Rectangle](https://rectangleapp.com/) window manager.
+[**Rectangle**](https://rectangleapp.com/) window manager.
 
-To import the settings, open **Rectangle**'s settings, click the gear icon in the top bar, then click _Import_ on the bottom.
+To import the settings:
+
+1. Open **Rectangle**'s settings.
+2. Click the ⚙ icon in the top bar.
+3. Click _Import_ on the bottom.
+
+## Stats
+
+[**Stats**](https://github.com/exelban/stats) - menu bar system monitor
+
+To import the settings:
+
+1. Right click on the **Stats** icon(s) in the menu bar.
+2. Right click on the ⚙ icon in the upper-right corner to open the settings.
+3. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
+4. Click _Export settings_
