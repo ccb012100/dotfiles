@@ -1,9 +1,9 @@
-# A list of all built-in modifier and literal keywords can be found at https://github.com/koekeishiya/skhd/issues/1
+# A list of all built-in modifier and literal keywords can be found at <https://github.com/koekeishiya/skhd/issues/1>
 #
 # To specify a NOP, use "true" or ":"
+# To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
 
 # prevent skhd from monitoring events for specific applications.
-#
 # .blacklist [
 #    "kitty"
 #    "terminal"
@@ -12,26 +12,70 @@
 
 # s: (S)potify
 meh - s [
-	# go to "Now Playing"
-	"spotify"	: skhd -k "alt - shift - j"
-	*			: open /Applications/Spotify.app
+    # go to "Now Playing"
+    "spotify"    :  skhd -k "alt + shift - j"
+    *            :  open /Applications/Spotify.app
 ]
 
 # f: (F)inder
 meh - f [
-	"finder"	: :
-	*			: open ~
+    "finder"    ~
+    *           :   open ~
 ]
 
 # k: launch (K)itty
 meh - k : open /Applications/kitty.app
 
-# meh+tab -> ctrl+tab
-meh - tab : skhd -k "ctrl - tab"
-shift + meh - tab : skhd -k "shift + ctrl - tab"
-
+# h: (H)ide active window
 meh - h [
-	"code" : osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
-	"kitty" : osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
-	* : skhd -k "cmd - h"
+    "code"  : osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
+    "kitty" : osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
+    *       : skhd -k "cmd - h"
+]
+
+# map some ctrl chords to cmd chords
+ctrl - c [
+    "code"   ~
+    "zed"   ~
+    *        :   skhd -k "cmd - c"
+]
+ctrl - l [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - l"
+]
+ctrl - q [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - q"
+]
+ctrl - t [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - t"
+]
+shift + ctrl - t [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "shift + cmd - t"
+]
+ctrl - v [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - v"
+]
+ctrl - x [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - x"
+]
+ctrl - w [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - w"
+]
+ctrl - z [
+    "code"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - z"
 ]
