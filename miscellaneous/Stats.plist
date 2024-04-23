@@ -5,25 +5,27 @@
 	<key>BAT_mini_label</key>
 	<false/>
 	<key>Battery_barChart_position</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>Battery_bar_chart_box</key>
 	<false/>
 	<key>Battery_bar_chart_frame</key>
 	<false/>
 	<key>Battery_batteryDetails_position</key>
-	<integer>4</integer>
+	<integer>1</integer>
 	<key>Battery_battery_additional</key>
 	<string>time</string>
 	<key>Battery_battery_color</key>
 	<true/>
+	<key>Battery_battery_details_mode</key>
+	<string>percentage</string>
 	<key>Battery_battery_position</key>
 	<integer>0</integer>
 	<key>Battery_color</key>
 	<true/>
 	<key>Battery_label_position</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>Battery_mini_position</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>Battery_notifications_high</key>
 	<string>0.1</string>
 	<key>Battery_notifications_low</key>
@@ -82,10 +84,25 @@
 	<false/>
 	<key>Disk_widget</key>
 	<string>mini,label,bar_chart</string>
+	<key>LaunchAtLoginNext</key>
+	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/.local/share/chezmoi/miscellaneous</string>
 	<key>NSStatusItem Preferred Position CombinedModules</key>
-	<real>293</real>
+	<real>284</real>
+	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<true/>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>1705 1513 430 135 0 0 3840 2135 </string>
+	<string>649 721 430 135 0 0 1728 1079 </string>
 	<key>Network_state</key>
 	<false/>
 	<key>RAM_barChart_position</key>
@@ -124,8 +141,12 @@
 	<true/>
 	<key>setupProcess</key>
 	<true/>
+	<key>telemetry</key>
+	<true/>
+	<key>telemetry_id</key>
+	<string>E7A7AFE7-3DBD-4931-BE5D-4D601C924619</string>
 	<key>updater_check_ts</key>
-	<integer>1713801424</integer>
+	<integer>1713886854</integer>
 	<key>version</key>
 	<string>2.10.10</string>
 </dict>
