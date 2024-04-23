@@ -1,0 +1,37 @@
+[
+  {
+    "bindings": {
+      "ctrl-x ctrl-c": "zed::Quit",
+      "ctrl-space": "command_palette::Toggle",
+      "shift-space": "command_palette::Toggle",
+      "ctrl-, t": "editor::ScrollCursorTop",
+      "ctrl-, b": "editor::ScrollCursorBottom",
+      "ctrl-, m": "editor::ScrollCursorBottom",
+      "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
+      "ctrl-u": ["workspace::SendKeystrokes", "alt-left"],
+      "alt-i": ["workspace::SendKeystrokes", "left"],
+      "alt-u": ["workspace::SendKeystrokes", "right"],
+      "alt-shift-.": "editor::MoveToEnd",
+      "alt-shift-,": "editor::MoveToBeginning"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-l d": "editor::Format",
+      "ctrl-l ctrl-d": "editor::Format",
+      "ctrl-/": "editor::Undo",
+      "ctrl-j s": "workspace::Save",
+      "ctrl-x ctrl-s": "workspace::Save",
+      "ctrl-j k": "workspace::CloseWindow",
+      "ctrl-x k": "workspace::CloseWindow",
+      "ctrl-l s": "editor::SortLinesCaseSensitive",
+      "alt-w": "editor::Copy",
+      "ctrl-w": "editor::Cut",
+      "ctrl-y": "editor::Paste",
+      "ctrl-l m": "markdown::OpenPreviewToTheSide",
+      "ctrl-j z": "workspace::ToggleZoom",
+      "ctrl-x ctrl-z": "zed::Zoom"
+    }
+  }
+]
