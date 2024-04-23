@@ -34,48 +34,86 @@ meh - h [
 ]
 
 # map some ctrl chords to cmd chords
-ctrl - c [
-    "code"   ~
+# A
+shift + ctrl - a [
+    "code"  ~
+    "kitty" ~
     "zed"   ~
-    *        :   skhd -k "cmd - c"
+    *       :   skhd -k "cmd - a"
 ]
+# C
+ctrl - c [
+    "code"  ~
+    "kitty"  ~
+    "zed"   ~
+    *       :   skhd -k "cmd - c"
+]
+# f
+shift + ctrl - f [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - f"
+]
+# L
 ctrl - l [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - l"
 ]
+# Q
 ctrl - q [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - q"
 ]
+# R
+ctrl - r [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - r"
+]
+# T
 ctrl - t [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - t"
 ]
 shift + ctrl - t [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "shift + cmd - t"
 ]
+# V
 ctrl - v [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - v"
 ]
+# X
 ctrl - x [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - x"
 ]
+# W
 ctrl - w [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - w"
 ]
+# Z
 ctrl - z [
     "code"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - z"
 ]
