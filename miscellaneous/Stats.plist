@@ -13,7 +13,7 @@
 	<key>Battery_batteryDetails_position</key>
 	<integer>1</integer>
 	<key>Battery_battery_additional</key>
-	<string>time</string>
+	<string>percentage</string>
 	<key>Battery_battery_color</key>
 	<true/>
 	<key>Battery_battery_details_mode</key>
@@ -35,21 +35,39 @@
 	<key>Battery_widget</key>
 	<string>battery</string>
 	<key>CPU_barChart_position</key>
-	<integer>3</integer>
+	<integer>0</integer>
 	<key>CPU_bar_chart_box</key>
 	<false/>
+	<key>CPU_bar_chart_color</key>
+	<string>utilization</string>
 	<key>CPU_bar_chart_frame</key>
 	<false/>
+	<key>CPU_bar_chart_label</key>
+	<false/>
 	<key>CPU_label_position</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>CPU_lineChart_position</key>
-	<integer>1</integer>
+	<integer>3</integer>
+	<key>CPU_line_chart_box</key>
+	<false/>
+	<key>CPU_line_chart_frame</key>
+	<false/>
+	<key>CPU_line_chart_label</key>
+	<false/>
+	<key>CPU_line_chart_scale</key>
+	<string>none</string>
 	<key>CPU_line_chart_value</key>
 	<false/>
-	<key>CPU_mini_label</key>
+	<key>CPU_line_chart_valueColor</key>
 	<false/>
+	<key>CPU_mini_alignment</key>
+	<string>left</string>
+	<key>CPU_mini_color</key>
+	<string>utilization</string>
+	<key>CPU_mini_label</key>
+	<true/>
 	<key>CPU_mini_position</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>CPU_notifications_totalLoad</key>
 	<string>0.97</string>
 	<key>CPU_oneView</key>
@@ -59,7 +77,13 @@
 	<key>CPU_tachometer_position</key>
 	<integer>5</integer>
 	<key>CPU_widget</key>
-	<string>mini,label,line_chart</string>
+	<string>mini,bar_chart</string>
+	<key>Clock_list</key>
+	<data>
+	W3sibmFtZSI6IkxvY2FsIHRpbWUiLCJlbmFibGVkIjpmYWxzZSwidHoiOiJsb2NhbCIs
+	ImZvcm1hdCI6Inl5eXktTU0tZGQgSEg6bW06c3MiLCJpZCI6IjdEMDkwMkFCLTk0MjMt
+	NDFCMC1CQTczLTUxM0E2MENEMUNEMCJ9XQ==
+	</data>
 	<key>CombinedModules</key>
 	<true/>
 	<key>CombinedModules_popup</key>
@@ -88,8 +112,10 @@
 	<true/>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/.local/share/chezmoi/miscellaneous</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{800, 448}</string>
 	<key>NSStatusItem Preferred Position CombinedModules</key>
-	<real>284</real>
+	<real>495</real>
 	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
 	<dict>
 		<key>TB Display Mode</key>
@@ -106,25 +132,39 @@
 	<key>Network_state</key>
 	<false/>
 	<key>RAM_barChart_position</key>
-	<integer>3</integer>
-	<key>RAM_label_position</key>
 	<integer>0</integer>
+	<key>RAM_bar_chart_box</key>
+	<false/>
+	<key>RAM_bar_chart_color</key>
+	<string>utilization</string>
+	<key>RAM_bar_chart_label</key>
+	<false/>
+	<key>RAM_label_position</key>
+	<integer>3</integer>
 	<key>RAM_lineChart_position</key>
-	<integer>1</integer>
+	<integer>2</integer>
+	<key>RAM_line_chart_label</key>
+	<true/>
+	<key>RAM_line_chart_value</key>
+	<false/>
 	<key>RAM_memory_position</key>
 	<integer>6</integer>
+	<key>RAM_mini_alignment</key>
+	<string>left</string>
+	<key>RAM_mini_color</key>
+	<string>utilization</string>
 	<key>RAM_mini_label</key>
-	<false/>
+	<true/>
 	<key>RAM_mini_position</key>
-	<integer>2</integer>
-	<key>RAM_notificationLevel</key>
-	<string>0.0097</string>
+	<integer>1</integer>
 	<key>RAM_notifications_totalUsage</key>
-	<string>0.97</string>
+	<string>0.0097</string>
 	<key>RAM_oneView</key>
 	<true/>
 	<key>RAM_pieChart_position</key>
 	<integer>5</integer>
+	<key>RAM_state</key>
+	<true/>
 	<key>RAM_tachometer_label</key>
 	<false/>
 	<key>RAM_tachometer_monochrome</key>
@@ -132,7 +172,7 @@
 	<key>RAM_tachometer_position</key>
 	<integer>4</integer>
 	<key>RAM_widget</key>
-	<string>label,mini,line_chart</string>
+	<string>mini,bar_chart</string>
 	<key>SSD_mini_color</key>
 	<string>system</string>
 	<key>SSD_mini_label</key>
@@ -146,7 +186,7 @@
 	<key>telemetry_id</key>
 	<string>E7A7AFE7-3DBD-4931-BE5D-4D601C924619</string>
 	<key>updater_check_ts</key>
-	<integer>1713886854</integer>
+	<integer>1713905501</integer>
 	<key>version</key>
 	<string>2.10.10</string>
 </dict>
