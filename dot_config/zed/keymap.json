@@ -1,37 +1,87 @@
 [
   {
     "bindings": {
-      "ctrl-x ctrl-c": "zed::Quit",
-      "ctrl-space": "command_palette::Toggle",
-      "shift-space": "command_palette::Toggle",
-      "ctrl-, t": "editor::ScrollCursorTop",
-      "ctrl-, b": "editor::ScrollCursorBottom",
-      "ctrl-, m": "editor::ScrollCursorBottom",
-      "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
-      "ctrl-u": ["workspace::SendKeystrokes", "alt-left"],
       "alt-i": ["workspace::SendKeystrokes", "left"],
       "alt-u": ["workspace::SendKeystrokes", "right"],
-      "alt-shift-.": "editor::MoveToEnd",
-      "alt-shift-,": "editor::MoveToBeginning"
+      "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
+      "ctrl-j o": "projects::OpenRecent",
+      "ctrl-h": null,
+      "ctrl-j": null,
+      "ctrl-j f": "file_finder::Toggle",
+      "ctrl-shift-f": "workspace::NewSearch",
+      "ctrl-shift-j": null,
+      "ctrl-shift-t": "pane::ReopenClosedItem",
+      "ctrl-space": "command_palette::Toggle",
+      "ctrl-u": ["workspace::SendKeystrokes", "alt-left"],
+      "ctrl-x ctrl-c": "zed::Quit",
+      "shift-space": "command_palette::Toggle"
     }
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-l d": "editor::Format",
-      "ctrl-l ctrl-d": "editor::Format",
-      "ctrl-/": "editor::Undo",
-      "ctrl-j s": "workspace::Save",
-      "ctrl-x ctrl-s": "workspace::Save",
-      "ctrl-j k": "workspace::CloseWindow",
-      "ctrl-x k": "workspace::CloseWindow",
-      "ctrl-l s": "editor::SortLinesCaseSensitive",
+      "alt-down": "editor::MoveLineDown",
+      "alt-shift-,": "editor::MoveToBeginning",
+      "alt-shift-.": "editor::MoveToEnd",
+      "alt-up": "editor::MoveLineUp",
       "alt-w": "editor::Copy",
-      "ctrl-w": "editor::Cut",
-      "ctrl-y": "editor::Paste",
-      "ctrl-l m": "markdown::OpenPreviewToTheSide",
+      "ctrl-, b": "editor::ScrollCursorBottom",
+      "ctrl-, m": "editor::ScrollCursorBottom",
+      "ctrl-, t": "editor::ScrollCursorTop",
+      "ctrl-/": "editor::Undo",
+      "alt-shift-up": "editor::AddSelectionAbove",
+      "alt-shift-down": "editor::AddSelectionBelow",
+      "ctrl-j s": "workspace::Save",
       "ctrl-j z": "workspace::ToggleZoom",
-      "ctrl-x ctrl-z": "zed::Zoom"
+      "ctrl-x ctrl-s": "workspace::Save",
+      "ctrl-k": "editor::DeleteLine",
+      "ctrl-l ctrl-d": "editor::Format",
+      "ctrl-l ctrl-j": "editor::ToggleComments",
+      "ctrl-l d": "editor::Format",
+      "ctrl-l m": "markdown::OpenPreviewToTheSide",
+      "ctrl-l s": "editor::SortLinesCaseSensitive",
+      "ctrl-o": "editor::NewlineBelow",
+      "ctrl-r": "search::SelectPrevMatch",
+      "ctrl-s": "search::SelectNextMatch",
+      "ctrl-shift-/": "editor::Redo", // FIMXE: this doesn't work
+      "ctrl-shift-j": "editor::JoinLines",
+      "ctrl-shift-k": "editor::DeleteToEndOfLine",
+      "ctrl-shift-o": "editor::NewlineAbove",
+      "ctrl-shift-s": "buffer_search::Deploy",
+      "ctrl-shift-u": "editor::DeleteToBeginningOfLine",
+      "ctrl-w": "editor::Cut",
+      "ctrl-x k": "workspace::CloseWindow",
+      "ctrl-y": "editor::Paste"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-j '": "workspace::ToggleRightDock",
+      "ctrl-j ;": "workspace::ToggleBottomDock",
+      "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
+      "ctrl-x ctrl-z": "workspace::ToggleZoom",
+      "ctlr-h k": "zed::OpenKeymap",
+      "ctlr-h s": "zed::OpenSettings"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-s cmd-shift-h"], // find and replace
+      "ctrl-j ctrl-j": "pane::ActivateNextItem", // FIXME: doesn't seem to work; I think 'ctrl-j' can't be mapped
+      "ctrl-j k": "pane::CloseActiveItem", // FIXME: doesn't seem to work; I think 'ctrl-j' can't be mapped
+      "ctrl-x 2": "pane::SplitDown",
+      "ctrl-x 3": "pane::SplitRight",
+      "cmd-left": "pane::GoBack",
+      "ctrl-right": "pane::GoForward"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-j n": "project_panel::NewFile",
+      "ctrl-j ctrl-j": "project_panel::ToggleFocus"
     }
   }
 ]
