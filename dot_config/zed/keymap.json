@@ -45,7 +45,7 @@
       "ctrl-r": "search::SelectPrevMatch",
       "ctrl-s": "search::SelectNextMatch",
       "ctrl-shift-/": "editor::Redo", // FIMXE: this doesn't work
-      "ctrl-shift-j": "editor::JoinLines",
+      "ctrl-shift-j": "editor::JoinLines", // FIXME: doesn't work - seems to be a problem with ctrl-j?
       "ctrl-shift-k": "editor::DeleteToEndOfLine",
       "ctrl-shift-o": "editor::NewlineAbove",
       "ctrl-shift-s": "buffer_search::Deploy",
