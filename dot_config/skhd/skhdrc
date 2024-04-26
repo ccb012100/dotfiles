@@ -42,8 +42,8 @@ alt - 0x32 [
     "code"  :   skhd -k "ctrl - 0x32"
     *       ~
 ]
-alt - shift - 0x32 [
-    "code"  :   skhd -k "ctrl - shift - 0x32"
+alt + shift - 0x32 [
+    "code"  :   skhd -k "ctrl + shift - 0x32"
     *       ~
 ]
 
