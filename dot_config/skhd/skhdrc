@@ -63,14 +63,14 @@ ctrl - l [
     *       :   skhd -k "cmd - l"
 ]
 # Q
-shift + ctrl - q [
+ctrl - q [
     "code"  ~
     "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - q"
 ]
 # R
-shift + ctrl - r [
+ctrl - r [
     "code"  ~
     "kitty" ~
     "zed"   ~
@@ -104,7 +104,7 @@ ctrl - x [
     *       :   skhd -k "cmd - x"
 ]
 # W
-shift + ctrl - w [
+ctrl - w [
     "code"  ~
     "kitty" ~
     "zed"   ~
