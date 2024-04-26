@@ -46,10 +46,10 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     # keyboard bindings
     # use command `fish_key_reader` to get input codes
-    bind \' __fish_pipe_to_fzf # <Ctrl-'>
+    bind \ej __fish_pipe_to_fzf # <Alt-j>
     bind \ea history-pager # <Alt-a>
     bind \en __fish_pipe_to_devnull # <Alt-n>
-    bind \; __fish_pipe_to_ripgrep # <Ctrl-;>
+    bind \ek __fish_pipe_to_ripgrep # <Alt-k>
     source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
     fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
     bind \cr _atuin_search # bind search to Ctrl-r; this has to to be done _after_ calling fzf_key_bindings
