@@ -2,8 +2,6 @@
 #
 # To specify a NOP, use "true" or ":"
 # To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
-#
-# See <https://gist.github.com/eegrok/949034#file-mac-keycodes> for macOS keycodes
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -30,9 +28,23 @@ meh - k : open /Applications/kitty.app
 
 # h: (H)ide active window
 meh - h [
-    "code"  : osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
-    "kitty" : osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
-    *       : skhd -k "cmd - h"
+    "code"  :   osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
+    "kitty" :   osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
+    *       :   skhd -k "cmd - h"
+]
+
+# Remap alt+` and alt+shift+` on vscode [kVK_Grave == 0x32]
+#
+# Using native tabs instead of separate windows, alt+` is useless because I have
+# only have a single vscode window. I have "Show Next Window Tab" mapped to Ctrl+`
+# in vscode, so to have consistent muscle memory across apps I remap alt+` here.
+alt - 0x32 [
+    "code"  :   skhd -k "ctrl - 0x32"
+    *       ~
+]
+alt - shift - 0x32 [
+    "code"  :   skhd -k "ctrl - shift - 0x32"
+    *       ~
 ]
 
 # map some ctrl chords to cmd chords
