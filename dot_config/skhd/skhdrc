@@ -2,6 +2,8 @@
 #
 # To specify a NOP, use "true" or ":"
 # To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
+#
+# See <https://gist.github.com/eegrok/949034#file-mac-keycodes> for macOS keycodes
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -44,7 +46,7 @@ shift + ctrl - a [
 # C
 ctrl - c [
     "code"  ~
-    "kitty"  ~
+    "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - c"
 ]
@@ -62,6 +64,20 @@ ctrl - l [
     "zed"   ~
     *       :   skhd -k "cmd - l"
 ]
+# M
+ctrl - m [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - m"
+]
+# N
+ctrl - n [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - n"
+]
 # Q
 ctrl - q [
     "code"  ~
@@ -75,6 +91,13 @@ ctrl - r [
     "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - r"
+]
+# T
+ctrl - s [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - s"
 ]
 # T
 ctrl - t [
@@ -116,4 +139,11 @@ ctrl - z [
     "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - z"
+]
+# , (kVK_Comma = 0x2B)
+ctrl - 0x2B [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - 0x2B"
 ]
