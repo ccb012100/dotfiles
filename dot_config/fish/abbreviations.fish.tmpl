@@ -52,7 +52,7 @@ abbr --add cmai chezmoi apply --interactive
 abbr --add cmch chezmoi chattr +template
 abbr --add cmd chezmoi diff
 abbr --add cme chezmoi edit
-abbr --add cmef chezmoi edit $(fd -H . $HOME/.config | fzf)
+abbr --add cmef 'chezmoi edit $(fd -H . $HOME/.config | fzf)'
 abbr --add cmi chezmoi ignored
 abbr --add cmin chezmoi init
 abbr --add cmm chezmoi merge
