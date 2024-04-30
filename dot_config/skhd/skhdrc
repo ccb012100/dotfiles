@@ -2,6 +2,8 @@
 #
 # To specify a NOP, use "true" or ":"
 # To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
+#
+# FIXME: this doesn't seem to work reliably - I think Contexts is intercepting the key events first
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -22,8 +24,6 @@ meh - h [
 # Using native tabs instead of separate windows, alt+` is useless because I have
 # only have a single vscode window. I have "Show Next Window Tab" mapped to Ctrl+`
 # in vscode, so to have consistent muscle memory across apps I remap alt+` here.
-#
-# FIXME: this doesn't seem to work reliably - I think Contexts is intercepting the key events first
 alt - 0x32 [
     "code"  :   skhd -k "ctrl - 0x32"
     *       ~
@@ -72,7 +72,7 @@ ctrl - l [
 ctrl + shift - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"
     "Microsoft Edge"    :   skhd -k "cmd + shift - a"
-    *           ~
+    *                   ~
 ]
 ctrl - m [
     "code"  ~
@@ -87,10 +87,11 @@ ctrl + shift - n [
     *       :   skhd -k "cmd - n"
 ]
 ctrl - q [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - q"
+    "Microsoft Teams"   ~
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - q"
 ]
 ctrl - r [
     "code"  ~
@@ -129,10 +130,11 @@ ctrl - x [
     *       :   skhd -k "cmd - x"
 ]
 ctrl - w [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - w"
+    "Microsoft Teams"   ~
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - w"
 ]
 ctrl - y [
     "code"  ~
@@ -166,4 +168,11 @@ ctrl - 0x1E [
     "kitty" ~
     "zed"   ~
     *       :   skhd -k "cmd - 0x1E"
+]
+# ctrl+/ (0x2C) to undo
+ctrl - 0x2C [
+    "code"  ~
+    "kitty" ~
+    "zed"   ~
+    *       :   skhd -k "cmd - z"
 ]
