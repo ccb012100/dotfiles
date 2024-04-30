@@ -134,12 +134,13 @@ map {{ .modifier }}+j>o show_last_command_output
 map {{ .modifier }}+j>{{ .modifier }}+j next_window
 map {{ .modifier }}+j>{{ .modifier }}+shift+j next_window
 # new window with same cwd
-map {{ .modifier }}+enter launch --cwd=current
 map {{ .modifier }}+j>k close_window
 map {{ .modifier }}+j>n new_os_window_with_cwd
 map {{ .modifier }}+j>r start_resizing_window
+map {{ .modifier }}+j>w close_os_window
 map {{ .modifier }}+j>z toggle_maximized
 map kitty_mod+w close_os_window
+map super+n new_os_window_with_cwd
 map super+w close_os_window
 
 # neighboring window
@@ -161,12 +162,13 @@ map {{ .modifier }}+j>; swap_with_window
 # Tab management
 
 map {{ .modifier }}+j>w close_window
+map {{ .modifier }}+j>t launch --cwd=current --type=tab
 map ctrl+tab next_tab
 map ctrl+shift+tab previous_tab
 map kitty_mod+, previous_tab
 map kitty_mod+. next_tab
 # create new tab with cwd set to current window
-map kitty_mod+space launch --cwd=current --type=tab
+map kitty_mod+enter launch --cwd=current --type=tab
 map super+t launch --cwd=current --type=tab
 map super+w close_tab
 
