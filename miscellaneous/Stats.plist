@@ -2,16 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BAT_mini_alignment</key>
+	<string>right</string>
+	<key>BAT_mini_color</key>
+	<string>utilization</string>
 	<key>BAT_mini_label</key>
 	<false/>
 	<key>Battery_barChart_position</key>
-	<integer>3</integer>
+	<integer>1</integer>
 	<key>Battery_bar_chart_box</key>
 	<false/>
 	<key>Battery_bar_chart_frame</key>
 	<false/>
+	<key>Battery_bar_chart_label</key>
+	<false/>
 	<key>Battery_batteryDetails_position</key>
-	<integer>1</integer>
+	<integer>3</integer>
 	<key>Battery_battery_additional</key>
 	<string>percentage</string>
 	<key>Battery_battery_color</key>
@@ -69,7 +75,7 @@
 	<key>CPU_mini_position</key>
 	<integer>1</integer>
 	<key>CPU_notifications_totalLoad</key>
-	<string>0.97</string>
+	<string></string>
 	<key>CPU_oneView</key>
 	<true/>
 	<key>CPU_pieChart_position</key>
@@ -115,7 +121,7 @@
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{800, 448}</string>
 	<key>NSStatusItem Preferred Position CombinedModules</key>
-	<real>495</real>
+	<real>278</real>
 	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
 	<dict>
 		<key>TB Display Mode</key>
@@ -128,7 +134,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>649 721 430 135 0 0 1728 1079 </string>
+	<string>1705 1500 430 135 0 0 3840 2135 </string>
 	<key>Network_state</key>
 	<false/>
 	<key>RAM_barChart_position</key>
@@ -186,8 +192,8 @@
 	<key>telemetry_id</key>
 	<string>E7A7AFE7-3DBD-4931-BE5D-4D601C924619</string>
 	<key>updater_check_ts</key>
-	<integer>1713905501</integer>
+	<integer>1714428950</integer>
 	<key>version</key>
-	<string>2.10.10</string>
+	<string>2.10.11</string>
 </dict>
 </plist>
