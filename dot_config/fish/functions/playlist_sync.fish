@@ -29,8 +29,8 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
                 set_color purple
                 echo Syncing tsv files...
                 set_color normal
-
-                $HOME/bin/playlist-search.sh sync tsv
+                
+                cd $HOME/src/playlist-search && source venv/bin/activate.fish && $HOME/bin/playlist-search.sh sync tsv
 
                 if test $status -ne 0
                     set_color brred
@@ -59,8 +59,6 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
                 continue
         end
     end
-
-    cd $HOME/src/playlist-search
 
     set_color brgreen
     echo \t--- Completed successfully! ---

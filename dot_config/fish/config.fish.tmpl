@@ -37,7 +37,8 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     stty -ixon # disable XON/XOFF control flow
 
-    # source config files
+    # source additional config files
+
     for x in "$HOME"/.config/fish/{abbreviations,git-abbreviations,aliases,tools}.fish
         source $x
     end
@@ -45,15 +46,13 @@ if status is-interactive # Commands to run in interactive sessions can go here
     source $HOME/.local/config-local.fish # local config unique to the machine
 
     # keyboard bindings
+
     # use command `fish_key_reader` to get input codes
     bind \cr _atuin_search # bind search to Ctrl-r; this has to to be done _after_ calling fzf_key_bindings
     bind \ea history-pager # <Alt-a>
     bind \en __fish_pipe_to_devnull # <Alt-n>
     bind \er __fish_pipe_to_ripgrep # <Alt-k>
     bind \ez __fish_pipe_to_fzf # <Alt-j>
-
-    source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
-    fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
 
     set --global --export fzf_preview_file_cmd bat
     {{/* IF ON WSL2, THEN run these */ -}}

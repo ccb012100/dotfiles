@@ -57,13 +57,17 @@ set --export --global FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 set --export --global FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 
+#: keybindings
+source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
+fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
+
+# Ripgrep
+set --global --export RIPGREP_CONFIG_PATH "$HOME/.config/ripgreprc"
+
 function __fish_pipe_to_ripgrep -d "Pipe the current command to ripgrep"
     set --local cmd rg
     fish_commandline_append " &| $cmd"
 end
-
-# Ripgrep
-set --global --export RIPGREP_CONFIG_PATH "$HOME/.config/ripgreprc"
 
 # Rust
 set --global --export PATH $HOME/.cargo/bin $PATH
