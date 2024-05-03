@@ -35,3 +35,14 @@ To import the settings:
 2. Right click on the ⚙ icon in the upper-right corner to open the settings.
 3. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
 4. Click _Export settings_
+
+## iTerm2
+
+[iTerm2](https://iterm2.com/) terminal emulator
+
+To sync with [the file in this repo](/miscellaneous/com.googlecode.iterm2.plist), in **iTerm2**:
+
+- Open **Settings ➤ General ➤ Preferences**
+- Check _Load preferences from a custom folder or URL_
+- Click _Browse_
+- Select [miscellaneous/com.googlecode.iterm2.plist](/miscellaneous/com.googlecode.iterm2.plist) in this repo
