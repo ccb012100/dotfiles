@@ -3822,46 +3822,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+;",
-        "command": "jump-extension.jump-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+q alt+q",
-        "command": "-jump-extension.jump-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+;",
-        "command": "jump-extension.jump-to-the-end-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+q alt+w",
-        "command": "-jump-extension.jump-to-the-end-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+;",
-        "command": "jump-extension.select-to-the-end-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+q alt+r",
-        "command": "-jump-extension.select-to-the-end-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+;",
-        "command": "jump-extension.select-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+q alt+e",
-        "command": "-jump-extension.select-to-the-start-of-a-word",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+z",
         "command": "undo"
     },
@@ -3876,5 +3836,25 @@
     {
         "key": "cmd+[",
         "command": "extension.arrowBackBtn"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "jumpy2.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-jumpy2.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+;",
+        "command": "jumpy2.toggleSelection",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "-jumpy2.toggleSelection",
+        "when": "editorTextFocus"
     }
 ]
