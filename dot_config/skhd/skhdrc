@@ -39,6 +39,9 @@ alt + shift - 0x32 [
 
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
+# TODO: figure out why this doesn't work
+#0x69 : skhd -k "shift + cmd - 4" # PrintScreen (0x69) to open screenshot tool
+
 shift + ctrl - a [
     "code"  ~
     "kitty" ~
@@ -155,19 +158,31 @@ ctrl - 0x2B [
     "zed"   ~
     *       :   skhd -k "cmd - 0x2B"
 ]
-# [ (0x21)
+# Ctrl+[ (0x21) to go backwards
 ctrl - 0x21 [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - 0x21"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Spotify"   :   skhd -k "alt - left"
+    *           :   skhd -k "cmd - 0x21"
 ]
-# ctrl+[ (0x1E) to go forwards
+# Ctrl+] (0x1E) to go forwards
 ctrl - 0x1E [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - 0x1E"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Spotify"   :   skhd -k "alt - right"
+    *           :   skhd -k "cmd - 0x1E"
+]
+# map ⌘+[ to ⌥+← in Spotify
+cmd - 0x21 [
+    "Spotify"   :   skhd -k "alt - left"
+    *           ~
+]
+# map ⌘+] to ⌥+→ in Spotify
+cmd - 0x1E [
+    "Spotify"   :   skhd -k "alt - right"
+    *           ~
 ]
 # ctrl+/ (0x2C) to undo
 ctrl - 0x2C [
