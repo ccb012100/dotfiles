@@ -3706,12 +3706,8 @@
         "when": "view.workbench.scm.visible && !editorFocus && focusedView == 'workbench.scm'"
     },
     {
-        "key": "ctrl+j shift+u",
-        "command": "insert-unicode.insertText"
-    },
-    {
         "key": "ctrl+j u",
-        "command": "insert-unicode.insertFavoriteText"
+        "command": "insert-unicode.insertText"
     },
     {
         "key": "ctrl+.",
