@@ -18,7 +18,7 @@ hint_chars: asdfghjkl;'zxcvnm,./qwertuiopby
 hint_fgcolor: #FFB000
 hint_font: CozetteVector
 hint: H x
-hint2_activation_key: S-A-C-l
+hint2_activation_key: S-A-C-/
 hint2_chars: uiojklm,.
 hint2: z
 
