@@ -1,3 +1,4 @@
+# 168h = 1 week
 # copy shell/key-bindings.fish from fzf master
 ["bin/fzf-key-bindings.fish"]
     type = "file"
@@ -12,4 +13,9 @@
 [".local/share/bash-completion/completions/fzf.bash"]
     type = "file"
     url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
+    refreshPeriod = "168h"
+# add Eldritch theme for kitty
+[".config/kitty/Eldritch.conf"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/eldritch-theme/kitty/master/Eldritch.conf"
     refreshPeriod = "168h"

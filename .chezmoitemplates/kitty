@@ -196,5 +196,5 @@ map {{ .modifier }}+j>f5 clear_terminal reset active
 map {{ .modifier }}+j>f6 clear_terminal reset all
 
 # BEGIN_KITTY_THEME
-include current-theme.conf
+include Eldritch.conf
 # END_KITTY_THEME
