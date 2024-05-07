@@ -695,7 +695,7 @@
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LeftCommand</key>
-	<integer>1</integer>
+	<integer>7</integer>
 	<key>MaxVertically</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -2195,7 +2195,7 @@
 		</dict>
 	</dict>
 	<key>RightCommand</key>
-	<integer>1</integer>
+	<integer>8</integer>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -2205,6 +2205,8 @@
 	<key>SwitchPaneModifier</key>
 	<integer>4</integer>
 	<key>SwitchTabModifier</key>
+	<integer>6</integer>
+	<key>SwitchWindowModifier</key>
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
