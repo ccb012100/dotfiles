@@ -3,7 +3,6 @@
 # To specify a NOP, use "true" or ":"
 # To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
 #
-# FIXME: this doesn't seem to work reliably - I think Contexts is intercepting the key events first
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -33,44 +32,54 @@ alt + shift - 0x32 [
     *       ~
 ]
 
+# TODO: figure out why this doesn't work
+0x69 : skhd -k "shift + cmd - 4" # PrintScreen (0x69) to open screenshot tool
+
 #
 # map ctrl chords to equivalent/similar cmd chords
 #
 
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
-# TODO: figure out why this doesn't work
-#0x69 : skhd -k "shift + cmd - 4" # PrintScreen (0x69) to open screenshot tool
-
 shift + ctrl - a [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - a"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - a"
 ]
 ctrl - c [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - c"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - c"
 ]
 shift + ctrl - f [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - f"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - f"
 ]
 shift + ctrl - h [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - h"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - h"
 ]
 ctrl - l [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - l"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - l"
 ]
 ctrl + shift - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"
@@ -78,41 +87,53 @@ ctrl + shift - l [
     *                   ~
 ]
 ctrl - m [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - m"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - m"
 ]
 ctrl + shift - n [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - n"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - n"
 ]
 ctrl - q [
     "Microsoft Teams"   ~
     "code"              ~
     "kitty"             ~
     "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
     *                   :   skhd -k "cmd - q"
 ]
 ctrl - r [
     "code"  ~
     "kitty" ~
     "zed"   ~
+    "Terminal"  ~
+    "iTerm2"    ~
     *       :   skhd -k "cmd - r"
 ]
 ctrl - s [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - s"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - s"
 ]
 ctrl - t [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - t"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - t"
 ]
 shift + ctrl - t [
     "code"  ~
@@ -137,32 +158,42 @@ ctrl - w [
     "code"              ~
     "kitty"             ~
     "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
     *                   :   skhd -k "cmd - w"
 ]
 ctrl - y [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - v"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - v"
 ]
 ctrl - z [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - z"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - z"
 ]
 # (kVK_Comma = 0x2B)
 ctrl - 0x2B [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - 0x2B"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - 0x2B"
 ]
 # Ctrl+[ (0x21) to go backwards
 ctrl - 0x21 [
     "code"      ~
     "kitty"     ~
     "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
     "Spotify"   :   skhd -k "alt - left"
     *           :   skhd -k "cmd - 0x21"
 ]
@@ -171,6 +202,8 @@ ctrl - 0x1E [
     "code"      ~
     "kitty"     ~
     "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
     "Spotify"   :   skhd -k "alt - right"
     *           :   skhd -k "cmd - 0x1E"
 ]
@@ -186,8 +219,10 @@ cmd - 0x1E [
 ]
 # ctrl+/ (0x2C) to undo
 ctrl - 0x2C [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    *       :   skhd -k "cmd - z"
+    "code"      ~
+    "kitty"     ~
+    "zed"       ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    *           :   skhd -k "cmd - z"
 ]
