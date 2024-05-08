@@ -3710,16 +3710,6 @@
         "command": "insert-unicode.insertText"
     },
     {
-        "key": "ctrl+.",
-        "command": "editor.action.autoFix",
-        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
-    },
-    {
-        "key": "alt+cmd+.",
-        "command": "-editor.action.autoFix",
-        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
-    },
-    {
         "key": "ctrl+`",
         "command": "workbench.action.showNextWindowTab"
     },
@@ -3852,5 +3842,10 @@
         "key": "shift+alt+enter",
         "command": "-jumpy2.toggleSelection",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     }
 ]
