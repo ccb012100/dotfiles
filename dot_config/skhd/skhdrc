@@ -32,8 +32,10 @@ alt + shift - 0x32 [
     *       ~
 ]
 
-# TODO: figure out why this doesn't work
-0x69 : skhd -k "shift + cmd - 4" # PrintScreen (0x69) to open screenshot tool
+# macOS interprets the SysRq (Print Screen) key as F13
+f13 : skhd -k "shift + cmd - 4" # PrntScrn to select an area and save to file
+cmd - f13 : skhd -k "shift + cmd - 5" # Cmd+PrntScrn to open the screenshot and recording options
+shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
 
 #
 # map ctrl chords to equivalent/similar cmd chords
