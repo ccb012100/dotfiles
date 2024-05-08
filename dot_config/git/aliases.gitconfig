@@ -27,6 +27,8 @@
 
     ## commit
     amend   = commit --amend
+    aamend  = ! git aa && git commit --amend
+    aumend  = ! git au && git commit --amend
     c       = commit
     ca      = commit --amend
     call    = commit --all
