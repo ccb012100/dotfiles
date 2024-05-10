@@ -1842,9 +1842,9 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+x o",
+        "key": "ctrl+g e",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!editorFocus"
+        "when": "!editorFocus && workbench.explorer.fileView.active"
     },
     {
         "key": "ctrl+l ctrl+s",
@@ -2059,8 +2059,9 @@
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     },
     {
-        "key": "ctrl+g f",
-        "command": "workbench.files.action.focusFilesExplorer"
+        "key": "ctrl+g e",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "editorFocus || !workbench.explorer.fileView.active"
     },
     {
         "key": "ctrl+enter",
@@ -2484,11 +2485,6 @@
         "key": "ctrl+x ctrl+e",
         "command": "workbench.action.debug.start",
         "when": "debuggersAvailable && debugState == 'inactive' && editorLangId != 'sql' && editorLangId != 'sqlite'"
-    },
-    {
-        "key": "ctrl+g e",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!editorFocus"
     },
     {
         "key": "ctrl+x o",
@@ -3847,5 +3843,9 @@
         "key": "ctrl+.",
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "editor.action.clipboardPasteAction"
     }
 ]
