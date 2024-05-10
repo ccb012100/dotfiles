@@ -1,10 +1,13 @@
-buttons: u 8 o
 cursor_color: #00FF00
+
+# button clicks
+buttons: u 8 o
+oneshot_buttons: m , .
 
 # history
 history: ; h
 hist_forward: C-f
-hist_back: C-o
+hist_back: C-b
 
 # indicator
 indicator: topright
@@ -20,17 +23,20 @@ hint_font: CozetteVector
 hint: H x
 hint2_activation_key: S-A-C-/
 hint2_chars: uiojklm,.
-hint2: z
+hint2: z X
 
 # scroll
-scroll_down: f n
-scroll_up: b p
+scroll_down: n
+scroll_up: p
 
 # cursor movement in Normal mode
 down: k
 left: j
 right: l
 up: i
+top: t
+middle: m
+bottom: b
 
 # grid
 grid_activation_key: S-A-C-g
