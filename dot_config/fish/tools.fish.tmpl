@@ -57,6 +57,10 @@ set --export --global FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 set --export --global FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 
+{{if eq .chezmoi.os "darwin" -}}
+#: iTerm2
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+{{ end}}
 #: keybindings
 source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
 fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
