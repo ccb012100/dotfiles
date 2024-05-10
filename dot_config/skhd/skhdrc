@@ -49,6 +49,7 @@ shift + ctrl - a [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - a"
 ]
 ctrl - c [
@@ -57,6 +58,7 @@ ctrl - c [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - c"
 ]
 shift + ctrl - f [
@@ -65,6 +67,7 @@ shift + ctrl - f [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - f"
 ]
 shift + ctrl - h [
@@ -73,6 +76,7 @@ shift + ctrl - h [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - h"
 ]
 ctrl - l [
@@ -81,6 +85,7 @@ ctrl - l [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - l"
 ]
 ctrl + shift - l [
@@ -94,6 +99,7 @@ ctrl - m [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - m"
 ]
 ctrl + shift - n [
@@ -102,6 +108,7 @@ ctrl + shift - n [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - n"
 ]
 ctrl - q [
@@ -111,6 +118,7 @@ ctrl - q [
     "zed"               ~
     "Terminal"          ~
     "iTerm2"            ~
+    "JetBrains Rider" ~
     *                   :   skhd -k "cmd - q"
 ]
 ctrl - r [
@@ -119,6 +127,7 @@ ctrl - r [
     "zed"   ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *       :   skhd -k "cmd - r"
 ]
 ctrl - s [
@@ -127,6 +136,7 @@ ctrl - s [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - s"
 ]
 ctrl - t [
@@ -135,24 +145,34 @@ ctrl - t [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - t"
 ]
 shift + ctrl - t [
     "code"  ~
     "kitty" ~
     "zed"   ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    "JetBrains Rider" ~
     *       :   skhd -k "shift + cmd - t"
 ]
 ctrl - v [
     "code"  ~
     "kitty" ~
     "zed"   ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    "JetBrains Rider" ~
     *       :   skhd -k "cmd - v"
 ]
 ctrl - x [
     "code"  ~
     "kitty" ~
     "zed"   ~
+    "Terminal"  ~
+    "iTerm2"    ~
+    "JetBrains Rider" ~
     *       :   skhd -k "cmd - x"
 ]
 ctrl - w [
@@ -162,6 +182,7 @@ ctrl - w [
     "zed"               ~
     "Terminal"          ~
     "iTerm2"            ~
+    "JetBrains Rider" ~
     *                   :   skhd -k "cmd - w"
 ]
 ctrl - y [
@@ -170,6 +191,7 @@ ctrl - y [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - v"
 ]
 ctrl - z [
@@ -178,6 +200,7 @@ ctrl - z [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - z"
 ]
 # (kVK_Comma = 0x2B)
@@ -187,6 +210,7 @@ ctrl - 0x2B [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - 0x2B"
 ]
 # Ctrl+[ (0x21) to go backwards
@@ -196,6 +220,7 @@ ctrl - 0x21 [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     "Spotify"   :   skhd -k "alt - left"
     *           :   skhd -k "cmd - 0x21"
 ]
@@ -206,6 +231,7 @@ ctrl - 0x1E [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     "Spotify"   :   skhd -k "alt - right"
     *           :   skhd -k "cmd - 0x1E"
 ]
@@ -226,5 +252,6 @@ ctrl - 0x2C [
     "zed"       ~
     "Terminal"  ~
     "iTerm2"    ~
+    "JetBrains Rider" ~
     *           :   skhd -k "cmd - z"
 ]
