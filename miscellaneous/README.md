@@ -42,6 +42,26 @@ To sync with [the file in this repo](/miscellaneous/com.googlecode.iterm2.plist)
 - Click _Browse_
 - Select [miscellaneous/com.googlecode.iterm2.plist](/miscellaneous/com.googlecode.iterm2.plist) in this repo
 
+## Keyboard Layout
+
+The default Keyboard Layout for **macOS** uses the `Alt`/`Option`/`⌥` key to insert special characters. This prevents some applications (**Visual Studio Code**, **JetBrains Rider**) from using ⌥ chords.
+
+Since I don't have any need to insert special characters, I use a [custom Keyboard Layout](/miscellaneous/qwerty_no_option.keylayout) to use the `⌥` keys as just normal `Alt` keys.
+
+To use the custom Keyboard Layout:
+
+    ```zsh
+    cp $HOME/.local/share/chezmoi/miscellaneous/qwerty_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
+    ```
+
+1. Go to `System Settings > Keyboard > Text Input > Input Sources > Edit`.
+    1. Click `＋` in the bottom left.
+    1. Scroll the list on the left to the very end and select `Others`.
+    1. Select `QWERTY no option` and click `Add`.
+1. In the menu bar, click the Input menu and select **QWERTY no option**
+
+source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-1615127984>
+
 ## Rectangle
 
 [**Rectangle**](https://rectangleapp.com/) window manager.
