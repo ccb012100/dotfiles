@@ -20,17 +20,18 @@ window_padding_width 2
 
 scrollback_lines 10000
 scrollback_pager_history_size 100
-
+{{ if eq .os "darwin" }}
 # macOS
 
-macos_menubar_title_max_length 80
+macos_menubar_title_max_length 120
 macos_option_as_alt both
 macos_traditional_fullscreen no
+{{- end}}
 
 # mouse settings
 
 copy_on_select yes
-# we have to discard the press event to prevent middle-click double-pasting
+#: we have to discard the press event to prevent middle-click double-pasting
 mouse_map middle press ungrabbed discard_event
 mouse_map middle release ungrabbed paste_from_selection
 
@@ -83,16 +84,16 @@ map opt+cmd+s toggle_macos_secure_keyboard_entry
 # map cmd+_ send_text all \x1F
 # map cmd+/ send_text all \x1f
 {{- end }}
-## Function keys
-
 map super+q quit
 map kitty_mod+q quit
 
-# Open kitty Website
+# Function keys
+
+#: Open kitty Website
 map f1 open_url https://sw.kovidgoyal.net/kitty/
-# kitty.conf config file
+#: kitty.conf config file
 map f3 edit_config_file
-# reload configuration
+#: reload configuration
 map f5 load_config_file
 map f6 debug_config
 map f11 toggle_fullscreen
@@ -108,7 +109,7 @@ map super+v paste_from_clipboard
 
 # Scrolling
 
-# neighboring window
+#: neighboring window
 map kitty_mod+h scroll_page_up
 map kitty_mod+l scroll_page_down
 map kitty_mod+j scroll_line_down
@@ -123,75 +124,77 @@ map kitty_mod+page_down scroll_page_down
 map kitty_mod+home scroll_home
 map kitty_mod+end scroll_end
 
-# Browse scrollback buffer in pager
+#: Browse scrollback buffer in pager
 map {{ .modifier }}+j>s show_scrollback
 
-# Browse output of the last command in pager
+#: Browse output of the last command in pager
 map {{ .modifier }}+j>o show_last_command_output
 
 # Window management
 
 map {{ .modifier }}+j>{{ .modifier }}+j next_window
 map {{ .modifier }}+j>{{ .modifier }}+shift+j next_window
-# new window with same cwd
 map {{ .modifier }}+j>k close_window
 map {{ .modifier }}+j>n new_os_window_with_cwd
 map {{ .modifier }}+j>r start_resizing_window
 map {{ .modifier }}+j>w close_os_window
 map {{ .modifier }}+j>z toggle_maximized
+map kitty_mod+space launch --cwd=current
 map kitty_mod+w close_os_window
 map super+n new_os_window_with_cwd
 map super+w close_os_window
 
-# neighboring window
+#: neighboring window
 map kitty_mod+h neighboring_window left
 map kitty_mod+l neighboring_window right
 map kitty_mod+j neighboring_window down
 map kitty_mod+k neighboring_window up
 
-# move window
+#: move window
 map kitty_mod+b move_window_backward
 map kitty_mod+f move_window_forward
 map kitty_mod+t move_window_to_top
 
-# Visually select and focus window
+#: Visually select and focus window
 map kitty_mod+; focus_visible_window
-# Visually swap window with another
+#: Visually swap window with another
 map {{ .modifier }}+j>; swap_with_window
 
 # Tab management
 
-map {{ .modifier }}+j>w close_window
-map {{ .modifier }}+j>t launch --cwd=current --type=tab
-map ctrl+tab next_tab
+#: launch new tab
+action_alias launch_tab launch --cwd=current --type=tab
+map {{ .modifier }}+j>t launch_tab
+map kitty_mod+enter launch_tab
+map super+t launch_tab
+
 map ctrl+shift+tab previous_tab
+map ctrl+tab next_tab
 map kitty_mod+, previous_tab
 map kitty_mod+. next_tab
-# create new tab with cwd set to current window
-map kitty_mod+enter launch --cwd=current --type=tab
-map super+t launch --cwd=current --type=tab
+
 map super+w close_tab
 
-## Layout management
+# Layout management
 
 map kitty_mod+n next_layout
 map kitty_mod+p last_used_layout
 
 # Font sizes
 
-# Increase font size
+#: Increase font size
 map kitty_mod+equal change_font_size all +1.0
 map kitty_mod+kp_add change_font_size all +1.0
 
-# Decrease font size
+#: Decrease font size
 map kitty_mod+minus change_font_size all -1.0
 map kitty_mod+kp_subtract change_font_size all -1.0
 
-# Reset font size
+#: Reset font size
 map kitty_mod+kp_enter change_font_size all 0
 map kitty_mod+backspace change_font_size all 0
 
-#: Reset the terminal
+# Reset the terminal
 map {{ .modifier }}+j>f5 clear_terminal reset active
 map {{ .modifier }}+j>f6 clear_terminal reset all
 
