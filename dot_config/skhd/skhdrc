@@ -11,12 +11,9 @@
 #    "qutebrowser"
 # ]
 
-# h: (H)ide active window
-meh - h [
-    "code"  :   osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
-    "kitty" :   osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
-    *       :   skhd -k "cmd - h"
-]
+# map alt-f/b to alt-right/left (i.e. Emacs bindings)
+alt - f : skhd -k "alt - right"
+alt - b : skhd -k "alt - left"
 
 # Remap alt+` and alt+shift+` on vscode [kVK_Grave == 0x32]
 #
@@ -33,14 +30,34 @@ alt + shift - 0x32 [
 ]
 
 # macOS interprets the SysRq (Print Screen) key as F13
-f13 : skhd -k "shift + cmd - 4" # PrntScrn to select an area and save to file
-cmd - f13 : skhd -k "shift + cmd - 5" # Cmd+PrntScrn to open the screenshot and recording options
+f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
+cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
 shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
 
-#
-# map ctrl chords to equivalent/similar cmd chords
-#
+###########
+# Meh key #
+###########
 
+# h: (H)ide active window
+meh - h [
+    "code"  :   osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
+    "kitty" :   osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
+    *       :   skhd -k "cmd - h"
+]
+
+meh - a : open -a Microsoft\ Teams\ (work\ or\ school)
+meh - d : open -a Rider
+meh - e : open -a Microsoft\ Edge
+meh - f : open -a firefox
+meh - i : open -a Safari
+meh - j : open -a Visual\ Studio\ Code
+meh - k : open -a kitty
+meh - o : open -a Microsoft\ Outlook
+meh - s : open -a Spotify
+
+####################################################
+# map ctrl chords to equivalent/similar cmd chords #
+####################################################
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
 shift + ctrl - a [
