@@ -1,5 +1,21 @@
 # Miscellaneous
 
+## AltTab
+
+[**AltTab**](https://github.com/lwouis/alt-tab-macos) window switcher for **macOS**
+
+To export the settings from your machine into this repository:
+
+```zsh
+defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
+```
+
+To import the settings from this repository to your machine:
+
+```zsh
+defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
+```
+
 ## DOIO Megalodon Triple Knob Macro Pad
 
 My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscellaneous/kb16_01.layout.json)
