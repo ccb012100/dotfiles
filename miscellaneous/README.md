@@ -10,7 +10,7 @@ To export the settings from your machine into this repository:
 defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
 ```
 
-To import the settings from this repository to your machine:
+To import [the settings from this repository](/miscellaneous/alt-tab-macos.plist) to your machine:
 
 ```zsh
 defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
@@ -50,6 +50,8 @@ Since I don't have any need to insert special characters, I use a [custom Keyboa
 
 To use the custom Keyboard Layout:
 
+1. Copy the [keyboard layout file](/miscellaneous/qwerty_no_option.keylayout) to the `Keyboard Layouts` folder
+
     ```zsh
     cp $HOME/.local/share/chezmoi/miscellaneous/qwerty_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
     ```
@@ -66,17 +68,18 @@ source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-161512798
 
 [**Rectangle**](https://rectangleapp.com/) window manager.
 
-To import the settings:
+To import the settings from [the file in this repo](/miscellaneous/Stats.plist):
 
 1. Open **Rectangle**'s settings.
 2. Click the ⚙ icon in the top bar.
 3. Click _Import_ on the bottom.
+4. Select `$HOME/.local/share/chezmoi/miscellaneous/Stats.plist`
 
 ## Stats
 
 [**Stats**](https://github.com/exelban/stats) menu bar system monitor
 
-To import the settings:
+To export the settings:
 
 1. Right click on the **Stats** icon(s) in the menu bar.
 1. Right click on the ⚙ icon in the upper-right corner to open the settings.
