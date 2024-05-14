@@ -2,4 +2,4 @@
 
 dotfiles managed by [chezmoi](https://www.chezmoi.io/).
 
-The [miscellaneous](miscellaneous/) folder is for configurations that I don't want/need to be applied via `chezmoi apply`.
+The [macOS](macOS) folder is for **macOS**-specific configurations that I can't/don't want to apply via `chezmoi apply`.

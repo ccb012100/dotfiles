@@ -117,7 +117,7 @@
 	<key>LaunchAtLoginNext</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.local/share/chezmoi/miscellaneous</string>
+	<string>~/.local/share/chezmoi/macOS</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{800, 448}</string>
 	<key>NSStatusItem Preferred Position CombinedModules</key>

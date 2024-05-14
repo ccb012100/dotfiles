@@ -1,6 +1,6 @@
 LICENSE.txt
 README.md
-miscellaneous/*
+macOS/*
 {{/* IF NOT on work machine, THEN ignore these */ -}}
 {{- if (ne .chezmoi.hostname "8901-75SCSV3") }}
 .local/work.gitconfig

@@ -1,4 +1,4 @@
-# Miscellaneous
+# Manually Updated macOS Settings
 
 ## AltTab
 
@@ -7,18 +7,18 @@
 To export the settings from your machine into this repository:
 
 ```zsh
-defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
+defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
 ```
 
-To import [the settings from this repository](/miscellaneous/alt-tab-macos.plist) to your machine:
+To import [the settings from this repository](/macOS/alt-tab-macos.plist) to your machine:
 
 ```zsh
-defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/miscellaneous/alt-tab-macos.plist
+defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
 ```
 
 ## DOIO Megalodon Triple Knob Macro Pad
 
-My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscellaneous/kb16_01.layout.json)
+My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/macOS/kb16_01.layout.json)
 
 - [Instructions](https://wiki.keebmonkey.com/en/products/mmp) for updating with **VIA**
   - To set an encoder function as transparent, enter the value `KC_TRNS` manually.
@@ -35,25 +35,25 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscel
 
 [iTerm2](https://iterm2.com/) terminal emulator
 
-To sync with [the file in this repo](/miscellaneous/com.googlecode.iterm2.plist), in **iTerm2**:
+To sync with [the file in this repo](/macOS/com.googlecode.iterm2.plist), in **iTerm2**:
 
 - Open **Settings ➤ General ➤ Preferences**
 - Check _Load preferences from a custom folder or URL_
 - Click _Browse_
-- Select [miscellaneous/com.googlecode.iterm2.plist](/miscellaneous/com.googlecode.iterm2.plist) in this repo
+- Select [com.googlecode.iterm2.plist](/macOS/com.googlecode.iterm2.plist).
 
 ## Keyboard Layout
 
 The default Keyboard Layout for **macOS** uses the `Alt`/`Option`/`⌥` key to insert special characters. This prevents some applications (**Visual Studio Code**, **JetBrains Rider**) from using ⌥ chords.
 
-Since I don't have any need to insert special characters, I use a [custom Keyboard Layout](/miscellaneous/qwerty_no_option.keylayout) to use the `⌥` keys as just normal `Alt` keys.
+Since I don't have any need to insert special characters, I use a [custom Keyboard Layout](/macOS/qwerty_no_option.keylayout) to use the `⌥` keys as just normal `Alt` keys.
 
 To use the custom Keyboard Layout:
 
-1. Copy the [keyboard layout file](/miscellaneous/qwerty_no_option.keylayout) to the `Keyboard Layouts` folder
+1. Copy the [keyboard layout file](/macOS/qwerty_no_option.keylayout) to the `Keyboard Layouts` folder
 
     ```zsh
-    cp $HOME/.local/share/chezmoi/miscellaneous/qwerty_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
+    cp $HOME/.local/share/chezmoi/macOS/qwerty_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
     ```
 
 1. Go to `System Settings > Keyboard > Text Input > Input Sources > Edit`.
@@ -68,12 +68,12 @@ source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-161512798
 
 [**Rectangle**](https://rectangleapp.com/) window manager.
 
-To import the settings from [the file in this repo](/miscellaneous/Stats.plist):
+To import the settings from [the file in this repo](/macOS/Stats.plist):
 
 1. Open **Rectangle**'s settings.
 2. Click the ⚙ icon in the top bar.
 3. Click _Import_ on the bottom.
-4. Select `$HOME/.local/share/chezmoi/miscellaneous/Stats.plist`
+4. Select [`Stats.plist`](/macOS/Stats.plist).
 
 ## Stats
 
