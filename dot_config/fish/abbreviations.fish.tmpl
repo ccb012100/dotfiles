@@ -6,10 +6,7 @@ abbr --add update update_packages
 # jump to directory
 abbr --add chez __zoxide_z $HOME/.local/share/chezmoi
 abbr --add config __zoxide_z $HOME/config
-abbr --add dotfiles __zoxide_z $HOME/.local/share/chezmoi
 abbr --add local __zoxide_z $HOME/.local
-abbr --add src __zoxide_z $HOME/src
-abbr --add work __zoxide_z $HOME/work
 
 # fish
 abbr --add efish exec fish
@@ -133,14 +130,16 @@ abbr --add v vim
 abbr --add vi vim
 # vs code
 abbr --add c code
+#: open directories in vscode
 abbr --add c. 'code .' # open current directory in VS Code
-abbr --add notes code $HOME/.local/notes.code-workspace
+abbr --add econf code $HOME/.local/share/chezmoi # (e)dit (conf)ig
+abbr --add enotes code $HOME/.local/notes.code-workspace # (e)dit notes
 {{- if (eq .chezmoi.os "linux")}}
 # systemctl
 abbr --add sctl sysmtemctl
 {{- end }}
 # zoxide
-abbr --add jq zoxide query
+abbr --add zq zoxide query
 abbr --add zo zoxide
 
 {{/* IF on WSL2, THEN run 1Password as a service account */ -}}
