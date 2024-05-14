@@ -44,49 +44,49 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
 shift + ctrl - a [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - a"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - a"
 ]
 ctrl - c [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - c"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - c"
 ]
 shift + ctrl - f [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - f"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - f"
 ]
 shift + ctrl - h [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - h"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - h"
 ]
 ctrl - l [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - l"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - l"
 ]
 ctrl + shift - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"
@@ -94,22 +94,22 @@ ctrl + shift - l [
     *                   ~
 ]
 ctrl - m [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - m"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - m"
 ]
 ctrl + shift - n [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - n"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - n"
 ]
 ctrl - q [
     "Microsoft Teams"   ~
@@ -118,122 +118,121 @@ ctrl - q [
     "zed"               ~
     "Terminal"          ~
     "iTerm2"            ~
-    "JetBrains Rider" ~
+    "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - q"
 ]
 ctrl - r [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *       :   skhd -k "cmd - r"
-]
-ctrl - s [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - s"
-]
-ctrl - t [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - t"
-]
-shift + ctrl - t [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *       :   skhd -k "shift + cmd - t"
-]
-ctrl - v [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *       :   skhd -k "cmd - v"
-]
-ctrl - x [
-    "code"  ~
-    "kitty" ~
-    "zed"   ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *       :   skhd -k "cmd - x"
-]
-ctrl - w [
-    "Microsoft Teams"   ~
     "code"              ~
     "kitty"             ~
     "zed"               ~
     "Terminal"          ~
     "iTerm2"            ~
-    "JetBrains Rider" ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - r"
+]
+ctrl - s [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - s"
+]
+ctrl - t [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - t"
+]
+shift + ctrl - t [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "shift + cmd - t"
+]
+ctrl - v [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - v"
+]
+ctrl - x [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - x"
+]
+ctrl - w [
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - w"
 ]
 ctrl - y [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - v"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - v"
 ]
 ctrl - z [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - z"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - z"
 ]
 # (kVK_Comma = 0x2B)
 ctrl - 0x2B [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - 0x2B"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - 0x2B"
 ]
 # Ctrl+[ (0x21) to go backwards
 ctrl - 0x21 [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    "Spotify"   :   skhd -k "alt - left"
-    *           :   skhd -k "cmd - 0x21"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    "Spotify"           :   skhd -k "alt - left"
+    *                   :   skhd -k "cmd - 0x21"
 ]
 # Ctrl+] (0x1E) to go forwards
 ctrl - 0x1E [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    "Spotify"   :   skhd -k "alt - right"
-    *           :   skhd -k "cmd - 0x1E"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    "Spotify"           :   skhd -k "alt - right"
+    *                   :   skhd -k "cmd - 0x1E"
 ]
 # map ⌘+[ to ⌥+← in Spotify
 cmd - 0x21 [
@@ -247,11 +246,11 @@ cmd - 0x1E [
 ]
 # ctrl+/ (0x2C) to undo
 ctrl - 0x2C [
-    "code"      ~
-    "kitty"     ~
-    "zed"       ~
-    "Terminal"  ~
-    "iTerm2"    ~
-    "JetBrains Rider" ~
-    *           :   skhd -k "cmd - z"
+    "code"              ~
+    "kitty"             ~
+    "zed"               ~
+    "Terminal"          ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    *                   :   skhd -k "cmd - z"
 ]
