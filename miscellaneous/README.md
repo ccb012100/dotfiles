@@ -15,6 +15,17 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/miscel
 - Firmware should be donwloaded from the [**VIA** site](https://www.caniusevia.com/docs/download_firmware).
   - [direct link](https://raw.githubusercontent.com/the-via/firmware/master/doio_kb16_rev2_via.bin) to firmware download
 
+## iTerm2
+
+[iTerm2](https://iterm2.com/) terminal emulator
+
+To sync with [the file in this repo](/miscellaneous/com.googlecode.iterm2.plist), in **iTerm2**:
+
+- Open **Settings ➤ General ➤ Preferences**
+- Check _Load preferences from a custom folder or URL_
+- Click _Browse_
+- Select [miscellaneous/com.googlecode.iterm2.plist](/miscellaneous/com.googlecode.iterm2.plist) in this repo
+
 ## Rectangle
 
 [**Rectangle**](https://rectangleapp.com/) window manager.
@@ -27,22 +38,11 @@ To import the settings:
 
 ## Stats
 
-[**Stats**](https://github.com/exelban/stats) - menu bar system monitor
+[**Stats**](https://github.com/exelban/stats) menu bar system monitor
 
 To import the settings:
 
 1. Right click on the **Stats** icon(s) in the menu bar.
-2. Right click on the ⚙ icon in the upper-right corner to open the settings.
-3. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
-4. Click _Export settings_
-
-## iTerm2
-
-[iTerm2](https://iterm2.com/) terminal emulator
-
-To sync with [the file in this repo](/miscellaneous/com.googlecode.iterm2.plist), in **iTerm2**:
-
-- Open **Settings ➤ General ➤ Preferences**
-- Check _Load preferences from a custom folder or URL_
-- Click _Browse_
-- Select [miscellaneous/com.googlecode.iterm2.plist](/miscellaneous/com.googlecode.iterm2.plist) in this repo
+1. Right click on the ⚙ icon in the upper-right corner to open the settings.
+1. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
+1. Click _Export settings_
