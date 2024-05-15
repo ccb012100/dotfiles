@@ -38,13 +38,6 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh key #
 ###########
 
-# h: (H)ide active window
-meh - h [
-    "code"  :   osascript -e 'tell application "System Events" to set visible of application process "Code" to false'
-    "kitty" :   osascript -e 'tell application "System Events" to set visible of application process "kitty" to false'
-    *       :   skhd -k "cmd - h"
-]
-
 meh - a : open -a Microsoft\ Teams\ (work\ or\ school)
 meh - d : open -a Rider
 meh - e : open -a Microsoft\ Edge
@@ -61,6 +54,7 @@ meh - s : open -a Spotify
 ####################################################
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
+# Shift+Ctrl+a to Select all
 shift + ctrl - a [
     "code"              ~
     "kitty"             ~
@@ -70,6 +64,7 @@ shift + ctrl - a [
     "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - a"
 ]
+# Ctrl+c to Copy
 ctrl - c [
     "code"              ~
     "kitty"             ~
@@ -79,84 +74,20 @@ ctrl - c [
     "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - c"
 ]
-shift + ctrl - f [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - f"
-]
-shift + ctrl - h [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - h"
-]
+# Ctrl+l to Focus in URL bar
 ctrl - l [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - l"
+    "Firefox"           :   skhd -k "cmd - l"
+    "Google Chrome"     :   skhd -k "cmd - l"
+    "Microsoft Edge"    :   skhd -k "cmd - l"
+    *                   ~
 ]
-ctrl + shift - l [
+# Shift+Ctrl+l to Search open tabs in chromium browsers
+shift + ctrl - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"
     "Microsoft Edge"    :   skhd -k "cmd + shift - a"
     *                   ~
 ]
-ctrl - m [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - m"
-]
-ctrl + shift - n [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - n"
-]
-ctrl - q [
-    "Microsoft Teams"   ~
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - q"
-]
-ctrl - r [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - r"
-]
-ctrl - s [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - s"
-]
+# Ctrl+t to Open a new tab
 ctrl - t [
     "code"              ~
     "kitty"             ~
@@ -166,90 +97,73 @@ ctrl - t [
     "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - t"
 ]
+# Shift+Ctrl+t to Reopen last browser tab
 shift + ctrl - t [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "shift + cmd - t"
+    "Firefox"           :   skhd -k "shift + cmd - t"
+    "Google Chrome"     :   skhd -k "shift + cmd - t"
+    "Microsoft Edge"    :   skhd -k "shift + cmd - t"
+    *                   ~
 ]
+# Ctrl+v to Paste
 ctrl - v [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - v"
 ]
+# Ctrl+x to Cut
 ctrl - x [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - x"
 ]
-ctrl - w [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - w"
-]
+# Ctrl+y to Paste
 ctrl - y [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - v"
 ]
+# ctrl+z to Undo
 ctrl - z [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - z"
 ]
-# (kVK_Comma = 0x2B)
-ctrl - 0x2B [
-    "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    *                   :   skhd -k "cmd - 0x2B"
-]
-# Ctrl+[ (0x21) to go backwards
+# Ctrl+[ (0x21) to Go backwards
 ctrl - 0x21 [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
     "Spotify"           :   skhd -k "alt - left"
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - 0x21"
 ]
-# Ctrl+] (0x1E) to go forwards
+# Ctrl+] (0x1E) to Go forwards
 ctrl - 0x1E [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
     "Spotify"           :   skhd -k "alt - right"
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - 0x1E"
 ]
 # map ⌘+[ to ⌥+← in Spotify
@@ -262,13 +176,13 @@ cmd - 0x1E [
     "Spotify"   :   skhd -k "alt - right"
     *           ~
 ]
-# ctrl+/ (0x2C) to undo
+# ctrl+/ (0x2C) to Undo
 ctrl - 0x2C [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
     *                   :   skhd -k "cmd - z"
 ]
