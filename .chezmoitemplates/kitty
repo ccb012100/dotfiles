@@ -47,42 +47,45 @@ kitty_mod ctrl+shift
 {{ if eq .os "darwin" }}
 # Toggle macOS secure keyboard entry
 map opt+cmd+s toggle_macos_secure_keyboard_entry
+map cmd+h hide_macos_app
+map opt+cmd+h hide_macos_other_apps
 
+{{ if eq .cmd_as_ctrl true}}
 # cmd as ctrl (from: <https://github.com/kovidgoyal/kitty/issues/2992>)
-
-# map cmd+@ send_text all \x00
-# map cmd+a send_text all \x01
-# map cmd+b send_text all \x02
-# map cmd+c send_text all \x03
-# map cmd+d send_text all \x04
-# map cmd+e send_text all \x05
-# map cmd+f send_text all \x06
-# map cmd+g send_text all \x07
-# map cmd+h send_text all \x08
-# map cmd+i send_text all \x09
-# map cmd+j send_text all \x0A
-# map cmd+k send_text all \x0B
-# map cmd+l send_text all \x0C
-# map cmd+m send_text all \x0D
-# map cmd+n send_text all \x0E
-# map cmd+o send_text all \x0F
-# map cmd+p send_text all \x10
-# map cmd+q send_text all \x11
-# map cmd+r send_text all \x12
-# map cmd+s send_text all \x13
-# map cmd+t send_text all \x14
-# map cmd+u send_text all \x15
-# map cmd+v send_text all \x16
-# map cmd+w send_text all \x17
-# map cmd+x send_text all \x18
-# map cmd+y send_text all \x19
-# map cmd+z send_text all \x1A
-# map cmd+[ send_text all \x1B
-# map cmd+\ send_text all \x1C
-# map cmd+] send_text all \x1D
-# map cmd+^ send_text all \x1E
-# map cmd+_ send_text all \x1F
-# map cmd+/ send_text all \x1f
+map cmd+@ send_text all \x00
+map cmd+a send_text all \x01
+map cmd+b send_text all \x02
+map cmd+c send_text all \x03
+map cmd+d send_text all \x04
+map cmd+e send_text all \x05
+map cmd+f send_text all \x06
+map cmd+g send_text all \x07
+map cmd+h send_text all \x08
+map cmd+i send_text all \x09
+map cmd+j send_text all \x0A
+map cmd+k send_text all \x0B
+map cmd+l send_text all \x0C
+map cmd+m send_text all \x0D
+map cmd+n send_text all \x0E
+map cmd+o send_text all \x0F
+map cmd+p send_text all \x10
+map cmd+q send_text all \x11
+map cmd+r send_text all \x12
+map cmd+s send_text all \x13
+map cmd+t send_text all \x14
+map cmd+u send_text all \x15
+map cmd+v send_text all \x16
+map cmd+w send_text all \x17
+map cmd+x send_text all \x18
+map cmd+y send_text all \x19
+map cmd+z send_text all \x1A
+map cmd+[ send_text all \x1B
+map cmd+\ send_text all \x1C
+map cmd+] send_text all \x1D
+map cmd+^ send_text all \x1E
+map cmd+_ send_text all \x1F
+map cmd+/ send_text all \x1f
+{{- end }}
 {{- end }}
 map super+q quit
 map kitty_mod+q quit
@@ -125,20 +128,20 @@ map kitty_mod+home scroll_home
 map kitty_mod+end scroll_end
 
 #: Browse scrollback buffer in pager
-map {{ .modifier }}+j>s show_scrollback
+map ctrl+j>s show_scrollback
 
 #: Browse output of the last command in pager
-map {{ .modifier }}+j>o show_last_command_output
+map ctrl+j>o show_last_command_output
 
 # Window management
 
-map {{ .modifier }}+j>{{ .modifier }}+j next_window
-map {{ .modifier }}+j>{{ .modifier }}+shift+j next_window
-map {{ .modifier }}+j>k close_window
-map {{ .modifier }}+j>n new_os_window_with_cwd
-map {{ .modifier }}+j>r start_resizing_window
-map {{ .modifier }}+j>w close_os_window
-map {{ .modifier }}+j>z toggle_maximized
+map ctrl+j>ctrl+j next_window
+map ctrl+j>ctrl+shift+j next_window
+map ctrl+j>k close_window
+map ctrl+j>n new_os_window_with_cwd
+map ctrl+j>r start_resizing_window
+map ctrl+j>w close_os_window
+map ctrl+j>z toggle_maximized
 map kitty_mod+space launch --cwd=current
 map kitty_mod+w close_os_window
 map super+n new_os_window_with_cwd
@@ -158,13 +161,13 @@ map kitty_mod+t move_window_to_top
 #: Visually select and focus window
 map kitty_mod+; focus_visible_window
 #: Visually swap window with another
-map {{ .modifier }}+j>; swap_with_window
+map ctrl+j>; swap_with_window
 
 # Tab management
 
 #: launch new tab
 action_alias launch_tab launch --cwd=current --type=tab
-map {{ .modifier }}+j>t launch_tab
+map ctrl+j>t launch_tab
 map kitty_mod+enter launch_tab
 map super+t launch_tab
 
@@ -195,8 +198,8 @@ map kitty_mod+kp_enter change_font_size all 0
 map kitty_mod+backspace change_font_size all 0
 
 # Reset the terminal
-map {{ .modifier }}+j>f5 clear_terminal reset active
-map {{ .modifier }}+j>f6 clear_terminal reset all
+map ctrl+j>f5 clear_terminal reset active
+map ctrl+j>f6 clear_terminal reset all
 
 # BEGIN_KITTY_THEME
 include Eldritch.conf

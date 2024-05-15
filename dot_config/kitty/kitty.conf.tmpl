@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.os "darwin" }}
-{{- template "kitty" dict "modifier" "ctrl" "os" .chezmoi.os -}}
+{{- template "kitty" dict "os" .chezmoi.os "cmd_as_ctrl" false -}}
 {{- else -}}
-{{- template "kitty" dict "modifier" "ctrl" "os" .chezmoi.os -}}
+{{- template "kitty" dict "ctrl" "os" .chezmoi.os -}}
 {{- end -}}
