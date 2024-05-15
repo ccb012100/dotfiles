@@ -116,35 +116,9 @@
                     {
                         "manipulators": [
                             {
-                                "conditions": [],
-                                "description": "Map RightOption -> Meta",
+                                "description": "Map LeftControl -> Meta",
                                 "from": {
-                                    "key_code": "right_option",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
-                                "description": "Map LeftOption -> Meta",
-                                "from": {
-                                    "key_code": "left_option",
+                                    "key_code": "left_control",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -235,7 +209,7 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
+                                "key_code": "left_option"
                             },
                             "to": [
                                 {
@@ -250,6 +224,16 @@
                             "to": [
                                 {
                                     "key_code": "f20"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "right_option"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "right_command"
                                 }
                             ]
                         }
