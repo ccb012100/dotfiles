@@ -17,7 +17,7 @@ indicator_color: #DFFF00
 # hints
 hint_activation_key: S-A-C-;
 hint_bgcolor: #282828
-hint_chars: asdfghjkl;'zxcvnm,./qwertuiopby
+hint_chars: asdfghjkl;weruiom,.
 hint_fgcolor: #FFB000
 hint_font: CozetteVector
 hint: H x
@@ -39,7 +39,7 @@ middle: m
 bottom: b
 
 # grid
-grid_activation_key: S-A-C-g
+#grid_activation_key: S-A-C-g
 grid_border_color: #00ff00
 grid_color: #00ff00
 grid_down: k
