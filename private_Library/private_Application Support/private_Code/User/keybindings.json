@@ -781,11 +781,6 @@
         "when": "focusedView == 'workbench.view.testing'"
     },
     {
-        "key": "alt+enter",
-        "command": "-search.action.openInEditor",
-        "when": "hasSearchResult && searchViewletFocus"
-    },
-    {
         "key": "ctrl+o",
         "command": "editor.action.insertLineAfter",
         "when": "editorTextFocus && !editorReadonly"
@@ -1189,11 +1184,6 @@
     {
         "key": "alt+8",
         "command": "nugetpackagemanagergui.view"
-    },
-    {
-        "key": "ctrl+shift+.",
-        "command": "-breadcrumbs.focusAndSelect",
-        "when": "breadcrumbsPossible && breadcrumbsVisible"
     },
     {
         "key": "ctrl+shift+.",
@@ -3347,9 +3337,9 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+j ctrl+j",
+        "key": "ctrl+enter",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!editorFocus"
+        "when": "workbench.view.search.active && workbench.view.search.visible"
     },
     {
         "key": "ctrl+x o",
@@ -3548,10 +3538,6 @@
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     },
     {
-        "key": "ctrl+j space",
-        "command": "breadcrumbs.focusAndSelect"
-    },
-    {
         "key": "ctrl+g o",
         "command": "workbench.panel.output.focus"
     },
@@ -3645,16 +3631,6 @@
     {
         "key": "ctrl+h f",
         "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "cmd+right",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
     },
     {
         "key": "alt+f",
@@ -3812,14 +3788,6 @@
         "command": "workbench.action.quickTextSearch"
     },
     {
-        "key": "cmd+]",
-        "command": "extension.arrowForwardBtn"
-    },
-    {
-        "key": "cmd+[",
-        "command": "extension.arrowBackBtn"
-    },
-    {
         "key": "ctrl+.",
         "command": "editor.action.quickFix",
         "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
@@ -3867,5 +3835,83 @@
         "key": "alt+q alt+w",
         "command": "-jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-markdown.extension.onIndentLines",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-markdown.extension.onOutdentLines",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+left",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+right",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+left",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "cmd+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+j space",
+        "command": "workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "cmd+k cmd+q",
+        "command": "-workbench.action.navigateToLastEditLocation"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "actions.find",
+        "when": "editorFocus || editorIsOpen"
     }
 ]
