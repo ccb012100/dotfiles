@@ -29,7 +29,13 @@ alt + shift - 0x32 [
     *       ~
 ]
 
-# macOS interprets the SysRq (Print Screen) key as F13
+# F5 to mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
+f5 [
+    "Microsoft Teams"   : skhd -k "shift + cmd - m"
+    *                   ~
+]
+
+# SysRq (Print Screen) is interpreted as F13 in macOS
 f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
 cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
 shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
@@ -38,12 +44,15 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh key #
 ###########
 
+# Meh chords reserved by other programs:
+#   Rectangle:  - , . ← → ↑ ↓ = ⎋ b c l m n r t
+#   iTerm2:     i
+
 meh - a : open -a Microsoft\ Teams\ (work\ or\ school)
 meh - d : open -a Rider
 meh - e : open -a Microsoft\ Edge
 meh - f : open -a firefox
 meh - g : open -a Google\ Chrome
-meh - i : open -a Safari
 meh - j : open -a Visual\ Studio\ Code
 meh - k : open -a kitty
 meh - o : open -a Microsoft\ Outlook
@@ -73,6 +82,16 @@ ctrl - c [
     "iTerm2"            ~
     "JetBrains Rider"   ~
     *                   :   skhd -k "cmd - c"
+]
+# Alt+w to Forward delete word
+alt - d [
+    "code"              ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
+    *                   :   skhd -k "shift + alt - delete"
 ]
 # Ctrl+l to Focus in URL bar
 ctrl - l [
@@ -113,6 +132,26 @@ ctrl - v [
     "Terminal"          ~
     "zed"               ~
     *                   :   skhd -k "cmd - v"
+]
+# Ctrl+w to Close tab
+ctrl - w [
+    "code"              ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - w"
+]
+# Alt+w to Copy
+alt - w [
+    "code"              ~
+    "iTerm2"            ~
+    "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - c"
 ]
 # Ctrl+x to Cut
 ctrl - x [
