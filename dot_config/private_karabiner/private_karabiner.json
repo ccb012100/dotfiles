@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Map mouse buttons 4 & 5 -> Cmd-[ & Cmd-]",
+                        "description": "Mouse buttons {4,5 } -> {Cmd-[,Cmd-]}",
                         "manipulators": [
                             {
                                 "from": {
@@ -51,7 +51,7 @@
                         ]
                     },
                     {
-                        "description": "Map F17 -> Clipboard Screenshot",
+                        "description": "F17 -> Clipboard Screenshot",
                         "manipulators": [
                             {
                                 "from": {
@@ -74,7 +74,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Map F19 (LeftCommand) -> LeftOption.",
+                                "description": "F19 (LeftCommand) -> LeftOption",
                                 "from": {
                                     "key_code": "f19",
                                     "modifiers": {
@@ -95,7 +95,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Map F20 (RightCommand) -> RightOption.",
+                                "description": "F20 (RightCommand) -> RightOption",
                                 "from": {
                                     "key_code": "f20",
                                     "modifiers": {
@@ -114,11 +114,11 @@
                         ]
                     },
                     {
+                        "description": "Escape → ModTap(Meh Key (⌃⌥⇧), Escape)",
                         "manipulators": [
                             {
-                                "description": "Map LeftControl -> Meta",
                                 "from": {
-                                    "key_code": "left_control",
+                                    "key_code": "escape",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -134,12 +134,17 @@
                                         ]
                                     }
                                 ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Change Spacebar to ModTap(LeftCtrl, Spacebar)",
+                        "description": "Spacebar → ModTap(LeftCtrl, Spacebar)",
                         "manipulators": [
                             {
                                 "from": {
