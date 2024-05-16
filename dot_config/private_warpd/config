@@ -8,6 +8,7 @@ oneshot_buttons: m , .
 history: ; h
 hist_forward: C-f
 hist_back: C-b
+history_activation_key: S-A-C-|
 
 # indicator
 indicator: topright
