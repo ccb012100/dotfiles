@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AddedStandardMacOSPresetP2</key>
+	<true/>
+	<key>AdjustedPrefsForB5</key>
+	<true/>
+	<key>AdjustedPrefsForB5P2</key>
+	<true/>
+	<key>BartenderBarOnlyOnNotchScreens</key>
+	<integer>1</integer>
+	<key>FRFeedbackReporter.lastCrashCheckDate</key>
+	<date>2024-05-17T14:03:25Z</date>
+	<key>Gaps-RequireAltOrRightClickToShowGapPopup</key>
+	<integer>1</integer>
+	<key>HaveConvertedImageSFUsToTriggers</key>
+	<true/>
+	<key>HaveConvertedSFUsToTriggers</key>
+	<true/>
+	<key>HaveCreatedDefaultTriggers</key>
+	<true/>
+	<key>HideItemsWhenShowingOthers</key>
+	<false/>
+	<key>IfScreenIsBiggerDontHide</key>
+	<integer>1</integer>
+	<key>IfScreenIsBiggerThanDontHide</key>
+	<real>2151.171875</real>
+	<key>LaunchAtLogin__hasMigratedNew</key>
+	<true/>
+	<key>MenuBarColoring-SpaceSettings</key>
+	<data>
+	</data>
+	<key>MouseOverMenuBarTogglesBartender</key>
+	<integer>1</integer>
+	<key>NSColorPanelMode</key>
+	<string>7</string>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Pictures</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{1147, 1091}</string>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 228.000000, 315.000000, NO, NO</string>
+		<string>0.000000, 316.000000, 228.000000, 43.000000, NO, NO</string>
+	</array>
+	<key>NSStatusItem Preferred Position EItem</key>
+	<real>11255</real>
+	<key>NSStatusItem Preferred Position HISItem</key>
+	<real>654</real>
+	<key>NSStatusItem Preferred Position RHSItem</key>
+	<real>1223</real>
+	<key>NSStatusItem Preferred Position THSItem</key>
+	<real>6239</real>
+	<key>NSStatusItem Preferred Position special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
+	<real>632</real>
+	<key>NSStatusItem Preferred Position statusItem</key>
+	<real>201</real>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>612 741 228 335 0 0 1728 1079 </string>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>1346 783 1147 1091 0 0 3840 2135 </string>
+	<key>NSWindow Frame SU5AlertMessages</key>
+	<real>1713904655.506639</real>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1720 1500 400 135 0 0 3840 2135 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1610 1072 620 628 0 0 3840 2135 </string>
+	<key>ProfileSettings</key>
+	<dict>
+		<key>StandardMacOS</key>
+		<dict>
+			<key>AlwaysHide</key>
+			<array/>
+			<key>BartenderBarStyling</key>
+			<data>
+			</data>
+			<key>GapItemLabels</key>
+			<dict/>
+			<key>GapItemWidths</key>
+			<dict/>
+			<key>Hide</key>
+			<array>
+				<string>special.AllOtherItems</string>
+			</array>
+			<key>Show</key>
+			<array>
+				<string>com.apple.Spotlight-Item-0</string>
+				<string>com.apple.controlcenter-WiFi</string>
+			</array>
+			<key>description</key>
+			<string>Shows only the default menu bar items on a clean install of macOS, all other menu bar items are hidden. Great for screen recording or screen shots.</string>
+			<key>icon</key>
+			<data>
+			</data>
+			<key>iconIsTemplate</key>
+			<true/>
+			<key>isSpecial</key>
+			<false/>
+			<key>leaveAlwaysHiddenItems</key>
+			<true/>
+			<key>name</key>
+			<string>Default macOS menu bar items</string>
+			<key>subBarStyling</key>
+			<data>
+			</data>
+			<key>subItemIcons</key>
+			<data>
+			</data>
+			<key>subItemItems</key>
+			<dict/>
+			<key>subItemTitles</key>
+			<dict/>
+		</dict>
+		<key>activeProfile</key>
+		<dict>
+			<key>AlwaysHide</key>
+			<array/>
+			<key>BartenderBarStyling</key>
+			<data>
+			</data>
+			<key>GapItemLabels</key>
+			<dict>
+				<key>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
+				<string>╏</string>
+			</dict>
+			<key>GapItemWidths</key>
+			<dict>
+				<key>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
+				<integer>6</integer>
+			</dict>
+			<key>Hide</key>
+			<array>
+				<string>com.apple.Spotlight-Item-0</string>
+				<string>com.apple.TextInputMenuAgent-Item-0</string>
+				<string>org.pqrs.Karabiner-Menu-Item-0</string>
+				<string>com.lwouis.alt-tab-macos-Item-0</string>
+				<string>com.knollsoft.Rectangle-Item-0</string>
+				<string>org.dmarcotte.Easy-Move-Resize-Item-0</string>
+				<string>com.rouge41.middleClick-Item-0</string>
+				<string>com.bitwarden.desktop-Item-0</string>
+				<string>com.1password.1password-Item-0</string>
+				<string>com.apple.controlcenter-Battery</string>
+				<string>com.logitech.logitune-Item-0</string>
+				<string>com.oliverpeate.Bluesnooze-Item-0</string>
+				<string>digital.twisted.noTunes-Item-0</string>
+				<string>com.microsoft.OneDrive-Item-0</string>
+				<string>com.zscaler.zscaler-Item-0</string>
+				<string>com.trusourcelabs.NoMAD-Item-0</string>
+			</array>
+			<key>Show</key>
+			<array>
+				<string>LGSI.TrueColorPro-Item-0</string>
+				<string>special.AllOtherItems</string>
+				<string>com.surteesstudios.Bartender-statusItem</string>
+				<string>com.lujjjh.LinearMouse-Item-0</string>
+				<string>com.contextsformac.Contexts-Item-0</string>
+				<string>eu.exelban.Stats-CombinedModules</string>
+				<string>com.apple.controlcenter-Sound</string>
+				<string>com.knfa.signal-shifter-Item-0</string>
+				<string>com.apple.controlcenter-NowPlaying</string>
+				<string>com.apple.controlcenter-Bluetooth</string>
+				<string>com.apple.controlcenter-WiFi</string>
+				<string>com.microsoft.Outlook-Item-0</string>
+				<string>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</string>
+				<string>com.apple.screencaptureui-Item-0</string>
+			</array>
+			<key>description</key>
+			<string></string>
+			<key>icon</key>
+			<data>
+			</data>
+			<key>iconIsTemplate</key>
+			<true/>
+			<key>isSpecial</key>
+			<true/>
+			<key>leaveAlwaysHiddenItems</key>
+			<false/>
+			<key>name</key>
+			<string>Profile</string>
+			<key>subBarStyling</key>
+			<data>
+			</data>
+			<key>subItemIcons</key>
+			<data>
+			</data>
+			<key>subItemItems</key>
+			<dict/>
+			<key>subItemTitles</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>ReduceUpdateCheckFrequencyWhenOnBattery</key>
+	<integer>1</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2024-05-17T13:59:59Z</date>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>428068234</integer>
+	<key>SUUpdateRelaunchingMarker</key>
+	<false/>
+	<key>TerminationReason</key>
+	<string>Bartender Quitting due to system restart or logout</string>
+	<key>TerminationReasons</key>
+	<array>
+		<string>2024-04-23 20:44:12 +0000 Bartender Quitting due to system restart or logout (POWER OFF) (Not set to Start at Login)</string>
+		<string>2024-04-23 20:44:12 +0000 Bartender Quitting due to system restart or logout (Not set to Start at Login)</string>
+		<string>2024-04-28 20:49:42 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
+		<string>2024-04-28 20:49:42 +0000 Bartender Quitting due to system restart or logout</string>
+		<string>2024-04-29 22:14:30 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
+		<string>2024-04-29 22:14:30 +0000 Bartender Quitting due to system restart or logout</string>
+		<string>2024-05-06 19:16:42 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
+		<string>2024-05-06 19:16:42 +0000 Bartender Quitting due to system restart or logout</string>
+		<string>2024-05-17 14:00:22 +0000 Bartender Quitting due to update</string>
+		<string>2024-05-17 14:01:32 +0000 Bartender Quitting due to system restart or logout</string>
+		<string>2024-05-17 14:02:35 +0000 Bartender Quitting due to system restart or logout</string>
+		<string>2024-05-17 14:03:22 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
+		<string>2024-05-17 14:03:22 +0000 Bartender Quitting due to system restart or logout</string>
+	</array>
+	<key>TriggerSettings</key>
+	<dict>
+		<key>Battery1</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>icon</key>
+			<dict>
+				<key>SFSymbolName</key>
+				<string>minus.plus.batteryblock.exclamationmark</string>
+				<key>isTemplate</key>
+				<true/>
+			</dict>
+			<key>isActive</key>
+			<true/>
+			<key>isSpecial</key>
+			<false/>
+			<key>menuBarItemsToActivate</key>
+			<dict>
+				<key>com.1password.1password-Item-0</key>
+				<string>1Password</string>
+				<key>com.apple.Spotlight-Item-0</key>
+				<string>Spotlight</string>
+				<key>com.apple.controlcenter-Battery</key>
+				<string>Battery</string>
+				<key>com.apple.controlcenter-BentoBox</key>
+				<string>Control Center</string>
+				<key>com.apple.controlcenter-Bluetooth</key>
+				<string>Bluetooth</string>
+				<key>com.apple.controlcenter-Clock</key>
+				<string>Clock</string>
+				<key>com.apple.controlcenter-Sound</key>
+				<string>Sound</string>
+				<key>com.apple.controlcenter-WiFi</key>
+				<string>WiFi</string>
+				<key>com.bitwarden.desktop-Item-0</key>
+				<string>Bitwarden</string>
+				<key>com.knollsoft.Rectangle-Item-0</key>
+				<string>Rectangle</string>
+				<key>com.logitech.logitune-Item-0</key>
+				<string>LogiTune</string>
+				<key>com.microsoft.OneDrive-Item-0</key>
+				<string>OneDrive</string>
+				<key>com.microsoft.Outlook-Item-0</key>
+				<string>Microsoft Outlook</string>
+				<key>com.oliverpeate.Bluesnooze-Item-0</key>
+				<string>Bluesnooze</string>
+				<key>com.rouge41.middleClick-Item-0</key>
+				<string>MiddleClick</string>
+				<key>com.surteesstudios.Bartender-statusItem</key>
+				<string>Bartender 5</string>
+				<key>com.trusourcelabs.NoMAD-Item-0</key>
+				<string>NoMAD</string>
+				<key>com.zscaler.zscaler-Item-0</key>
+				<string>Zscaler</string>
+				<key>eu.exelban.Stats-CombinedModules</key>
+				<string>Stats</string>
+				<key>org.dmarcotte.Easy-Move-Resize-Item-0</key>
+				<string>Easy Move+Resize</string>
+				<key>org.pqrs.Karabiner-Menu-Item-0</key>
+				<string>Karabiner-Menu</string>
+			</dict>
+			<key>name</key>
+			<string>Show Battery when battery condition met</string>
+			<key>triggerSpecificDict</key>
+			<dict>
+				<key>Battery-When</key>
+				<string>lessThan</string>
+				<key>Battery-percentage</key>
+				<real>20.258091517857142</real>
+				<key>ShowOn</key>
+				<string>AllDisconnected</string>
+				<key>WiFiSSID</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<array>
+				<string>WiFi</string>
+				<string>Battery</string>
+			</array>
+		</dict>
+		<key>TimeMachine1</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>icon</key>
+			<dict>
+				<key>SFSymbolName</key>
+				<string>clock.arrow.circlepath</string>
+				<key>isTemplate</key>
+				<true/>
+			</dict>
+			<key>isActive</key>
+			<false/>
+			<key>isSpecial</key>
+			<false/>
+			<key>menuBarItemsToActivate</key>
+			<dict>
+				<key>com.apple.systemuiserver-TimeMachine.TMMenuExtraHost</key>
+				<string>SystemUIServer</string>
+			</dict>
+			<key>name</key>
+			<string>Show Time Machine when time machine is backing up.</string>
+			<key>triggerSpecificDict</key>
+			<dict>
+				<key>Script</key>
+				<string>tmutil status | awk -F'=' '/Running/ {print $2*1}'</string>
+			</dict>
+			<key>type</key>
+			<array>
+				<string>Script</string>
+			</array>
+		</dict>
+		<key>WiFi1</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>icon</key>
+			<dict>
+				<key>SFSymbolName</key>
+				<string>wifi.slash</string>
+				<key>isTemplate</key>
+				<true/>
+			</dict>
+			<key>isActive</key>
+			<true/>
+			<key>isSpecial</key>
+			<false/>
+			<key>menuBarItemsToActivate</key>
+			<dict>
+				<key>com.apple.controlcenter-WiFi</key>
+				<string>Wi-Fi</string>
+			</dict>
+			<key>name</key>
+			<string>Show Wi-Fi when Wi-Fi condition met</string>
+			<key>triggerSpecificDict</key>
+			<dict>
+				<key>ShowOn</key>
+				<string>AllDisconnected</string>
+			</dict>
+			<key>type</key>
+			<array>
+				<string>WiFi</string>
+			</array>
+		</dict>
+	</dict>
+	<key>UpdateWelcomeMessageShowAgainB5</key>
+	<true/>
+	<key>UseBartenderBar</key>
+	<integer>1</integer>
+	<key>bartenderAutoExtendsMenuBar</key>
+	<integer>0</integer>
+	<key>hotkeySearch</key>
+	<dict>
+		<key>characters</key>
+		<string>/</string>
+		<key>keyCode</key>
+		<integer>44</integer>
+		<key>modifierFlags</key>
+		<integer>917504</integer>
+	</dict>
+	<key>statusBarImage</key>
+	<data>
+	</data>
+	<key>statusBarImageNamed</key>
+	<string>Bartender</string>
+	<key>trial5Start</key>
+	<date>2024-04-23T20:37:35Z</date>
+</dict>
+</plist>
