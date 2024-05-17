@@ -6,6 +6,8 @@
 	<true/>
 	<key>MSAppCenter310CrashesUserDefaultsMigratedKey</key>
 	<true/>
+	<key>MSAppCenterAppDidReceiveMemoryWarning</key>
+	<true/>
 	<key>MSAppCenterInstallId</key>
 	<string>96CA473A-7EF6-4CF7-A6FC-19504E0B3E38</string>
 	<key>MSAppCenterNetworkRequestsAllowed</key>
@@ -66,7 +68,7 @@
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{800, 1427}</string>
 	<key>NSStatusItem Preferred Position Item-0</key>
-	<real>216</real>
+	<real>835</real>
 	<key>NSStatusItem Visible Item-0</key>
 	<true/>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
@@ -86,7 +88,7 @@
 	<key>blacklist</key>
 	<string>[{"bundleIdentifier":"com.McAfee.McAfeeSafariHost","ignore":"0","hide":"1"},{"hide":"2","ignore":"0","bundleIdentifier":"com.apple.finder"},{"bundleIdentifier":"com.microsoft.rdc.macos","ignore":"2","hide":"0"},{"bundleIdentifier":"com.teamviewer.TeamViewer","hide":"0","ignore":"2"},{"bundleIdentifier":"org.virtualbox.app.VirtualBoxVM","hide":"0","ignore":"2"},{"ignore":"2","bundleIdentifier":"com.parallels.","hide":"0"},{"ignore":"2","hide":"0","bundleIdentifier":"com.citrix.XenAppViewer"},{"hide":"0","ignore":"2","bundleIdentifier":"com.citrix.receiver.icaviewer.mac"},{"hide":"0","bundleIdentifier":"com.nicesoftware.dcvviewer","ignore":"2"},{"hide":"0","bundleIdentifier":"com.vmware.fusion","ignore":"2"},{"ignore":"2","hide":"0","bundleIdentifier":"com.apple.ScreenSharing"},{"ignore":"0","hide":"2","bundleIdentifier":"com.apple.Preview"}]</string>
 	<key>hideShowAppShortcut</key>
-	<string>⇧H</string>
+	<string>N</string>
 	<key>holdShortcut3</key>
 	<string>⌃</string>
 	<key>menubarIcon</key>
@@ -94,7 +96,7 @@
 	<key>mouseHoverEnabled</key>
 	<string>true</string>
 	<key>nextWindowShortcut3</key>
-	<string>`</string>
+	<string></string>
 	<key>preferencesVersion</key>
 	<string>6.69.0</string>
 	<key>previewFocusedWindow</key>
