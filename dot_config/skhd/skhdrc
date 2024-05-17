@@ -106,6 +106,13 @@ shift + ctrl - l [
     "Microsoft Edge"    :   skhd -k "cmd + shift - a"
     *                   ~
 ]
+# Ctrl+r to Reload browser tab
+ctrl - r [
+    "Firefox"           :   skhd -k "cmd - r"
+    "Google Chrome"     :   skhd -k "cmd - r"
+    "Microsoft Edge"    :   skhd -k "cmd - r"
+    *                   ~
+]
 # Ctrl+t to Open a new tab
 ctrl - t [
     "code"              ~
@@ -144,15 +151,15 @@ ctrl - w [
     *                   :   skhd -k "cmd - w"
 ]
 # Alt+w to Copy
-alt - w [
-    "code"              ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "zed"               ~
-    *                   :   skhd -k "cmd - c"
-]
+# alt - w [
+#     "code"              ~
+#     "iTerm2"            ~
+#     "JetBrains Rider"   ~
+#     "kitty"             ~
+#     "Terminal"          ~
+#     "zed"               ~
+#     *                   :   skhd -k "cmd - c"
+# ]
 # Ctrl+x to Cut
 ctrl - x [
     "code"              ~
@@ -164,15 +171,15 @@ ctrl - x [
     *                   :   skhd -k "cmd - x"
 ]
 # Ctrl+y to Paste
-ctrl - y [
-    "code"              ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "zed"               ~
-    *                   :   skhd -k "cmd - v"
-]
+# ctrl - y [
+#     "code"              ~
+#     "iTerm2"            ~
+#     "JetBrains Rider"   ~
+#     "kitty"             ~
+#     "Terminal"          ~
+#     "zed"               ~
+#     *                   :   skhd -k "cmd - v"
+# ]
 # ctrl+z to Undo
 ctrl - z [
     "code"              ~
