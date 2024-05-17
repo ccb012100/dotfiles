@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Mouse buttons {4,5 } -> {Cmd-[,Cmd-]}",
+                        "description": "Mouse buttons {4,5} -> left_command+{open_bracket,close_bracket}",
                         "manipulators": [
                             {
                                 "from": {
@@ -51,7 +51,7 @@
                         ]
                     },
                     {
-                        "description": "F17 -> Clipboard Screenshot",
+                        "description": "f17 -> Clipboard Screenshot (⇧⌘^+4)",
                         "manipulators": [
                             {
                                 "from": {
@@ -74,7 +74,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "F19 (LeftCommand) -> LeftOption",
+                                "description": "f19 (left_command) -> left_option",
                                 "from": {
                                     "key_code": "f19",
                                     "modifiers": {
@@ -95,7 +95,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "F20 (RightCommand) -> RightOption",
+                                "description": "f20 (right_command) -> right_option",
                                 "from": {
                                     "key_code": "f20",
                                     "modifiers": {
@@ -114,7 +114,37 @@
                         ]
                     },
                     {
-                        "description": "Escape → ModTap(Meh Key (⌃⌥⇧), Escape)",
+                        "description": "return_or_enter → ModTap(meh, return_or_enter)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "escape → ModTap(meh, escape)",
                         "manipulators": [
                             {
                                 "from": {
@@ -144,7 +174,7 @@
                         ]
                     },
                     {
-                        "description": "Spacebar → ModTap(LeftCtrl, Spacebar)",
+                        "description": "spacebar → ModTap(left_control, spacebar)",
                         "manipulators": [
                             {
                                 "from": {
