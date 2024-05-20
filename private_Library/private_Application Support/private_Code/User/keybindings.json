@@ -1558,7 +1558,7 @@
         "command": "-workbench.action.quit"
     },
     {
-        "key": "ctrl+j l",
+        "key": "ctrl+g l",
         "command": "workbench.action.gotoLine"
     },
     {
@@ -2212,16 +2212,6 @@
         "when": "editorTextFocus && !openapiErrors"
     },
     {
-        "key": "shift+alt+j",
-        "command": "editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+k",
-        "command": "editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+k ctrl+s",
         "command": "-workbench.action.openGlobalKeybindings"
     },
@@ -2482,16 +2472,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+alt+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+down",
-        "command": "-editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+x ctrl+q",
         "command": "workbench.action.files.toggleActiveEditorReadonlyInSession"
     },
@@ -2699,24 +2679,9 @@
         "when": "editorFocus && findWidgetVisible"
     },
     {
-        "key": "alt+enter",
-        "command": "editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
         "key": "ctrl+j b",
         "command": "rust-analyzer.matchingBrace",
         "when": "editorTextFocus && editorLangId == 'rust'"
-    },
-    {
-        "key": "shift+alt+enter",
-        "command": "editor.action.addSelectionToPreviousFindMatch",
-        "when": "editorFocus"
     },
     {
         "key": "ctrl+l ;",
@@ -3741,7 +3706,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "shift+alt+l",
+        "key": "alt+l",
         "command": "addCursorsAtSearchResults",
         "when": "fileMatchOrMatchFocus && searchViewletVisible"
     },
@@ -3753,26 +3718,6 @@
     {
         "key": "shift+alt+i",
         "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+cmd+down",
-        "command": "-editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+cmd+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "editor.action.insertCursorAbove",
         "when": "editorTextFocus"
     },
     {
@@ -3879,7 +3824,7 @@
         "command": "workbench.action.switchWindow"
     },
     {
-        "key": "alt+;",
+        "key": "ctrl+;",
         "command": "jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3889,7 +3834,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+;",
+        "key": "alt+;",
         "command": "jump-extension.jump-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3917,5 +3862,35 @@
         "key": "alt+q alt+e",
         "command": "-jump-extension.select-to-the-start-of-a-word",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     }
 ]
