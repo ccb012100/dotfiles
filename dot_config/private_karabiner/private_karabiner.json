@@ -18,6 +18,94 @@
                 },
                 "rules": [
                     {
+                        "description": "application button -> mouse right-click (button2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "application",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "pointing_button": "button2"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "left_command+{up_arrow,down_arrow}_arrow -> left_control+{up_arrow,down_arrow} - Mission Control shortcuts [ErgoDox-only]",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": [
+                                            "left_control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Mouse buttons {4,5} -> left_command+{open_bracket,close_bracket}",
                         "manipulators": [
                             {
@@ -74,7 +162,19 @@
                     {
                         "manipulators": [
                             {
-                                "description": "f19 (left_command) -> left_option",
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
+                                "description": "f19 (left_command) -> left_option [excluding ErgoDox]",
                                 "from": {
                                     "key_code": "f19",
                                     "modifiers": {
@@ -95,7 +195,19 @@
                     {
                         "manipulators": [
                             {
-                                "description": "f20 (right_command) -> right_option",
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
+                                "description": "f20 (right_command) -> right_option [excluding ErgoDox]",
                                 "from": {
                                     "key_code": "f20",
                                     "modifiers": {
@@ -114,9 +226,21 @@
                         ]
                     },
                     {
-                        "description": "return_or_enter → ModTap(meh, return_or_enter)",
+                        "description": "return_or_enter → ModTap(meh, return_or_enter) [excluding ErgoDox]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "return_or_enter",
                                     "modifiers": {
@@ -144,9 +268,21 @@
                         ]
                     },
                     {
-                        "description": "escape → ModTap(meh, escape)",
+                        "description": "escape → ModTap(meh, escape) [excluding ErgoDox]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "escape",
                                     "modifiers": {
@@ -174,9 +310,21 @@
                         ]
                     },
                     {
-                        "description": "spacebar → ModTap(left_control, spacebar)",
+                        "description": "spacebar → ModTap(left_control, spacebar) [excluding ErgoDox]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
@@ -308,7 +456,7 @@
                         "product_id": 18806,
                         "vendor_id": 12951
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": true,
                     "mouse_flip_horizontal_wheel": false,
                     "mouse_flip_vertical_wheel": false,
