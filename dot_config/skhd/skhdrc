@@ -100,6 +100,11 @@ ctrl - l [
     "Microsoft Edge"    :   skhd -k "cmd - l"
     *                   ~
 ]
+# Ctrl+k to search in Spotify
+ctrl - k [
+    "Spotify"   :   skhd -k "cmd - k"
+    *           ~
+]
 # Shift+Ctrl+l to Search open tabs in chromium browsers
 shift + ctrl - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"
