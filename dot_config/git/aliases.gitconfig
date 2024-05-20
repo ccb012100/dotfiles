@@ -34,6 +34,7 @@
     call    = commit --all
     can     = ca --no-edit
     cherry  = cherry-pick
+    cm      = commit -m
     cnv     = c --no-verify
     contrib = shortlog -s
     fix     = commit --fixup
