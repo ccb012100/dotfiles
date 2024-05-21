@@ -45,7 +45,7 @@
       "ctrl-r": "search::SelectPrevMatch",
       "ctrl-s": "search::SelectNextMatch",
       "ctrl-shift-/": "editor::Redo", // FIMXE: this doesn't work
-      "ctrl-shift-j": "editor::JoinLines", // FIXME: doesn't work - seems to be a problem with ctrl-j?
+      "ctrl-shift-j": "editor::JoinLines", // FIXME: doesn't work
       "ctrl-shift-k": "editor::DeleteToEndOfLine",
       "ctrl-shift-o": "editor::NewlineAbove",
       "ctrl-shift-s": "buffer_search::Deploy",
@@ -58,8 +58,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctlr-h k": "zed::OpenKeymap",
-      "ctlr-h s": "zed::OpenSettings",
+      "ctrl-h k": "zed::OpenKeymap",
+      "ctrl-h s": "zed::OpenSettings",
       "ctrl-j '": "workspace::ToggleRightDock",
       "ctrl-j ;": "workspace::ToggleBottomDock",
       "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
@@ -70,8 +70,8 @@
     "context": "Pane",
     "bindings": {
       "alt-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-s cmd-shift-h"], // find and replace
-      "ctrl-j ctrl-j": "pane::ActivateNextItem", // FIXME: doesn't seem to work; I think 'ctrl-j' can't be mapped
-      "ctrl-j k": "pane::CloseActiveItem", // FIXME: doesn't seem to work; I think 'ctrl-j' can't be mapped
+      "ctrl-j ctrl-j": "pane::ActivateNextItem", // FIXME: doesn't work
+      "ctrl-j k": "pane::CloseActiveItem",
       "ctrl-x k": "pane::CloseActiveItem",
       "ctrl-shift-w": "pane::CloseActiveItem",
       "ctrl-x 2": "pane::SplitDown",
