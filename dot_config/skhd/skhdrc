@@ -93,14 +93,15 @@ alt - d [
     "zed"               ~
     *                   :   skhd -k "shift + alt - delete"
 ]
-# Ctrl+l to Focus in URL bar
+# Ctrl+l
 ctrl - l [
-    "Firefox"           :   skhd -k "cmd - l"
-    "Google Chrome"     :   skhd -k "cmd - l"
-    "Microsoft Edge"    :   skhd -k "cmd - l"
+    "Firefox"           :   skhd -k "cmd - l" # Focus in URL bar
+    "Google Chrome"     :   skhd -k "cmd - l" # Focus in URL bar
+    "Microsoft Edge"    :   skhd -k "cmd - l" # Focus in URL bar
+    "Spotify"           :   skhd -k "cmd - l" # Search in Spotify
     *                   ~
 ]
-# Ctrl+k to search in Spotify
+# Ctrl+k to Quick search in Spotify
 ctrl - k [
     "Spotify"   :   skhd -k "cmd - k"
     *           ~
