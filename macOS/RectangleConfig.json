@@ -83,7 +83,7 @@
 
     },
     "gapSize" : {
-      "float" : 0
+      "float" : 1
     },
     "hapticFeedbackOnSnap" : {
       "int" : 1
@@ -236,6 +236,14 @@
       "keyCode" : 11,
       "modifierFlags" : 917504
     },
+    "bottomLeft" : {
+      "keyCode" : 123,
+      "modifierFlags" : 917504
+    },
+    "bottomRight" : {
+      "keyCode" : 125,
+      "modifierFlags" : 917504
+    },
     "center" : {
       "keyCode" : 8,
       "modifierFlags" : 917504
@@ -287,7 +295,15 @@
     "topHalf" : {
       "keyCode" : 17,
       "modifierFlags" : 917504
+    },
+    "topLeft" : {
+      "keyCode" : 126,
+      "modifierFlags" : 917504
+    },
+    "topRight" : {
+      "keyCode" : 124,
+      "modifierFlags" : 917504
     }
   },
-  "version" : "83"
+  "version" : "85"
 }
