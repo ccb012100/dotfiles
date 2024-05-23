@@ -80,5 +80,10 @@ set --global --export PATH $HOME/.cargo/bin $PATH
 starship init fish | source
 enable_transience
 
+# wezterm
+{{if eq .chezmoi.os "darwin" -}}
+set --global --export PATH $PATH /Applications/WezTerm.app/Contents/MacOS
+{{- end}}
+
 # zoxide
 zoxide init --cmd j fish | source
