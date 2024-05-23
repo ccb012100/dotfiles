@@ -40,15 +40,6 @@
       "| $0 | |"
     ]
   },
-  "bash-code-block": {
-    "description": "add a Bash shell code block",
-    "prefix": "bash",
-    "body": [
-      "```bash",
-      "$0",
-      "```"
-    ]
-  },
   "see": {
     "prefix": "see",
     "description": "reference to link for more information",
@@ -59,29 +50,29 @@
     "description": "add an image tag",
     "body": "![${2:alt text}](/${1:path to image})$0"
   },
-  "Mermaid node": {
-    "prefix": "mermaid-node",
-    "description": "square Mermaid node",
-    "body": "${1:Node name}[${2:Node text}]"
-  },
-  "Mermaid arrow": {
-    "prefix": "mermaid-arrow",
-    "description": "solid Mermaid arrow",
-    "body": "--> "
-  },
-  "Mermaid arrow with text": {
-    "prefix": "mermaid-label-text-arrow",
-    "description": "Mermaid arrow with label text on the body",
-    "body": "--> | $1 | $0"
-  },
-  "Mermaid rounded node":{
-    "prefix": "mermaid-rounded-node",
-    "description": "Mermaid rounded node",
-    "body": "${1:Node name}[(${2:Node text})]"
-  },
-  "Mermaid decision diamond node": {
-    "prefix": "mermaid-decision-diamond",
-    "description": "Mermaid diamond decision node",
-    "body": "${1:Node name}{${2:Node text}}"
-  }
+  // "Mermaid node": {
+  //   "prefix": "mermaid-node",
+  //   "description": "square Mermaid node",
+  //   "body": "${1:Node name}[${2:Node text}]"
+  // },
+  // "Mermaid arrow": {
+  //   "prefix": "mermaid-arrow",
+  //   "description": "solid Mermaid arrow",
+  //   "body": "--> "
+  // },
+  // "Mermaid arrow with text": {
+  //   "prefix": "mermaid-label-text-arrow",
+  //   "description": "Mermaid arrow with label text on the body",
+  //   "body": "--> | $1 | $0"
+  // },
+  // "Mermaid rounded node": {
+  //   "prefix": "mermaid-rounded-node",
+  //   "description": "Mermaid rounded node",
+  //   "body": "${1:Node name}[(${2:Node text})]"
+  // },
+  // "Mermaid decision diamond node": {
+  //   "prefix": "mermaid-decision-diamond",
+  //   "description": "Mermaid diamond decision node",
+  //   "body": "${1:Node name}{${2:Node text}}"
+  // }
 }
