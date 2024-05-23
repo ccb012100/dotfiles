@@ -49,7 +49,7 @@ abbr --add cmai chezmoi apply --interactive
 abbr --add cmch chezmoi chattr +template
 abbr --add cmd chezmoi diff
 abbr --add cme chezmoi edit
-abbr --add cmef 'chezmoi edit $(fd -H . $HOME/.config | fzf)'
+abbr --add cmef 'chezmoi edit $(fd --hidden . $HOME/.config | fzf)'
 abbr --add cmi chezmoi ignored
 abbr --add cmin chezmoi init
 abbr --add cmm chezmoi merge
@@ -81,10 +81,9 @@ abbr --add dns dotnet user-secrets
 abbr --add dnt dotnet test
 abbr --add dnu dotnet user-secrets
 # fd
-abbr --add fd 'fd -H'
+abbr --add fd 'fd --hidden'
 abbr --add fde 'fd --extension'
 abbr --add fdf 'fd --type file'
-abbr --add fdh 'fd -H' # show hidden files when doing fd search
 # golang
 abbr --add gg go
 abbr --add ggb go build
