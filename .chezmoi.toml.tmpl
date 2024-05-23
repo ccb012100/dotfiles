@@ -4,7 +4,7 @@
 [merge]
 	command = "meld"
 {{- /* IF ON WSL2, THEN run 1Password as a service account */ -}}
-{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
 [onepassword]
 	mode = "service"
 {{- end -}}

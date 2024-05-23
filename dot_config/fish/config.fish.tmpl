@@ -56,7 +56,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     set --global --export fzf_preview_file_cmd bat
     {{/* IF ON WSL2, THEN run these */ -}}
-    {{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
+    {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
     eval $(keychain --eval ~/.ssh/*_ed25519) # get ssh key credentials from the running instance of ssh-agent
     {{- end}}
     {{- if (eq .chezmoi.os "darwin") }}
