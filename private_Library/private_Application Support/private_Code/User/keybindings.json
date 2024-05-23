@@ -3834,7 +3834,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+;",
+        "key": "ctrl+shift+;",
         "command": "jump-extension.jump-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3844,7 +3844,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+;",
+        "key": "alt+;",
         "command": "jump-extension.select-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
