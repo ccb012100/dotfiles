@@ -25,7 +25,7 @@
 	<key>IfScreenIsBiggerDontHide</key>
 	<integer>1</integer>
 	<key>IfScreenIsBiggerThanDontHide</key>
-	<real>2151.171875</real>
+	<real>2140.1717967772215</real>
 	<key>LaunchAtLogin__hasMigratedNew</key>
 	<true/>
 	<key>MenuBarColoring-SpaceSettings</key>
@@ -45,17 +45,17 @@
 		<string>0.000000, 316.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSStatusItem Preferred Position EItem</key>
-	<real>11255</real>
+	<real>16290</real>
 	<key>NSStatusItem Preferred Position HISItem</key>
-	<real>654</real>
+	<real>674</real>
 	<key>NSStatusItem Preferred Position RHSItem</key>
-	<real>1223</real>
+	<real>6258</real>
 	<key>NSStatusItem Preferred Position THSItem</key>
-	<real>6239</real>
+	<real>11274</real>
 	<key>NSStatusItem Preferred Position special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
-	<real>632</real>
+	<real>652</real>
 	<key>NSStatusItem Preferred Position statusItem</key>
-	<real>201</real>
+	<real>216</real>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
@@ -127,7 +127,7 @@
 			<key>GapItemLabels</key>
 			<dict>
 				<key>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
-				<string>╏</string>
+				<string>§</string>
 			</dict>
 			<key>GapItemWidths</key>
 			<dict>
