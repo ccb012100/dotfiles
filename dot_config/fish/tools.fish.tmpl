@@ -15,6 +15,7 @@ atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent 
 
 # dotnet CLI
 complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+set --global --export PATH $HOME/.dotnet/tools $PATH
 
 # coreutils
 {{if eq .chezmoi.os "darwin" -}}
