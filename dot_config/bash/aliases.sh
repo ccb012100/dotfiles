@@ -11,7 +11,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 alias back='cd -'
-alias rm='rm -i'
+alias rm='echo use ''trash'''
 
 #: ls
 alias l=ls
@@ -32,8 +32,8 @@ alias llt='eza -l -t modified --sort newest'
 alias tree='eza --tree'
 
 #: git
-alias git=git-util  # ln in ~/bin directory
-alias k=git         # k is easier to type
+alias git=git-util # ln in ~/bin directory
+alias k=git        # k is easier to type
 alias ka='git a'
 alias kaa='git aa'
 alias kaac='git aac'
