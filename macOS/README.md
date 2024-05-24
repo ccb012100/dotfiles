@@ -32,7 +32,7 @@ defaults export com.surteesstudios.Bartender.plist - | sed '/\h*<.*>\h*/!d' > $H
 Import:
 
 ```zsh
-defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist
+defaults import com.surteesstudios.Bartender.plist $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist
 ```
 
 ## DOIO Megalodon Triple Knob Macro Pad
