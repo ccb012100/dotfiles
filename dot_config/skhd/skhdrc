@@ -54,7 +54,7 @@ meh - e : open -a 'Microsoft Edge'
 meh - f : open -a firefox
 meh - g : open -a 'Google Chrome'
 meh - j : open -a 'Visual Studio Code'
-meh - k : open -a kitty
+meh - k : open -a wezterm
 meh - o : open -a 'Microsoft Outlook'
 meh - s : open -a Spotify
 
@@ -66,21 +66,23 @@ ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete wor
 # Shift+Ctrl+a to Select all
 shift + ctrl - a [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "WezTerm"           ~
+    "zed"               ~
     *                   :   skhd -k "cmd - a"
 ]
 # Ctrl+c to Copy
 ctrl - c [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "WezTerm"           ~
+    "zed"               ~
     *                   :   skhd -k "cmd - c"
 ]
 # Alt+w to Forward delete word
@@ -90,6 +92,7 @@ alt - d [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "shift + alt - delete"
 ]
@@ -98,6 +101,7 @@ ctrl - l [
     "Firefox"           :   skhd -k "cmd - l" # Focus in URL bar
     "Google Chrome"     :   skhd -k "cmd - l" # Focus in URL bar
     "Microsoft Edge"    :   skhd -k "cmd - l" # Focus in URL bar
+    "Safari"            :   skhd -k "cmd - l" # Focus in URL bar
     "Spotify"           :   skhd -k "cmd - l" # Search in Spotify
     *                   ~
 ]
@@ -108,8 +112,9 @@ ctrl - k [
 ]
 # Shift+Ctrl+l to Search open tabs in chromium browsers
 shift + ctrl - l [
-    "Google Chrome"     :   skhd -k "cmd + shift - a"
-    "Microsoft Edge"    :   skhd -k "cmd + shift - a"
+    "Google Chrome"     :   skhd -k "cmd + shift - a"       # Search open tabs
+    "Microsoft Edge"    :   skhd -k "cmd + shift - a"       # Search open tabs
+    "Safari"            :   skhd -k "cmd + shift - 0x2A"    # Show tab overview
     *                   ~
 ]
 # Ctrl+r to Reload browser tab
@@ -117,16 +122,18 @@ ctrl - r [
     "Firefox"           :   skhd -k "cmd - r"
     "Google Chrome"     :   skhd -k "cmd - r"
     "Microsoft Edge"    :   skhd -k "cmd - r"
+    "Safari"            :   skhd -k "cmd - r"
     *                   ~
 ]
 # Ctrl+t to Open a new tab
 ctrl - t [
     "code"              ~
-    "kitty"             ~
-    "zed"               ~
-    "Terminal"          ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
+    "kitty"             ~
+    "Terminal"          ~
+    "WezTerm"           ~
+    "zed"               ~
     *                   :   skhd -k "cmd - t"
 ]
 # Shift+Ctrl+t to Reopen last browser tab
@@ -134,6 +141,7 @@ shift + ctrl - t [
     "Firefox"           :   skhd -k "shift + cmd - t"
     "Google Chrome"     :   skhd -k "shift + cmd - t"
     "Microsoft Edge"    :   skhd -k "shift + cmd - t"
+    "Safari"            :   skhd -k "shift + cmd - t"
     *                   ~
 ]
 # Ctrl+v to Paste
@@ -143,6 +151,7 @@ ctrl - v [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - v"
 ]
@@ -153,6 +162,7 @@ ctrl - w [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - w"
 ]
@@ -173,6 +183,7 @@ ctrl - x [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - x"
 ]
@@ -193,6 +204,7 @@ ctrl - z [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - z"
 ]
@@ -204,6 +216,7 @@ ctrl - 0x21 [
     "kitty"             ~
     "Spotify"           :   skhd -k "alt - left"
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - 0x21"
 ]
@@ -215,6 +228,7 @@ ctrl - 0x1E [
     "kitty"             ~
     "Spotify"           :   skhd -k "alt - right"
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - 0x1E"
 ]
@@ -235,6 +249,7 @@ ctrl - 0x2C [
     "JetBrains Rider"   ~
     "kitty"             ~
     "Terminal"          ~
+    "WezTerm"           ~
     "zed"               ~
     *                   :   skhd -k "cmd - z"
 ]
