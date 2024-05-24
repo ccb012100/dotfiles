@@ -29,17 +29,44 @@ config.font = wezterm.font {
 config.font_size = 14.0
 config.pane_select_font_size = 36 -- default = 36
 
+--
+-- THEMING
+--
+{{ if (eq .chezmoi.os "windows") -}}
 -- on Windows, make sure to link/copy files from ~/.config/wezterm/colors/
 -- to "/c/Program Files/Wezterm/colors"
+{{- end }}
 -- config.color_scheme = 'Eldritch'
 config.color_scheme = 'Ic Orange Ppl (Gogh)'
 
--- see: <https://github.com/wez/wezterm/issues/2623>
-config.key_map_preference = 'Physical'
+config.window_frame = {
+    font = wezterm.font { family = 'IBM Plex Mono' },
+    font_size = 13.0, -- default = 10 on Windowx, 12.0 on everything else
+}
+
+config.colors = {
+    tab_bar = {
+        inactive_tab_edge = 'red',
+    },
+}
+config.tab_max_width = 36; -- default = 6
+
+-- config.use_fancy_tab_bar = false
+-- config.colors = {
+--     tab_bar = {
+--         active_tab = {
+--             bg_color = '#ED733A',
+--             fg_color = '#000000'
+--         },
+--     },
+-- }
 
 --
 -- Keybindings
 --
+
+-- see: <https://github.com/wez/wezterm/issues/2623>
+config.key_map_preference = 'Physical'
 
 config.use_dead_keys = false
 config.disable_default_key_bindings = true
@@ -93,15 +120,15 @@ config.keys = {
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
     { key = keycode.enter, mods = keycode.leader,           action = act.SplitHorizontal }, -- actually a vertical split
     -- Move/select panes
-    -- TODO: use new modes when they move out of nightly builds: "MoveToNewTab", "MoveToNewWindow"
     { key = 'j',           mods = keycode.leader,           action = act.PaneSelect },
+    { key = 'd',           mods = keycode.leader,           action = act.PaneSelect {mode = 'MoveToNewWindow', } }, -- (d)etach
+    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect {mode = 'MoveToNewTab', } },    -- (D)etach
     -- :: activate next Pane mode with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane mode with 'Leader, Shift+Leader'
     { key = 'j',           mods = keycode.leader_ctrlshift, action = act.ActivatePaneDirection 'Prev' },
-    -- TODO: switch to SwapWithActiveKeepFocus when it moves out of nightly builds
     -- :: swap the active and selected panes
-    { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActive', } },
+    { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActiveKeepFocus', } },
     { key = ',',           mods = keycode.leader,           action = act.RotatePanes 'CounterClockwise', },
     { key = '.',           mods = keycode.leader,           action = act.RotatePanes 'Clockwise' },
     -- Adjust pane size
@@ -224,7 +251,7 @@ config.key_tables = {
 
 }
 
-{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
+{{- if (eq .chezmoi.os "window")}}
 -- Windows-specific config
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     local spawn_gitbash = { label = "Git Bash", args = { "C:/Program Files/Git/bin/bash.exe ", "-i", "-l" } }
