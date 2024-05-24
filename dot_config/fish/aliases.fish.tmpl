@@ -5,6 +5,7 @@
 #
 alias grep 'grep --color=auto'
 alias ppath "echo \"$PATH\" | tr ':' '\n'"
+alias rm 'echo use the command \"trash\" instead of rm'
 
 # ls
 alias la 'ls -a'
@@ -12,7 +13,9 @@ alias lal 'ls -al'
 alias ll 'ls -l'
 alias lla 'ls -la'
 
+{{- if (eq .chezmoi.os "linux") }}
 alias aptup 'sudo apt update && sudo apt upgrade --yes'
+{{- end}}
 
 #
 # external tools
