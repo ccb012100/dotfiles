@@ -1397,6 +1397,8 @@
 	<integer>7</integer>
 	<key>MaxVertically</key>
 	<true/>
+	<key>NeverBlockSystemShutdown</key>
+	<true/>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2828,6 +2830,8 @@
 			<string>kNextTabPointerAction</string>
 		</dict>
 	</dict>
+	<key>PromptOnQuit</key>
+	<false/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>SmartPlacement</key>
