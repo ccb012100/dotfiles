@@ -89,8 +89,8 @@ lua << EOF
     require('hop').setup()
 EOF
 map <Leader>w <cmd>HopWord<CR>
-map <Leader>j <cmd>HopLineStartAC<CR>
-map <Leader>k <cmd>HopLineStartBC<CR>
+map <Leader>j <cmd>HopVertical<CR>
+map <Leader>k <cmd>HopVertical<CR>
 map <Leader>l <cmd>HopLine<CR>
 map <Leader>f <cmd>HopChar1<CR>
 map <Leader>; <cmd>HopChar2<CR>
