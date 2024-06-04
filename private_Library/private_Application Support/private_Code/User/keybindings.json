@@ -2435,14 +2435,6 @@
         "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
-        "key": "ctrl+x ctrl+r",
-        "command": "reader-mode.toggleFile"
-    },
-    {
-        "key": "ctrl+x shift+r",
-        "command": "reader-mode.toggleWorkspace"
-    },
-    {
         "key": "shift+alt+a",
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
@@ -2772,11 +2764,7 @@
         "command": "git.viewLineHistory"
     },
     {
-        "key": "ctrl+g c",
-        "command": "git.openChange"
-    },
-    {
-        "key": "ctrl+g ctrl+c",
+        "key": "ctrl+l c",
         "command": "git.openAllChanges"
     },
     {
@@ -3144,10 +3132,6 @@
     {
         "key": "ctrl+x i",
         "command": "editor.action.inlineSuggest.toggleAlwaysShowToolbar"
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "editor.action.inlineSuggest.trigger"
     },
     {
         "key": "ctrl+x e",
@@ -3892,5 +3876,24 @@
         "key": "cmd+d",
         "command": "-editor.action.addSelectionToNextFindMatch",
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.inlineSuggest.trigger",
+        "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "github.copilot.nextPanelSolution",
+        "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "github.copilot.previousPanelSolution",
+        "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+    },
+    {
+        "key": "ctrl+g c",
+        "command": "workbench.panel.chat.view.copilot.focus"
     }
 ]
