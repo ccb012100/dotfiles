@@ -105,38 +105,44 @@ config.keys = {
     { key = 'F1',          mods = keycode.leader_shift,     action = act.ShowDebugOverlay },
     { key = 'F5',          mods = keycode.ctrl,             action = act.ReloadConfiguration },
     { key = 'F11',         mods = keycode.ctrl,             action = act.ToggleFullScreen },
-    -- New window
+    -- Windows
     { key = keycode.space, mods = keycode.leader,           action = act.SpawnWindow },
     { key = 'n',           mods = keycode.super,            action = act.SpawnWindow },
-    -- Close tab/pane
+    -- Tabs
+    { key = 't',           mods = keycode.leader,           action = act.SpawnTab 'CurrentPaneDomain' },
+    { key = 't',           mods = keycode.super,            action = act.SpawnTab 'CurrentPaneDomain' },
     { key = 'q',           mods = keycode.leader,           action = act.CloseCurrentTab { confirm = true } },
     { key = 'q',           mods = keycode.super,            action = act.CloseCurrentTab { confirm = true } },
-    { key = 'w',           mods = keycode.leader,           action = wezterm.action.CloseCurrentPane { confirm = true } },
-    { key = 'w',           mods = keycode.super,            action = wezterm.action.CloseCurrentPane { confirm = true } },
     -- Move/Activate Tab
-    { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) },
     { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },
-    -- Split panes
+    { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) },
+    -- Panes
+    -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
     { key = keycode.enter, mods = keycode.leader,           action = act.SplitHorizontal }, -- actually a vertical split
-    -- Move/select panes
+    -- :: Close pane
+    { key = 'w',           mods = keycode.leader,           action = wezterm.action.CloseCurrentPane { confirm = true } },
+    { key = 'w',           mods = keycode.super,            action = wezterm.action.CloseCurrentPane { confirm = true } },
+    -- :: Select
     { key = 'j',           mods = keycode.leader,           action = act.PaneSelect },
+    -- :: Select and move
     { key = 'd',           mods = keycode.leader,           action = act.PaneSelect {mode = 'MoveToNewWindow', } }, -- (d)etach
     { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect {mode = 'MoveToNewTab', } },    -- (D)etach
-    -- :: activate next Pane mode with 'Leader, Leader'
+    -- :: activate next Pane with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.ActivatePaneDirection 'Next' },
-    -- :: activate prev Pane mode with 'Leader, Shift+Leader'
+    -- :: activate prev Pane with 'Leader, Shift+Leader'
     { key = 'j',           mods = keycode.leader_ctrlshift, action = act.ActivatePaneDirection 'Prev' },
     -- :: swap the active and selected panes
     { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActiveKeepFocus', } },
+    -- :: rotate panes
     { key = ',',           mods = keycode.leader,           action = act.RotatePanes 'CounterClockwise', },
     { key = '.',           mods = keycode.leader,           action = act.RotatePanes 'Clockwise' },
-    -- Adjust pane size
+    -- :: Adjust pane size
     { key = 'DownArrow',   mods = keycode.ctrl_shift,       action = act.AdjustPaneSize { 'Down', 1 } },
     { key = 'LeftArrow',   mods = keycode.ctrl_shift,       action = act.AdjustPaneSize { 'Left', 1 } },
     { key = 'RightArrow',  mods = keycode.ctrl_shift,       action = act.AdjustPaneSize { 'Right', 1 } },
     { key = 'UpArrow',     mods = keycode.ctrl_shift,       action = act.AdjustPaneSize { 'Up', 1 } },
-    -- Zoom pane
+    -- :: Zoom
     { key = 'z',           mods = keycode.leader,           action = act.TogglePaneZoomState },
     -- Font size
     { key = '-',           mods = keycode.leader,           action = act.DecreaseFontSize },
