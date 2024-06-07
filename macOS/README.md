@@ -7,13 +7,13 @@
 To export the settings from your machine into this repository:
 
 ```zsh
-defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
+defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/macOS/com.lwouis.alt-tab-macos.plist
 ```
 
 To import [the settings from this repository](/macOS/alt-tab-macos.plist) to your machine:
 
 ```zsh
-defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
+defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lwouis.alt-tab-macos.plist
 ```
 
 ## Bartender 5
