@@ -5,7 +5,7 @@ buttons: u 8 o
 oneshot_buttons: m , .
 
 # history
-history: ; h
+history: ;
 hist_forward: C-f
 hist_back: C-b
 history_activation_key: S-A-C-|
@@ -16,13 +16,13 @@ indicator_size: 20
 indicator_color: #DFFF00
 
 # hints
-hint_activation_key: S-A-C-;
+hint_activation_key: S-A-C-'
 hint_bgcolor: #282828
 hint_chars: asdfghjkl;weruiom,.
 hint_fgcolor: #FFB000
 hint_font: CozetteVector
 hint: H x
-hint2_activation_key: S-A-C-'
+hint2_activation_key: S-A-C-;
 hint2_chars: uiojklm,.
 hint2: z X
 
@@ -31,10 +31,10 @@ scroll_down: n
 scroll_up: p
 
 # cursor movement in Normal mode
-down: k
-left: j
+down: j
+left: h
 right: l
-up: i
+up: k
 top: t
 middle: m
 bottom: b
