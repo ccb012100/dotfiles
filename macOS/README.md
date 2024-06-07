@@ -18,6 +18,10 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lw
 
 ## Bartender 5
 
+> [!WARNING]
+> Bartender was sold by the original developer to a new owner, so I've moved to [Ice](https://github.com/jordanbaird/Ice), which seems to
+> be feature-complete for my requirements
+
 [Bartender 5](https://www.macbartender.com/Bartender5/) menu bar item manager.
 
 To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:
@@ -49,6 +53,22 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/macOS/
   - Use [**Revision 2**](https://github.com/qmk/qmk_firmware/tree/master/keyboards/doio/kb16/rev2)
 - Firmware should be donwloaded from the [**VIA** site](https://www.caniusevia.com/docs/download_firmware).
   - [direct link](https://raw.githubusercontent.com/the-via/firmware/master/doio_kb16_rev2_via.bin) to firmware download
+
+## Ice
+
+macOS [menu bar manager](https://github.com/jordanbaird/Ice)
+
+Export the settings from your machine into this repository:
+
+```zsh
+defaults export com.jordanbair.Ice.plist - > $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
+```
+
+Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to your machine:
+
+```zsh
+defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
+```
 
 ## iTerm2
 
