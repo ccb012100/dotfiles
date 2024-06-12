@@ -682,8 +682,9 @@
         "command": "-workbench.action.files.revealActiveFileInWindows"
     },
     {
-        "key": "ctrl+shift+w",
-        "command": "workbench.action.closeActiveEditor"
+        "key": "ctrl+j w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!activeEditorIsPinned"
     },
     {
         "key": "ctrl+s",
@@ -1834,7 +1835,7 @@
     {
         "key": "ctrl+g e",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!editorFocus && workbench.explorer.fileView.active"
+        "when": "!editorFocus"
     },
     {
         "key": "ctrl+l ctrl+s",
@@ -2049,7 +2050,7 @@
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
     },
     {
-        "key": "ctrl+g e",
+        "key": "ctrl+g f",
         "command": "workbench.files.action.focusFilesExplorer",
         "when": "editorFocus || !workbench.explorer.fileView.active"
     },
@@ -2445,11 +2446,6 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+g g",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    },
-    {
         "key": "ctrl+j shift+;",
         "command": "workbench.action.toggleMaximizedPanel"
     },
@@ -2476,11 +2472,6 @@
         "key": "ctrl+l j",
         "command": "editor.action.blockComment",
         "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+g",
-        "command": "-workbench.view.scm",
-        "when": "workbench.scm.active"
     },
     {
         "key": "ctrl+g s",
@@ -2568,19 +2559,9 @@
         "command": "git.viewHistory"
     },
     {
-        "key": "ctrl+g g",
-        "command": "workbench.view.scm",
-        "when": "workbench.scm.active"
-    },
-    {
         "key": "ctrl+e ctrl+b",
         "command": "-sqltools.formatSql",
         "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings && !editorReadonly"
-    },
-    {
-        "key": "ctrl+g ctrl+g",
-        "command": "workbench.view.scm",
-        "when": "workbench.scm.active"
     },
     {
         "key": "ctrl+; c",
@@ -3105,16 +3086,6 @@
         "when": "taskCommandsRegistered"
     },
     {
-        "key": "tab",
-        "command": "editor.action.inlineSuggest.showNext",
-        "when": "inlineSuggestionVisible && !editorReadonly"
-    },
-    {
-        "key": "alt+]",
-        "command": "-editor.action.inlineSuggest.showNext",
-        "when": "inlineSuggestionVisible && !editorReadonly"
-    },
-    {
         "key": "shift+tab",
         "command": "editor.action.inlineSuggest.showPrevious",
         "when": "inlineSuggestionVisible && !editorReadonly"
@@ -3351,7 +3322,7 @@
         "when": "!activeEditorIsPinned"
     },
     {
-        "key": "ctrl+j '",
+        "key": "ctrl+j ctrl+;",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
@@ -3895,5 +3866,37 @@
     {
         "key": "ctrl+g c",
         "command": "workbench.panel.chat.view.copilot.focus"
+    },
+    {
+        "key": "ctrl+l b",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "-bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+g b",
+        "command": "bookmarks.listFromAllFiles"
+    },
+    {
+        "key": "ctrl+g ctrl+b",
+        "command": "bookmarksExplorer.focus"
+    },
+    {
+        "key": "ctrl+l g",
+        "command": "gitBlameLineView.focus"
+    },
+    {
+        "key": "ctrl+g ctrl+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
     }
 ]
