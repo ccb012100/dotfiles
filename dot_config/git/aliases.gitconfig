@@ -7,8 +7,10 @@
 
     ## branch
     b       = branch
-    bdf     = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es)
-    bdff    = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es)
+    bd      = branch --delete
+    bdf     = branch --delete --force
+    bdz     = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es) with fzf
+    bdfz    = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es) with fzf
     bl      = branch --list
     bv      = branch -v
     br      = branch --remote
