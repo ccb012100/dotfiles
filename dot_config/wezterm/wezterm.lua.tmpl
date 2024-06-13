@@ -92,6 +92,8 @@ local keycode = {
 config.leader = { key = 'j', mods = keycode.ctrl }
 
 config.keys = {
+    -- This lets us hide the app with Cmd+h on macOS
+    { key = 'h',           mods = keycode.super,            action = wezterm.action.HideApplication },
     -- Launcher
     {
         key = 'Enter',
@@ -126,8 +128,8 @@ config.keys = {
     -- :: Select
     { key = 'j',           mods = keycode.leader,           action = act.PaneSelect },
     -- :: Select and move
-    { key = 'd',           mods = keycode.leader,           action = act.PaneSelect {mode = 'MoveToNewWindow', } }, -- (d)etach
-    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect {mode = 'MoveToNewTab', } },    -- (D)etach
+    { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
+    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
     -- :: activate next Pane with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane with 'Leader, Shift+Leader'
