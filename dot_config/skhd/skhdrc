@@ -61,7 +61,7 @@ meh - j : open -a 'Visual Studio Code'
 meh - k : open -a wezterm
 meh - o : open -a 'Microsoft Outlook'
 meh - s : open -a Spotify
-meh - w : skhd -k 'f5' # mostly used for muting the mic in MS Teams
+# meh - w : skhd -k 'f5' # mostly used for muting the mic in MS Teams # TODO: not working
 
 ####################################################
 # map ctrl chords to equivalent/similar cmd chords #
