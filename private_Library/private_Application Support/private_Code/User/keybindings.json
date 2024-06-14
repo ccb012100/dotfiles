@@ -2671,7 +2671,7 @@
         "command": "workbench.action.toggleEditorWidths"
     },
     {
-        "key": "shift+alt+h",
+        "key": "alt+r",
         "command": "editor.action.startFindReplaceAction",
         "when": "editorFocus || editorIsOpen"
     },
@@ -2848,11 +2848,6 @@
         "key": "ctrl+y",
         "command": "filesExplorer.paste",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "shift+alt+r",
-        "command": "revealInExplorer",
-        "when": "editorFocus"
     },
     {
         "key": "shift+backspace",
@@ -3898,5 +3893,29 @@
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm",
         "when": "workbench.scm.active"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "-workbench.action.replaceInFiles"
+    },
+    {
+        "key": "cmd+k shift+left",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "cmd+k shift+up",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "cmd+k shift+down",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "cmd+k shift+right",
+        "command": "workbench.action.moveEditorToRightGroup"
     }
 ]
