@@ -3626,7 +3626,7 @@
     {
         "key": "ctrl+enter",
         "command": "editor.action.openLink",
-        "when": "editorTextFocus && editorLangId == 'markdown'"
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+space",
@@ -3774,7 +3774,7 @@
         "command": "workbench.action.switchWindow"
     },
     {
-        "key": "ctrl+;",
+        "key": "ctrl+shift+;",
         "command": "jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3784,7 +3784,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+;",
+        "key": "ctrl+;",
         "command": "jump-extension.jump-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3794,7 +3794,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+;",
+        "key": "shift+alt+;",
         "command": "jump-extension.select-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3804,7 +3804,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+;",
+        "key": "alt+;",
         "command": "jump-extension.select-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3879,10 +3879,6 @@
     {
         "key": "ctrl+g ctrl+b",
         "command": "bookmarksExplorer.focus"
-    },
-    {
-        "key": "ctrl+l g",
-        "command": "gitBlameLineView.focus"
     },
     {
         "key": "ctrl+g ctrl+g",
