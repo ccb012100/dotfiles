@@ -112,8 +112,9 @@
     checkpoint  = !git stash push --include-untracked && git stash apply # stash changes but keep them in staging area
     pop         = stash pop
     stc         = checkpoint
+    stsp        = stash show -p
     stl         = stash list
-    stp         = stash push --include-untracked # *not* stash push --all, which includes ignored files
+    stps        = stash push --include-untracked # *not* stash push --all, which includes ignored files
 
     ## status
     s   = ss
