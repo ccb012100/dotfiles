@@ -1,9 +1,9 @@
 ## aliases
 [alias]
     ## add
-    aa      = ! git add --all && git status --short
-    af      = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
-    au      = ! git add --update && git status --short
+    aa  = ! git add --all && git status --short
+    af  = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
+    au  = ! git add --update && git status --short
 
     ## branch
     b       = branch
@@ -21,11 +21,15 @@
     ## checkout
     back    = checkout - # checkout previous branch
     co      = checkout
-    cob     = checkout -b # create and checkout a new branch
     cof     = ! git --no-pager branch | fzf | xargs --no-run-if-empty git checkout # checkout local branch
     corf    = ! git --no-pager branch --remote | fzf | sed 's_^origin/__g' | xargs --no-run-if-empty git checkout # checkout remote branch
     main    = checkout main
     master  = checkout master
+
+    ## cherry-pick
+    cherry  = cherry-pick
+    cp      = cherry-pick
+    pick    = cherry-pick
 
     ## commit
     amend   = commit --amend
@@ -35,64 +39,53 @@
     ca      = commit --amend
     call    = commit --all
     can     = ca --no-edit
-    cherry  = cherry-pick
     cm      = commit -m
     cnv     = c --no-verify
     contrib = shortlog -s
     fix     = commit --fixup
     fixup   = commit --fixup
-    pick    = cherry-pick
 
     ## diff
-    d       = diff
-    dm      = diff main..
-    dom     = diff origin/main..
-    ds      = diff --staged
-    dt      = difftool
-    dts     = difftool --staged
+    d   = diff
+    dm  = diff main..
+    dom = diff origin/main..
+    ds  = diff --staged
+    dt  = difftool
+    dts = difftool --staged
 
     ## fetch
-    f       = fetch --all --verbose
-    fm      = fetch --verbose origin main:main # update local main branch to match origin
+    f   = fetch --all --verbose
+    fm  = fetch --verbose origin main:main # update local main branch to match origin
 
     ## forgit
-    foa      = forgit add
-    fobd     = forgit branch_delete
-    foblame  = forgit blame
-    foclean  = forgit clean
-    foco     = forgit checkout_branch
-    fococ    = forgit checkout_commit
-    focof    = forgit checkout_file
-    focot    = forgit checkout_tag
-    fof      = forgit fixup
-    foi      = forgit ignore
-    fol      = forgit log
-    fopick   = forgit cherry_pick
-    fopickb  = forgit cherry_pick_from_branch
-    for      = forgit rebase
-    forc     = forgit revert_commit
-    foreset  = forgit reset_head
-    fos      = forgit stash_show
-    fosp     = forgit stash_push
+    ja      = forgit add
+    jbd     = forgit branch_delete
+    jc      = forgit checkout_commit
+    jcp     = forgit cherry_pick
+    jco     = forgit checkout_file
+    jl      = forgit log
+    jpick   = forgit cherry_pick
+    jstl    = forgit stash_show
+    jstp    = forgit stash_push
 
     ## log
-    logfp   = log --first-parent
-    logm    = log --merges
-    lognm   = log --no-merges
-    lp      = log --patch --compact-summary # show diffs
-    ls      = ls-files
+    lfp = log --first-parent
+    lm  = log --merges
+    lnm = log --no-merges
+    lp  = log --patch --compact-summary # show diffs
+    ls  = ls-files
 
     ## merge
-    m       = merge
-    ma      = merge --abort
-    mc      = merge --continue
-    mt      = mergetool
+    m   = merge
+    ma  = merge --abort
+    mc  = merge --continue
+    mt  = mergetool
 
     ## pull
-    p       = pull
-    pa      = pull --autostash
-    pr      = pull --rebase
-    pra     = pull --rebase --autostash
+    p   = pull
+    pa  = pull --autostash
+    pr  = pull --rebase
+    pra = pull --rebase --autostash
 
     ## push
     ps      = push
@@ -110,10 +103,10 @@
     ri          = rebase --interactive
 
     ## reset
-    rt      = reset
-    rtm     = reset --mixed
-    rts     = reset --soft
-    rth     = reset --hard
+    rt  = reset
+    rtm = reset --mixed
+    rts = reset --soft
+    rth = reset --hard
 
     ## stash
     checkpoint  = !git stash push --include-untracked && git stash apply # stash changes but keep them in staging area
@@ -130,17 +123,21 @@
     sv  = svv
     svv = status -vv
 
+    ## switch
+    sw  = switch
+    cb  = switch --create # (c)reate (b)ranch
+
     ## tag
     current-tags    = tag --list --points-at HEAD
     t               = current-tags
 
     ## worktree
-    w   =   worktree
-    wl  =   worktree list
-    wa  =   worktree add
-    wm  =   worktree move
-    wp  =   worktree prune
-    wr  =   worktree remove
+    w   = worktree
+    wl  = worktree list
+    wa  = worktree add
+    wm  = worktree move
+    wp  = worktree prune
+    wr  = worktree remove
 
     ## misc
     chx     = update-index --chmod=+x
