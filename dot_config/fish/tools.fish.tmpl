@@ -45,6 +45,9 @@ function __fish_pipe_to_fzf -d "Pipe the current command to fzf"
     fish_commandline_append " &| $cmd"
 end
 
+# fnm
+fnm env --use-on-cd --version-file-strategy=recursive | source
+
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
 set --export --global fzf_fd_opts --hidden # include hidden files
