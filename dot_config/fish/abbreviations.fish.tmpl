@@ -25,7 +25,7 @@ abbr --add cpr cp -r
 abbr --add crm command rm -i
 abbr --add his history
 abbr --add jctl journalctl
-abbr --add l ls
+abbr --add l ls -a
 abbr --add lec 'echo $status' # last exit code
 abbr --add lns ln -s
 abbr --add mv mv -iv
@@ -132,7 +132,8 @@ abbr --add vi vim
 abbr --add c code
 #: open directories in vscode
 abbr --add c. 'code .' # open current directory in VS Code
-abbr --add cconf code $HOME/.local/share/chezmoi # (e)dit (conf)ig
+abbr --add cconf code $HOME/.local/share/chezmoi # (c)ode (conf)ig
+abbr --add cconfig code $HOME/.local/share/chezmoi # (c)ode (config)
 abbr --add cnotes code $HOME/.local/notes.code-workspace # (e)dit notes
 {{- if (eq .chezmoi.os "linux")}}
 # systemctl
