@@ -85,20 +85,20 @@ To sync with [the file in this repo](/macOS/com.googlecode.iterm2.plist), in **i
 
 The default Keyboard Layout for **macOS** uses the `Alt`/`Option`/`⌥` key to insert special characters. This prevents some applications (**Visual Studio Code**, **JetBrains Rider**) from using ⌥ chords.
 
-Since I don't have any need to insert special characters, I use a [custom Keyboard Layout](/macOS/qwerty_no_option.keylayout) to use the `⌥` keys as just normal `Alt` keys.
+Since I don't have any need to insert special characters, I use a custom Keyboard Layout to use the `⌥` keys as just normal `Alt` keys.
 
 To use the custom Keyboard Layout:
 
-1. Copy the [keyboard layout file](/macOS/qwerty_no_option.keylayout) to the `Keyboard Layouts` folder
+1. Copy the [keyboard layout file](/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout) to the `Keyboard Layouts` folder
 
     ```zsh
-    cp $HOME/.local/share/chezmoi/macOS/qwerty_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
+    cp $HOME/.local/share/chezmoi/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
     ```
 
 1. Go to `System Settings > Keyboard > Text Input > Input Sources > Edit`.
     1. Click `＋` in the bottom left.
     1. Scroll the list on the left to the very end and select `Others`.
-    1. Select `QWERTY no option` and click `Add`.
+    1. Select `US no ⌥` and click `Add`.
 1. In the menu bar, click the Input menu and select **QWERTY no option**
 
 source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-1615127984>
