@@ -31,6 +31,7 @@
     usehttppath = true
 {{- end}}
 [fetch]
+    parallel = 0
     prune = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
@@ -48,6 +49,8 @@
     sslbackend = openssl
 [init]
     defaultBranch = main
+[log]
+    follow = true
 [pull]
     ff = only
     rebase = true
@@ -64,9 +67,10 @@
     gpgsign = true
 [url "git@github.com:"]
     insteadof = https://github.com/
+[user]
+    useConfigOnly = true
 {{- /* IF NOT on work machine, THEN include these */ -}}
 {{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
-[user]
     name = Christopher Bocardo
     email = 397636+ccb012100@users.noreply.github.com
     signingkey = ~/.ssh/id_ed25519
