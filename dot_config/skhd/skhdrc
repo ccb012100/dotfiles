@@ -61,8 +61,8 @@ meh - j     : open -a 'Visual Studio Code'
 meh - k     : open -a wezterm
 meh - o     : open -a 'Microsoft Outlook'
 meh - s     : open -a Spotify
-meh - 0x27  : skhd -k 'alt + shift - 0x32'  # map meh+' to alt+shift+` (switch application window backwards)
-meh - 0x29  : skhd -k 'alt - 0x32'          # map meh+; to alt+` (switch application window forwards)
+meh - 0x27  : skhd -k 'alt - 0x32'          # map meh+' to alt+` (switch application window forwards)
+meh - 0x29  : skhd -k 'alt + shift - 0x32'  # map meh+; to alt+shift+` (switch application window backwards)
 # meh - w : skhd -k 'f5' # mostly used for muting the mic in MS Teams # TODO: not working
 
 ####################################################
