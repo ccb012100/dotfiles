@@ -19,7 +19,7 @@
     swc     = switch --create           # create new branch and switch to it
 
     ## checkout
-    back    = checkout - # checkout previous branch
+    back    = switch - # checkout previous branch
     co      = checkout
     cof     = ! git --no-pager branch | fzf | xargs --no-run-if-empty git checkout # checkout local branch
     corf    = ! git --no-pager branch --remote | fzf | sed 's_^origin/__g' | xargs --no-run-if-empty git checkout # checkout remote branch
