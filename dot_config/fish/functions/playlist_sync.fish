@@ -7,47 +7,47 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
     set pldb $HOME/playlister.db
 
     set_color purple
-    echo Syncing $pldb ...
+    echo Syncing $pldb ...\n
     set_color normal
 
     $HOME/bin/playlist-search.sh sync db
 
     if test $status -eq 0
         set_color purple
-        echo Updated $pldb.
+        echo Updated $pldb.\n
         set_color normal
     else
         set_color brred
-        echo \t --- Playlist DB sync failed! ---
+        echo \t --- Playlist DB sync failed! ---\n
         set_color normal
         return 1
     end
 
-    while read --nchars 1 -l response --prompt-str="Sync playlist-search album tsv files? (y/n)"
+    while read --nchars 1 -l response --prompt-str="❔ Sync playlist-search album tsv files? (y/n) "
         switch $response
             case y Y
                 set_color purple
-                echo Syncing tsv files...
+                echo \nSyncing tsv files...
                 set_color normal
-                
+
                 cd $HOME/src/playlist-search && source venv/bin/activate.fish && $HOME/bin/playlist-search.sh sync tsv
 
                 if test $status -ne 0
                     set_color brred
-                    echo \t --- Playlist TSV sync failed! ---
+                    echo \n\t --- Playlist TSV sync failed! ---\n
                     set_color normal
 
                     return 1
                 end
 
-                set_color purple
-                echo Synced tsv files.
-                set_color normal
+                # set_color purple
+                # echo \nSynced tsv files.\n
+                # set_color normal
 
                 break
             case n N
                 set_color purple
-                echo Not syncing album tsv files.
+                echo \nNot syncing album tsv files.\n
                 set_color normal
 
                 break
@@ -60,7 +60,7 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
         end
     end
 
-    set_color brgreen
-    echo \t--- Completed successfully! ---
-    set_color normal
+    # set_color brgreen
+    # echo \n\t--- Completed successfully! ---
+    # set_color normal
 end
