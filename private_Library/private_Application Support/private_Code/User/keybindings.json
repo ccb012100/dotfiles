@@ -507,11 +507,6 @@
         "command": "-testing.toggleInlineTestOutput"
     },
     {
-        "key": "ctrl+k ctrl+c",
-        "command": "-editor.action.addCommentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+k m",
         "command": "-workbench.action.editor.changeLanguageMode",
         "when": "!notebookEditorFocused"
@@ -1798,11 +1793,6 @@
         "command": "-workbench.action.files.saveWithoutFormatting"
     },
     {
-        "key": "ctrl+/",
-        "command": "-editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+x ctrl+a",
         "command": "workbench.files.action.showActiveFileInExplorer"
     },
@@ -2438,12 +2428,7 @@
     {
         "key": "shift+alt+a",
         "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+l ctrl+j",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly && !editorHasSelection"
     },
     {
         "key": "ctrl+j shift+;",
@@ -2462,16 +2447,6 @@
     {
         "key": "ctrl+x ctrl+q",
         "command": "workbench.action.files.toggleActiveEditorReadonlyInSession"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+l j",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "ctrl+g s",
@@ -2632,7 +2607,7 @@
         "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+shift+i ctrl+shift+alt",
         "command": "editor.action.selectHighlights",
         "when": "editorFocus && !findWidgetVisible"
     },
@@ -2642,7 +2617,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+shift+i ctrl+shift+alt",
         "command": "editor.action.selectAllMatches",
         "when": "editorFocus && findWidgetVisible"
     },
@@ -3666,11 +3641,6 @@
         "when": "fileMatchOrMatchFocus && searchViewletVisible"
     },
     {
-        "key": "shift+alt+i",
-        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+z",
         "command": "undo"
     },
@@ -3844,7 +3814,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+shift+i",
+        "key": "ctrl+shift+l",
         "command": "editor.action.inlineSuggest.trigger",
         "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
     },
@@ -3913,5 +3883,50 @@
     {
         "key": "cmd+k shift+right",
         "command": "workbench.action.moveEditorToRightGroup"
-    }
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "git.stageSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "cmd+k alt+cmd+s",
+        "command": "-git.stageSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "ctrl+alt+z",
+        "command": "git.unstageSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "cmd+k cmd+n",
+        "command": "-git.unstageSelectedRanges",
+        "when": "isInDiffEditor && !operationInProgress"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly && editorHasSelection"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly && !editorHasSelection"
+    },
+    {
+        "key": "ctrl+l j",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+l ctrl+j",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]

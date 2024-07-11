@@ -42,8 +42,10 @@
     cm      = commit -m
     cnv     = c --no-verify
     contrib = shortlog -s
+    date    = commit --amend --no-edit --date=now
     fix     = commit --fixup
     fixup   = commit --fixup
+    now     = commit --amend --no-edit --date=now
 
     ## diff
     d   = diff
@@ -142,9 +144,7 @@
 
     ## misc
     chx     = update-index --chmod=+x
-    date    = ! git commit --amend --no-edit --date=now
     difft   = difftool --tool=difftastic
     fg      = forgit
     nuke    = clean -fdx
     sbs     = ! DELTA_FEATURES=sbs git # use delta in side-by-side mode
-    ui      = ! gitui
