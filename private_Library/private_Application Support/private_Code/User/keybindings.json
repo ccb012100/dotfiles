@@ -175,6 +175,10 @@
         "command": "-editor.action.toggleWordWrap"
     },
     {
+        "key": "ctrl+l w",
+        "command": "editor.action.toggleWordWrap"
+    },
+    {
         "key": "ctrl+alt+l",
         "command": "-workbench.view.explorer"
     },
@@ -1035,7 +1039,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+l space",
+        "key": "ctrl+l w",
         "command": "editor.action.toggleRenderWhitespace"
     },
     {
@@ -1210,10 +1214,6 @@
         "key": "ctrl+k ctrl+b",
         "command": "-editor.action.setSelectionAnchor",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+l w",
-        "command": "editor.action.toggleWordWrap"
     },
     {
         "key": "ctrl+shift+m",
