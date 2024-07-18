@@ -1304,7 +1304,7 @@
         "command": "workbench.action.files.saveAll"
     },
     {
-        "key": "ctrl+l ctrl+l",
+        "key": "ctrl+l shift+u",
         "command": "editor.action.transformToLowercase"
     },
     {
@@ -3432,7 +3432,7 @@
         "command": "workbench.panel.output.focus"
     },
     {
-        "key": "ctrl+l ctrl+u",
+        "key": "ctrl+l u",
         "command": "editor.action.transformToUppercase"
     },
     {
