@@ -2041,8 +2041,7 @@
     },
     {
         "key": "ctrl+g f",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "editorFocus || !workbench.explorer.fileView.active"
+        "command": "workbench.files.action.focusFilesExplorer"
     },
     {
         "key": "ctrl+enter",
