@@ -27,13 +27,5 @@ abbr --add kj git-forgit
 abbr --add kja git-forgit add
 abbr --add kjl git-forgit log
 
-# gitui
-abbr --add kui gitui
-
-# GitHub CLI
-# TODO: can this be done inside the gh cli app?
-abbr --add ghv 'gh pr view --web || gh repo view --web'
-
 # lazygit
-abbr --add lk lazygit
-abbr --add ld lazydocker
+abbr --add kk lazygit
