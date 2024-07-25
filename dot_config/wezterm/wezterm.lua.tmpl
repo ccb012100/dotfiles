@@ -117,6 +117,8 @@ config.keys = {
     -- Move/Activate Tab
     { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },
     { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) },
+    { key = '[',           mods = keycode.leader,           action = act.MoveTabRelative(-1) },
+    { key = ']',           mods = keycode.leader,           action = act.MoveTabRelative(1) },
     -- Panes
     -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
@@ -128,7 +130,7 @@ config.keys = {
     { key = 'j',           mods = keycode.leader,           action = act.PaneSelect },
     -- :: Select and move
     { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
-    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
+    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } }, -- (D)etach
     -- :: activate next Pane with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane with 'Leader, Shift+Leader'
@@ -146,8 +148,8 @@ config.keys = {
     -- :: Zoom
     { key = 'z',           mods = keycode.leader,           action = act.TogglePaneZoomState },
     -- Font size
-    { key = '-',           mods = keycode.leader,           action = act.DecreaseFontSize },
-    { key = '+',           mods = keycode.leader,           action = act.IncreaseFontSize },
+    { key = '-',           mods = keycode.ctrl,             action = act.DecreaseFontSize },
+    { key = '+',           mods = keycode.ctrl,             action = act.IncreaseFontSize },
     { key = '=',           mods = keycode.leader,           action = act.ResetFontSize },
     -- Scrollback
     { key = 'PageDown',    mods = keycode.leader,           action = act.ScrollByPage(1) },
