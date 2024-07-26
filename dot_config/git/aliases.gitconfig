@@ -74,8 +74,10 @@
     lfp = log --first-parent
     lm  = log --merges
     lnm = log --no-merges
-    lp  = log --patch --compact-summary # show diffs
+    lp  = log --patch                   # same as -p or -u
+    lpc = log --patch --compact-summary # show diffs
     ls  = ls-files
+    lu  = log -u                        # same as -p or --patch
 
     ## merge
     m   = merge
