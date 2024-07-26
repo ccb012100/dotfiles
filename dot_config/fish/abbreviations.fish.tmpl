@@ -19,6 +19,10 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr --add , command # easier way to call aliased commands
 abbr --add back cd -
 abbr --add bce 'bc --expression=\''
+{{ if eq .chezmoi.os "darwin" -}}
+abbr --add caf caffeinate -u -t 3600 # 1 hour
+abbr --add half-caf caffeinate -u -t 1800 # half hour
+{{- end}}
 abbr --add chx chmod +x # make file executable
 abbr --add cls clear
 abbr --add cp cp -iv
