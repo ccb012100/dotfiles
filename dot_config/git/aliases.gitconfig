@@ -71,7 +71,9 @@
     jstp    = forgit stash_push
 
     ## log
+    lc  = log --compact-summary         # show files changed
     lfp = log --first-parent
+    ll  = log --compact-summary         # show files changed
     lm  = log --merges
     lnm = log --no-merges
     lp  = log --patch                   # same as -p or -u
