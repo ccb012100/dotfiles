@@ -148,6 +148,7 @@
 
     ## misc
     chx     = update-index --chmod=+x
+    clg     = config list --global
     difft   = difftool --tool=difftastic
     fg      = forgit
     nuke    = clean -fdx
