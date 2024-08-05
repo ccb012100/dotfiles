@@ -681,11 +681,6 @@
         "command": "-workbench.action.files.revealActiveFileInWindows"
     },
     {
-        "key": "ctrl+j w",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "!activeEditorIsPinned"
-    },
-    {
         "key": "ctrl+s",
         "command": "keybindings.editor.searchKeybindings",
         "when": "inKeybindings"
@@ -1298,10 +1293,6 @@
         "key": "alt+p",
         "command": "scrollLineUp",
         "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+j shift+s",
-        "command": "workbench.action.files.saveAll"
     },
     {
         "key": "ctrl+l shift+u",
@@ -3275,20 +3266,6 @@
     {
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveAs"
-    },
-    {
-        "key": "ctrl+j s",
-        "command": "workbench.action.files.save"
-    },
-    {
-        "key": "ctrl+j w",
-        "command": "workbench.action.closeActivePinnedEditor",
-        "when": "activeEditorIsPinned"
-    },
-    {
-        "key": "ctrl+j w",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "!activeEditorIsPinned"
     },
     {
         "key": "ctrl+j ctrl+;",
