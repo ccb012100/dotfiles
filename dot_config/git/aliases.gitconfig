@@ -1,7 +1,6 @@
 ## aliases
 [alias]
     ## add
-    aa  = ! git add --all && git status --short
     af  = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
     au  = ! git add --update && git status --short
 
@@ -34,7 +33,7 @@
     ## commit
     amend   = commit --amend
     aamend  = ! git aa && git commit --amend
-    aumend  = ! git au && git commit --amend
+    aumend  = git commit --amend
     c       = commit
     ca      = commit --amend
     call    = commit --all
