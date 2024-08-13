@@ -7,13 +7,13 @@
 To export the settings from your machine into this repository:
 
 ```zsh
-defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/macOS/com.lwouis.alt-tab-macos.plist
+defaults export com.lwouis.alt-tab-macos - > $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
 ```
 
 To import [the settings from this repository](/macOS/com.lwouis.alt-tab-macos.plist) to your machine:
 
 ```zsh
-defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lwouis.alt-tab-macos.plist
+defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/alt-tab-macos.plist
 ```
 
 ## Bartender 5
@@ -21,24 +21,6 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lw
 > [!WARNING]
 > Bartender was sold by the original developer to a new owner, so I've moved to [Ice](https://github.com/jordanbaird/Ice), which seems to
 > be feature-complete for my requirements
-
-~~[Bartender 5](https://www.macbartender.com/Bartender5/) menu bar item manager.~~
-
-~~To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:~~
-
-~~Export:~~
-
-~~```zsh~~
-~~# strip out the body text of the <data> tags, which I don't really care about and add > 1M to the file's size~~
-~~defaults export com.surteesstudios.Bartender.plist - | sed '/\h*<.*>\h*/!d' > $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist~~
-
-~~```~~
-
-~~Import:~~
-
-~~```zsh~~
-~~defaults import com.surteesstudios.Bartender.plist $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist~~
-~~```~~
 
 ## Contexts 3
 
@@ -50,13 +32,13 @@ Export:
 
 ```zsh
 # strip out the body text of the <data> tags, which I don't really care about and add > 1M to the file's size
-defaults export com.contextsformac.Contexts.plist - > $HOME/.local/share/chezmoi/macOS/com.contextsformac.Contexts.plist
+defaults export com.contextsformac.Contexts.plist - > $HOME/.local/share/chezmoi/macOS/Contexts.plist
 ```
 
 Import:
 
 ```zsh
-defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/macOS/com.contextsformac.Contexts.plist
+defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/macOS/Contexts.plist
 ```
 
 ## DOIO Megalodon Triple Knob Macro Pad
@@ -66,7 +48,7 @@ My [VIA](https://www.caniusevia.com/) config is in [kb16_01.layout.json](/macOS/
 - [Instructions](https://wiki.keebmonkey.com/en/products/mmp) for updating with **VIA**
   - To set an encoder function as transparent, enter the value `KC_TRNS` manually.
   - To set an encoder function to mouse wheel scroll, use the values `KC_MS_WH_UP` and `KC_MS_WH_DOWN`
-    - `KC_WH_U` and `KC_WH_D` do **_not_** work
+    - `KC_WH_U` and `KC_WH_D` do ***not*** work
 - [Instructions](https://wiki.keebmonkey.com/en/guides/kb16update) for flashing the firmware with **QMK Tool Box**.
 - The [default keymap](https://github.com/the-via/keyboards/tree/master/src/doio/kb16) from the **VIA** repo.
 - The [firmware code](https://github.com/qmk/qmk_firmware/tree/master/keyboards/doio/kb16) in the QMK repo.
@@ -97,8 +79,8 @@ defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/com.jordanba
 To sync with [the file in this repo](/macOS/com.googlecode.iterm2.plist), in **iTerm2**:
 
 - Open **Settings ➤ General ➤ Preferences**
-- Check _Load preferences from a custom folder or URL_
-- Click _Browse_
+- Check *Load preferences from a custom folder or URL*
+- Click *Browse*
 - Select [com.googlecode.iterm2.plist](/macOS/com.googlecode.iterm2.plist).
 
 ## Keyboard Layout
@@ -131,7 +113,7 @@ To import the settings from [the file in this repo](/macOS/Stats.plist):
 
 1. Open **Rectangle**'s settings.
 2. Click the ⚙ icon in the top bar.
-3. Click _Import_ on the bottom.
+3. Click *Import* on the bottom.
 4. Select [`Stats.plist`](/macOS/Stats.plist).
 
 ## Stats
@@ -142,5 +124,5 @@ To export the settings:
 
 1. Right click on the **Stats** icon(s) in the menu bar.
 1. Right click on the ⚙ icon in the upper-right corner to open the settings.
-1. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
-1. Click _Export settings_
+1. On the navigation strip on the left, choose *⚙ Settings* (the the last option).
+1. Click *Export settings*
