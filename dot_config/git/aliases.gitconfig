@@ -32,8 +32,6 @@
 
     ## commit
     amend   = commit --amend
-    aamend  = commit --all --amend                      # TODO: add to git-util
-    aumend  = ! git add --updated && git commit --amend # TODO: add to git-util
     c       = commit
     ca      = commit --amend
     call    = commit --all
