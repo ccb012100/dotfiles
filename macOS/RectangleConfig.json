@@ -154,6 +154,9 @@
     "screenEdgeGapTop" : {
       "float" : 0
     },
+    "screenEdgeGapTopNotch" : {
+      "float" : 0
+    },
     "shortEdgeSnapAreaSize" : {
       "float" : 145
     },
@@ -248,6 +251,10 @@
       "keyCode" : 8,
       "modifierFlags" : 917504
     },
+    "centerHalf" : {
+      "keyCode" : 16,
+      "modifierFlags" : 917504
+    },
     "larger" : {
       "keyCode" : 24,
       "modifierFlags" : 917504
@@ -305,5 +312,5 @@
       "modifierFlags" : 917504
     }
   },
-  "version" : "85"
+  "version" : "87"
 }
