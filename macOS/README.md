@@ -81,7 +81,7 @@ macOS [menu bar manager](https://github.com/jordanbaird/Ice)
 Export the settings from your machine into this repository:
 
 ```zsh
-defaults export com.jordanbair.Ice.plist - > $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
+defaults export com.jordanbair.Ice - > $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
 ```
 
 Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to your machine:
