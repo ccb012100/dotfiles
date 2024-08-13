@@ -22,7 +22,24 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lw
 > Bartender was sold by the original developer to a new owner, so I've moved to [Ice](https://github.com/jordanbaird/Ice), which seems to
 > be feature-complete for my requirements
 
-[Bartender 5](https://www.macbartender.com/Bartender5/) menu bar item manager.
+~~[Bartender 5](https://www.macbartender.com/Bartender5/) menu bar item manager.~~
+
+~~To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:~~
+
+~~Export:~~
+
+~~```zsh~~
+~~# strip out the body text of the <data> tags, which I don't really care about and add > 1M to the file's size~~
+~~defaults export com.surteesstudios.Bartender.plist - | sed '/\h*<.*>\h*/!d' > $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist~~
+
+~~```~~
+
+~~Import:~~
+
+~~```zsh~~
+~~defaults import com.surteesstudios.Bartender.plist $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist~~
+~~```~~
+
 
 To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:
 
