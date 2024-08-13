@@ -10,8 +10,10 @@
 	<true/>
 	<key>BartenderBarOnlyOnNotchScreens</key>
 	<integer>1</integer>
+	<key>DisableAllTriggers</key>
+	<true/>
 	<key>FRFeedbackReporter.lastCrashCheckDate</key>
-	<date>2024-05-17T14:03:25Z</date>
+	<date>2024-08-12T14:34:08Z</date>
 	<key>Gaps-RequireAltOrRightClickToShowGapPopup</key>
 	<integer>1</integer>
 	<key>HaveConvertedImageSFUsToTriggers</key>
@@ -45,17 +47,17 @@
 		<string>0.000000, 316.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSStatusItem Preferred Position EItem</key>
-	<real>16290</real>
+	<real>16197</real>
 	<key>NSStatusItem Preferred Position HISItem</key>
-	<real>674</real>
+	<real>606</real>
 	<key>NSStatusItem Preferred Position RHSItem</key>
-	<real>6258</real>
+	<real>6165</real>
 	<key>NSStatusItem Preferred Position THSItem</key>
-	<real>11274</real>
-	<key>NSStatusItem Preferred Position special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
-	<real>652</real>
+	<real>11181</real>
 	<key>NSStatusItem Preferred Position statusItem</key>
-	<real>216</real>
+	<real>214</real>
+	<key>NSStatusItem Visible Item-6</key>
+	<false/>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
@@ -125,15 +127,9 @@
 			<data>
 			</data>
 			<key>GapItemLabels</key>
-			<dict>
-				<key>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
-				<string>§</string>
-			</dict>
+			<dict/>
 			<key>GapItemWidths</key>
-			<dict>
-				<key>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</key>
-				<integer>6</integer>
-			</dict>
+			<dict/>
 			<key>Hide</key>
 			<array>
 				<string>com.apple.Spotlight-Item-0</string>
@@ -152,6 +148,7 @@
 				<string>com.microsoft.OneDrive-Item-0</string>
 				<string>com.zscaler.zscaler-Item-0</string>
 				<string>com.trusourcelabs.NoMAD-Item-0</string>
+				<string>com.cisco.anyconnect.gui-Item-0</string>
 			</array>
 			<key>Show</key>
 			<array>
@@ -167,8 +164,6 @@
 				<string>com.apple.controlcenter-Bluetooth</string>
 				<string>com.apple.controlcenter-WiFi</string>
 				<string>com.microsoft.Outlook-Item-0</string>
-				<string>com.surteesstudios.Bartender-special.GapItem-9E8DBDE8-29F1-4925-8066-4574EE040628</string>
-				<string>com.apple.screencaptureui-Item-0</string>
 			</array>
 			<key>description</key>
 			<string></string>
@@ -202,29 +197,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2024-05-17T13:59:59Z</date>
+	<date>2024-08-13T14:34:09Z</date>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>428068234</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
-	<key>TerminationReason</key>
-	<string>Bartender Quitting due to system restart or logout</string>
-	<key>TerminationReasons</key>
-	<array>
-		<string>2024-04-23 20:44:12 +0000 Bartender Quitting due to system restart or logout (POWER OFF) (Not set to Start at Login)</string>
-		<string>2024-04-23 20:44:12 +0000 Bartender Quitting due to system restart or logout (Not set to Start at Login)</string>
-		<string>2024-04-28 20:49:42 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
-		<string>2024-04-28 20:49:42 +0000 Bartender Quitting due to system restart or logout</string>
-		<string>2024-04-29 22:14:30 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
-		<string>2024-04-29 22:14:30 +0000 Bartender Quitting due to system restart or logout</string>
-		<string>2024-05-06 19:16:42 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
-		<string>2024-05-06 19:16:42 +0000 Bartender Quitting due to system restart or logout</string>
-		<string>2024-05-17 14:00:22 +0000 Bartender Quitting due to update</string>
-		<string>2024-05-17 14:01:32 +0000 Bartender Quitting due to system restart or logout</string>
-		<string>2024-05-17 14:02:35 +0000 Bartender Quitting due to system restart or logout</string>
-		<string>2024-05-17 14:03:22 +0000 Bartender Quitting due to system restart or logout (POWER OFF)</string>
-		<string>2024-05-17 14:03:22 +0000 Bartender Quitting due to system restart or logout</string>
-	</array>
 	<key>TriggerSettings</key>
 	<dict>
 		<key>Battery1</key>
