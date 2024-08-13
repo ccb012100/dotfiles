@@ -1391,6 +1391,8 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>917795</integer>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>Leader</key>
 	<string>0x6a-0x40000-0x26</string>
 	<key>LeftCommand</key>
