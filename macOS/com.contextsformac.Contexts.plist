@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CTInfoBundleVersionFirst</key>
+	<string>390</string>
+	<key>CTKeyboardEventRightOptionNumberActive</key>
+	<false/>
+	<key>CTPreferenceAppearanceContentSizeCategory</key>
+	<integer>2</integer>
+	<key>CTPreferenceApplicationSlideGestureSelectionMode</key>
+	<string>CTSlideGestureSelectionModePanel</string>
+	<key>CTPreferenceInputDoubleTouchSwitchGestureActive</key>
+	<true/>
+	<key>CTPreferenceInputSourceIdToUse</key>
+	<string>org.unknown.keylayout.USno⌥</string>
+	<key>CTPreferencePanelRecentSwitcherShowAfterDelay</key>
+	<true/>
+	<key>CTPreferencePanelUpdatesSelectionOnMouseMove</key>
+	<true/>
+	<key>CTPreferencePanelWidth</key>
+	<integer>0</integer>
+	<key>CTPreferenceSearchShortcutEscapeKeyEnabled</key>
+	<true/>
+	<key>CTPreferenceSidebarWidth</key>
+	<integer>4</integer>
+	<key>CTPreferenceWorkspaceConstrainWindowFrames</key>
+	<false/>
+	<key>CTPreferenceWorkspaceEnableAlternativeSwitchingMethod</key>
+	<true/>
+	<key>CTPreferenceWorkspaceGrouping</key>
+	<string>CTWorkspaceGroupingOne</string>
+	<key>CTSidebarInactiveMaximumWidth</key>
+	<integer>0</integer>
+	<key>CTSidebarShowIndicesForWindows</key>
+	<false/>
+	<key>CTUsageCount</key>
+	<integer>469</integer>
+	<key>CTUsageCountSwitcherGesture</key>
+	<integer>5</integer>
+	<key>CTUsageCountSwitcherNumber</key>
+	<integer>5</integer>
+	<key>CTUsageCountSwitcherRecent</key>
+	<integer>382</integer>
+	<key>CTUsageCountSwitcherSearch</key>
+	<integer>76</integer>
+	<key>CTUsageCountSwitcherSidebar</key>
+	<integer>1</integer>
+	<key>CTWorkspaceShowApplicationsWithNoWindows</key>
+	<false/>
+	<key>MSAppCenter310AnalyticsUserDefaultsMigratedKey</key>
+	<true/>
+	<key>MSAppCenter310AppCenterUserDefaultsMigratedKey</key>
+	<true/>
+	<key>MSAppCenter310CrashesUserDefaultsMigratedKey</key>
+	<true/>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>1720 1500 400 135 0 0 3840 2135 </string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2024-08-13T14:06:39Z</date>
+	<key>SUScheduledCheckInterval</key>
+	<real>86400</real>
+</dict>
+</plist>

@@ -40,6 +40,9 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/com.lw
 ~~defaults import com.surteesstudios.Bartender.plist $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist~~
 ~~```~~
 
+## Contexts 3
+
+[Contexts](https://contexts.co/) window switcher.
 
 To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:
 
@@ -47,13 +50,13 @@ Export:
 
 ```zsh
 # strip out the body text of the <data> tags, which I don't really care about and add > 1M to the file's size
-defaults export com.surteesstudios.Bartender.plist - | sed '/\h*<.*>\h*/!d' > $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist
+defaults export com.contextsformac.Contexts.plist - > $HOME/.local/share/chezmoi/macOS/com.contextsformac.Contexts.plist
 ```
 
 Import:
 
 ```zsh
-defaults import com.surteesstudios.Bartender.plist $HOME/.local/share/chezmoi/macOS/com.surteesstudios.Bartender.plist
+defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/macOS/com.contextsformac.Contexts.plist
 ```
 
 ## DOIO Megalodon Triple Knob Macro Pad
