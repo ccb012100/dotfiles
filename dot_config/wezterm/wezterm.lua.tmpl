@@ -47,18 +47,12 @@ config.colors = {
     tab_bar = {
         inactive_tab_edge = 'red',
     },
+    quick_select_label_bg = { Color = '#0000FF' },
+    quick_select_label_fg = { Color = '#FFFF00' },
+    quick_select_match_bg = { Color = 'peru' },
+    quick_select_match_fg = { Color = '#FFFF00' },
 }
 config.tab_max_width = 36; -- default = 6
-
--- config.use_fancy_tab_bar = false
--- config.colors = {
---     tab_bar = {
---         active_tab = {
---             bg_color = '#ED733A',
---             fg_color = '#000000'
---         },
---     },
--- }
 
 --
 -- Keybindings
@@ -160,7 +154,7 @@ config.keys = {
     -- Copy/paste/select
     { key = 'c',           mods = keycode.super,            action = act.ActivateCopyMode },
     { key = 'c',           mods = keycode.ctrl_shift,       action = act.CopyTo 'Clipboard' },
-    { key = "s",           mods = keycode.ctrl_shift,       action = act.QuickSelect },
+    { key = "s",           mods = keycode.ctrl_shift,       action = act.QuickSelectArgs{ alphabet = 'asdfjkl;qweruioptyvcxznm,.b' } },
     { key = 'v',           mods = keycode.ctrl_shift,       action = act.PasteFrom 'Clipboard' },
     { key = 'v',           mods = keycode.super,            action = act.PasteFrom 'Clipboard' },
     { key = 'Copy',        mods = keycode.none,             action = act.CopyTo 'Clipboard' },
