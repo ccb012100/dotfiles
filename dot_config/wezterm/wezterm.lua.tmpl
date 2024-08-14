@@ -9,19 +9,14 @@ end
 
 config.initial_cols = 120
 config.initial_rows = 60
-
 config.inactive_pane_hsb = {
     saturation = 0.5,
     brightness = 0.5,
 }
-
-config.window_frame = {                   -- TODO: reduce font size on command palette
-    font = wezterm.font('IBM Plex Sans'), -- Proportional font
-}
-
+-- TODO: reduce font size on command palette
+config.window_frame = { font = wezterm.font('IBM Plex Sans') }
 -- place window management buttons (minimize, maximize, close) into the tab bar instead of showing a title bar
 config.window_decorations = 'INTEGRATED_BUTTONS|RESIZE'
-
 config.font = wezterm.font {
     family = 'JetBrains Mono',
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, -- disable ligatures
@@ -32,17 +27,9 @@ config.pane_select_font_size = 36 -- default = 36
 --
 -- THEMING
 --
-{{ if (eq .chezmoi.os "windows") -}}
--- on Windows, make sure to link/copy files from ~/.config/wezterm/colors/
--- to "/c/Program Files/Wezterm/colors"
-{{- end }}
+-- If on Windows, make sure to link/copy files from "~/.config/wezterm/colors/" to "/c/Program Files/Wezterm/colors"
 config.color_scheme = 'Dracula'
-
-config.window_frame = {
-    font = wezterm.font { family = 'IBM Plex Mono' },
-    font_size = 13.0, -- default = 10 on Windowx, 12.0 on everything else
-}
-
+config.window_frame = { font = wezterm.font { family = 'IBM Plex Mono' }, font_size = 13.0, }
 config.colors = {
     tab_bar = {
         inactive_tab_edge = 'red',
@@ -52,7 +39,7 @@ config.colors = {
     quick_select_match_bg = { Color = 'peru' },
     quick_select_match_fg = { Color = '#FFFF00' },
 }
-config.tab_max_width = 36; -- default = 6
+config.tab_max_width = 36;
 
 --
 -- Keybindings
@@ -60,11 +47,18 @@ config.tab_max_width = 36; -- default = 6
 
 -- see: <https://github.com/wez/wezterm/issues/2623>
 config.key_map_preference = 'Physical'
-
 config.use_dead_keys = false
 config.disable_default_key_bindings = true
+config.quick_select_alphabet = 'asdfjkl;zxcvm,./weruiopb'
 
-config.quick_select_alphabet = 'asdfjkl;zxcvm,./weruiop'
+-- Show the name of the active key table in the status area
+wezterm.on('update-right-status', function(window, pane)
+    local name = window:active_key_table()
+    if name then
+        name = 'TABLE: ' .. name .. ' '
+    end
+    window:set_right_status(name or '')
+end)
 
 local keycode = {
     none = 'NONE', -- unmap
@@ -87,11 +81,26 @@ config.leader = { key = 'j', mods = keycode.ctrl }
 config.keys = {
     -- This lets us hide the app with Cmd+h on macOS
     { key = 'h',           mods = keycode.super,            action = wezterm.action.HideApplication },
+    -- open wezterm config (i.e. this file) in Visual Studio Code with ⌘-,
+    {
+        key = ',',
+        mods = 'SUPER',
+        action = wezterm.action.SpawnCommandInNewTab {
+            cwd = wezterm.home_dir,
+            args = { '/usr/local/bin/code', wezterm.config_file },
+        },
+    },
     -- Launcher
     {
         key = 'Enter',
         mods = keycode.ctrl,
         action = act.ShowLauncherArgs { flags = 'FUZZY|TABS|LAUNCH_MENU_ITEMS' }
+    },
+    -- Enter resize_pane mode until we cancel out of it
+    {
+        key = 'r',
+        mods = 'LEADER',
+        action = act.ActivateKeyTable { name = 'resize_pane', one_shot = false, },
     },
     -- Command Palette
     { key = keycode.space, mods = keycode.ctrl,             action = act.ActivateCommandPalette },
@@ -124,7 +133,7 @@ config.keys = {
     { key = 'j',           mods = keycode.leader,           action = act.PaneSelect },
     -- :: Select and move
     { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
-    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } }, -- (D)etach
+    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
     -- :: activate next Pane with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane with 'Leader, Shift+Leader'
@@ -154,18 +163,38 @@ config.keys = {
     -- Copy/paste/select
     { key = 'c',           mods = keycode.super,            action = act.ActivateCopyMode },
     { key = 'c',           mods = keycode.ctrl_shift,       action = act.CopyTo 'Clipboard' },
-    { key = "s",           mods = keycode.ctrl_shift,       action = act.QuickSelectArgs{ alphabet = 'asdfjkl;qweruioptyvcxznm,.b' } },
-    { key = 'v',           mods = keycode.ctrl_shift,       action = act.PasteFrom 'Clipboard' },
-    { key = 'v',           mods = keycode.super,            action = act.PasteFrom 'Clipboard' },
-    { key = 'Copy',        mods = keycode.none,             action = act.CopyTo 'Clipboard' },
-    { key = 'Insert',      mods = keycode.ctrl,             action = act.CopyTo 'PrimarySelection' },
-    { key = 'Insert',      mods = keycode.shift,            action = act.PasteFrom 'PrimarySelection' },
-    { key = 'Paste',       mods = keycode.none,             action = act.PasteFrom 'Clipboard' },
+    {
+        key = "s",
+        mods = keycode.ctrl_shift,
+        action = act.QuickSelectArgs { patterns = { '\\b\\S*\\b', }, }
+    },
+    { key = 'v',      mods = keycode.ctrl_shift, action = act.PasteFrom 'Clipboard' },
+    { key = 'v',      mods = keycode.super,      action = act.PasteFrom 'Clipboard' },
+    { key = 'Copy',   mods = keycode.none,       action = act.CopyTo 'Clipboard' },
+    { key = 'Insert', mods = keycode.ctrl,       action = act.CopyTo 'PrimarySelection' },
+    { key = 'Insert', mods = keycode.shift,      action = act.PasteFrom 'PrimarySelection' },
+    { key = 'Paste',  mods = keycode.none,       action = act.PasteFrom 'Clipboard' },
     -- Search
-    { key = 'f',           mods = keycode.ctrl_shift,       action = act.Search 'CurrentSelectionOrEmptyString' },
+    { key = 'f',      mods = keycode.ctrl_shift, action = act.Search 'CurrentSelectionOrEmptyString' },
 }
 
 config.key_tables = {
+    -- Resize Pane mode
+    resize_pane = {
+        { key = 'LeftArrow',  action = act.AdjustPaneSize { 'Left', 1 } },
+        { key = 'h',          action = act.AdjustPaneSize { 'Left', 1 } },
+        { key = 'f',          action = act.AdjustPaneSize { 'Left', 1 } },
+        { key = 'RightArrow', action = act.AdjustPaneSize { 'Right', 1 } },
+        { key = 'l',          action = act.AdjustPaneSize { 'Right', 1 } },
+        { key = 'b',          action = act.AdjustPaneSize { 'Right', 1 } },
+        { key = 'UpArrow',    action = act.AdjustPaneSize { 'Up', 1 } },
+        { key = 'k',          action = act.AdjustPaneSize { 'Up', 1 } },
+        { key = 'p',          action = act.AdjustPaneSize { 'Up', 1 } },
+        { key = 'DownArrow',  action = act.AdjustPaneSize { 'Down', 1 } },
+        { key = 'j',          action = act.AdjustPaneSize { 'Down', 1 } },
+        { key = 'n',          action = act.AdjustPaneSize { 'Down', 1 } },
+        { key = 'Escape',     action = 'PopKeyTable' }, -- Exit mode
+    },
     -- Copy mode
     copy_mode = {
         { key = 'Tab',    mods = 'NONE',  action = act.CopyMode 'MoveForwardWord' },
