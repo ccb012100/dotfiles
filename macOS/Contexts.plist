@@ -11,7 +11,7 @@
 	<key>CTPreferenceApplicationSlideGestureSelectionMode</key>
 	<string>CTSlideGestureSelectionModePanel</string>
 	<key>CTPreferenceInputDoubleTouchSwitchGestureActive</key>
-	<true/>
+	<false/>
 	<key>CTPreferenceInputSourceIdToUse</key>
 	<string>org.unknown.keylayout.USno⌥</string>
 	<key>CTPreferencePanelRecentSwitcherShowAfterDelay</key>
@@ -22,8 +22,41 @@
 	<integer>0</integer>
 	<key>CTPreferenceSearchShortcutEscapeKeyEnabled</key>
 	<true/>
+	<key>CTPreferenceSearchShortcutModal</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxAREldL
+	ZXlDb2RlViRjbGFzc11Nb2RpZmllckZsYWdzEDWAAhIABAAA0hQVFhdaJGNsYXNzbmFt
+	ZVgkY2xhc3Nlc1pDVFNob3J0Y3V0oxYYGVtNQVNTaG9ydGN1dFhOU09iamVjdAgRGiQp
+	MjdJTFFTV11kbHOBg4WKj5qjrrK+AAAAAAAAAQEAAAAAAAAAGgAAAAAAAAAAAAAAAAAA
+	AMc=
+	</data>
 	<key>CTPreferenceSidebarWidth</key>
 	<integer>4</integer>
+	<key>CTPreferenceSwitchers</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBgLDBUlJiwzNjc4OT1ISk1O
+	T1hZXF5oam1VJG51bGzSDQ4PFFpOUy5vYmplY3RzViRjbGFzc6QQERITgAKAC4AQgBSA
+	F9gOFhcYGRobHB0eHyAhHiMkXxAXbWluaW1pemVkV2luZG93c0Rpc3BsYXlXZW5hYmxl
+	ZF8QGndpbmRvd2xlc3NQcm9jZXNzZXNEaXNwbGF5XG5leHRTaG9ydGN1dF8QFGhpZGRl
+	bldpbmRvd3NEaXNwbGF5XHNwYWNlc09wdGlvbl8QEHByZXZpb3VzU2hvcnRjdXSACoAJ
+	gAOACIAEgAmAB4AGCdMnDigpKitXS2V5Q29kZV1Nb2RpZmllckZsYWdzEDCABRIAEAAA
+	0i0uLzBaJGNsYXNzbmFtZVgkY2xhc3Nlc1pDVFNob3J0Y3V0oy8xMltNQVNTaG9ydGN1
+	dFhOU09iamVjdNMnDig0KisQMoAFXxARQ1RTcGFjZXNPcHRpb25BbGxfEBNDVEl0ZW1E
+	aXNwbGF5SGlkZGVuXxATQ1RJdGVtRGlzcGxheU5vcm1hbNItLjo7WkNUU3dpdGNoZXKi
+	PDJaQ1RTd2l0Y2hlctk+DhcYGRYaGxw/HR8eQ0REI0dfEBlub25hY3RpdmVQcm9jZXNz
+	ZXNEaXNwbGF5gA6ACoADgAmADIAPgA+AB4AN0ycOKDQqK4AF0ycOKDQqTIAFEgASAABf
+	EBNDVEl0ZW1EaXNwbGF5SGlkZGVuXxATQ1RJdGVtRGlzcGxheU5vcm1hbNgOFhcYGRob
+	HB1EUiBURCNXgAqAD4ARgAiAEoAPgAeAExAB0ycOKCkqW4AFEgAIAADTJw4oNCpbgAXZ
+	Pg4XGBkWGhscPx1SRGNERCNngA6ACoARgA+AFYAPgA+AB4AW0ycOKDQqW4AF0ycOKDQq
+	bIAFEgAKAADSLS5ub1dOU0FycmF5om4yAAgAEQAaACQAKQAyADcASQBMAFEAUwBuAHQA
+	eQCEAIsAkACSAJQAlgCYAJoAqwDFAM0A6gD3AQ4BGwEuATABMgE0ATYBOAE6ATwBPgE/
+	AUYBTgFcAV4BYAFlAWoBdQF+AYkBjQGZAaIBqQGrAa0BwQHXAe0B8gH9AgACCwIeAjoC
+	PAI+AkACQgJEAkYCSAJKAkwCUwJVAlwCXgJjAnkCjwKgAqICpAKmAqgCqgKsAq4CsAKy
+	ArkCuwLAAscCyQLcAt4C4ALiAuQC5gLoAuoC7ALuAvUC9wL+AwADBQMKAxIAAAAAAAAC
+	AQAAAAAAAABwAAAAAAAAAAAAAAAAAAADFQ==
+	</data>
 	<key>CTPreferenceWorkspaceConstrainWindowFrames</key>
 	<false/>
 	<key>CTPreferenceWorkspaceEnableAlternativeSwitchingMethod</key>
@@ -35,15 +68,15 @@
 	<key>CTSidebarShowIndicesForWindows</key>
 	<false/>
 	<key>CTUsageCount</key>
-	<integer>469</integer>
+	<integer>781</integer>
 	<key>CTUsageCountSwitcherGesture</key>
 	<integer>5</integer>
 	<key>CTUsageCountSwitcherNumber</key>
 	<integer>5</integer>
 	<key>CTUsageCountSwitcherRecent</key>
-	<integer>382</integer>
+	<integer>669</integer>
 	<key>CTUsageCountSwitcherSearch</key>
-	<integer>76</integer>
+	<integer>101</integer>
 	<key>CTUsageCountSwitcherSidebar</key>
 	<integer>1</integer>
 	<key>CTWorkspaceShowApplicationsWithNoWindows</key>
@@ -55,13 +88,13 @@
 	<key>MSAppCenter310CrashesUserDefaultsMigratedKey</key>
 	<true/>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1720 1500 400 135 0 0 3840 2135 </string>
+	<string>689 708 400 135 0 0 1728 1079 </string>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2024-08-13T14:06:39Z</date>
+	<date>2024-08-14T14:09:29Z</date>
 	<key>SUScheduledCheckInterval</key>
 	<real>86400</real>
 </dict>
