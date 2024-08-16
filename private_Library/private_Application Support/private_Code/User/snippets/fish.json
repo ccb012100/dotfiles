@@ -1,12 +1,4 @@
 {
-	"shebang": {
-		"prefix": "shebang",
-		"body": [
-			"#!/usr/bin/env fish",
-			"$0"
-		],
-		"description": "insert shebang line for fish script"
-	},
 	"add abbr": {
 		"prefix": "abbr",
 		"body": "abbr --add ${1:name} ${2:command}",
