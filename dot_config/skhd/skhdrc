@@ -54,7 +54,7 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #   1Password:          1 p
 
 meh - 0x27  : skhd -k 'alt - 0x32'          # map meh+' to alt+` (switch application window forwards)
-meh - 0x29  : skhd -k 'alt + shift - 0x32'  # map meh+; to alt+shift+` (switch application window backwards)
+# meh - 0x29  : skhd -k 'alt + shift - 0x32'  # map meh+; to alt+shift+` (switch application window backwards)
 meh - h     : skhd -k "cmd - h"             # map meh+h to cmd+h (hide app)
 
 meh - a     : open -a 'Microsoft Teams'
@@ -66,6 +66,7 @@ meh - j     : open -a 'Visual Studio Code'
 meh - k     : open -a wezterm
 meh - o     : open -a 'Microsoft Outlook'
 meh - s     : open -a Spotify
+meh - 0x29  : open -a 'JetBrains Rider'     # meh+;
 # meh - w     : skhd -k 'f5'                # TODO: not working    # mostly used for muting the mic in MS Teams
 
 ####################################################
