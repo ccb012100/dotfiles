@@ -57,16 +57,15 @@ meh - 0x27  : skhd -k 'alt - 0x32'          # map meh+' to alt+` (switch applica
 meh - 0x29  : skhd -k 'alt + shift - 0x32'  # map meh+; to alt+shift+` (switch application window backwards)
 meh - h     : skhd -k "cmd - h"             # map meh+h to cmd+h (hide app)
 
-# these are commented out because I'm using Contexts 3 instead
-# meh - a     : open -a 'Microsoft Teams'
-# meh - d     : open -a Rider
-# meh - e     : open -a 'Microsoft Edge'
-# meh - f     : open -a firefox
-# meh - g     : open -a 'Google Chrome'
-# meh - j     : open -a 'Visual Studio Code'
-# meh - k     : open -a wezterm
-# meh - o     : open -a 'Microsoft Outlook'
-# meh - s     : open -a Spotify
+meh - a     : open -a 'Microsoft Teams'
+meh - d     : open -a Rider
+meh - e     : open -a 'Microsoft Edge'
+meh - f     : open -a firefox
+meh - g     : open -a 'Google Chrome'
+meh - j     : open -a 'Visual Studio Code'
+meh - k     : open -a wezterm
+meh - o     : open -a 'Microsoft Outlook'
+meh - s     : open -a Spotify
 # meh - w     : skhd -k 'f5'                # TODO: not working    # mostly used for muting the mic in MS Teams
 
 ####################################################
