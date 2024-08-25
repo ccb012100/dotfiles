@@ -180,24 +180,19 @@ config.keys = {
 }
 
 for i = 1, 8 do
-  --  Alt/Opt + [0-9] to activate that tab
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = keycode.alt_opt,
-    action = act.ActivateTab(i - 1),
-  })
-  --  Super + [0-9] to activate that tab
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = keycode.super,
-    action = act.ActivateTab(i - 1),
-  })
-  -- F1 through F8 to activate that tab
-  table.insert(config.keys, {
-    key = 'F' .. tostring(i),
-    action = act.ActivateTab(i - 1),
-  })
+    --  Alt/Opt + [0-9] to activate that tab
+    table.insert(config.keys, {
+        key = tostring(i),
+        mods = keycode.ctrl_shift,
+        action = act.ActivateTab(i - 1),
+    })
+    -- F1 through F8 to activate that tab
+    table.insert(config.keys, {
+        key = 'F' .. tostring(i),
+        action = act.ActivateTab(i - 1),
+    })
 end
+
 config.key_tables = {
     -- Resize Pane mode
     resize_pane = {
