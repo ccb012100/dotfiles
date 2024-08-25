@@ -3468,10 +3468,6 @@
         "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
-        "key": "alt+1",
-        "command": "workbench.action.holdLockedScrolling"
-    },
-    {
         "key": "ctrl+t",
         "command": "editor.action.transpose"
     },
@@ -4164,5 +4160,17 @@
     {
         "key": "ctrl+g b",
         "command": "numberedBookmarks.listFromAllFiles"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.holdLockedScrolling"
+    },
+    {
+        "key": "ctrl+l t",
+        "command": "workbench.action.tasks.test"
+    },
+    {
+        "key": "ctrl+l shift+t",
+        "command": "workbench.action.tasks.test"
     },
 ]
