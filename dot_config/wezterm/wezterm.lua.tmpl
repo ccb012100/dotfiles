@@ -45,8 +45,7 @@ config.tab_max_width = 36;
 -- Keybindings
 --
 
--- see: <https://github.com/wez/wezterm/issues/2623>
-config.key_map_preference = 'Physical'
+config.key_map_preference = 'Physical' -- see: <https://github.com/wez/wezterm/issues/2623>
 config.use_dead_keys = false
 config.disable_default_key_bindings = true
 config.quick_select_alphabet = 'asdfjkl;zxcvm,./weruiopb'
@@ -119,10 +118,13 @@ config.keys = {
     { key = 'q',           mods = keycode.leader,           action = act.CloseCurrentTab { confirm = true } },
     { key = 'q',           mods = keycode.super,            action = act.CloseCurrentTab { confirm = true } },
     -- Move/Activate Tab
-    { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },
-    { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) },
-    { key = '[',           mods = keycode.leader,           action = act.MoveTabRelative(-1) },
-    { key = ']',           mods = keycode.leader,           action = act.MoveTabRelative(1) },
+    { key = '0',           mods = keycode.leader,           action = act.MoveTab(0) },
+    { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) }, -- activate previous
+    { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) }, -- activate next
+    { key = 'b',           mods = keycode.leader,           action = act.ActivateTabRelative(-1) }, -- activate previous
+    { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) }, -- activate next
+    { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) }, -- move forward 1
+    { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) }, -- move backward 1
     -- Panes
     -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
@@ -191,6 +193,15 @@ for i = 1, 8 do
         key = 'F' .. tostring(i),
         action = act.ActivateTab(i - 1),
     })
+end
+
+for i = 1, 8 do
+  -- Leader, number to move tab to that position
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = keycode.leader,
+    action = wezterm.action.MoveTab(i - 1),
+  })
 end
 
 config.key_tables = {
