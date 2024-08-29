@@ -3011,11 +3011,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+,",
-        "command": "cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
         "key": "ctrl+shift+b",
         "command": "csdevkit.buildSolution",
         "when": "resourceLangId == 'csharp'"
