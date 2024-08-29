@@ -4173,4 +4173,8 @@
         "key": "ctrl+l shift+t",
         "command": "workbench.action.tasks.test"
     },
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "workbench.action.navigateToLastEditLocation"
+    },
 ]
