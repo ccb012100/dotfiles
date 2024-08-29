@@ -42,6 +42,7 @@ brew install \
     font-jetbrains-mono-nerd-font \
     git \
     git-delete-merged-branches \
+    git-lfs \
     glow \
     go \
     iterm2 \
