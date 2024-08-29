@@ -153,8 +153,9 @@ abbr --add sctl sysmtemctl
 # zoxide
 abbr --add zq zoxide query
 abbr --add zo zoxide
-
 {{/* IF on WSL2, THEN run 1Password as a service account */ -}}
 {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
 abbr --add open wslview # wslu
 {{- end }}
+abbr --add dsp 'datasette $HOME/playlister.db'
+abbr --add pls 'playlister.sh sync tsv'
