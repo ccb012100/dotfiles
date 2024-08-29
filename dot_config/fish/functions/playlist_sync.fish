@@ -5,12 +5,12 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
     end
 
     set pldb $HOME/playlister.db
-
+    set playlister_script $HOME/bin/playlister.sh
     set_color purple
     echo Syncing $pldb ...\n
     set_color normal
 
-    $HOME/bin/playlist-search.sh sync db
+    $playlister_script sync db
 
     if test $status -eq 0
         set_color purple
@@ -23,14 +23,14 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
         return 1
     end
 
-    while read --nchars 1 -l response --prompt-str="❔ Sync playlist-search album tsv files? (y/n) "
+    while read --nchars 1 -l response --prompt-str="❔ Sync ccb012100/spotify-playlists album tsv files? (y/n) "
         switch $response
             case y Y
                 set_color purple
                 echo \nSyncing tsv files...
                 set_color normal
 
-                cd $HOME/src/playlist-search && source venv/bin/activate.fish && $HOME/bin/playlist-search.sh sync tsv
+                $playlister_script sync tsv
 
                 if test $status -ne 0
                     set_color brred
