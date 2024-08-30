@@ -1190,7 +1190,7 @@
         "command": "-workbench.action.toggleEditorGroupLayout"
     },
     {
-        "key": "ctrl+x ,",
+        "key": "ctrl+x ;",
         "command": "workbench.action.toggleEditorGroupLayout"
     },
     {
@@ -1695,11 +1695,6 @@
         "command": "workbench.action.focusPanel"
     },
     {
-        "key": "ctrl+k ctrl+j",
-        "command": "-editor.unfoldAll",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
         "key": "ctrl+y",
         "command": "-redo"
     },
@@ -1810,46 +1805,6 @@
         "key": "ctrl+shift+i",
         "command": "-overtype.toggle",
         "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "editor.fold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "-editor.fold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+]",
-        "command": "editor.unfold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+]",
-        "command": "-editor.unfold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "editor.foldRecursively",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+k ctrl+[",
-        "command": "-editor.foldRecursively",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+]",
-        "command": "editor.unfoldRecursively",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+k ctrl+]",
-        "command": "-editor.unfoldRecursively",
-        "when": "editorTextFocus && foldingEnabled"
     },
     {
         "key": "ctrl+]",
@@ -3031,20 +2986,6 @@
         "when": "markdownPreviewFocus"
     },
     {
-        "key": "ctrl+alt+[",
-        "command": "editor.foldAll",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+k ctrl+0",
-        "command": "-editor.foldAll",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+alt+]",
-        "command": "editor.unfoldAll"
-    },
-    {
         "key": "ctrl+x ctrl+z",
         "command": "workbench.action.toggleZenMode"
     },
@@ -3303,11 +3244,13 @@
     },
     {
         "key": "ctrl+j p",
-        "command": "editor.action.marker.nextInFiles"
+        "command": "editor.action.marker.nextInFiles",
+        "when": "!isMergeEditor && !isMergeResultEditor"
     },
     {
         "key": "ctrl+j shift+p",
-        "command": "editor.action.marker.prevInFiles"
+        "command": "editor.action.marker.prevInFiles",
+        "when": "!isMergeResultEditor && !isMergeResultEditor"
     },
     {
         "key": "ctrl+j k",
@@ -4108,7 +4051,7 @@
         "command": "numberedBookmarks.listFromAllFiles"
     },
     {
-        "key": "alt+1",
+        "key": "alt+x",
         "command": "workbench.action.holdLockedScrolling"
     },
     {
@@ -4173,5 +4116,49 @@
         "key": "ctrl+shift+d",
         "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorHasSelection && !editorReadonly"
+    },
+    {
+        "key": "ctrl+j p",
+        "command": "merge.goToNextUnhandledConflict",
+        "when": "isMergeEditor || isMergeResultEditor"
+    },
+    {
+        "key": "ctrl+j shift+p",
+        "command": "merge.goToPreviousUnhandledConflict",
+        "when": "isMergeEditor || isMergeResultEditor"
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup && !sideBySideEditorActive"
+    },
+    {
+        "key": "cmd+k shift+cmd+\\",
+        "command": "-workbench.action.splitEditorInGroup",
+        "when": "activeEditorCanSplitInGroup"
+    },
+    {
+        "key": "ctrl+x l",
+        "command": "workbench.action.toggleLockedScrolling"
+    },
+    {
+        "key": "alt+o",
+        "command": "editor.toggleFold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+l",
+        "command": "-editor.toggleFold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "editor.toggleFoldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k shift+cmd+l",
+        "command": "-editor.toggleFoldRecursively",
+        "when": "editorTextFocus && foldingEnabled"
     }
 ]
