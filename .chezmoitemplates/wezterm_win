@@ -1,0 +1,46 @@
+-- Windows-specific config
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    local spawn_gitbash = { label = "Git Bash", args = { "C:/Program Files/Git/bin/bash.exe ", "-i", "-l" } }
+    local spawn_wsl = { label = "WSL - Ubuntu", args = { "wsl.exe" }, cwd = "//wsl.localhost/Ubuntu/home/ccb012100" }
+    local spawn_cmdexe = { label = "cmd.exe", args = { "cmd.exe", "/k", "config.cmd" } }
+    local spawn_pwsh = { label = 'PowerShell', args = { "C:/Program Files/PowerShell/7/pwsh.exe" } }
+
+    config.launch_menu = { spawn_gitbash, spawn_wsl, spawn_cmdexe, spawn_pwsh }
+
+    -- set Git Bash as default
+    config.default_prog = spawn_gitbash.args
+
+    config.skip_close_confirmation_for_processes_named = {
+        "bash",
+        "cmd.exe",
+        "fish",
+        "powershell.exe",
+        "pwsh.exe",
+        "sh",
+        "zsh",
+    }
+
+    -- causes issues with key remappers like kmonad and kanata
+    -- :: see: <https://github.com/jtroo/kanata/issues/437> and <https://github.com/wez/wezterm/issues/3934>
+    config.allow_win32_input_mode = false
+
+    -- Keybindings for spawning new tabs/panes
+    --:   Ctrl+Shift+<NUM> -> splits vertically   (spawns new pane underneath)
+    --:   leader, <NUM>    -> splits horizontally (spawns new pane to the right)
+
+    --:: 1  ->  GitBash
+    table.insert(config.keys,
+        { key = '1', mods = keycode.ctrl_shift, action = act.SplitVertical { args = spawn_gitbash.args } })
+    table.insert(config.keys,
+        { key = '1', mods = keycode.leader, action = act.SplitHorizontal { args = spawn_gitbash.args } })
+    --:: 2  ->  WSL
+    table.insert(config.keys,
+        { key = '2', mods = keycode.ctrl_shift, action = act.SplitVertical { args = spawn_wsl.args, cwd = spawn_wsl.cwd } })
+    table.insert(config.keys,
+        { key = '2', mods = keycode.leader, action = act.SplitHorizontal { args = spawn_wsl.args, cwd = spawn_wsl.cwd } })
+    --:: 3  ->  CMD.exe
+    table.insert(config.keys,
+        { key = '3', mods = keycode.ctrl_shift, action = act.SplitVertical { args = spawn_cmdexe.args } })
+    table.insert(config.keys,
+        { key = '3', mods = keycode.leader, action = act.SplitHorizontal { args = spawn_cmdexe.args } })
+end
