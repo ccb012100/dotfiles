@@ -672,9 +672,9 @@
         "when": "editorHasReferenceProvider"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
     },
     {
         "key": "ctrl+p",
@@ -682,7 +682,7 @@
         "when": "notificationFocus && notificationToastsVisible"
     },
     {
-        "key": "ctrl+p",
+        "key": "ctrl+k",
         "command": "showPrevParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     },
@@ -696,11 +696,6 @@
     },
     {
         "key": "ctrl+n",
-        "command": "cursorDown",
-        "when": "textInputFocus && !suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+n",
         "command": "notifications.focusNextToast",
         "when": "notificationFocus && notificationToastsVisible"
     },
@@ -708,14 +703,6 @@
         "key": "ctrl+a",
         "command": "-file-browser.actions",
         "when": "inFileBrowser"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "-editor.action.selectAll"
-    },
-    {
-        "key": "ctrl+x h",
-        "command": "editor.action.selectAll"
     },
     {
         "key": "ctrl+x h",
@@ -726,10 +713,6 @@
         "key": "ctrl+a",
         "command": "-list.selectAll",
         "when": "listFocus && listSupportsMultiselect && !inputFocus"
-    },
-    {
-        "key": "ctrl+shift+a",
-        "command": "editor.action.selectAll"
     },
     {
         "key": "ctrl+o",
@@ -1520,7 +1503,7 @@
         "when": "listFocus && listSupportsFind"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "focusNextCodeAction",
         "when": "CodeActionMenuVisible"
     },
@@ -1664,9 +1647,9 @@
         "when": "codeActionMenuVisible"
     },
     {
-        "key": "ctrl+p",
+        "key": "ctrl+k",
         "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
     },
     {
         "key": "ctrl+alt+c ctrl+alt+c",
@@ -2063,11 +2046,6 @@
         "command": "workbench.action.togglePanel"
     },
     {
-        "key": "ctrl+p",
-        "command": "cursorUp",
-        "when": "textInputFocus && !suggestWidgetVisible"
-    },
-    {
         "key": "ctrl+k",
         "command": "focusPreviousCodeAction",
         "when": "CodeActionMenuVisible"
@@ -2076,11 +2054,6 @@
         "key": "ctrl+k",
         "command": "showPrevParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
         "key": "f2",
@@ -2230,11 +2203,6 @@
         "key": "ctrl+k ctrl+i",
         "command": "-workbench.action.terminal.focusHover",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalIsOpen || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
     },
     {
         "key": "ctrl+q",
@@ -2994,39 +2962,34 @@
         "command": "editor.action.clipboardCopyAction"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "selectNextCodeAction",
         "when": "codeActionMenuVisible"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext",
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+n",
-        "command": "showNextParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+p",
+        "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "showNextParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+j",
         "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
     },
     {
-        "key": "ctrl+p",
+        "key": "ctrl+k",
         "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
     },
     {
         "key": "down",
@@ -4160,5 +4123,25 @@
         "key": "cmd+k shift+cmd+l",
         "command": "-editor.toggleFoldRecursively",
         "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "notifications.focusNextToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "focusPreviousCodeAction",
+        "when": "CodeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "notifications.focusPreviousToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
     }
 ]
