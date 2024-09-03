@@ -28,18 +28,18 @@ config.pane_select_font_size = 36 -- default = 36
 -- THEMING
 --
 -- If on Windows, make sure to link/copy files from "~/.config/wezterm/colors/" to "/c/Program Files/Wezterm/colors"
-config.color_scheme = 'Dracula'
+config.color_scheme = 'Papercolor Dark (Gogh)'
 config.window_frame = { font = wezterm.font { family = 'IBM Plex Mono' }, font_size = 13.0, }
 config.colors = {
     tab_bar = {
-        inactive_tab_edge = 'red',
+        inactive_tab_edge = 'peru',
     },
     quick_select_label_bg = { Color = '#0000FF' },
     quick_select_label_fg = { Color = '#FFFF00' },
     quick_select_match_bg = { Color = 'peru' },
     quick_select_match_fg = { Color = '#FFFF00' },
 }
-config.tab_max_width = 36;
+config.tab_max_width = 72;
 
 --
 -- Keybindings
@@ -120,11 +120,11 @@ config.keys = {
     -- Move/Activate Tab
     { key = '0',           mods = keycode.leader,           action = act.MoveTab(0) },
     { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) }, -- activate previous
-    { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) }, -- activate next
+    { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },  -- activate next
     { key = 'b',           mods = keycode.leader,           action = act.ActivateTabRelative(-1) }, -- activate previous
-    { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) }, -- activate next
-    { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) }, -- move forward 1
-    { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) }, -- move backward 1
+    { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) },  -- activate next
+    { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) },      -- move forward 1
+    { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) },     -- move backward 1
     -- Panes
     -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
@@ -196,12 +196,12 @@ for i = 1, 8 do
 end
 
 for i = 1, 8 do
-  -- Leader, number to move tab to that position
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = keycode.leader,
-    action = wezterm.action.MoveTab(i - 1),
-  })
+    -- Leader, number to move tab to that position
+    table.insert(config.keys, {
+        key = tostring(i),
+        mods = keycode.leader,
+        action = wezterm.action.MoveTab(i - 1),
+    })
 end
 
 config.key_tables = {
@@ -309,6 +309,42 @@ config.key_tables = {
 
 }
 
+-- This function returns the suggested title for a tab.
+-- It prefers the title that was set via `tab:set_title()` or `wezterm cli set-tab-title`,
+-- but falls back to the title of the active pane in that tab.
+local function tab_title(tab_info)
+    local title = tab_info.tab_title
+    -- if the tab title is explicitly set, take that
+    if title and #title > 0 then
+        return title
+    end
+    -- Otherwise, use the title from the active pane
+    -- in that tab
+    return tab_info.tab_index + 1 .. ': ' .. tab_info.active_pane.title
+end
+
+-- format tab title to show an indicator when the acive pane is zoomed in
+wezterm.on(
+    'format-tab-title',
+    function(tab, tabs, panes, config, hover, max_width)
+        local title = tab_title(tab)
+
+        if tab.is_active then
+            if tab.active_pane.is_zoomed then
+                return {
+                    { Foreground = { Color = 'red' } },
+                    { Text = '🧿 ' .. title .. ' [Z]' },
+                }
+            else
+                return {
+                    { Text = ' ' .. title .. ' ' },
+                }
+            end
+        end
+
+        return title
+    end
+)
 {{- if (eq .chezmoi.os "window")}}
 {{- template "wezterm_win" -}}
 {{- end}}
