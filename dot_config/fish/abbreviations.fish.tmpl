@@ -157,5 +157,5 @@ abbr --add zo zoxide
 {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
 abbr --add open wslview # wslu
 {{- end }}
-abbr --add dsp 'datasette $HOME/playlister.db'
+abbr --add dsp 'datasette $HOME/playlister.sqlite3'
 abbr --add pls 'playlister.sh sync tsv'

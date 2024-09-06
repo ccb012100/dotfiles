@@ -3,6 +3,8 @@
     colorMoved = zebra
     colormovedws = "allow-indentation-change"
     tool = meld
+[diff "sqlite3"]
+    textconv = sh -c 'sqlite3 $0 .dump'
 [difftool]
     prompt = false
 [interactive]

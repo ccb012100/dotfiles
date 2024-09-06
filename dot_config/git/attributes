@@ -4,8 +4,8 @@
 * text=auto
 
 ~/.config/git/attributes text eol=lf
-
-#.gitignore text eol=lf
+.gitignore text eol=lf
+*.sqlite3 diff=sqlite3
 
 # Force shell scripts/configs to always use lf line endings
 *.bashrc text eol=lf

@@ -4,7 +4,7 @@ function playlist_sync --description 'Sync Spotify playlists to local DB/spreads
         return 1
     end
 
-    set pldb $HOME/playlister.db
+    set pldb $HOME/playlister.sqlite3
     set playlister_script $HOME/bin/playlister.sh
     set_color purple
     echo Syncing $pldb ...\n
