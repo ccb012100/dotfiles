@@ -268,6 +268,48 @@
                         ]
                     },
                     {
+                        "description": "quote (') → ModTap(meh, quote) [excluding ErgoDox]",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "ZSA ErgoDox",
+                                                "product_id": 18806,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "quote"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "spacebar → ModTap(left_control, spacebar) [excluding ErgoDox]",
                         "manipulators": [
                             {
