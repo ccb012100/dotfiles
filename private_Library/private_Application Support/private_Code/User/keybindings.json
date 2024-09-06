@@ -175,7 +175,7 @@
         "command": "-editor.action.toggleWordWrap"
     },
     {
-        "key": "ctrl+l space",
+        "key": "ctrl+l l",
         "command": "editor.action.toggleWordWrap"
     },
     {
@@ -4038,7 +4038,7 @@
         "command": "editor.action.goToTypeDefinition"
     },
     {
-        "key": "ctrl+h shift+d",
+        "key": "ctrl+h d",
         "command": "editor.action.revealDefinitionAside",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
@@ -4048,7 +4048,7 @@
         "when": "editorHasDefinitionProvider && editorTextFocus && isWeb && !isInEmbeddedEditor"
     },
     {
-        "key": "ctrl+h d",
+        "key": "ctrl+h shift+d",
         "command": "editor.action.peekDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
