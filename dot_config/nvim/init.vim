@@ -4,7 +4,6 @@ scriptencoding utf-8
 filetype indent plugin on
 
 "" Exit Insert mode
-inoremap jj <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
