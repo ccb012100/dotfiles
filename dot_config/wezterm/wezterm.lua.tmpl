@@ -28,8 +28,17 @@ config.pane_select_font_size = 36 -- default = 36
 -- THEMING
 --
 -- If on Windows, make sure to link/copy files from "~/.config/wezterm/colors/" to "/c/Program Files/Wezterm/colors"
--- config.color_scheme = 'GruvboxDarkHard'
+-- see <https://github.com/wez/wezterm/discussions/3426> for a quick theme switcher to quickly demo themes
+-- config.color_scheme = 'ayu'
+-- config.color_scheme = 'AyuDark (Gogh)'
+-- config.color_scheme = 'Default Dark (base16)'
 config.color_scheme = 'GJM (terminal.sexy)'
+-- config.color_scheme = 'gooey (Gogh)'
+-- config.color_scheme = 'GruvboxDarkHard'
+-- config.color_scheme = 'Helios (base16)'
+-- config.color_scheme = 'Popping and Locking'
+-- config.color_scheme = 'Purpledream (base16)'
+-- config.color_scheme = 'SleepyHollow'
 config.window_frame = { font = wezterm.font { family = 'IBM Plex Mono' }, font_size = 13.0, }
 config.colors = {
     tab_bar = {
@@ -183,15 +192,16 @@ config.keys = {
 }
 
 for i = 1, 8 do
+    --  Super/⌘ + [0-9] to activate that tab
+    table.insert(config.keys, {
+        key = tostring(i),
+        mods = keycode.super,
+        action = act.ActivateTab(i - 1),
+    })
     --  Alt/Opt + [0-9] to activate that tab
     table.insert(config.keys, {
         key = tostring(i),
-        mods = keycode.ctrl_shift,
-        action = act.ActivateTab(i - 1),
-    })
-    -- F1 through F8 to activate that tab
-    table.insert(config.keys, {
-        key = 'F' .. tostring(i),
+        mods = keycode.alt_opt,
         action = act.ActivateTab(i - 1),
     })
 end
@@ -333,7 +343,7 @@ wezterm.on(
         if tab.is_active then
             if tab.active_pane.is_zoomed then
                 return {
-                    { Foreground = { Color = 'red' } },
+                    { Foreground = { Color = '#ffbf00' } }, -- amber
                     { Text = '🧿 ' .. title .. ' [Z]' },
                 }
             else
