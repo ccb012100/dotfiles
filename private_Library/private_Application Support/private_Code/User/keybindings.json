@@ -4159,5 +4159,49 @@
         "key": "ctrl+l d",
         "command": "editor.action.formatSelection",
         "when": "editorHasDocumentSelectionFormattingProvider && editorHasSelection && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+0",
+        "command": "workbench.action.focusLastEditorGroup"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "alt+8",
+        "command": "workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "alt+7",
+        "command": "workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "alt+6",
+        "command": "workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.focusLastEditorGroup"
     }
 ]
