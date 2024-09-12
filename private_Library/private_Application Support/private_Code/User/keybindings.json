@@ -4203,5 +4203,10 @@
     {
         "key": "cmd+0",
         "command": "workbench.action.focusLastEditorGroup"
+    },
+    {
+        "key": "ctrl+l d",
+        "command": "prettyxml.prettifyxml",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor && editorLangId == 'xml'"
     }
 ]
