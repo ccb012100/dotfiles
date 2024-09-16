@@ -3660,10 +3660,6 @@
         "command": "workbench.action.moveEditorToLeftGroup"
     },
     {
-        "key": "cmd+k shift+up",
-        "command": "workbench.action.moveEditorToAboveGroup"
-    },
-    {
         "key": "cmd+k shift+down",
         "command": "workbench.action.moveEditorToBelowGroup"
     },
@@ -4208,5 +4204,13 @@
         "key": "ctrl+l d",
         "command": "prettyxml.prettifyxml",
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor && editorLangId == 'xml'"
+    },
+    {
+        "key": "cmd+k shift+up",
+        "command": "workbench.action.moveEditorToAboveGroup"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeActiveEditor"
     }
 ]
