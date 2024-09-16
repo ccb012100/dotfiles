@@ -1,5 +1,9 @@
 # Manually Updated macOS Settings
 
+## Install script
+
+The `zsh` [script](/macOS/install.zsh) can be used to set up a fresh **Mac**.
+
 ## AltTab
 
 [**AltTab**](https://github.com/lwouis/alt-tab-macos) window switcher for **macOS**
@@ -21,6 +25,10 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/alt-ta
 > [!WARNING]
 > Bartender was sold by the original developer to a new owner, so I've moved to [Ice](https://github.com/jordanbaird/Ice), which seems to
 > be feature-complete for my requirements
+
+## Brewfile
+
+Running `brew bundle dump` generates the [Brewfile](/macOS/Brewfile) that I can use to re-install everything that I've installed via [Homebrew](https://brew.sh/).
 
 ## Contexts 3
 
