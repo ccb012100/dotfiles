@@ -59,6 +59,7 @@ meh - 6 : open -a firefox
 meh - 7 : open -a Spotify
 meh - 8 : open -a 'Visual Studio Code'
 meh - 9 : open -a wezterm
+meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 
 ####################################################
 # map ctrl chords to equivalent/similar cmd chords #
