@@ -90,6 +90,14 @@ To use the custom Keyboard Layout:
 
 source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-1615127984>
 
+## Loop
+
+[Loop](https://github.com/MrKai77/Loop) window manager.
+
+Tried it out - settings are in [Loop-keybinds.json](/macOS/Loop-keybinds.json).
+
+Not currently using it, but may in the future.
+
 ## Rectangle
 
 [**Rectangle**](https://rectangleapp.com/) window manager.

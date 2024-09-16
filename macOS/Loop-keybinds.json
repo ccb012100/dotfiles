@@ -1,0 +1,85 @@
+[
+  {
+    "direction" : "Hide",
+    "keybind" : [
+      4
+    ]
+  },
+  {
+    "direction" : "Maximize",
+    "keybind" : [
+      46
+    ],
+    "name" : "MaximizeCycle"
+  },
+  {
+    "direction" : "Larger",
+    "keybind" : [
+      24
+    ],
+    "name" : "LargerCycle"
+  },
+  {
+    "direction" : "TopHalf",
+    "keybind" : [
+      17
+    ],
+    "name" : "TophalfCycle"
+  },
+  {
+    "direction" : "RightHalf",
+    "keybind" : [
+      15
+    ],
+    "name" : "RighthalfCycle"
+  },
+  {
+    "direction" : "Center",
+    "keybind" : [
+      8
+    ],
+    "name" : "CenterCycle"
+  },
+  {
+    "direction" : "NextScreen",
+    "keybind" : [
+      47
+    ],
+    "name" : "NextdisplayCycle"
+  },
+  {
+    "direction" : "Smaller",
+    "keybind" : [
+      27
+    ],
+    "name" : "SmallerCycle"
+  },
+  {
+    "direction" : "Undo",
+    "keybind" : [
+      53
+    ],
+    "name" : "RestoreCycle"
+  },
+  {
+    "direction" : "LeftHalf",
+    "keybind" : [
+      37
+    ],
+    "name" : "LefthalfCycle"
+  },
+  {
+    "direction" : "PreviousScreen",
+    "keybind" : [
+      43
+    ],
+    "name" : "PreviousdisplayCycle"
+  },
+  {
+    "direction" : "BottomHalf",
+    "keybind" : [
+      11
+    ],
+    "name" : "BottomhalfCycle"
+  }
+]
