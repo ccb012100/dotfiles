@@ -55,20 +55,8 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #
 # Mapped Meh bindings: 01-,.←→↑↓=⎋bcglmnrty
 
-# meh - 0x27  : skhd -k 'alt - 0x32'          # map meh+' to alt+` (switch application window forwards)
-# meh - 0x29  : skhd -k 'alt + shift - 0x32'  # map meh+; to alt+shift+` (switch application window backwards)
-
-# meh - 0x29  : open -a 'Microsoft Teams' # meh+;
-# meh - a     : open -a 'Google Chrome'
-# meh - d     : open -a Rider
-# meh - e     : open -a 'Microsoft Edge'
-# meh - f     : open -a firefox
-# meh - h     : skhd -k "cmd - h"         # map meh+h to cmd+h (hide app)
-# meh - i     : open -a iterm
-# meh - j     : open -a 'Visual Studio Code'
-# meh - k     : open -a wezterm
-# meh - o     : open -a 'Microsoft Outlook'
-# meh - s     : open -a Spotify
+meh - 8 : open -a 'Visual Studio Code'
+meh - 9 : open -a wezterm
 
 ####################################################
 # map ctrl chords to equivalent/similar cmd chords #
