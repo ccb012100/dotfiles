@@ -55,6 +55,8 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #
 # Mapped Meh bindings: 01-,.←→↑↓=⎋bcglmnrty
 
+meh - 6 : open -a firefox
+meh - 7 : open -a Spotify
 meh - 8 : open -a 'Visual Studio Code'
 meh - 9 : open -a wezterm
 
