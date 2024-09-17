@@ -4212,5 +4212,10 @@
     {
         "key": "ctrl+shift+w",
         "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "-editor.action.organizeImports",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
     }
 ]
