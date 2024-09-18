@@ -21,6 +21,7 @@ abbr --add kl git l
 abbr --add kp git p
 abbr --add kps git ps
 abbr --add ks git s
+abbr --add kse git se
 abbr --add ksl git sl
 
 # git-forgit

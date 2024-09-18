@@ -150,3 +150,4 @@
     fg      = forgit
     nuke    = clean -fdx
     sbs     = ! DELTA_FEATURES=sbs git # use delta in side-by-side mode
+    se      = ! serie
