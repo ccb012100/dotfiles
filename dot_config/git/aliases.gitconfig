@@ -148,6 +148,7 @@
     clg     = config list --global
     difft   = difftool --tool=difftastic
     fg      = forgit
+    ms      = maintenance start
     nuke    = clean -fdx
     sbs     = ! DELTA_FEATURES=sbs git # use delta in side-by-side mode
     se      = ! serie
