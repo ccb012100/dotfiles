@@ -933,11 +933,6 @@
         "when": "suggestWidgetVisible && textInputFocus"
     },
     {
-        "key": "ctrl+l ctrl+m",
-        "command": "markdown.showPreviewToSide",
-        "when": "editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
         "key": "ctrl+o",
         "command": "-lineBreakInsert",
         "when": "textInputFocus && !editorReadonly"
@@ -4221,5 +4216,15 @@
     {
         "key": "ctrl+j shift+k",
         "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "ctrl+l ctrl+m",
+        "command": "markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     }
 ]
