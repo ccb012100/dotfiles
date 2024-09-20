@@ -13,16 +13,20 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # atuin
 atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent binding it to autin search
 
-# dotnet CLI
-complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
-set --global --export PATH $HOME/.dotnet/tools $PATH
-
 # coreutils
 {{if eq .chezmoi.os "darwin" -}}
 set --global --export PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
 {{else}}
 set --global --export PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
 {{- end}}
+
+# done (<https://github.com/franciscolourenco/done>)
+set -U __done_min_cmd_duration 20000 # default: 20_000 ms = 20 seconds
+
+# dotnet CLI
+complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
+set --global --export PATH $HOME/.dotnet/tools $PATH
+
 # GPG (GNU Privacy Guard or GnuPG)
 export GPG_TTY=$(tty)
 
@@ -63,7 +67,7 @@ set --export --global FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 
 {{if eq .chezmoi.os "darwin" -}}
 #: iTerm2
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 {{ end}}
 #: keybindings
 source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi

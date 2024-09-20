@@ -62,7 +62,9 @@ abbr --add cmin chezmoi init
 abbr --add cmm chezmoi merge
 abbr --add cmr chezmoi re-add
 abbr --add cms chezmoi status
-abbr --add cmv 'chezmoi re-add $HOME/Library/Application\ Support/Code/User/keybindings.json'
+{{ if eq .chezmoi.os "darwin" -}}
+abbr --add cmk 'chezmoi re-add $HOME/Library/Application\ Support/Code/User/keybindings.json'
+{{- end}}
 # cht.sh
 abbr --add ch cht.sh
 abbr --add cht cht.sh
