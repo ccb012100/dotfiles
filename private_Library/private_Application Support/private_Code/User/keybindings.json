@@ -3362,14 +3362,6 @@
         "command": "insert-unicode.insertText"
     },
     {
-        "key": "ctrl+`",
-        "command": "workbench.action.showNextWindowTab"
-    },
-    {
-        "key": "ctrl+shift+`",
-        "command": "workbench.action.showPreviousWindowTab"
-    },
-    {
         "key": "ctrl+w",
         "command": "-workbench.action.switchWindow"
     },
@@ -4241,5 +4233,13 @@
         "key": "f11",
         "command": "-workbench.action.debug.stepInto",
         "when": "debugState != 'inactive'"
+    },
+    {
+        "key": "ctrl+x n",
+        "command": "workbench.action.showNextWindowTab"
+    },
+    {
+        "key": "ctrl+x p",
+        "command": "workbench.action.showPreviousWindowTab"
     }
 ]
