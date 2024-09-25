@@ -14,8 +14,3 @@
     type = "file"
     url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
     refreshPeriod = "168h"
-# add Eldritch theme for kitty
-[".config/kitty/Eldritch.conf"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/eldritch-theme/kitty/master/Eldritch.conf"
-    refreshPeriod = "168h"
