@@ -2,7 +2,6 @@
 [alias]
     ## add
     af  = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
-    au  = ! git add --update && git status --short
 
     ## branch
     b       = branch

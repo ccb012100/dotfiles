@@ -7,9 +7,11 @@ abbr --add k git
 abbr --add ka git a
 abbr --add kaa git aa
 abbr --add kaac git aac
+abbr --add kaf git aaf
 abbr --add kac git ac
 abbr --add kau git au
 abbr --add kauc git auc
+abbr --add kauf git auf
 abbr --add kb git b
 abbr --add kbr git br
 abbr --add kc git c
@@ -30,4 +32,4 @@ abbr --add kja git-forgit add
 abbr --add kjl git-forgit log
 
 # lazygit
-abbr --add kk lazygit
+abbr --add lk lazygit
