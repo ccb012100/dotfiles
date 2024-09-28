@@ -7,6 +7,7 @@ abbr --add k git
 abbr --add ka git a
 abbr --add kaa git aa
 abbr --add kaac git aac
+abbr --add kaaf git aaf
 abbr --add kaf git aaf
 abbr --add kac git ac
 abbr --add kau git au
