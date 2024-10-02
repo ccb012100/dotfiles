@@ -175,7 +175,7 @@
         "command": "-editor.action.toggleWordWrap"
     },
     {
-        "key": "ctrl+l l",
+        "key": "ctrl+l a",
         "command": "editor.action.toggleWordWrap"
     },
     {
@@ -668,11 +668,6 @@
         "key": "ctrl+p",
         "command": "notifications.focusPreviousToast",
         "when": "notificationFocus && notificationToastsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "showPrevParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     },
     {
         "key": "ctrl+n",
@@ -1260,10 +1255,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+l b",
-        "command": "editor.action.selectToBracket"
-    },
-    {
         "key": "shift+alt+p",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
@@ -1471,11 +1462,6 @@
         "when": "listFocus && listSupportsFind"
     },
     {
-        "key": "ctrl+j",
-        "command": "focusNextCodeAction",
-        "when": "CodeActionMenuVisible"
-    },
-    {
         "key": "ctrl+p",
         "command": "focusPreviousCodeAction",
         "when": "CodeActionMenuVisible"
@@ -1608,16 +1594,6 @@
         "key": "ctrl+k ctrl+i",
         "command": "-editor.debug.action.showDebugHover",
         "when": "editorTextFocus && inDebugMode"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
     },
     {
         "key": "ctrl+alt+c ctrl+alt+c",
@@ -1994,12 +1970,12 @@
     {
         "key": "down",
         "command": "focusNextCodeAction",
-        "when": "CodeActionMenuVisible"
+        "when": "codeActionMenuVisible"
     },
     {
         "key": "up",
         "command": "focusPreviousCodeAction",
-        "when": "CodeActionMenuVisible"
+        "when": "codeActionMenuVisible"
     },
     {
         "key": "up",
@@ -2013,16 +1989,6 @@
     {
         "key": "ctrl+j ;",
         "command": "workbench.action.togglePanel"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "focusPreviousCodeAction",
-        "when": "CodeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "showPrevParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     },
     {
         "key": "f2",
@@ -2913,11 +2879,6 @@
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    },
-    {
         "key": "ctrl+j",
         "command": "showNextParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
@@ -2926,11 +2887,6 @@
         "key": "ctrl+j",
         "command": "selectNextSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
     },
     {
         "key": "down",
@@ -3041,7 +2997,7 @@
     },
     {
         "key": "ctrl+j ctrl+;",
-         "command": "workbench.action.toggleSidebarVisibility"
+        "command": "workbench.action.toggleSidebarVisibility"
     },
     {
         "key": "ctrl+x ctrl+c",
@@ -4025,21 +3981,6 @@
         "when": "notificationFocus && notificationToastsVisible"
     },
     {
-        "key": "ctrl+k",
-        "command": "focusPreviousCodeAction",
-        "when": "CodeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "notifications.focusPreviousToast",
-        "when": "notificationFocus && notificationToastsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
         "key": "right",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionVisible && !editorReadonly"
@@ -4199,5 +4140,19 @@
     {
         "key": "cmd+k shift+cmd+w",
         "command": "-workbench.action.closeAllGroups"
+    },
+    {
+        "key": "ctrl+l l",
+        "command": "rust-analyzer.matchingBrace",
+        "when": "editorTextFocus && editorLangId == 'rust'"
+    },
+    {
+        "key": "ctrl+l l",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+l ctrl+shift+l",
+        "command": "editor.action.selectToBracket"
     }
 ]

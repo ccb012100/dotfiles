@@ -32,5 +32,8 @@ abbr --add kj git-forgit
 abbr --add kja git-forgit add
 abbr --add kjl git-forgit log
 
+# gitu
+abbr --add kk gitu
+
 # lazygit
 abbr --add lk lazygit
