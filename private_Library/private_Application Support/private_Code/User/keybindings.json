@@ -183,14 +183,6 @@
         "command": "-workbench.view.explorer"
     },
     {
-        "key": "ctrl+x 3",
-        "command": "workbench.action.splitEditorRight"
-    },
-    {
-        "key": "ctrl+x 2",
-        "command": "workbench.action.splitEditorDown"
-    },
-    {
         "key": "ctrl+alt+o",
         "command": "-workbench.action.output.toggleOutput",
         "when": "workbench.panel.output.active"
@@ -613,10 +605,6 @@
         "command": "-workbench.action.moveActiveEditorGroupUp"
     },
     {
-        "key": "ctrl+k ctrl+left",
-        "command": "-workbench.action.moveEditorToPreviousGroup"
-    },
-    {
         "key": "ctrl+k shift+enter",
         "command": "-workbench.action.pinEditor",
         "when": "!activeEditorIsPinned"
@@ -685,14 +673,6 @@
         "key": "ctrl+k",
         "command": "showPrevParameterHint",
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+x ctrl+c",
-        "command": "workbench.action.closeWindow"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
     },
     {
         "key": "ctrl+n",
@@ -776,10 +756,6 @@
     },
     {
         "key": "ctrl+alt+left",
-        "command": "-workbench.action.moveEditorToPreviousGroup"
-    },
-    {
-        "key": "ctrl+alt+left",
         "command": "-cursorWordPartLeft",
         "when": "textInputFocus"
     },
@@ -804,7 +780,8 @@
     },
     {
         "key": "ctrl+x 1",
-        "command": "workbench.action.closeEditorsInOtherGroups"
+        "command": "workbench.action.closeEditorsInOtherGroups",
+        "when": "multipleEditorGroups"
     },
     {
         "key": "ctrl+[",
@@ -1170,10 +1147,6 @@
     {
         "key": "ctrl+x ;",
         "command": "workbench.action.toggleEditorGroupLayout"
-    },
-    {
-        "key": "ctrl+alt+right",
-        "command": "-workbench.action.moveEditorToNextGroup"
     },
     {
         "key": "alt+/",
@@ -1661,8 +1634,9 @@
         "when": "problemsVisibility && !relatedInformationFocus && focusedView == 'workbench.panel.markers.view'"
     },
     {
-        "key": "ctrl+x shift+0",
-        "command": "workbench.action.closeOtherEditors"
+        "key": "ctrl+x 1",
+        "command": "workbench.action.closeOtherEditors",
+        "when": "!multipleEditorGroups"
     },
     {
         "key": "ctrl+8",
@@ -2075,15 +2049,7 @@
     },
     {
         "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorDown"
-    },
-    {
-        "key": "ctrl+k ctrl+\\",
         "command": "-workbench.action.splitEditorLeft"
-    },
-    {
-        "key": "ctrl+k ctrl+\\",
-        "command": "-workbench.action.splitEditorRight"
     },
     {
         "key": "ctrl+k ctrl+\\",
@@ -3075,10 +3041,10 @@
     },
     {
         "key": "ctrl+j ctrl+;",
-        "command": "workbench.action.toggleSidebarVisibility"
+         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+j q",
+        "key": "ctrl+x ctrl+c",
         "command": "workbench.action.closeWindow"
     },
     {
@@ -3380,14 +3346,6 @@
         "command": "workbench.action.showCommands"
     },
     {
-        "key": "ctrl+j .",
-        "command": "workbench.action.moveEditorToNextGroup"
-    },
-    {
-        "key": "ctrl+j ,",
-        "command": "workbench.action.moveEditorToPreviousGroup"
-    },
-    {
         "key": "ctrl+h ctrl+h",
         "command": "deleteLeft",
         "when": "textInputFocus"
@@ -3621,18 +3579,6 @@
     {
         "key": "shift+cmd+h",
         "command": "-workbench.action.replaceInFiles"
-    },
-    {
-        "key": "cmd+k shift+left",
-        "command": "workbench.action.moveEditorToLeftGroup"
-    },
-    {
-        "key": "cmd+k shift+down",
-        "command": "workbench.action.moveEditorToBelowGroup"
-    },
-    {
-        "key": "cmd+k shift+right",
-        "command": "workbench.action.moveEditorToRightGroup"
     },
     {
         "key": "ctrl+alt+a",
@@ -4173,10 +4119,6 @@
         "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor && editorLangId == 'xml'"
     },
     {
-        "key": "cmd+k shift+up",
-        "command": "workbench.action.moveEditorToAboveGroup"
-    },
-    {
         "key": "ctrl+shift+w",
         "command": "workbench.action.closeActiveEditor"
     },
@@ -4241,5 +4183,21 @@
         "key": "ctrl+l",
         "command": "-emacs.C-l",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x 2",
+        "command": "workbench.action.moveEditorToBelowGroup"
+    },
+    {
+        "key": "ctrl+x 3",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "ctrl+x 0",
+        "command": "workbench.action.closeAllGroups"
+    },
+    {
+        "key": "cmd+k shift+cmd+w",
+        "command": "-workbench.action.closeAllGroups"
     }
 ]
