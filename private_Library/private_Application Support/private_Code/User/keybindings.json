@@ -3430,7 +3430,7 @@
         "command": "workbench.action.switchWindow"
     },
     {
-        "key": "ctrl+shift+;",
+        "key": "alt+;",
         "command": "jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3460,7 +3460,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+;",
+        "key": "ctrl+shift+;",
         "command": "jump-extension.select-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -4096,16 +4096,6 @@
         "key": "ctrl+f",
         "command": "acceptSnippet",
         "when": "inSnippetMode"
-    },
-    {
-        "key": "ctrl+f11",
-        "command": "workbench.action.debug.stepInto",
-        "when": "debugState != 'inactive'"
-    },
-    {
-        "key": "f11",
-        "command": "-workbench.action.debug.stepInto",
-        "when": "debugState != 'inactive'"
     },
     {
         "key": "ctrl+x n",
