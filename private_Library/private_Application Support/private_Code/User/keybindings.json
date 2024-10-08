@@ -2033,7 +2033,7 @@
     },
     {
         "key": "ctrl+shift+z",
-        "command": "undo"
+        "command": "redo"
     },
     {
         "key": "ctrl+u",
