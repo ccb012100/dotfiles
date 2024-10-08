@@ -1,8 +1,9 @@
 [
   {
     "bindings": {
-      "alt-i": ["workspace::SendKeystrokes", "left"],
-      "alt-u": ["workspace::SendKeystrokes", "right"],
+      "alt-i": ["workspace::SendKeystrokes", "right"],
+      "alt-u": ["workspace::SendKeystrokes", "left"],
+      "ctrl-g": null,
       "ctrl-h": null,
       "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
       "ctrl-j f": "file_finder::Toggle",
@@ -19,72 +20,103 @@
       "shift-space": "command_palette::Toggle"
     }
   },
+
   {
     "context": "Editor",
     "bindings": {
+      "alt-,": "editor::ScrollCursorCenterTopBottom",
       "alt-down": "editor::MoveLineDown",
-      "alt-shift-,": "editor::MoveToBeginning",
-      "alt-shift-.": "editor::MoveToEnd",
+      "alt-n": "editor::LineDown",
+      "alt-o": "editor::Fold",
+      "alt-p": "editor::LineUp",
+      "alt-shift-,": "editor::MoveToBeginning", // FIXME: doesn't work
+      "alt-shift-.": "editor::MoveToEnd", // FIXME: doesn't work
       "alt-shift-down": "editor::AddSelectionBelow",
+      "alt-shift-o": "editor::UnfoldLines",
       "alt-shift-up": "editor::AddSelectionAbove",
       "alt-up": "editor::MoveLineUp",
       "alt-w": "editor::Copy",
       "ctrl-, b": "editor::ScrollCursorBottom",
       "ctrl-, m": "editor::ScrollCursorBottom",
       "ctrl-, t": "editor::ScrollCursorTop",
+      "ctrl-,": "editor::MoveToEndOfParagraph",
       "ctrl-/": "editor::Undo",
+      "ctrl-h d": "editor::GoToDefinition",
+      "ctrl-h i": "editor::GoToImplementation",
+      "ctrl-j a": "editor::SelectAll",
       "ctrl-j s": "workspace::Save",
       "ctrl-j z": "workspace::ToggleZoom",
       "ctrl-k": "editor::DeleteLine",
+      "ctrl-l B": "editor::ToggleGitBlameInline",
+      "ctrl-l a": "editor::ToggleSoftWrap",
+      "ctrl-l b": "editor::ToggleGitBlame",
       "ctrl-l ctrl-d": "editor::Format",
       "ctrl-l ctrl-j": "editor::ToggleComments",
+      "ctrl-l ctrl-l": "editor::MoveToEnclosingBracket",
       "ctrl-l d": "editor::Format",
       "ctrl-l m": "markdown::OpenPreviewToTheSide",
       "ctrl-l s": "editor::SortLinesCaseSensitive",
       "ctrl-o": "editor::NewlineBelow",
       "ctrl-r": "search::SelectPrevMatch",
       "ctrl-s": "search::SelectNextMatch",
+      "ctrl-shift-,": "editor::MoveToStartOfParagraph",
       "ctrl-shift-/": "editor::Redo", // FIMXE: this doesn't work
-      "ctrl-shift-j": "editor::JoinLines", // FIXME: doesn't work
+      "ctrl-shift-d": "editor::DuplicateLineDown",
       "ctrl-shift-k": "editor::DeleteToEndOfLine",
       "ctrl-shift-o": "editor::NewlineAbove",
       "ctrl-shift-s": "buffer_search::Deploy",
       "ctrl-shift-u": "editor::DeleteToBeginningOfLine",
+      "ctrl-shift-z": "editor::Redo",
       "ctrl-w": "editor::Cut",
       "ctrl-x ctrl-s": "workspace::Save",
-      "ctrl-y": "editor::Paste"
+      "ctrl-y": "editor::Paste",
+      "ctrl-z": "editor::Undo"
     }
   },
   {
-    "context": "Workspace",
+    "context": "OutlinePanel",
     "bindings": {
-      "ctrl-h k": "zed::OpenKeymap",
-      "ctrl-h s": "zed::OpenSettings",
-      "ctrl-j '": "workspace::ToggleRightDock",
-      "ctrl-j ;": "workspace::ToggleBottomDock",
-      "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
-      "ctrl-x ctrl-z": "workspace::ToggleZoom"
+      "ctrl-j ctrl-j": "workspace::ActivateNextPane" // TODO: way to focus on the most recent pane?
     }
   },
   {
     "context": "Pane",
     "bindings": {
       "alt-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-s cmd-shift-h"], // find and replace
-      "ctrl-j ctrl-j": "pane::ActivateNextItem", // FIXME: doesn't work
+      "cmd-left": "pane::GoBack",
+      "ctrl-j ctrl-j": "workspace::ActivateNextPane",
+      "ctrl-j ctrl-shift-j": "workspace::ActivatePreviousPane",
       "ctrl-j k": "pane::CloseActiveItem",
-      "ctrl-x k": "pane::CloseActiveItem",
+      "ctrl-right": "pane::GoForward",
       "ctrl-shift-w": "pane::CloseActiveItem",
+      "ctrl-x 0": "pane::CloseAllItems",
       "ctrl-x 2": "pane::SplitDown",
       "ctrl-x 3": "pane::SplitRight",
-      "cmd-left": "pane::GoBack",
-      "ctrl-right": "pane::GoForward"
+      "ctrl-x O": "workspace::ActivatePreviousPane",
+      "ctrl-x k": "pane::CloseActiveItem",
+      "ctrl-x o": "workspace::ActivateNextPane"
     }
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "ctrl-j ctrl-j": "project_panel::ToggleFocus",
+      "ctrl-j ctrl-j": "project_panel::ToggleFocus", // focus back on active editor
       "ctrl-j n": "project_panel::NewFile"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-g o": "outline_panel::ToggleFocus",
+      "ctrl-g l": "go_to_line::Toggle",
+      "ctrl-g s": "outline::Toggle", // Go to Symbol
+      "ctrl-h k": "zed::OpenKeymap",
+      "ctrl-h s": "zed::OpenSettings",
+      "ctrl-j ;": "workspace::ToggleBottomDock",
+      "ctrl-j ctrl-;": "workspace::ToggleRightDock",
+      "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
+      "ctrl-x ctrl-z": "workspace::ToggleZoom",
+      "ctrl-g f": "project_panel::ToggleFocus" // toggle focus between file browser and active editor
     }
   }
 ]
