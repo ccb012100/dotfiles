@@ -4144,5 +4144,21 @@
     {
         "key": "ctrl+l ctrl+shift+l",
         "command": "editor.action.selectToBracket"
+    },
+    {
+        "key": "ctrl+j ctrl+shift+.",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+j ctrl+.",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
     }
 ]
