@@ -1,11 +1,20 @@
 [
   {
     "bindings": {
-      "alt-i": ["workspace::SendKeystrokes", "right"],
-      "alt-u": ["workspace::SendKeystrokes", "left"],
+      "alt-i": [
+        "workspace::SendKeystrokes",
+        "right"
+      ],
+      "alt-u": [
+        "workspace::SendKeystrokes",
+        "left"
+      ],
       "ctrl-g": null,
       "ctrl-h": null,
-      "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
+      "ctrl-i": [
+        "workspace::SendKeystrokes",
+        "alt-right"
+      ],
       "ctrl-j f": "file_finder::Toggle",
       "ctrl-j o": "projects::OpenRecent",
       "ctrl-j": null,
@@ -14,18 +23,21 @@
       "ctrl-shift-j": null,
       "ctrl-shift-t": "pane::ReopenClosedItem",
       "ctrl-space": "command_palette::Toggle",
-      "ctrl-u": ["workspace::SendKeystrokes", "alt-left"],
+      "ctrl-u": [
+        "workspace::SendKeystrokes",
+        "alt-left"
+      ],
       "ctrl-x ctrl-c": "zed::Quit",
       "ctrl-x": null,
       "shift-space": "command_palette::Toggle"
     }
   },
-
   {
     "context": "Editor",
     "bindings": {
       "alt-,": "editor::ScrollCursorCenterTopBottom",
       "alt-down": "editor::MoveLineDown",
+      "alt-k": "editor::DuplicateLineDown",
       "alt-n": "editor::LineDown",
       "alt-o": "editor::Fold",
       "alt-p": "editor::LineUp",
@@ -82,7 +94,10 @@
   {
     "context": "Pane",
     "bindings": {
-      "alt-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-s cmd-shift-h"], // find and replace
+      "alt-shift-r": [
+        "workspace::SendKeystrokes",
+        "ctrl-shift-s cmd-shift-h"
+      ], // find and replace
       "cmd-left": "pane::GoBack",
       "ctrl-j ctrl-j": "workspace::ActivateNextPane",
       "ctrl-j ctrl-shift-j": "workspace::ActivatePreviousPane",
@@ -114,7 +129,10 @@
       "ctrl-h s": "zed::OpenSettings",
       "ctrl-j ;": "workspace::ToggleBottomDock",
       "ctrl-j ctrl-;": "workspace::ToggleRightDock",
-      "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
+      "ctrl-shift-r": [
+        "workspace::SendKeystrokes",
+        "ctrl-shift-f cmd-shift-h"
+      ], // global find and replace,
       "ctrl-x ctrl-z": "workspace::ToggleZoom",
       "ctrl-g f": "project_panel::ToggleFocus" // toggle focus between file browser and active editor
     }
