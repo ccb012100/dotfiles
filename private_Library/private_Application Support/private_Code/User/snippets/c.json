@@ -1,0 +1,24 @@
+{
+	"include system header file": {
+		"prefix": [
+			"ih",
+			"#inch"
+		],
+		"body": [
+			"#include <$1>",
+			"$0"
+		],
+		"description": "Add include directive for a header file"
+	},
+	"include header file": {
+		"prefix": [
+			"inc",
+			"#inc"
+		],
+		"body": [
+			"#include \"$1\"",
+			"$0"
+		],
+		"description": "Add include directive for a non-system header file"
+	}
+}
