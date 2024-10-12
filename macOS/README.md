@@ -127,3 +127,12 @@ To export the settings:
 1. Right click on the ⚙ icon in the upper-right corner to open the settings.
 1. On the navigation strip on the left, choose *⚙ Settings* (the the last option).
 1. Click *Export settings*
+
+## Trailer
+
+[**Trailer**](https://github.com/ptsochantaris/trailer) **GitHub** PR/Issues notification tool
+
+To export the settings:
+
+1. Open the settings
+2. Click the button labeled `Export...`
