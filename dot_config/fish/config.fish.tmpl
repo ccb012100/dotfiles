@@ -31,7 +31,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
     #: -X leaves file contents on the screen when less exits.
     #: -F makes less quit if the entire output can be displayed on one screen.
     #: -R displays ANSI color escape sequences in "raw" form.
-    set --global --export LESS "-XFR"
+    set --global --export LESS "-XR"
 
     set --global --export GPG_TTY "$(tty)"
 
