@@ -23,15 +23,15 @@
 [delta]
 	commit-decoration-style = magenta box ul
 	commit-regex = > [0-9a-f]{7,}
-    features = line-numbers decorations
+    features = decorations
 	file-decoration-style = yellow box
 	file-style = brightyellow italic
 	hyperlinks = true
 	line-numbers-minus-style = red
 	line-numbers-plus-style = green
 	line-numbers-zero-style = white
-    syntax-theme = TwoDark
-	whitespace-error-style = 22 reverse
+    syntax-theme = Dracula
+ 	whitespace-error-style = 22 reverse
     # keep-plus-minus-markers = true
 [delta "decorations"]
     commit-decoration-style = blue ol
