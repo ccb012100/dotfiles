@@ -1,17 +1,10 @@
 # bat configuration
 # run `bat --config-file` to get the detault location/name of the config file
 
+--italic-text=always # Use italic text on the terminal (not supported on all terminals)
+--pager="less -FR --mouse"
+--style="snip,grid,header"
 --theme="gruvbox-dark"
-
-# Show line numbers, Git modifications and file header (but no grid)
---style="numbers,changes,header"
-
-# Use italic text on the terminal (not supported on all terminals)
---italic-text=always
-
-# Add mouse scrolling support in less (does not work with older
-# versions of "less")
---pager="less -FR"
 
 # Set sqlite language to 'sql'
 --map-syntax *.sqlite3:SQL
