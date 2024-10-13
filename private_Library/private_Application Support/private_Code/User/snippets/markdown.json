@@ -24,7 +24,7 @@
   "Source url": {
     "prefix": "source",
     "description": "add source URL for notes",
-    "body": "_source_: <$1>$0"
+    "body": "((source)[$1])$0"
   },
   "link": {
     "prefix": "link",

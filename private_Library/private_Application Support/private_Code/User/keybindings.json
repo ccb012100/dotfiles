@@ -1547,11 +1547,6 @@
         "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/"
     },
     {
-        "key": "ctrl+shift+l",
-        "command": "-addCursorsAtSearchResults",
-        "when": "fileMatchOrMatchFocus && searchViewletVisible"
-    },
-    {
         "key": "ctrl+l s",
         "command": "editor.action.sortLinesAscending",
         "when": "editorHasSelection && editorTextFocus"
@@ -2263,11 +2258,6 @@
         "command": "deleteAllLeft"
     },
     {
-        "key": "alt+k",
-        "command": "editor.action.duplicateSelection",
-        "when": "editorHasSelection && editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+l p",
         "command": "workbench.action.unpinEditor",
         "when": "activeEditorIsPinned"
@@ -2286,14 +2276,6 @@
         "key": "ctrl+shift+a",
         "command": "workbench.action.terminal.selectAll",
         "when": "terminalFocus"
-    },
-    {
-        "key": "alt+h g",
-        "command": "git.viewFileHistory"
-    },
-    {
-        "key": "alt+h",
-        "command": "-git.viewFileHistory"
     },
     {
         "key": "ctrl+h ctrl+g",
@@ -3198,11 +3180,6 @@
         "when": "accessibilityModeEnabled && accessibleViewOnLastLine && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewOnLastLine && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
     },
     {
-        "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "shift+alt+up",
         "command": "-markdown.extension.onCopyLineUp",
         "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
@@ -3315,16 +3292,6 @@
         "key": "ctrl+shift+up",
         "command": "scrollLineUp",
         "when": "textInputFocus"
-    },
-    {
-        "key": "alt+l",
-        "command": "addCursorsAtSearchResults",
-        "when": "fileMatchOrMatchFocus && searchViewletVisible"
-    },
-    {
-        "key": "shift+cmd+l",
-        "command": "-addCursorsAtSearchResults",
-        "when": "fileMatchOrMatchFocus && searchViewletVisible"
     },
     {
         "key": "ctrl+z",
@@ -3500,7 +3467,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "alt+/",
+        "key": "ctrl+shift+l",
         "command": "editor.action.inlineSuggest.trigger",
         "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
     },
@@ -3611,7 +3578,7 @@
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+/",
+        "key": "ctrl+shift+l",
         "command": "editor.action.accessibleViewAcceptInlineCompletion",
         "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
     },
@@ -3621,7 +3588,7 @@
         "when": "accessibleViewIsShown && accessibleViewCurrentProviderId == 'inlineCompletions'"
     },
     {
-        "key": "alt+/",
+        "key": "ctrl+shift+l",
         "command": "github.copilot.acceptCursorPanelSolution",
         "when": "github.copilot.activated && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
     },
@@ -3922,11 +3889,6 @@
         "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
     },
     {
-        "key": "alt+k",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "!editorHasSelection && editorTextFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+shift+d",
         "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorHasSelection && !editorReadonly"
@@ -4069,10 +4031,6 @@
         "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
     },
     {
-        "key": "ctrl+j shift+k",
-        "command": "workbench.action.closeOtherEditors"
-    },
-    {
         "key": "ctrl+l ctrl+m",
         "command": "markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
@@ -4142,23 +4100,92 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+l ctrl+shift+l",
+        "key": "ctrl+l shift+l",
         "command": "editor.action.selectToBracket"
     },
     {
-        "key": "ctrl+j ctrl+shift+.",
-        "command": "workbench.action.moveEditorToPreviousGroup"
+        "key": "ctrl+x ctrl+k",
+        "command": "workbench.action.moveEditorToAboveGroup"
     },
     {
-        "key": "ctrl+cmd+left",
-        "command": "-workbench.action.moveEditorToPreviousGroup"
+        "key": "ctrl+x ctrl+j",
+        "command": "workbench.action.moveEditorToBelowGroup"
     },
     {
-        "key": "ctrl+j ctrl+.",
-        "command": "workbench.action.moveEditorToNextGroup"
+        "key": "ctrl+x ctrl+l",
+        "command": "workbench.action.moveEditorToRightGroup"
     },
     {
-        "key": "ctrl+cmd+right",
-        "command": "-workbench.action.moveEditorToNextGroup"
-    }
+        "key": "ctrl+x ctrl+h",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+h",
+        "command": "workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "cmd+k left",
+        "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+l",
+        "command": "workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "cmd+k right",
+        "command": "-workbench.action.moveActiveEditorGroupRight"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+k",
+        "command": "workbench.action.moveActiveEditorGroupUp"
+    },
+    {
+        "key": "cmd+k up",
+        "command": "-workbench.action.moveActiveEditorGroupUp"
+    },
+    {
+        "key": "ctrl+x ctrl+shift+j",
+        "command": "workbench.action.moveActiveEditorGroupDown"
+    },
+    {
+        "key": "cmd+k down",
+        "command": "-workbench.action.moveActiveEditorGroupDown"
+    },
+    {
+        "key": "alt+a",
+        "command": "-editor.action.accessibilityHelpConfigureAssignedKeybindings",
+        "when": "accessibilityHelpIsShown && accessibleViewHasAssignedKeybindings"
+    },
+    { // insert "->"
+        "key": "alt+k",
+        "command": "type",
+        "args": {
+            "text": "->"
+        },
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+h",
+        "command": "-editor.action.accessibilityHelpOpenHelpLink",
+        "when": "accessibilityHelpIsShown"
+    },
+    {
+        "key": "alt+h",
+        "command": "-git.viewFileHistory"
+    },
+    {
+        "key": "alt+k",
+        "command": "-editor.action.accessibilityHelpConfigureKeybindings",
+        "when": "accessibilityHelpIsShown && accessibleViewHasUnassignedKeybindings"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.duplicateSelection",
+        "when": "editorFocus && editorHasSelection"
+    },
+    {
+        "key": "alt+shift+l",
+        "command": "addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
 ]
