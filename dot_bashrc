@@ -9,7 +9,7 @@ stty -ixon
 #: -X leaves file contents on the screen when less exits.
 #: -F makes less quit if the entire output can be displayed on one screen.
 #: -R displays ANSI color escape sequences in "raw" form.
-export LESS="-XR"
+export LESS="-XR --mouse"
 
 export EDITOR="nvim"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
