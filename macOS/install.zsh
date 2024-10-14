@@ -8,14 +8,13 @@ mkdir -v "$HOME"/bin
 # macOS defaults
 #
 
-# show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder
+defaults write com.apple.finder AppleShowAllFiles -boolean true && killall Finder # show hidden files by default
+defaults write com.apple.dock orientation -string left && killall Dock  # set Dock to left
+defaults write com.apple.dock persistent-apps -array    # remove default apps from Dock
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false # disable "natural" scrolling
+defaults write NSGlobalDomain com.apple.keyboard.fnState -int 1 # Use Function keys as standard Function keys
 
-# set dock to left
-defaults write com.apple.dock orientation -string left && killall Dock
-
-# fix issues with bluetooth 2.4 GHz devices
-sudo defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid
+sudo defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid # fix issues with bluetooth 2.4 GHz devices
 
 #
 # Homebrew
