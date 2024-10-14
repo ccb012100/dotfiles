@@ -132,6 +132,10 @@ abbr --add rgf rg --fixed-strings # verbatim search (i.e. disable regex)
 abbr --add rgi rg --ignore-case # case-insensitive search
 abbr --add rguuu rg -uuu # same as `rg --no-ignore --hidden --binary` & equiv. to `grep -r`
 {{- if (eq .chezmoi.os "linux")}}
+# systemctl
+abbr --add sctl sysmtemctl
+{{- end }}
+{{- if (eq .chezmoi.os "linux")}}
 # trash-cli
 abbr --add trash trash-put
 {{- end }}
@@ -149,10 +153,6 @@ abbr --add c. 'code .' # open current directory in VS Code
 abbr --add cconf code $HOME/.local/share/chezmoi # (c)ode (conf)ig
 abbr --add cconfig code $HOME/.local/share/chezmoi # (c)ode (config)
 abbr --add cnotes code $HOME/.local/notes.code-workspace # (e)dit notes
-{{- if (eq .chezmoi.os "linux")}}
-# systemctl
-abbr --add sctl sysmtemctl
-{{- end }}
 # zoxide
 abbr --add zq zoxide query
 abbr --add zo zoxide

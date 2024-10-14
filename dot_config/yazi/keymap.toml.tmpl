@@ -1,0 +1,9 @@
+# see <https://github.com/sxyazi/yazi/blob/shipped/yazi-config/preset/keymap.toml> for defaults
+[manager]
+prepend_keymap = [
+    { on = "k", run = "plugin --sync arrow --args=-1" },                # move up (wrap to bottom)
+    { on = "j", run = "plugin --sync arrow --args=1" },                 # move down (wrap to top)
+{{- if eq .chezmoi.os "darwin" }}
+    { on = "<C-o>", run = ''' shell 'qlmanage -p "$@"' --confirm ''' }, # preview file with macOS Quick Look
+{{- end}}
+]
