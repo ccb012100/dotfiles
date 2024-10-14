@@ -27,8 +27,8 @@ log_level = INFO
 # audit_log = ~/.litecli-audit.log
 
 # Default pager.
-# By default '$PAGER' environment variable is used
-# pager = less -SRXF
+# '-SRXF' same as '--chop-long-lines --RAW-CONTROL-CHARS --no-init --quit-if-one-screen'
+pager = less -SRXF --mouse
 
 # Table format. Possible values:
 # ascii, double, github, psql, plain, simple, grid, fancy_grid, pipe, orgtbl,

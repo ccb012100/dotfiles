@@ -27,11 +27,8 @@ if status is-interactive # Commands to run in interactive sessions can go here
         ln -sv '/mnt/c/Program Files/PowerShell/7/pwsh.exe' $HOME/bin/pwsh-win
     end
     {{- end }}
-    # less configuration
-    #: -X leaves file contents on the screen when less exits.
-    #: -F makes less quit if the entire output can be displayed on one screen.
-    #: -R displays ANSI color escape sequences in "raw" form.
-    set --global --export LESS "-XR --mouse"
+    # less
+    set --global --export LESS "-XR --mouse" # '-XR' same as '--no-init --RAW-CONTROL-CHARS'
 
     set --global --export GPG_TTY "$(tty)"
 

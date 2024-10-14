@@ -85,7 +85,8 @@ search_path_filter = False
 
 # Default pager.
 # By default 'PAGER' environment variable is used
-# pager = less -SRXF
+# '-SRXF' same as '--chop-long-lines --RAW-CONTROL-CHARS --no-init --quit-if-one-screen'
+pager = less -SRXF --mouse
 
 # Timing of sql statements and table rendering.
 timing = True

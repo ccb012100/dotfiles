@@ -18,7 +18,7 @@
     excludesfile = ~/.config/git/ignore
     filemode = false
     fsmonitor = true
-    pager = less -FRX
+    pager = less -FRX --mouse # '-FRX' same as '--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
     untrackedCache = true
 {{- /* IF NOT on work machine, THEN include these */ -}}
 {{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}

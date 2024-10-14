@@ -2,7 +2,8 @@
 # run `bat --config-file` to get the detault location/name of the config file
 
 --italic-text=always # Use italic text on the terminal (not supported on all terminals)
---pager="less -FR --mouse"
+--pager="less -FR --mouse" # same as --RAW-CONTROL-CHARS --no-init
+
 --style="snip,grid,header"
 --theme="gruvbox-dark"
 
