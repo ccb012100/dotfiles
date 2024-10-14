@@ -18,6 +18,7 @@
     excludesfile = ~/.config/git/ignore
     filemode = false
     fsmonitor = true
+    pager = less -FRX
     untrackedCache = true
 {{- /* IF NOT on work machine, THEN include these */ -}}
 {{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
