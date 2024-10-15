@@ -1611,10 +1611,6 @@
     },
     {
         "key": "ctrl+8",
-        "command": "-workbench.action.focusEighthEditorGroup"
-    },
-    {
-        "key": "ctrl+8",
         "command": "workbench.action.focusPanel"
     },
     {
@@ -3608,234 +3604,104 @@
         "when": "config.github.copilot.inlineSuggest.enable && editorTextFocus && !editorHasSelection && !inlineSuggestionsVisible"
     },
     {
-        "key": "ctrl+1",
+        "key": "ctrl+shift+1",
         "command": "numberedBookmarks.jumpToBookmark1",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+1",
-        "command": "-numberedBookmarks.jumpToBookmark1",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+2",
+        "key": "ctrl+shift+2",
         "command": "numberedBookmarks.jumpToBookmark2",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+2",
-        "command": "-numberedBookmarks.jumpToBookmark2",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+3",
+        "key": "ctrl+shift+3",
         "command": "numberedBookmarks.jumpToBookmark3",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+3",
-        "command": "-numberedBookmarks.jumpToBookmark3",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+4",
+        "key": "ctrl+shift+4",
         "command": "numberedBookmarks.jumpToBookmark4",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+4",
-        "command": "-numberedBookmarks.jumpToBookmark4",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+5",
+        "key": "ctrl+shift+5",
         "command": "numberedBookmarks.jumpToBookmark5",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+5",
-        "command": "-numberedBookmarks.jumpToBookmark5",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+6",
+        "key": "ctrl+shift+6",
         "command": "numberedBookmarks.jumpToBookmark6",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+6",
-        "command": "-numberedBookmarks.jumpToBookmark6",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+7",
+        "key": "ctrl+shift+7",
         "command": "numberedBookmarks.jumpToBookmark7",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+7",
-        "command": "-numberedBookmarks.jumpToBookmark7",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+8",
+        "key": "ctrl+shift+8",
         "command": "numberedBookmarks.jumpToBookmark8",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+8",
-        "command": "-numberedBookmarks.jumpToBookmark8",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+9",
+        "key": "ctrl+shift+9",
         "command": "numberedBookmarks.jumpToBookmark9",
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+9",
-        "command": "-numberedBookmarks.jumpToBookmark9",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+1",
+        "key": "alt+1",
         "command": "numberedBookmarks.toggleBookmark1",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+1",
-        "command": "-numberedBookmarks.toggleBookmark1",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+2",
+        "key": "alt+2",
         "command": "numberedBookmarks.toggleBookmark2",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+2",
-        "command": "-numberedBookmarks.toggleBookmark2",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+3",
+        "key": "alt+3",
         "command": "numberedBookmarks.toggleBookmark3",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+3",
-        "command": "-numberedBookmarks.toggleBookmark3",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+4",
+        "key": "alt+4",
         "command": "numberedBookmarks.toggleBookmark4",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+4",
-        "command": "-numberedBookmarks.toggleBookmark4",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+5",
+        "key": "alt+5",
         "command": "numberedBookmarks.toggleBookmark5",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+5",
-        "command": "-numberedBookmarks.toggleBookmark5",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+6",
+        "key": "alt+6",
         "command": "numberedBookmarks.toggleBookmark6",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+6",
-        "command": "-numberedBookmarks.toggleBookmark6",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+7",
+        "key": "alt+7",
         "command": "numberedBookmarks.toggleBookmark7",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+7",
-        "command": "-numberedBookmarks.toggleBookmark7",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+8",
+        "key": "alt+8",
         "command": "numberedBookmarks.toggleBookmark8",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+8",
-        "command": "-numberedBookmarks.toggleBookmark8",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+9",
+        "key": "alt+9",
         "command": "numberedBookmarks.toggleBookmark9",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+9",
-        "command": "-numberedBookmarks.toggleBookmark9",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+0",
+        "key": "alt+0",
         "command": "numberedBookmarks.toggleBookmark0",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+0",
+        "key": "ctrl+shift+0",
         "command": "numberedBookmarks.jumpToBookmark0",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+1",
-        "command": "-workbench.action.openEditorAtIndex1"
-    },
-    {
-        "key": "ctrl+2",
-        "command": "-workbench.action.openEditorAtIndex2"
-    },
-    {
-        "key": "ctrl+3",
-        "command": "-workbench.action.openEditorAtIndex3"
-    },
-    {
-        "key": "ctrl+4",
-        "command": "-workbench.action.openEditorAtIndex4"
-    },
-    {
-        "key": "ctrl+5",
-        "command": "-workbench.action.openEditorAtIndex5"
-    },
-    {
-        "key": "ctrl+6",
-        "command": "-workbench.action.openEditorAtIndex6"
-    },
-    {
-        "key": "ctrl+7",
-        "command": "-workbench.action.openEditorAtIndex7"
-    },
-    {
-        "key": "ctrl+8",
-        "command": "-workbench.action.openEditorAtIndex8"
-    },
-    {
-        "key": "ctrl+9",
-        "command": "-workbench.action.openEditorAtIndex9"
-    },
-    {
-        "key": "ctrl+0",
-        "command": "-workbench.action.lastEditorInGroup"
     },
     {
         "key": "ctrl+g b",
@@ -3971,42 +3837,6 @@
         "key": "ctrl+l d",
         "command": "editor.action.formatSelection",
         "when": "editorHasDocumentSelectionFormattingProvider && editorHasSelection && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+0",
-        "command": "workbench.action.focusLastEditorGroup"
-    },
-    {
-        "key": "alt+1",
-        "command": "workbench.action.focusFirstEditorGroup"
-    },
-    {
-        "key": "alt+8",
-        "command": "workbench.action.focusEighthEditorGroup"
-    },
-    {
-        "key": "alt+5",
-        "command": "workbench.action.focusFifthEditorGroup"
-    },
-    {
-        "key": "alt+4",
-        "command": "workbench.action.focusFourthEditorGroup"
-    },
-    {
-        "key": "alt+2",
-        "command": "workbench.action.focusSecondEditorGroup"
-    },
-    {
-        "key": "alt+7",
-        "command": "workbench.action.focusSeventhEditorGroup"
-    },
-    {
-        "key": "alt+6",
-        "command": "workbench.action.focusSixthEditorGroup"
-    },
-    {
-        "key": "alt+3",
-        "command": "workbench.action.focusThirdEditorGroup"
     },
     {
         "key": "cmd+0",
@@ -4187,5 +4017,33 @@
         "key": "alt+shift+l",
         "command": "addCursorsAtSearchResults",
         "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "cmd+8",
+        "command": "-workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+7",
+        "command": "-workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "cmd+6",
+        "command": "-workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
     },
 ]
