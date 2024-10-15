@@ -205,9 +205,12 @@ for i = 1, 8 do
         mods = keycode.alt_opt,
         action = act.ActivateTab(i - 1),
     })
-end
-
-for i = 1, 8 do
+    --  Ctrl + Shift + [0-9] to activate that tab
+    table.insert(config.keys, {
+        key = tostring(i),
+        mods = keycode.ctrl_shift,
+        action = act.ActivateTab(i - 1),
+    })
     -- Leader, number to move tab to that position
     table.insert(config.keys, {
         key = tostring(i),
