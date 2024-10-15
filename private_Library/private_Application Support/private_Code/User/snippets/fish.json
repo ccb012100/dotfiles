@@ -11,6 +11,11 @@
 			"\t$0",
 			"end"
 		],
-		"description": "add new function definition"
+		"description": "add new function definition",
+	},
+	"scriptdir": {
+		"prefix": "scriptdir",
+		"body": "set script_dir (dirname (status --current-filename))",
+		"description": "set variable with the directory of the running script"
 	}
 }
