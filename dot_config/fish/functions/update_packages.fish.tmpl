@@ -12,6 +12,7 @@ function update_packages --description 'Update various system packages'
 
     brew upgrade
     fisher update
+    rustup update
     #gh extension upgrade --all
 
     if test $status -ne 0

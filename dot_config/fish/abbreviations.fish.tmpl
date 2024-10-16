@@ -18,7 +18,8 @@ abbr --add funcs functions
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 # generic Linux/UNIX utilities
-abbr --add , command # easier way to call aliased commands
+abbr --add ; sudo # easier way to call with sudo
+abbr --add , command # easier way to call commands hidden behind an alias
 abbr --add back cd -
 abbr --add bce 'bc --expression=\''
 {{ if eq .chezmoi.os "darwin" -}}
