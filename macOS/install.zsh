@@ -33,16 +33,15 @@ brew bundle # uses Brewfile
 #
 echo 'Starting homebrew post-installation'
 
-# use current version of bash over macOS's old version
-ln -vs /opt/homebrew/bin/bash /usr/local/bin/
+ln -vs /opt/homebrew/bin/bash /usr/local/bin/ # use current version of bash over macOS's old version
+ln -vs /opt/homebrew/bin/gcc-14 "$HOME"/bin/gcc  # macOS links 'gcc' to 'clang', so we override that with a new link
 
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/MiddleClick.app", hidden:true}'
 
 skhd --install-service && skhd --start-service
 
 pipx ensurepath
-# optional to allow pipx actions with --global argument
-# sudo pipx ensurepath --global
+# sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
 
 # dotnet tools
 dotnet tool install --global csharprepl
@@ -50,16 +49,12 @@ dotnet tool install --global dotnet-script
 
 echo 'Finished homebrew post-installation!'
 
-#
-# Rust
-#
-# I don't want to download via Homebrew because `rustup` handles updates itself.
+# install Rust (I don't want to download via Homebrew because `rustup` handles updates itself)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || (echo 'Error: Rust installation failed!' && exit)
 
 #
 # install from App Store
-# Signal Shifter 'https://apps.apple.com/us/app/signal-shifter/id6446061552?mt=12'
-brew install mas && mas install 6446061552 && brew remove mas
+brew install mas && mas install 6446061552 && brew remove mas # Signal Shifter 'https://apps.apple.com/us/app/signal-shifter/id6446061552?mt=12'
 
 #
 # Import settings with "defaults import"
