@@ -1,7 +1,8 @@
 # Config relating to the Lazygit UI
 gui:
+    nerdFontsVersion: "3"
     # The number of lines you scroll by when scrolling the main window
-    scrollHeight: 2
+    scrollHeight: 10
     # Config relating to colors and styles.
     # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
     theme:
@@ -39,7 +40,7 @@ git:
     # Prefix to use when skipping hooks. E.g. if set to 'WIP', then pre-commit hooks will be skipped when the commit message starts with 'WIP'
     skipHookPrefix: WIP
     # Command used when displaying the current branch git log in the main window
-    branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=format-local:'%a %b %d %Y %-I:%M %p %Z' --pretty=medium {{branchName}} --
+    branchLogCmd: git -c core.pager='less -S' log --all --color=always --pretty='%C(yellow)%h %C(magenta)%as %C(blue)%aL %C(cyan)%s%C(reset)'
     # Command used to display git log of all branches in the main window.
     # Deprecated: User `allBranchesLogCmds` instead.
     allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
