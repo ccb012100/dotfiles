@@ -49,16 +49,18 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c l m n r t y
 #   Ice:                /
 #   iTerm2:             i
+#   Trailer:            '
 #   [disabled] warpd:   ; ' |
 #   1Password:          1 p
 #
-# Mapped Meh bindings: 01-,.←→↑↓=⎋bcglmnrty
-# TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search; for some reason, Contexts doesn't pick it up
+# Mapped Meh bindings: 01-,.←→↑↓=⎋bcgjlmnrty
+# TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
 meh - 6 : open -a spotify
 meh - 7 : open -a 'Visual Studio Code'
 meh - 8 : open -a wezterm
 meh - 9 : open -a 'System Settings'
 meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
+meh - j : ~/bin/toggle-wezterm.scpt
 
 ####################################################
 # map ctrl chords to equivalent/similar cmd chords #
