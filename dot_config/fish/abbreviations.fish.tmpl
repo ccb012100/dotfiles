@@ -2,7 +2,6 @@
 
 # call functions
 abbr --add up update_packages
-abbr --add sp playlist_sync
 
 # jump to directory
 abbr --add config __zoxide_z $HOME/.config
@@ -18,7 +17,6 @@ abbr --add funcs functions
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 # generic Linux/UNIX utilities
-abbr --add ; sudo # easier way to call with sudo
 abbr --add , command # easier way to call commands hidden behind an alias
 abbr --add back cd -
 abbr --add bce 'bc --expression=\''
@@ -52,20 +50,18 @@ abbr --add jjt cargo test
 abbr --add cm chezmoi
 abbr --add cma chezmoi apply
 abbr --add cmad chezmoi add
-abbr --add cmadt chezmoi add --template
 abbr --add cmai chezmoi apply --interactive
-abbr --add cmch chezmoi chattr +template
 abbr --add cmd chezmoi diff
 abbr --add cme chezmoi edit
+abbr --add cme chezmoi edit --apply
 abbr --add cmef 'chezmoi edit $(fd --hidden . $HOME/.config | fzf)'
 abbr --add cmi chezmoi ignored
-abbr --add cmin chezmoi init
-abbr --add cmm chezmoi merge
-abbr --add cmr chezmoi re-add
-abbr --add cms chezmoi status
 {{ if eq .chezmoi.os "darwin" -}}
 abbr --add cmk 'chezmoi re-add $HOME/Library/Application\ Support/Code/User/keybindings.json'
 {{- end}}
+abbr --add cmm chezmoi merge
+abbr --add cmr chezmoi re-add
+abbr --add cms chezmoi status
 # cht.sh
 abbr --add ch cht.sh
 abbr --add cht cht.sh
@@ -130,6 +126,13 @@ abbr --add ra ranger
 abbr --add rgf rg --fixed-strings # verbatim search (i.e. disable regex)
 abbr --add rgi rg --ignore-case # case-insensitive search
 abbr --add rguuu rg -uuu # same as `rg --no-ignore --hidden --binary` & equiv. to `grep -r`
+{{ if eq .chezmoi.os "darwin" -}}
+# Swift
+abbr --add sb swift build
+abbr --add sp swift package
+abbr --add spc swift package clean
+abbr --add sr swift run
+{{- end}}
 {{- if (eq .chezmoi.os "linux")}}
 # systemctl
 abbr --add sctl sysmtemctl
