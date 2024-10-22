@@ -56,13 +56,13 @@ macOS [menu bar manager](https://github.com/jordanbaird/Ice)
 Export the settings from your machine into this repository:
 
 ```zsh
-defaults export com.jordanbair.Ice - > $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
+defaults export com.jordanbair.Ice - > $HOME/.local/share/chezmoi/macOS/Ice.plist
 ```
 
 Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to your machine:
 
 ```zsh
-defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
+defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/Ice.plist
 ```
 
 ## iTerm2
@@ -127,6 +127,22 @@ To export the settings:
 1. Right click on the ⚙ icon in the upper-right corner to open the settings.
 1. On the navigation strip on the left, choose *⚙ Settings* (the the last option).
 1. Click *Export settings*
+
+## Tuneful
+
+[**Tuneful**](https://github.com/martinfekete10/Tuneful) music player menu bar app.
+
+To export the settings, run the command `com.logitech.logitune.plist`
+
+```zsh
+defaults export com.Martin-Fekete.Tuneful.plist - > $HOME/.local/share/chezmoi/macOS/Tuneful.plist
+```
+
+Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to your machine:
+
+```zsh
+defaults import com.Martin-Fekete.Tuneful.plist $HOME/.local/share/chezmoi/macOS/Tuneful.plist
+```
 
 ## Trailer
 

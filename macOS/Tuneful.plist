@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSStatusItem Visible Item-0</key>
+	<true/>
+	<key>NSStatusItem Visible Item-1</key>
+	<false/>
+	<key>NSWindow Frame com.sindresorhus.Settings.FrameAutosaveName</key>
+	<string>1046 884 460 120 0 0 2056 1285 </string>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2024-10-22T19:21:34Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3364070974</integer>
+	<key>hideMenuBarItemWhenNotPlaying</key>
+	<true/>
+	<key>menuBarItemWidth</key>
+	<real>100</real>
+	<key>miniPlayerType</key>
+	<string>Full</string>
+	<key>popoverBackground</key>
+	<string>Transparent</string>
+	<key>popoverType</key>
+	<string>Full</string>
+	<key>showMenuBarPlaybackControls</key>
+	<true/>
+	<key>showPlayerWindow</key>
+	<false/>
+	<key>showStatusBarTrackInfo</key>
+	<string>When playing</string>
+	<key>statusBarIcon</key>
+	<string>Hidden</string>
+	<key>trackInfoDetails</key>
+	<string>Song</string>
+	<key>viewedOnboarding</key>
+	<true/>
+	<key>viewedShortcutsSetup</key>
+	<true/>
+</dict>
+</plist>
