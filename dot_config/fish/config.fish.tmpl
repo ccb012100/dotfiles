@@ -2,8 +2,8 @@ if status is-interactive # Commands to run in interactive sessions can go here
     echo Loading config.fish...
     set --global --export EDITOR nvim
 
-    set --global --export PATH $HOME/bin $PATH
-    set --global --export PATH $PATH $HOME/.local/bin
+    fish_add_path $HOME/bin
+    fish_add_path --append $HOME/.local/bin
     {{ if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
     # symlinks to Windows binaries
 

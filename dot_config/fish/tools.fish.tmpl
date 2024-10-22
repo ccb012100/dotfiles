@@ -4,28 +4,29 @@
 
 # homebrew
 {{if eq .chezmoi.os "darwin" -}}
-set --global --export PATH /opt/homebrew/bin $PATH
+fish_add_path /opt/homebrew/bin
 eval "$(/opt/homebrew/bin/brew shellenv)"
 {{else}}
-set --global --export PATH /home/linuxbrew/.linuxbrew/bin $PATH
+fish_add_path /home/linuxbrew/.linuxbrew/bin
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{- end}}
+
 # atuin
 atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent binding it to autin search
-
-# coreutils
-{{if eq .chezmoi.os "darwin" -}}
-set --global --export PATH /opt/homebrew/opt/coreutils/libexec/gnubin $PATH
-{{else}}
-set --global --export PATH /home/linuxbrew/.linuxbrew/opt/coreutils/libexec/gnubin $PATH
-{{- end}}
 
 # done (<https://github.com/franciscolourenco/done>)
 set -U __done_min_cmd_duration 20000 # default: 20_000 ms = 20 seconds
 
 # dotnet CLI
 complete -f -c dotnet -a "(dotnet complete (commandline -cp))"
-set --global --export PATH $HOME/.dotnet/tools $PATH
+fish_add_path $HOME/.dotnet/tools
+
+# GNU - add utils to path with "real" name
+{{if eq .chezmoi.os "darwin" -}}
+fish_add_path /opt/homebrew/opt/{coreutils,findutils,gnu-indent,gnu-sed,gnu-tar,gnu-which,grep,make}/libexec/gnubin
+{{else}}
+fish_add_path /home/linuxbrew/.linuxbrew/opt/{coreutils,findutils,gnu-indent,gnu-sed,gnu-tar,gnu-which,grep,make}/libexec/gnubin
+{{- end}}
 
 # GPG (GNU Privacy Guard or GnuPG)
 export GPG_TTY=$(tty)
@@ -82,7 +83,7 @@ function __fish_pipe_to_ripgrep -d "Pipe the current command to ripgrep"
 end
 
 # Rust
-set --global --export PATH $HOME/.cargo/bin $PATH
+fish_add_path $HOME/.cargo/bin
 
 # starship.rs
 starship init fish | source
@@ -90,8 +91,11 @@ enable_transience
 
 # wezterm
 {{if eq .chezmoi.os "darwin" -}}
-set --global --export PATH $PATH /Applications/WezTerm.app/Contents/MacOS
+fish_add_path --append /Applications/WezTerm.app/Contents/MacOS
 {{- end}}
+
+# unzip
+fish_add_path /opt/homebrew/opt/unzip/bin
 
 # zoxide
 zoxide init --cmd j fish | source
