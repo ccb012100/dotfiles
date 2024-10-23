@@ -276,11 +276,6 @@
     },
     {
         "key": "ctrl+i",
-        "command": "-markdown.extension.editing.toggleItalic",
-        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-    },
-    {
-        "key": "ctrl+i",
         "command": "-editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
@@ -381,11 +376,6 @@
     {
         "key": "ctrl+shift+v",
         "command": "-markdown.showPreview",
-        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-    },
-    {
-        "key": "ctrl+k v",
-        "command": "-markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     },
     {
@@ -1727,26 +1717,6 @@
     },
     {
         "key": "ctrl+]",
-        "command": "markdown.extension.editing.toggleHeadingUp",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "ctrl+[",
-        "command": "markdown.extension.editing.toggleHeadingDown",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "-markdown.extension.editing.toggleHeadingDown",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "ctrl+l m",
-        "command": "markdown.extension.toc.update",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "ctrl+]",
         "command": "-markdown.extension.onIndentLines",
         "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
     },
@@ -2106,11 +2076,6 @@
     {
         "key": "ctrl+; ctrl+m",
         "command": "-testing.openOutputPeek"
-    },
-    {
-        "key": "ctrl+l shift+m",
-        "command": "markdown.extension.toc.create",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
     },
     {
         "key": "ctrl+k i",
@@ -2549,11 +2514,6 @@
         "command": "-workbench.action.previousEditorInGroup"
     },
     {
-        "key": "ctrl+shift+v",
-        "command": "markdown.extension.editing.paste",
-        "when": "editorHasSelection && editorTextFocus && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
         "key": "ctrl+y",
         "command": "filesExplorer.paste",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
@@ -2609,16 +2569,6 @@
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
     {
-        "key": "ctrl+l ctrl+`",
-        "command": "markdown.extension.editing.toggleCodeSpan",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
-        "key": "ctrl+l `",
-        "command": "markdown.extension.editing.toggleCodeBlock",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^qmd$/"
-    },
-    {
         "key": "ctrl+v",
         "command": "-editor.action.clipboardPasteAction"
     },
@@ -2626,11 +2576,6 @@
         "key": "ctrl+v",
         "command": "-filesExplorer.paste",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "-markdown.extension.editing.paste",
-        "when": "editorHasSelection && editorTextFocus && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
         "key": "ctrl+v",
@@ -2655,26 +2600,6 @@
     {
         "key": "ctrl+c ctrl+v",
         "command": "paste"
-    },
-    {
-        "key": "ctrl+b",
-        "command": "-markdown.extension.editing.toggleBold",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "ctrl+l shift+-",
-        "command": "markdown.extension.editing.toggleItalic",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "-markdown.extension.editing.toggleItalic",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "ctrl+l shift+b",
-        "command": "markdown.extension.editing.toggleBold",
-        "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
     },
     {
         "key": "ctrl+y",
@@ -3861,16 +3786,6 @@
         "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
     },
     {
-        "key": "ctrl+l ctrl+m",
-        "command": "markdown.showPreviewToSide",
-        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-    },
-    {
-        "key": "cmd+k v",
-        "command": "-markdown.showPreviewToSide",
-        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
-    },
-    {
         "key": "ctrl+shift+m",
         "command": "editor.action.insertSnippet",
         "when": "!editorReadonly && editorFocus && !editorHasSelection"
@@ -4045,5 +3960,50 @@
     {
         "key": "cmd+3",
         "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-markdown-preview-enhanced.runCodeChunk",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-markdown-preview-enhanced.runAllCodeChunks",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-markdown-preview-enhanced.syncPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+l ctrl+shift+m",
+        "command": "markdown-preview-enhanced.openPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown-preview-enhanced.openPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+l ctrl+m",
+        "command": "markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+j ctrl+j",
+        "command": "workbench.action.focusNextGroup",
+        "when": "activeEditor == WebviewEditor"
+    },
+    {
+        "key": "ctrl+x o",
+        "command": "workbench.action.focusNextGroup",
+        "when": "activeEditor == WebviewEditor"
     },
 ]
