@@ -1,7 +1,7 @@
 {
   "Date header": {
     "body": [
-      "##$0 ==> $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+      "## $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE - $0",
       ""
     ],
     "prefix": "dheader",
