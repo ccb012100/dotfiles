@@ -3977,26 +3977,6 @@
         "when": "editorLangId == 'markdown'"
     },
     {
-        "key": "ctrl+l ctrl+shift+m",
-        "command": "markdown-preview-enhanced.openPreview",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
-        "key": "shift+cmd+v",
-        "command": "-markdown-preview-enhanced.openPreview",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
-        "key": "ctrl+l ctrl+m",
-        "command": "markdown-preview-enhanced.openPreviewToTheSide",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
-        "key": "cmd+k v",
-        "command": "-markdown-preview-enhanced.openPreviewToTheSide",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
         "key": "ctrl+j ctrl+j",
         "command": "workbench.action.focusNextGroup",
         "when": "activeEditor == WebviewEditor"
@@ -4006,4 +3986,14 @@
         "command": "workbench.action.focusNextGroup",
         "when": "activeEditor == WebviewEditor"
     },
+    {
+        "key": "ctrl+l ctrl+m",
+        "command": "markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    }
 ]
