@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSStatusItem Preferred Position Item-1</key>
+	<real>371</real>
 	<key>NSStatusItem Visible Item-0</key>
-	<true/>
-	<key>NSStatusItem Visible Item-1</key>
 	<false/>
+	<key>NSStatusItem Visible Item-1</key>
+	<true/>
 	<key>NSWindow Frame com.sindresorhus.Settings.FrameAutosaveName</key>
-	<string>1046 884 460 120 0 0 2056 1285 </string>
+	<string>3365 1751 460 191 0 0 3840 2135 </string>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -15,31 +17,33 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2024-10-22T19:21:34Z</date>
+	<date>2024-10-31T21:23:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>3364070974</integer>
 	<key>hideMenuBarItemWhenNotPlaying</key>
-	<true/>
+	<false/>
 	<key>menuBarItemWidth</key>
-	<real>100</real>
+	<real>300</real>
+	<key>miniPlayerBackground</key>
+	<string>Album art</string>
 	<key>miniPlayerType</key>
-	<string>Full</string>
+	<string>Minimal</string>
 	<key>popoverBackground</key>
-	<string>Transparent</string>
+	<string>Album art</string>
 	<key>popoverType</key>
 	<string>Full</string>
 	<key>showMenuBarPlaybackControls</key>
-	<true/>
+	<false/>
 	<key>showPlayerWindow</key>
 	<false/>
 	<key>showStatusBarTrackInfo</key>
-	<string>When playing</string>
+	<string>Always</string>
 	<key>statusBarIcon</key>
-	<string>Hidden</string>
+	<string>Album art</string>
 	<key>trackInfoDetails</key>
-	<string>Song</string>
+	<string>Artist and song</string>
 	<key>viewedOnboarding</key>
 	<true/>
 	<key>viewedShortcutsSetup</key>
