@@ -34,7 +34,7 @@ Running `brew bundle dump` generates the [Brewfile](/macOS/Brewfile) that I can 
 
 [Contexts](https://contexts.co/) window switcher.
 
-To import [the settings from this repository](/macOS/com.surteesstudios.Bartender.plist) to your machine:
+To import [the settings from this repository](/macOS/Contexts.plist) to your machine:
 
 Export:
 
@@ -132,7 +132,7 @@ To export the settings:
 
 [**Tuneful**](https://github.com/martinfekete10/Tuneful) music player menu bar app.
 
-To export the settings, run the command `com.logitech.logitune.plist`
+To export the settings, run the command:
 
 ```zsh
 defaults export com.Martin-Fekete.Tuneful.plist - > $HOME/.local/share/chezmoi/macOS/Tuneful.plist
