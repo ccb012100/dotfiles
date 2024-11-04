@@ -176,7 +176,8 @@
     },
     {
         "key": "ctrl+l a",
-        "command": "editor.action.toggleWordWrap"
+        "command": "editor.action.toggleWordWrap",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+alt+l",
@@ -559,10 +560,6 @@
         "key": "ctrl+k ctrl+n",
         "command": "-git.unstageSelectedRanges",
         "when": "isInDiffEditor"
-    },
-    {
-        "key": "ctrl+k ctrl+q",
-        "command": "-workbench.action.navigateToLastEditLocation"
     },
     {
         "key": "ctrl+k ctrl+r",
@@ -3297,14 +3294,6 @@
         "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+j space",
-        "command": "workbench.action.navigateToLastEditLocation"
-    },
-    {
-        "key": "cmd+k cmd+q",
-        "command": "-workbench.action.navigateToLastEditLocation"
-    },
-    {
         "key": "ctrl+shift+s",
         "command": "actions.find",
         "when": "editorFocus || editorIsOpen"
@@ -3995,5 +3984,10 @@
         "key": "cmd+k v",
         "command": "-markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+l space",
+        "command": "editor.action.toggleWordWrap",
+        "when": "editorFocus"
     }
 ]

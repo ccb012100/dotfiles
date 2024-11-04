@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
 # abbrs for git and related tools
+abbr --add root 'cd $(git rev-parse --show-toplevel)'
 
 #: k is easier to type than g
 abbr --add k git
