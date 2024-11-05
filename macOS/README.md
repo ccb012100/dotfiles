@@ -1,5 +1,9 @@
 # Manually Updated macOS Settings
 
+> [!NOTE]
+>
+> All instructions assume this repository has been downloaded to `$HOME/.local/share/chezmoi/`.
+
 ## Install script
 
 The `zsh` [script](/macOS/install.zsh) can be used to set up a fresh **Mac**.
@@ -48,6 +52,22 @@ Import:
 ```zsh
 defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/macOS/Contexts.plist
 ```
+
+## DBeaver
+
+[DBeaver](https://github.com/dbeaver/dbeaver) SQL client.
+
+### Export settings
+
+- In the menu bar, select `File ➤ Export` to open the Export wizard.
+- Select the entry `DBeaver ➤ Preferences`, then click the button `Next ›`
+- Set the _Output file_ file picker to `$HOME/.local/share/chezmoi/macOS/dbeaver.zip`
+
+### Import settings
+
+- In the menu bar, select `File ➤ Import` to start the Import wizard
+- Select the entry `DBeaver ➤ Preferences`, then click the button `Next ›`
+- Set the _Preferences Archive_ file picker to [`$HOME/.local/share/chezmoi/macOS/dbeaver.zip`](/macOS/dbeaver.zip)
 
 ## Ice
 
