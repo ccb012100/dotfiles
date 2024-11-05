@@ -3269,22 +3269,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "cmd+left",
-        "command": "workbench.action.navigateBack",
-        "when": "canNavigateBack"
-    },
-    {
         "key": "cmd+]",
-        "command": "workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "ctrl+shift+-",
-        "command": "-workbench.action.navigateForward",
-        "when": "canNavigateForward"
-    },
-    {
-        "key": "cmd+right",
         "command": "workbench.action.navigateForward",
         "when": "canNavigateForward"
     },
