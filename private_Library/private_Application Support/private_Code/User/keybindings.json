@@ -1459,11 +1459,6 @@
         "when": "textInputFocus"
     },
     {
-        "key": "tab",
-        "command": "-editor.emmet.action.expandAbbreviation",
-        "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    },
-    {
         "key": "ctrl+shift+enter",
         "command": "-memo.openReferenceBeside",
         "when": "editorTextFocus && memo:refFocusedOrHovered && editorLangId == 'markdown'"
@@ -1605,16 +1600,6 @@
         "command": "-redo"
     },
     {
-        "key": "ctrl+l ctrl+;",
-        "command": "rewrap.rewrapComment",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+q",
-        "command": "-rewrap.rewrapComment",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "shift+alt+d",
         "command": "-editor.detectLanguage",
         "when": "editorTextFocus && !notebookEditable"
@@ -1682,11 +1667,6 @@
         "key": "ctrl+f",
         "command": "acceptSelectedSuggestionOnEnter",
         "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
-    },
-    {
-        "key": "alt+q",
-        "command": "rewrap.rewrapComment",
-        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+h k",
@@ -3974,5 +3954,37 @@
         "key": "ctrl+l space",
         "command": "editor.action.toggleWordWrap",
         "when": "editorFocus"
-    }
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.emmet.action.wrapWithAbbreviation",
+        "when": "editorFocus && !editorReadonly && editorLangId == 'html'"
+    },
+    {
+        "key": "ctrl+x 4",
+        "command": "workbench.action.evenEditorWidths"
+    },
+    {
+        "key": "alt+s",
+        "command": "editor.emmet.action.wrapWithAbbreviation",
+        "when": "editorFocus && !editorReadonly && editorLangId == 'html'"
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "editor.emmet.action.removeTag"
+    },
+    {
+        "key": "alt+s",
+        "command": "editor.action.surroundWithSnippet",
+        "when": "editorFocus && editorHasSelection && !editorReadonly"
+    },
+    {
+        "key": "alt+s alt+n",
+        "command": "-swift.newFile"
+    },
+    {
+        "key": "alt+s",
+        "command": "editor.action.insertSnippet",
+        "when": "!editorReadonly && editorFocus && !editorHasSelection"
+    },
 ]
