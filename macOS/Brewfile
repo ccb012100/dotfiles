@@ -120,6 +120,7 @@ cask "tuneful"
 cask "wezterm"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
+mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
@@ -211,7 +212,6 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-wsl"
 vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-repositories"
-vscode "ms-vscode.theme-1337"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "mvllow.rose-pine"
 vscode "pkief.material-icon-theme"
