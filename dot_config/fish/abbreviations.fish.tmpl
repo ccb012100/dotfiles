@@ -156,8 +156,10 @@ abbr --add cconf code $HOME/.local/share/chezmoi # (c)ode (conf)ig
 abbr --add cconfig code $HOME/.local/share/chezmoi # (c)ode (config)
 abbr --add cnotes code $HOME/.local/notes.code-workspace # (e)dit notes
 # zoxide
+abbr --add ze zoxide edit
 abbr --add zq zoxide query
-abbr --add zo zoxide
+abbr --add z zoxide
+abbr --add zr zoxide remove
 {{/* IF on WSL2, THEN run 1Password as a service account */ -}}
 {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
 abbr --add open wslview # wslu
