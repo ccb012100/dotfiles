@@ -116,7 +116,6 @@ cask "qmk-toolbox"
 cask "rectangle"
 cask "sqlitestudio"
 cask "stats"
-cask "tuneful"
 cask "wezterm"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
