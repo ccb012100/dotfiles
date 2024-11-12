@@ -74,6 +74,10 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
 fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
 
+{{ if eq .chezmoi.os "darwin" -}}
+fish_add_path /opt/homebrew/opt/lsof/bin
+{{- end}}
+
 # Ripgrep
 set --global --export RIPGREP_CONFIG_PATH "$HOME/.config/ripgreprc"
 
