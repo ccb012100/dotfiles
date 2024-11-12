@@ -31,10 +31,19 @@ abbr --add ksl git sl
 # git-forgit
 abbr --add kj git-forgit
 abbr --add kja git-forgit add
+abbr --add kjb git-forgit blame
+abbr --add kjd git-forgit diff
 abbr --add kjl git-forgit log
+abbr --add kjr git-forgit rebase
+abbr --add kjsp git-forgit stash_push
+abbr --add kjss git-forgit stash_show
 
 # gitu
 abbr --add kk gitu
 
 # lazygit
 abbr --add lk lazygit
+abbr --add lkb lazygit branch
+abbr --add lkl lazygit log
+abbr --add lks lazygit status
+abbr --add lkss lazygit stash
