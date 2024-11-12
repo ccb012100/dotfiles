@@ -52,11 +52,12 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #   Karabiner-Elements  8
 #   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c l m n r t y
 #   System Settings:    ; 9
-#   Trailer:            '
 #
-# Mapped Meh bindings: 0189-,.';/←→↑↓=⎋bcgjklmnprty
+# Mapped Meh bindings: 0189-,.;/←→↑↓=⎋bcgjklmnprty
+# quote (') = 0x27
 # TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
 meh - 0 : open -a 'System Settings'
+meh - g : skhd -k 'shift + cmd - g' # ⇧⌘G = toggle Gitify
 meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
