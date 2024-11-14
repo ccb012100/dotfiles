@@ -21,7 +21,7 @@
     pager = less -FRX --mouse # '-FRX' same as '--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
     untrackedCache = true
 {{- /* IF NOT on work machine, THEN include these */ -}}
-{{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
+{{- if not .isWorkMachine }}
     hooksPath = ~/.hooks
 {{- end}}
 [commit]
@@ -29,10 +29,6 @@
     verbose = true
 [credential]
     helper = wincred
-{{- if eq .chezmoi.hostname "8901-75SCSV3" }}
-[credential "https://dev.azure.com"]
-    usehttppath = true
-{{- end}}
 [fetch]
     parallel = 0
     prune = true
@@ -75,8 +71,7 @@
     insteadof = https://github.com/
 [user]
     useConfigOnly = true
-{{- /* IF NOT on work machine, THEN include these */ -}}
-{{- if (and (ne .chezmoi.hostname "F9GRXCQDGC") (ne .chezmoi.hostname "8901-75SCSV3")) }}
+{{- if not .isWorkMachine }}
     name = Christopher Bocardo
     email = 397636+ccb012100@users.noreply.github.com
     signingkey = ~/.ssh/id_ed25519

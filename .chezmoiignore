@@ -4,12 +4,12 @@ macOS/*
 miscellaneous/*
 **/.DS_Store
 {{/* IF NOT on work machine, THEN ignore these */ -}}
-{{- if (ne .chezmoi.hostname "8901-75SCSV3") }}
+{{- if not .isWorkMachine }}
 .local/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
 {{- /* IF NOT on macOS, THEN ignore these */ -}}
-{{- if ne .chezmoi.os "darwin" -}}
+{{- if not .isMacOS -}}
 .config/karabiner/*
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd
@@ -18,7 +18,7 @@ miscellaneous/*
 Library/*
 {{- end}}
 {{/* IF ON WSL2, THEN ignore these */ -}}
-{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
+{{- if .isWSL2 }}
 .config/kitty/*
 {{- end -}}
 .config/fish/completions

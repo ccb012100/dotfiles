@@ -1,8 +1,3 @@
-{{- /* IF on work machine, THEN include this */ -}}
-{{- if eq .chezmoi.hostname "8901-75SCSV3" }}
-{{- onepasswordDocument "ictvfxvtwfqwdj4qsb3lvrdaja" -}}
-{{- end }}
-{{- /* IF on work machine, THEN include this */ -}}
-{{- if eq .chezmoi.hostname "F9GRXCQDGC" }}
-{{- onepasswordDocument "ictvfxvtwfqwdj4qsb3lvrdaja" -}}
+{{- if .isWorkMachine }}
+{{- onepasswordDocument "4dbnqiilrxk2hxmjl65ojf6rna" -}}
 {{- end }}

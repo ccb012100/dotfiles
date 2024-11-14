@@ -122,8 +122,7 @@ function g() {
     esac
 }
 
-{{- /* IF ON WSL2, THEN run 1Password as a service account */ -}}
-{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease))}}
+{{- if .isWSL2 }}
 # use built-in Windows 'open' command
 function open() {
     if [[ -n "${*}" ]]; then

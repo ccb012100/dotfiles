@@ -2,8 +2,7 @@
     path = .config/git/git.gitconfig
     path = .config/git/aliases.gitconfig
     path = .config/git/tools.gitconfig
-{{- /* IF on work machine, THEN include these */ -}}
-{{- if (or (eq .chezmoi.hostname "F9GRXCQDGC") (eq .chezmoi.hostname "8901-75SCSV3")) }}
+{{- if .isWorkMachine }}
 [includeIf "gitdir:~/src/"]
     path = .config/git/personal.gitconfig
 [includeIf "gitdir:~/.local/share/chezmoi/"]

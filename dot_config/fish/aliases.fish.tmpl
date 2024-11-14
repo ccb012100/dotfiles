@@ -12,7 +12,7 @@ alias lal 'ls -al'
 alias ll 'ls -l'
 alias lla 'ls -la'
 
-{{- if (eq .chezmoi.os "linux") }}
+{{- if .isLinux }}
 alias aptup 'sudo apt update && sudo apt upgrade --yes'
 {{- end}}
 

@@ -20,7 +20,7 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr --add , command # easier way to call commands hidden behind an alias
 abbr --add back cd -
 abbr --add bce 'bc --expression=\''
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if .isMacOS }}
 abbr --add caf caffeinate -u -t 3600 # 1 hour
 abbr --add half-caf caffeinate -u -t 1800 # half hour
 {{- end}}
@@ -56,7 +56,7 @@ abbr --add cme chezmoi edit
 abbr --add cme chezmoi edit --apply
 abbr --add cmef 'chezmoi edit $(fd --hidden . $HOME/.config | fzf)'
 abbr --add cmi chezmoi ignored
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if .isMacOS }}
 abbr --add cmk 'chezmoi re-add $HOME/Library/Application\ Support/Code/User/keybindings.json'
 {{- end}}
 abbr --add cmm chezmoi merge
@@ -89,7 +89,7 @@ abbr --add dnt dotnet test
 abbr --add dnu dotnet user-secrets
 abbr --add dnw dotnet watch
 # fd
-abbr --add fd 'fd --hidden --ignored'
+abbr --add fd 'fd --hidden'
 abbr --add fde 'fd --extension'
 abbr --add fdf 'fd --type file'
 # GitHub CLI
@@ -126,25 +126,25 @@ abbr --add ra ranger
 abbr --add rgf rg --fixed-strings # verbatim search (i.e. disable regex)
 abbr --add rgi rg --ignore-case # case-insensitive search
 abbr --add rguuu rg -uuu # same as `rg --no-ignore --hidden --binary` & equiv. to `grep -r`
-{{ if eq .chezmoi.os "darwin" -}}
+{{- if .isMacOS }}
 # Swift
 abbr --add sb swift build
 abbr --add sp swift package
 abbr --add spc swift package clean
 abbr --add sr swift run
 {{- end}}
-{{- if (eq .chezmoi.os "linux")}}
+{{- if .isLinux }}
 # systemctl
 abbr --add sctl sysmtemctl
 {{- end }}
-{{- if (eq .chezmoi.os "linux")}}
+{{- if .isLinux }}
 # trash-cli
 abbr --add trash trash-put
 {{- end }}
 # ts-node
 abbr --add tsn 'npx ts-node' # run local version of ts-node
 # uuidgen
-abbr --add uuid uuidgen {{- if (eq .chezmoi.os "linux")}} --random {{- end }}
+abbr --add uuid uuidgen {{- if .isLinux }} --random {{- end }}
 # vim
 abbr --add v vim
 abbr --add vi vim
@@ -160,8 +160,7 @@ abbr --add ze zoxide edit
 abbr --add zq zoxide query
 abbr --add z zoxide
 abbr --add zr zoxide remove
-{{/* IF on WSL2, THEN run 1Password as a service account */ -}}
-{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft"))}}
+{{ if .isWSL2 }}
 abbr --add open wslview # wslu
 {{- end }}
 abbr --add dsp 'datasette $HOME/playlister.sqlite3'

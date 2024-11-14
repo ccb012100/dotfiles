@@ -360,7 +360,7 @@ wezterm.on(
         return title
     end
 )
-{{- if (eq .chezmoi.os "window")}}
+{{- if .isWSL2 }}
 {{- template "wezterm_win" -}}
 {{- end}}
 
