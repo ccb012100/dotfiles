@@ -54,8 +54,7 @@
     "prefix": "important",
     "description": "Add GitHub Markdown IMPORTANT alert",
     "body": [
-      "> [!IMPORTANT] ${1:title}",
-      "> ",
+      "> [!IMPORTANT]",
       "> $0"
     ]
   },
@@ -63,8 +62,7 @@
     "prefix": "caution",
     "description": "Add GitHub Markdown CAUTION alert",
     "body": [
-      "> [!CAUTION] ${1:title}",
-      "> ",
+      "> [!CAUTION]",
       "> $0"
     ]
   },
@@ -72,8 +70,7 @@
     "prefix": "warning",
     "description": "Add GitHub Markdown WARNING alert",
     "body": [
-      "> [!WARNING] ${1:title}",
-      "> ",
+      "> [!WARNING]",
       "> $0"
     ]
   },
@@ -81,8 +78,7 @@
     "prefix": "note",
     "description": "Add GitHub Markdown NOTE alert",
     "body": [
-      "> [!NOTE] ${1:title}",
-      "> ",
+      "> [!NOTE]",
       "> $0"
     ]
   },
@@ -90,8 +86,7 @@
     "prefix": "tip",
     "description": "Add GitHub Markdown TIP alert",
     "body": [
-      "> [!TIP] ${1:title}",
-      "> ",
+      "> [!TIP]",
       "> $0"
     ]
   },
