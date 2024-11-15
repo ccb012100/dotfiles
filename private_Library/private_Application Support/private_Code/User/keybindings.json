@@ -3988,4 +3988,12 @@
         "command": "editor.action.insertSnippet",
         "when": "!editorReadonly && editorFocus && !editorHasSelection && editorLangId != 'html'"
     },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.showPreviousWindowTab"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.showNextWindowTab"
+    },
 ]
