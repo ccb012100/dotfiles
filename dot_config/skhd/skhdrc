@@ -47,6 +47,7 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh chords reserved by other programs:
 #   [disabled] warpd:   ; ' |
 #   1Password:          1 p
+#   Hammerspoon:        7
 #   Ice:                /
 #   iTerm2:             i
 #   Karabiner-Elements  8
