@@ -35,7 +35,6 @@ if status is-interactive # Commands to run in interactive sessions can go here
     stty -ixon # disable XON/XOFF control flow
 
     # source additional config files
-
     for x in "$HOME"/.config/fish/{abbreviations,git-abbreviations,aliases,tools}.fish
         source $x
     end
@@ -43,16 +42,16 @@ if status is-interactive # Commands to run in interactive sessions can go here
     source $HOME/.local/config-local.fish # local config unique to the machine
 
     # keyboard bindings
-
-    # use command `fish_key_reader` to get input codes
-    bind \cr _atuin_search # bind search to Ctrl-r; this has to to be done _after_ calling fzf_key_bindings
+    #: use command `fish_key_reader` to get input codes
     bind \cx\ce edit_command_buffer # edit command in $EDITOR
-    bind \ea history-pager # <Alt-a>
+    bind \eh history-pager # <Alt-h>
+    bind \e\ch __fish_man_page # rebind from <Alt-h>
     # bind \en __fish_pipe_to_devnull # <Alt-n>
+    #: keybindings for tools
     bind \er __fish_pipe_to_ripgrep # <Alt-k>
     bind \ez __fish_pipe_to_fzf # <Alt-j>
+    bind \cr _atuin_search # Ctrl-r
 
-    set --global --export fzf_preview_file_cmd bat
     {{ if .isWSL2 }}
     eval $(keychain --eval ~/.ssh/*_ed25519) # get ssh key credentials from the running instance of ssh-agent
     {{- end}}

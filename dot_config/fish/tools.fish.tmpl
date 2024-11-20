@@ -55,24 +55,21 @@ fnm env --use-on-cd --version-file-strategy=recursive | source
 
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
-set --export --global fzf_fd_opts --hidden # include hidden files
-
-set --export --global FZF_COMPLETION_TRIGGER ';;'
-set --export --global FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix'
+#: IMPORTANT: must not have other fzf plugins installed (see: <https://github.com/PatrickF1/fzf.fish/wiki/Uninstalling-other-fzf-plugins>)
+set FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix'
 #: colors are from Eldritch theme: <https://github.com/eldritch-theme/fzf>
-set --export --global FZF_DEFAULT_OPTS '--ansi --cycle --height=50% --reverse --info=inline --border=rounded --color=fg:#ebfafa,bg:#282a36,hl:#37f499 --color=fg+:#ebfafa,bg+:#212337,hl+:#37f499 --color=info:#f7c67f,prompt:#04d1f9,pointer:#7081d0 --color=marker:#7081d0,spinner:#f7c67f,header:#323449'
-set --export --global FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
-set --export --global FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}'
+set FZF_DEFAULT_OPTS '--ansi --cycle --height=50% --reverse --info=inline --border=rounded --color=fg:#ebfafa,bg:#282a36,hl:#37f499 --color=fg+:#ebfafa,bg+:#212337,hl+:#37f499 --color=info:#f7c67f,prompt:#04d1f9,pointer:#7081d0 --color=marker:#7081d0,spinner:#f7c67f,header:#323449'
+set FZF_CTRL_T_OPTS "--preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-set --export --global FZF_ALT_C_OPTS "--preview 'tree -C {}'"
+set FZF_ALT_C_OPTS "--preview 'tree -C {}'"
+#: use eza and bat for previews
+set fzf_preview_dir_cmd eza --all --color=always
+set fzf_preview_file_cmd bat --color=always
 
 {{if eq .chezmoi.os "darwin" -}}
 #: iTerm2
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
 {{ end}}
-#: keybindings
-source "$HOME/bin/fzf-key-bindings.fish" && fzf_key_bindings #: synced to ~/bin by chezmoi
-fzf_configure_bindings --variables=\ev # change variables binding to <Alt-v>
 
 {{ if eq .chezmoi.os "darwin" -}}
 fish_add_path /opt/homebrew/opt/lsof/bin

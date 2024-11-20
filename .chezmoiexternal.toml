@@ -1,16 +1,12 @@
 # 168h = 1 week
-# copy shell/key-bindings.fish from fzf master
-["bin/fzf-key-bindings.fish"]
-    type = "file"
-    url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.fish"
-    refreshPeriod = "168h"
+# 720h = 30 days
 # copy shell/key-bindings.bash from fzf master
 ["bin/fzf-key-bindings.bash"]
     type = "file"
     url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash"
-    refreshPeriod = "168h"
+    refreshPeriod = "720h"
 # copy shell/completion.bash from fzf master
 [".local/share/bash-completion/completions/fzf.bash"]
     type = "file"
     url = "https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash"
-    refreshPeriod = "168h"
+    refreshPeriod = "720h"
