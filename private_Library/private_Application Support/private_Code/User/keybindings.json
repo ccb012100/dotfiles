@@ -3528,57 +3528,107 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+1",
+        "key": "ctrl+shift+0",
+        "command": "numberedBookmarks.jumpToBookmark0",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+shift+1",
         "command": "numberedBookmarks.toggleBookmark1",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+2",
+        "key": "alt+shift+2",
         "command": "numberedBookmarks.toggleBookmark2",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+3",
+        "key": "alt+shift+3",
         "command": "numberedBookmarks.toggleBookmark3",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+4",
+        "key": "alt+shift+4",
         "command": "numberedBookmarks.toggleBookmark4",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+5",
+        "key": "alt+shift+5",
         "command": "numberedBookmarks.toggleBookmark5",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+6",
+        "key": "alt+shift+6",
         "command": "numberedBookmarks.toggleBookmark6",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+7",
+        "key": "alt+shift+7",
         "command": "numberedBookmarks.toggleBookmark7",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+8",
+        "key": "alt+shift+8",
         "command": "numberedBookmarks.toggleBookmark8",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+9",
+        "key": "alt+shift+9",
         "command": "numberedBookmarks.toggleBookmark9",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+0",
+        "key": "alt+shift+0",
         "command": "numberedBookmarks.toggleBookmark0",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+0",
+        "key": "alt+1",
+        "command": "numberedBookmarks.jumpToBookmark1",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+2",
+        "command": "numberedBookmarks.jumpToBookmark2",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+3",
+        "command": "numberedBookmarks.jumpToBookmark3",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+4",
+        "command": "numberedBookmarks.jumpToBookmark4",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+5",
+        "command": "numberedBookmarks.jumpToBookmark5",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+6",
+        "command": "numberedBookmarks.jumpToBookmark6",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+7",
+        "command": "numberedBookmarks.jumpToBookmark7",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+8",
+        "command": "numberedBookmarks.jumpToBookmark8",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+9",
+        "command": "numberedBookmarks.jumpToBookmark9",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+0",
         "command": "numberedBookmarks.jumpToBookmark0",
         "when": "editorTextFocus"
     },
