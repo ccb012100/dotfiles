@@ -1,8 +1,8 @@
 -- Meh+⌘+v ⇨ circumvent paste blocking
 hs.hotkey.bind({ "ctrl", "shift", "cmd", "alt" }, "V", function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end)
 
--- Meh+7 ⇨ show currently playing Spotify track
-hs.hotkey.bind({ "ctrl", "alt", "shift" }, "7", function() hs.spotify.displayCurrentTrack() end)
+-- Meh+' ⇨ show currently playing Spotify track
+hs.hotkey.bind({ "ctrl", "alt", "shift" }, "'", function() hs.spotify.displayCurrentTrack() end)
 
 -- Set alert styling
 hs.alert.defaultStyle.fillColor = { white = 0, alpha = 1 }       -- alert background = black
