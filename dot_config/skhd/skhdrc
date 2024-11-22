@@ -1,8 +1,7 @@
-# A list of all built-in modifier and literal keywords can be found at <https://github.com/koekeishiya/skhd/issues/1>
-#
-# To specify a NOP, use "true" or ":"
-# To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
-#
+# - A list of all built-in modifier and literal keywords can be found at <https://github.com/koekeishiya/skhd/issues/1>
+# - To specify a NOP, use "true" or ":"
+# - To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
+# - Contexts 3 intercepts keys before skhd, so I can't map any chords that use the Apple 'fn' key
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -47,15 +46,16 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh chords reserved by other programs:
 #   [disabled] warpd:   ; ' |
 #   1Password:          1 p
-#   Hammerspoon:        7
+#   Hammerspoon:        '
 #   Ice:                /
 #   Karabiner-Elements  8
 #   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c l m n r t y
 #   System Settings:    ; 9
 #
-# Mapped Meh bindings: 016789-,.;/←→↑↓=⎋bcgjklmnprty
+# Mapped Meh bindings: 01689-,.;'/←→↑↓=⎋bcgjklmnprty
 # quote (') = 0x27
 # TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
+
 meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 meh - 6 : MacOSUtility toggle 'com.logi.optionsplus'
 meh - g : skhd -k 'shift + cmd - g' # ⇧⌘G = toggle Gitify
