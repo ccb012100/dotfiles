@@ -1,3 +1,7 @@
+/* Shift key modifier only works with letter keys. For other
+ * keys, you have to refer to the shifted character instead:
+ *      e.g. instead of `alt-shift-/`, use `alt-?`
+ */
 [
   {
     "bindings": {
@@ -25,12 +29,13 @@
     "bindings": {
       "alt-,": "editor::ScrollCursorCenterTopBottom",
       "alt-down": "editor::MoveLineDown",
+      "alt-d": "editor::DeleteToNextWordEnd",
       "alt-k": "editor::DuplicateLineDown",
       "alt-n": "editor::LineDown",
       "alt-o": "editor::Fold",
       "alt-p": "editor::LineUp",
-      "alt-shift-,": "editor::MoveToBeginning", // FIXME: doesn't work
-      "alt-shift-.": "editor::MoveToEnd", // FIXME: doesn't work
+      "alt-<": "editor::MoveToBeginning",
+      "alt->": "editor::MoveToEnd",
       "alt-shift-down": "editor::AddSelectionBelow",
       "alt-shift-o": "editor::UnfoldLines",
       "alt-shift-up": "editor::AddSelectionAbove",
@@ -60,8 +65,8 @@
       "ctrl-o": "editor::NewlineBelow",
       "ctrl-r": "search::SelectPrevMatch",
       "ctrl-s": "search::SelectNextMatch",
-      "ctrl-shift-,": "editor::MoveToStartOfParagraph",
-      "ctrl-shift-/": "editor::Redo", // FIMXE: this doesn't work
+      "ctrl-<": "editor::MoveToStartOfParagraph",
+      "ctrl-?": "editor::Redo",
       "ctrl-shift-d": "editor::DuplicateLineDown",
       "ctrl-shift-k": "editor::DeleteToEndOfLine",
       "ctrl-shift-o": "editor::NewlineAbove",
@@ -91,8 +96,8 @@
       "ctrl-right": "pane::GoForward",
       "ctrl-shift-w": "pane::CloseActiveItem",
       "ctrl-x 0": "pane::CloseAllItems",
-      "ctrl-x 2": "pane::SplitDown",
-      "ctrl-x 3": "pane::SplitRight",
+      "ctrl-x 2": "pane::SplitHorizontal",
+      "ctrl-x 3": "pane::SplitVertical",
       "ctrl-x O": "workspace::ActivatePreviousPane",
       "ctrl-x k": "pane::CloseActiveItem",
       "ctrl-x o": "workspace::ActivateNextPane"
@@ -108,9 +113,9 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-g o": "outline_panel::ToggleFocus",
+      "ctrl-g .": "outline_panel::ToggleFocus",
       "ctrl-g l": "go_to_line::Toggle",
-      "ctrl-g s": "outline::Toggle", // Go to Symbol
+      "ctrl-g >": "outline::Toggle", // Go to Symbol
       "ctrl-h k": "zed::OpenKeymap",
       "ctrl-h s": "zed::OpenSettings",
       "ctrl-j ;": "workspace::ToggleBottomDock",
