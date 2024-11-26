@@ -7,8 +7,8 @@
     b       = branch
     bd      = branch --delete
     bdf     = branch --delete --force
-    bdz     = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es) with fzf
-    bdfz    = ! git branch | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es) with fzf
+    bdz     = ! git branch --no-color | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es) with fzf
+    bdfz    = ! git branch --no-color | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es) with fzf
     bl      = branch --list
     bv      = branch -v
     br      = branch --remote
@@ -19,8 +19,7 @@
     ## checkout
     back    = switch - # checkout previous branch
     co      = checkout
-    cof     = ! git --no-pager branch | fzf | xargs --no-run-if-empty git checkout # checkout local branch
-    corf    = ! git --no-pager branch --remote | fzf | sed 's_^origin/__g' | xargs --no-run-if-empty git checkout # checkout remote branch
+    cof     = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
     main    = checkout main
     master  = checkout master
 
@@ -101,7 +100,7 @@
     rc          = rebase --continue
     remain      = ! git fetch origin main:main && git rebase --interactive origin/main
     remaster    = ! git fetch origin master:master && git rebase --interactive origin/master
-    reorigin    = ! git fetch origin master:master && git rebase --interactive origin/`git branch --show-current`
+    reorigin    = ! git fetch && git rebase --interactive origin/`git branch --show-current`
     ri          = rebase --interactive
 
     ## reset
@@ -111,7 +110,7 @@
     rth = reset --hard
 
     ## stash
-    checkpoint  = !git stash push --include-untracked && git stash apply # stash changes but keep them in staging area
+    checkpoint  = ! git stash push --include-untracked && git stash apply # stash changes but keep them in staging area
     pop         = stash pop
     stc         = checkpoint
     stsp        = stash show -p
