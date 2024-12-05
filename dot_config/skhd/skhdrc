@@ -71,6 +71,7 @@ ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete wor
 # Shift+Ctrl+a to Select all
 shift + ctrl - a [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -82,6 +83,7 @@ shift + ctrl - a [
 # Ctrl+c to Copy
 ctrl - c [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -93,6 +95,7 @@ ctrl - c [
 # Alt+w to Forward delete word
 alt - d [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -133,6 +136,7 @@ ctrl - r [
 # Ctrl+t to Open a new tab
 ctrl - t [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -152,6 +156,7 @@ shift + ctrl - t [
 # Ctrl+v to Paste
 ctrl - v [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -163,6 +168,7 @@ ctrl - v [
 # Ctrl+w to Close tab
 ctrl - w [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -184,6 +190,7 @@ ctrl - w [
 # Ctrl+x to Cut
 ctrl - x [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -205,6 +212,7 @@ ctrl - x [
 # ctrl+z to Undo
 ctrl - z [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -216,6 +224,7 @@ ctrl - z [
 # Ctrl+[ (0x21) to Go backwards
 ctrl - 0x21 [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -228,6 +237,7 @@ ctrl - 0x21 [
 # Ctrl+] (0x1E) to Go forwards
 ctrl - 0x1E [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -250,6 +260,7 @@ cmd - 0x1E [
 # ctrl+/ (0x2C) to Undo
 ctrl - 0x2C [
     "code"              ~
+    "DBeaver"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
