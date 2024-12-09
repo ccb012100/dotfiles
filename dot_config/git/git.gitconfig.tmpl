@@ -27,8 +27,10 @@
 [commit]
     gpgsign = true
     verbose = true
+{{- if .isWSL2 }}
 [credential]
     helper = wincred
+{{- end}}
 [fetch]
     parallel = 0
     prune = true
@@ -38,7 +40,6 @@
     required = true
     smudge = git-lfs smudge -- %f
 [gpg]
-    # vscode doesn't support ssh signing at the moment: <https://github.com/microsoft/vscode/issues/179517>
     format = ssh
 [gpg "ssh"]
     allowedSignersFile = ~/.ssh/allowed_signers
