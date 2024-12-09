@@ -67,8 +67,10 @@
     showUntrackedFiles = all
 [tag]
     gpgsign = true
+{{- if not .isWorkMachine }}
 [url "git@github.com:"]
     insteadof = https://github.com/
+{{- end}}
 [user]
     useConfigOnly = true
 {{- if not .isWorkMachine }}
