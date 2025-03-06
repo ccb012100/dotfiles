@@ -16,7 +16,7 @@
   "buffer_font_family": "Fantasque Sans Mono",
   "buffer_font_size": 16,
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "collaboration_panel": {
     "button": false
