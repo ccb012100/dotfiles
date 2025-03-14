@@ -615,9 +615,20 @@
                         ]
                     },
                     {
-                        "description": "f17 -> Clipboard Screenshot (⇧⌘^+4)",
+                        "description": "f17 -> Clipboard Screenshot (⇧⌘^+4) [Excluding ErgoDox]",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "is_keyboard": true,
+                                                "vendor_id": 12951
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "f17"
                                 },
@@ -953,6 +964,7 @@
                 {
                     "identifiers": {
                         "is_keyboard": true,
+                        "product_id": 18804,
                         "vendor_id": 12951
                     },
                     "simple_modifications": [
@@ -962,7 +974,7 @@
                             },
                             "to": [
                                 {
-                                    "apple_vendor_top_case_key_code": "keyboard_fn"
+                                    "apple_vendor_keyboard_key_code": "function"
                                 }
                             ]
                         },
@@ -972,7 +984,7 @@
                             },
                             "to": [
                                 {
-                                    "apple_vendor_top_case_key_code": "keyboard_fn"
+                                    "apple_vendor_keyboard_key_code": "function"
                                 }
                             ]
                         }
