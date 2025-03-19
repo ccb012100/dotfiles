@@ -29,10 +29,10 @@ alt + shift - 0x32 [
 ]
 
 # F5 to mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
-f5 [
-    "Microsoft Teams"   : skhd -k "shift + cmd - m"
-    *                   ~
-]
+# f5 [
+#     "Microsoft Teams"   : skhd -k "shift + cmd - m"
+#     *                   ~
+# ]
 
 # SysRq (Print Screen) is interpreted as F13 in macOS
 f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
@@ -60,8 +60,8 @@ meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 meh - 6 : MacOSUtility toggle 'com.logi.optionsplus'
 meh - g : skhd -k 'shift + cmd - g' # ⇧⌘G = toggle Gitify
 meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
-meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
-meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
+# meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
+# meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
 
 ####################################################
 # map ctrl chords to equivalent/similar cmd chords #
