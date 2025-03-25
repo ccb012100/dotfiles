@@ -3272,7 +3272,7 @@
         "command": "workbench.action.switchWindow"
     },
     {
-        "key": "alt+;",
+        "key": "ctrl+;",
         "command": "jump-extension.jump-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3282,7 +3282,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+;",
+        "key": "alt+;",
         "command": "jump-extension.jump-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3292,7 +3292,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+;",
+        "key": "ctrl+shift+;",
         "command": "jump-extension.select-to-the-end-of-a-word",
         "when": "editorTextFocus"
     },
@@ -3302,7 +3302,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+;",
+        "key": "shift+alt+;",
         "command": "jump-extension.select-to-the-start-of-a-word",
         "when": "editorTextFocus"
     },
