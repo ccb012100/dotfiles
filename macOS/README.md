@@ -92,8 +92,8 @@ defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/Ice.plist
 To sync with [the file in this repo](/macOS/com.googlecode.iterm2.plist), in **iTerm2**:
 
 - Open **Settings ➤ General ➤ Preferences**
-- Check *Load preferences from a custom folder or URL*
-- Click *Browse*
+- Check _Load preferences from a custom folder or URL_
+- Click _Browse_
 - Select [com.googlecode.iterm2.plist](/macOS/com.googlecode.iterm2.plist).
 
 ## Keyboard Layout
@@ -134,7 +134,7 @@ To import the settings from [the file in this repo](/macOS/Stats.plist):
 
 1. Open **Rectangle**'s settings.
 2. Click the ⚙ icon in the top bar.
-3. Click *Import* on the bottom.
+3. Click _Import_ on the bottom.
 4. Select [`Stats.plist`](/macOS/Stats.plist).
 
 ## Stats
@@ -145,8 +145,8 @@ To export the settings:
 
 1. Right click on the **Stats** icon(s) in the menu bar.
 1. Right click on the ⚙ icon in the upper-right corner to open the settings.
-1. On the navigation strip on the left, choose *⚙ Settings* (the the last option).
-1. Click *Export settings*
+1. On the navigation strip on the left, choose _⚙ Settings_ (the the last option).
+1. Click _Export settings_
 
 ## Tuneful
 
