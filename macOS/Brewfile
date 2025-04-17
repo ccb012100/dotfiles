@@ -67,7 +67,6 @@ brew "lsof"
 brew "macos-trash", link: true
 brew "make"
 brew "mas"
-brew "mdcat"
 brew "moreutils"
 brew "nano"
 brew "neovim"
@@ -89,7 +88,6 @@ brew "vim"
 brew "watch"
 brew "wdiff"
 brew "wget"
-brew "yazi"
 brew "zig"
 brew "zoxide"
 brew "zsh"
@@ -124,7 +122,7 @@ mas "1Password for Safari", id: 1569813296
 mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
-mas "Keymapp", id: 6472865291
+mas "keymapp", id: 6472865291
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -183,6 +181,7 @@ vscode "jdinhlife.gruvbox"
 vscode "jinliming2.vscode-go-template"
 vscode "kacperbiedka.one-candy-dark"
 vscode "kuscamara.electron"
+vscode "llvm-vs-code-extensions.lldb-dap"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "louisyoung.pastel-pro"
 vscode "mattn.lisp"
