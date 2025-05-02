@@ -32,8 +32,10 @@
     helper = wincred
 {{- end}}
 [fetch]
+    all = true
     parallel = 0
     prune = true
+    pruneTags = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     process = git-lfs filter-process
@@ -64,10 +66,12 @@
 [rerere]
     autoUpdate = true
     enabled = true
+    updateRefs = true
 [status]
     showUntrackedFiles = all
 [tag]
     gpgsign = true
+    sort = version:refname
 [url "git@github.com:"]
     insteadof = https://github.com/
 [user]

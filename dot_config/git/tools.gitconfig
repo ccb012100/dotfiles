@@ -1,7 +1,9 @@
 # diff/merge/sequence tools
 [diff]
+    algorithm = histogram
     colorMoved = zebra
     colormovedws = "allow-indentation-change"
+    renames = true
     tool = meld
 [diff "sqlite3"]
     textconv = sh -c 'sqlite3 $0 .dump'
@@ -21,17 +23,17 @@
 
 ## delta
 [delta]
-	commit-decoration-style = magenta box ul
-	commit-regex = > [0-9a-f]{7,}
+    commit-decoration-style = magenta box ul
+    commit-regex = > [0-9a-f]{7,}
     features = decorations
-	file-decoration-style = yellow box
-	file-style = brightyellow italic
-	hyperlinks = true
-	line-numbers-minus-style = red
-	line-numbers-plus-style = green
-	line-numbers-zero-style = white
+    file-decoration-style = yellow box
+    file-style = brightyellow italic
+    hyperlinks = true
+    line-numbers-minus-style = red
+    line-numbers-plus-style = green
+    line-numbers-zero-style = white
     syntax-theme = Dracula
- 	whitespace-error-style = 22 reverse
+    whitespace-error-style = 22 reverse
     # keep-plus-minus-markers = true
 [delta "decorations"]
     commit-decoration-style = blue ol
