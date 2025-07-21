@@ -5,7 +5,7 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
                 "rules": [
                     {
-                        "description": "hold f+d for Navigation Layer (exclude Ergodox)",
+                        "description": "hold s+d for Navigation Layer (exclude Ergodox)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -13,13 +13,19 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "hold fd -> set 'nav_layer' variable (exclude Ergodox)",
+                                "description": "hold sd -> set 'nav_layer' variable (exclude Ergodox)",
                                 "from": {
                                     "simultaneous": [
                                         { "key_code": "d" },
@@ -312,13 +318,19 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "f19 (left_command) -> left_option [excluding ErgoDox]",
+                                "description": "f19 (left_command) -> left_option [Excluding QMK boards]",
                                 "from": {
                                     "key_code": "f19",
                                     "modifiers": { "optional": ["any"] }
@@ -336,13 +348,19 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "f20 (right_command) -> right_option [excluding ErgoDox]",
+                                "description": "f20 (right_command) -> right_option [Excluding QMK boards]",
                                 "from": {
                                     "key_code": "f20",
                                     "modifiers": { "optional": ["any"] }
@@ -360,71 +378,24 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "f18 (left_control) -> Meh [excluding ErgoDox]",
+                                "description": "f18 (left_control) -> Meh [Excluding QMK boards]",
                                 "from": { "key_code": "f18" },
                                 "to": [
                                     {
                                         "key_code": "left_shift",
                                         "modifiers": ["left_control", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "left_command+{up_arrow,down_arrow}_arrow -> left_control+{up_arrow,down_arrow} - Mission Control shortcuts [ErgoDox-only]",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "is_keyboard": true,
-                                                "vendor_id": 12951
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": { "mandatory": ["left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            {
-                                                "is_keyboard": true,
-                                                "vendor_id": 12951
-                                            }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": { "mandatory": ["left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow",
-                                        "modifiers": ["left_control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -458,7 +429,7 @@
                         ]
                     },
                     {
-                        "description": "f17 -> Clipboard Screenshot (⇧⌘^+4) [Excluding ErgoDox]",
+                        "description": "f17 -> Clipboard Screenshot (⇧⌘^+4) [Excluding QMK boards]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -466,7 +437,13 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
@@ -509,7 +486,7 @@
                         ]
                     },
                     {
-                        "description": "spacebar → ModTap(left_control, spacebar) [excluding ErgoDox]",
+                        "description": "spacebar → ModTap(left_control, spacebar) [Excluding QMK boards]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -517,7 +494,13 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
@@ -534,7 +517,7 @@
                         ]
                     },
                     {
-                        "description": "Escape -> ModTap(Meh, Escape) [excluding ErgoDox]",
+                        "description": "Escape -> ModTap(Meh, Escape) [Excluding QMK boards]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -542,7 +525,13 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
@@ -561,7 +550,7 @@
                         ]
                     },
                     {
-                        "description": "\\ -> ModTap(Meh, Escape) [excluding ErgoDox]",
+                        "description": "\\ -> ModTap(Meh, Escape) [Excluding QMK boards]",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -569,7 +558,13 @@
                                         "identifiers": [
                                             {
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951
+                                                "vendor_id": 12951,
+                                                "description": "Ergodox"
+                                            },
+                                            {
+                                              "is_keyboard": true,
+                                              "vendor_id": 13364,
+                                              "description": "Keychron"
                                             }
                                         ],
                                         "type": "device_unless"
@@ -706,6 +701,12 @@
             ],
             "name": "MacBook_ErgodoxEZ_MX_Master_3S",
             "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "f17" },
+                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                }
+            ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
