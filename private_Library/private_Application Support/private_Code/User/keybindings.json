@@ -3805,14 +3805,6 @@
         "when": "inSnippetMode"
     },
     {
-        "key": "ctrl+x n",
-        "command": "workbench.action.showNextWindowTab"
-    },
-    {
-        "key": "ctrl+x p",
-        "command": "workbench.action.showPreviousWindowTab"
-    },
-    {
         "key": "alt+,",
         "command": "emacs.C-l",
         "when": "editorTextFocus"
@@ -4039,11 +4031,66 @@
         "when": "!editorReadonly && editorFocus && !editorHasSelection && editorLangId != 'html'"
     },
     {
-        "key": "ctrl+[",
+        "key": "ctrl+x n",
+        "command": "workbench.action.showNextWindowTab"
+    },
+    {
+        "key": "ctrl+x p",
         "command": "workbench.action.showPreviousWindowTab"
     },
     {
-        "key": "ctrl+]",
-        "command": "workbench.action.showNextWindowTab"
+        "key": "alt+]",
+        "command": "-github.copilot.nextPanelSolution",
+        "when": "github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
     },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.accessibleViewNext",
+        "when": "accessibleViewIsShown && accessibleViewSupportsNavigation"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+[",
+        "command": "-github.copilot.previousPanelSolution",
+        "when": "github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.accessibleViewPrevious",
+        "when": "accessibleViewIsShown && accessibleViewSupportsNavigation"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "alt+[",
+        "command": "editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+0",
+        "command": "-editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "alt+]",
+        "command": "editor.unfoldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+k cmd+j",
+        "command": "-editor.unfoldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    }
 ]
