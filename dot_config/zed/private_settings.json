@@ -7,13 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "assistant": {
-    "version": "2",
-    "enabled": false
-  },
   "autosave": "off",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Fantasque Sans Mono",
+  "buffer_font_family": "Cascadia Mono",
   "buffer_font_size": 16,
   "chat_panel": {
     "button": "never"
@@ -21,14 +17,10 @@
   "collaboration_panel": {
     "button": false
   },
-  "features": {
-    "copilot": false
-  },
   "git": {
     "inline_blame": {
       "enabled": true,
-      "delay_ms": 600,
-      "git_gutter": "tracked_files"
+      "delay_ms": 600
     }
   },
   "indent_guides": {
@@ -41,15 +33,15 @@
   "project_panel": {
     "dock": "right"
   },
-  "show_copilot_suggestions": false,
   "soft_wrap": "editor_width",
   "tabs": { "git_status": true, "file_icons": true },
   "terminal": {
-    "font_family": "JetBrainsMonoNL Nerd Font",
+    "font_family": "Cascadia Mono NF",
+    "font_size": 16,
     "option_as_meta": true,
     "copy_on_select": true
   },
   "theme": "Oxocarbon Dark (Variation III)",
-  "ui_font_family": "JetBrains Mono",
-  "ui_font_size": 14
+  "ui_font_family": "Cascadia Mono",
+  "ui_font_size": 15
 }
