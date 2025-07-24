@@ -1,6 +1,9 @@
 {
   "bundleId" : "com.knollsoft.Rectangle",
   "defaults" : {
+    "SUEnableAutomaticChecks" : {
+      "bool" : true
+    },
     "allowAnyShortcut" : {
       "bool" : true
     },
@@ -10,11 +13,11 @@
     "almostMaximizeWidth" : {
       "float" : 0
     },
-    "alternateDefaultShortcuts" : {
-      "bool" : true
-    },
     "altThirdCycle" : {
       "int" : 0
+    },
+    "alternateDefaultShortcuts" : {
+      "bool" : true
     },
     "alwaysAccountForStage" : {
       "int" : 0
@@ -34,10 +37,10 @@
     "cascadeAllDeltaSize" : {
       "float" : 30
     },
-    "centeredDirectionalMove" : {
+    "centerHalfCycles" : {
       "int" : 0
     },
-    "centerHalfCycles" : {
+    "centeredDirectionalMove" : {
       "int" : 0
     },
     "cornerSnapAreaSize" : {
@@ -151,14 +154,14 @@
     "screenEdgeGapRight" : {
       "float" : 0
     },
-    "screenEdgeGapsOnMainScreenOnly" : {
-      "bool" : false
-    },
     "screenEdgeGapTop" : {
       "float" : 0
     },
     "screenEdgeGapTopNotch" : {
       "float" : 0
+    },
+    "screenEdgeGapsOnMainScreenOnly" : {
+      "bool" : false
     },
     "selectedCycleSizes" : {
       "int" : 0
@@ -201,9 +204,6 @@
     },
     "subsequentExecutionMode" : {
       "int" : 0
-    },
-    "SUEnableAutomaticChecks" : {
-      "bool" : true
     },
     "systemWideMouseDown" : {
       "int" : 0
@@ -273,24 +273,16 @@
       "keyCode" : 125,
       "modifierFlags" : 917504
     },
-    "moveLeft" : {
-      "keyCode" : 123,
-      "modifierFlags" : 917504
-    },
-    "moveRight" : {
-      "keyCode" : 124,
-      "modifierFlags" : 917504
-    },
     "moveUp" : {
       "keyCode" : 126,
       "modifierFlags" : 917504
     },
     "nextDisplay" : {
-      "keyCode" : 47,
+      "keyCode" : 124,
       "modifierFlags" : 917504
     },
     "previousDisplay" : {
-      "keyCode" : 43,
+      "keyCode" : 123,
       "modifierFlags" : 917504
     },
     "reflowTodo" : {
@@ -318,5 +310,5 @@
       "modifierFlags" : 917504
     }
   },
-  "version" : "88"
+  "version" : "94"
 }
