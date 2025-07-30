@@ -75,6 +75,9 @@ test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell
 fish_add_path /opt/homebrew/opt/lsof/bin
 {{- end}}
 
+# Rancher Desktop
+fish_add_path $HOME/.rd/bin
+
 # Ripgrep
 set --global --export RIPGREP_CONFIG_PATH "$HOME/.config/ripgreprc"
 
