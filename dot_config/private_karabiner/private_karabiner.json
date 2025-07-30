@@ -12,14 +12,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -317,14 +317,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -347,14 +347,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -377,14 +377,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -436,14 +436,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -493,14 +493,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -524,14 +524,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -557,14 +557,14 @@
                                     {
                                         "identifiers": [
                                             {
+                                                "description": "Ergodox",
                                                 "is_keyboard": true,
-                                                "vendor_id": 12951,
-                                                "description": "Ergodox"
+                                                "vendor_id": 12951
                                             },
                                             {
-                                              "is_keyboard": true,
-                                              "vendor_id": 13364,
-                                              "description": "Keychron"
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
                                             }
                                         ],
                                         "type": "device_unless"
@@ -588,10 +588,6 @@
                 {
                     "identifiers": { "is_keyboard": true },
                     "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "escape" }]
-                        },
                         {
                             "from": { "key_code": "left_command" },
                             "to": [{ "key_code": "f19" }]
