@@ -258,7 +258,7 @@
       "modifierFlags" : 917504
     },
     "leftHalf" : {
-      "keyCode" : 37,
+      "keyCode" : 123,
       "modifierFlags" : 917504
     },
     "maximize" : {
@@ -278,11 +278,11 @@
       "modifierFlags" : 917504
     },
     "nextDisplay" : {
-      "keyCode" : 124,
+      "keyCode" : 47,
       "modifierFlags" : 917504
     },
     "previousDisplay" : {
-      "keyCode" : 123,
+      "keyCode" : 43,
       "modifierFlags" : 917504
     },
     "reflowTodo" : {
@@ -294,7 +294,7 @@
       "modifierFlags" : 917504
     },
     "rightHalf" : {
-      "keyCode" : 15,
+      "keyCode" : 124,
       "modifierFlags" : 917504
     },
     "smaller" : {
