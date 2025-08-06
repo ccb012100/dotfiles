@@ -69,6 +69,14 @@ defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/mac
 - Select the entry `DBeaver ➤ Preferences`, then click the button `Next ›`
 - Set the _Preferences Archive_ file picker to [`$HOME/.local/share/chezmoi/macOS/dbeaver.zip`](/macOS/dbeaver.zip)
 
+## Easy Move+Resize
+
+### "malicious software" warning
+
+Run the command `zsh xattr -dr com.apple.quarantine /Applications/Easy\ Move+Resize.app`.
+
+([source](https://github.com/dmarcotte/easy-move-resize/issues/84#issuecomment-1184946746))
+
 ## Ice
 
 macOS [menu bar manager](https://github.com/jordanbaird/Ice)
