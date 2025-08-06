@@ -44,13 +44,12 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 ###########
 
 # Meh chords reserved by other programs:
-#   [disabled] warpd:   ; ' |
 #   1Password:          1 p
-#   Hammerspoon:        '
+#   HazeOver:           k
 #   Ice:                /
 #   Karabiner-Elements  8
-#   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c l m n r t y
-#   System Settings:    ; 9
+#   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c m n t y
+#   System Settings:    ;
 #
 # Mapped Meh bindings: 01689-,.;'/←→↑↓=⎋bcgjklmnprty
 # quote (') = 0x27
