@@ -130,9 +130,22 @@ source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-161512798
 
 [Loop](https://github.com/MrKai77/Loop) window manager.
 
-Tried it out - settings are in [Loop-keybinds.json](/macOS/Loop-keybinds.json).
+## Keybinds
 
-Not currently using it, but may in the future.
+It seems like there's some issue with the keybinds and UP/DOWN arrows. I can't bind by pressing either UP or DOWN arrow. I have to bind using PGUP and PGDN, and then either PGUP/PGDN or UP/DOWN will trigger the shortcuts.
+
+## Export keybinds
+
+1. Go to **Settings**.
+2. Go to **Advanced**.
+3. Click the button labeled _Export_ under **Keybinds**.
+
+## Import keybinds
+
+1. Go to **Settings**.
+2. Go to **Advanced**.
+3. Click the button labeled _Import_ under **Keybinds**.
+4. Select [`Loop-keybinds.json`](/macOS/Loop-keybinds.json).
 
 ## Rectangle
 

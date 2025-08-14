@@ -1,85 +1,120 @@
-[
-  {
-    "direction" : "Hide",
-    "keybind" : [
-      4
-    ]
-  },
-  {
-    "direction" : "Maximize",
-    "keybind" : [
-      46
-    ],
-    "name" : "MaximizeCycle"
-  },
-  {
-    "direction" : "Larger",
-    "keybind" : [
-      24
-    ],
-    "name" : "LargerCycle"
-  },
-  {
-    "direction" : "TopHalf",
-    "keybind" : [
-      17
-    ],
-    "name" : "TophalfCycle"
-  },
-  {
-    "direction" : "RightHalf",
-    "keybind" : [
-      15
-    ],
-    "name" : "RighthalfCycle"
-  },
-  {
-    "direction" : "Center",
-    "keybind" : [
-      8
-    ],
-    "name" : "CenterCycle"
-  },
-  {
-    "direction" : "NextScreen",
-    "keybind" : [
-      47
-    ],
-    "name" : "NextdisplayCycle"
-  },
-  {
-    "direction" : "Smaller",
-    "keybind" : [
-      27
-    ],
-    "name" : "SmallerCycle"
-  },
-  {
-    "direction" : "Undo",
-    "keybind" : [
-      53
-    ],
-    "name" : "RestoreCycle"
-  },
-  {
-    "direction" : "LeftHalf",
-    "keybind" : [
-      37
-    ],
-    "name" : "LefthalfCycle"
-  },
-  {
-    "direction" : "PreviousScreen",
-    "keybind" : [
-      43
-    ],
-    "name" : "PreviousdisplayCycle"
-  },
-  {
-    "direction" : "BottomHalf",
-    "keybind" : [
-      11
-    ],
-    "name" : "BottomhalfCycle"
-  }
-]
+{
+  "actions" : [
+    {
+      "direction" : "AlmostMaximize",
+      "keybind" : [
+        45
+      ]
+    },
+    {
+      "direction" : "BottomHalf",
+      "keybind" : [
+        11
+      ]
+    },
+    {
+      "direction" : "Center",
+      "keybind" : [
+        8
+      ],
+      "name" : "CenterCycle"
+    },
+    {
+      "direction" : "GrowBottom",
+      "keybind" : [
+        125
+      ]
+    },
+    {
+      "direction" : "GrowTop",
+      "keybind" : [
+        126
+      ]
+    },
+    {
+      "direction" : "Hide",
+      "keybind" : [
+        4
+      ]
+    },
+    {
+      "direction" : "Larger",
+      "keybind" : [
+        24
+      ],
+      "name" : "LargerCycle"
+    },
+    {
+      "direction" : "LeftHalf",
+      "keybind" : [
+        123
+      ],
+      "name" : "LefthalfCycle"
+    },
+    {
+      "direction" : "Maximize",
+      "keybind" : [
+        46
+      ],
+      "name" : "MaximizeCycle"
+    },
+    {
+      "direction" : "MaximizeHeight",
+      "keybind" : [
+        9
+      ]
+    },
+    {
+      "direction" : "MaximizeWidth",
+      "keybind" : [
+        13
+      ]
+    },
+    {
+      "direction" : "NextScreen",
+      "keybind" : [
+        47
+      ],
+      "name" : "NextdisplayCycle"
+    },
+    {
+      "direction" : "PreviousScreen",
+      "keybind" : [
+        43
+      ],
+      "name" : "PreviousdisplayCycle"
+    },
+    {
+      "direction" : "RightHalf",
+      "keybind" : [
+        124
+      ]
+    },
+    {
+      "direction" : "Smaller",
+      "keybind" : [
+        27
+      ],
+      "name" : "SmallerCycle"
+    },
+    {
+      "direction" : "TopHalf",
+      "keybind" : [
+        17
+      ]
+    },
+    {
+      "direction" : "Undo",
+      "keybind" : [
+        53
+      ],
+      "name" : "RestoreCycle"
+    }
+  ],
+  "triggerKey" : [
+    56,
+    58,
+    59
+  ],
+  "version" : "1.3.0"
+}
