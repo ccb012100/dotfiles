@@ -44,21 +44,21 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 ###########
 
 # Meh chords reserved by other programs:
-#   1Password:          1 p
-#   HazeOver:           k
-#   Ice:                /
-#   Karabiner-Elements  8
-#   Rectangle:          - , . ← → ↑ ↓ = ⎋ b c m n t y
-#   System Settings:    ;
+#   1Password:              1 p
+#   HazeOver:               k
+#   Ice:                    /
+#   Karabiner-Elements      8
+#   Loop                    c h m n w = . - , ⎋ ← →
+#   Rectangle [disabled]:   - , . ← → ↑ ↓ = ⎋ b c m n t y
+#   System Settings:        ;
 #
-# Mapped Meh bindings: 01689-,.;'/←→↑↓=⎋bcgjklmnprty
 # quote (') = 0x27
 # TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
 
 meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 meh - 6 : MacOSUtility toggle 'com.logi.optionsplus'
 meh - g : skhd -k 'shift + cmd - g' # ⇧⌘G = toggle Gitify
-meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
+# meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 # meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
 
