@@ -145,7 +145,7 @@ It seems like there's some issue with the keybinds and UP/DOWN arrows. I can't b
 1. Go to **Settings**.
 2. Go to **Advanced**.
 3. Click the button labeled _Import_ under **Keybinds**.
-4. Select [`Loop-keybinds.json`](/macOS/Loop-keybinds.json).
+4. Select [`Loop-keybinds.json`](/macOS/Loop%20Keybinds.json).
 
 ## Rectangle
 
