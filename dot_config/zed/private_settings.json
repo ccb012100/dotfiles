@@ -9,13 +9,19 @@
 {
   "autosave": "off",
   "base_keymap": "VSCode",
-  "buffer_font_family": "Cascadia Mono",
+  "buffer_font_family": "Cascadia Mono NF",
   "buffer_font_size": 16,
   "chat_panel": {
     "button": "never"
   },
   "collaboration_panel": {
     "button": false
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "agent": {
+    "enabled": false
   },
   "git": {
     "inline_blame": {
