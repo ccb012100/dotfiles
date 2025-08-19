@@ -2,6 +2,9 @@
 # - To specify a NOP, use "true" or ":"
 # - To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
 # - Contexts 3 intercepts keys before skhd, so I can't map any chords that use the Apple 'fn' key
+# - TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
+# - quote (') = 0x27
+# - SysRq (Print Screen) is interpreted as F13 in macOS
 
 # prevent skhd from monitoring events for specific applications.
 # .blacklist [
@@ -34,7 +37,7 @@ alt + shift - 0x32 [
 #     *                   ~
 # ]
 
-# SysRq (Print Screen) is interpreted as F13 in macOS
+# PrntScrn (F13)
 f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
 cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
 shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
@@ -43,28 +46,28 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh key #
 ###########
 
-# Meh chords reserved by other programs:
-#   1Password:              1 p
-#   HazeOver:               k
-#   Ice:                    /
+# Meh chords reserved by programs:
+#
+#   1Password               1 p
+#   HazeOver                d [ ]
+#   Ice                     /
 #   Karabiner-Elements      8
 #   Loop                    c h m n w = . - , ⎋ ← →
-#   Rectangle [disabled]:   - , . ← → ↑ ↓ = ⎋ b c m n t y
-#   System Settings:        ;
+#   Rectangle               - , . ← → ↑ ↓ = ⎋ b c m n t y
+#   skhd                    0 6 g h
+#   System Settings         ;
 #
-# quote (') = 0x27
-# TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
 
 meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
-meh - 6 : MacOSUtility toggle 'com.logi.optionsplus'
-meh - g : skhd -k 'shift + cmd - g' # ⇧⌘G = toggle Gitify
-# meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
+meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 # meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
 
-####################################################
-# map ctrl chords to equivalent/similar cmd chords #
-####################################################
+######################################################
+#                                                    #
+#  Map ctrl chords to equivalent/similar cmd chords  #
+#                                                    #
+######################################################
 ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
 
 # Shift+Ctrl+a to Select all
