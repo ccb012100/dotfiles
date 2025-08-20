@@ -1,5 +1,6 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
+local helpers = require 'helpers'
 
 local config = {}
 
@@ -36,11 +37,12 @@ config.pane_select_font_size = 36 -- default = 36
 -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
 -- config.color_scheme = 'GJM (terminal.sexy)'
 -- config.color_scheme = 'gooey (Gogh)'
-config.color_scheme = 'GruvboxDarkHard'
+-- config.color_scheme = 'GruvboxDarkHard'
 -- config.color_scheme = 'Helios (base16)'
 -- config.color_scheme = 'Popping and Locking'
 -- config.color_scheme = 'Purpledream (base16)'
 -- config.color_scheme = 'Rosé Pine (base16)'
+config.color_scheme = 'Blue Matrix'
 
 config.window_frame = { font = wezterm.font { family = 'IBM Plex Mono' }, font_size = 13.0, }
 config.colors = {
@@ -93,7 +95,7 @@ config.leader = { key = 'j', mods = keycode.ctrl }
 
 config.keys = {
     -- This lets us hide the app with Cmd+h on macOS
-    { key = 'h',           mods = keycode.super,            action = wezterm.action.HideApplication },
+    { key = 'h',           mods = keycode.super,        action = wezterm.action.HideApplication },
     -- open wezterm config (i.e. this file) in Visual Studio Code with ⌘-,
     {
         key = ',',
@@ -112,16 +114,23 @@ config.keys = {
     -- Enter resize_pane mode until we cancel out of it
     {
         key = 'r',
-        mods = 'LEADER',
+        mods = keycode.leader,
         action = act.ActivateKeyTable { name = 'resize_pane', one_shot = false, },
     },
     -- Command Palette
-    { key = keycode.space, mods = keycode.ctrl,             action = act.ActivateCommandPalette },
-    { key = keycode.space, mods = keycode.shift,            action = act.ActivateCommandPalette },
+    { key = keycode.space, mods = keycode.ctrl,         action = act.ActivateCommandPalette },
+    { key = keycode.space, mods = keycode.shift,        action = act.ActivateCommandPalette },
     -- Function keys
-    { key = 'F1',          mods = keycode.leader_shift,     action = act.ShowDebugOverlay },
-    { key = 'F5',          mods = keycode.ctrl,             action = act.ReloadConfiguration },
-    { key = 'F11',         mods = keycode.ctrl,             action = act.ToggleFullScreen },
+    { key = 'F1',          mods = keycode.leader, action = act.ShowDebugOverlay },
+    {
+        key = 'l',
+        mods = keycode.leader,
+        action = wezterm.action_callback(function(window, pane)
+            helpers.theme_switcher(window, pane)
+        end)
+    },
+    { key = 'F5',          mods = keycode.leader,             action = act.ReloadConfiguration },
+    { key = 'F11',         mods = keycode.leader,             action = act.ToggleFullScreen },
     -- Windows
     { key = keycode.space, mods = keycode.leader,           action = act.SpawnWindow },
     { key = 'n',           mods = keycode.super,            action = act.SpawnWindow },
@@ -362,8 +371,5 @@ wezterm.on(
         return title
     end
 )
-{{- if .isWSL2 }}
-{{- template "wezterm_win" -}}
-{{- end}}
 
 return config
