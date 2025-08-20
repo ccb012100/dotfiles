@@ -52,8 +52,8 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 #   HazeOver                d [ ]
 #   Ice                     /
 #   Karabiner-Elements      8
-#   Loop                    c h m n w = . - , ⎋ ← →
-#   Rectangle               - , . ← → ↑ ↓ = ⎋ b c m n t y
+#   Loop [Disabled]         c h m n w = . - , ⎋ ← →
+#   Rectangle               ⎵ , . = + - ← → ↑ ↓ b c m n t y
 #   skhd                    0 6 g h
 #   System Settings         ;
 #
