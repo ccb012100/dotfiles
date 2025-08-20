@@ -53,10 +53,6 @@ echo 'Finished homebrew post-installation!'
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || (echo 'Error: Rust installation failed!' && exit)
 
 #
-# install from App Store
-brew install mas && mas install 6446061552 && brew remove mas # Signal Shifter 'https://apps.apple.com/us/app/signal-shifter/id6446061552?mt=12'
-
-#
 # Import settings with "defaults import"
 #
 defaults import com.lwouis.alt-tab-macos "$HOME"/.local/share/chezmoi/macOS/alt-tab-macos.plist
@@ -65,8 +61,5 @@ defaults import com.jordanbair.Ice "$HOME"/.local/share/chezmoi/macOS/com.jordan
 
 # copy over custom Keyboard Layout
 cp -v "$HOME"/.local/share/chezmoi/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout "$HOME"/Library/Keyboard\ Layouts/
-
-# Some apps need manual configuration
-echo -e 'The following apps need to have their settings manually imported:\n\n\t→ iTerm2\n\t→ Keyboard Layout\n\t→ Rectangle\n\t→ Stats'
 
 echo 'Installation script completed successfully!'
