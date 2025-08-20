@@ -163,6 +163,9 @@
     "screenEdgeGapsOnMainScreenOnly" : {
       "bool" : false
     },
+    "screensOrderedByX" : {
+      "int" : 0
+    },
     "selectedCycleSizes" : {
       "int" : 0
     },
@@ -278,19 +281,19 @@
       "modifierFlags" : 917504
     },
     "nextDisplay" : {
-      "keyCode" : 47,
-      "modifierFlags" : 917504
+      "keyCode" : 124,
+      "modifierFlags" : 1048576
     },
     "previousDisplay" : {
-      "keyCode" : 43,
-      "modifierFlags" : 917504
+      "keyCode" : 123,
+      "modifierFlags" : 1048576
     },
     "reflowTodo" : {
       "keyCode" : 45,
       "modifierFlags" : 786432
     },
     "restore" : {
-      "keyCode" : 53,
+      "keyCode" : 49,
       "modifierFlags" : 917504
     },
     "rightHalf" : {
@@ -310,5 +313,5 @@
       "modifierFlags" : 917504
     }
   },
-  "version" : "94"
+  "version" : "95"
 }
