@@ -46,18 +46,6 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 # Meh key #
 ###########
 
-# Meh chords reserved by programs:
-#
-#   1Password               1 p
-#   HazeOver                d [ ]
-#   Ice                     /
-#   Karabiner-Elements      8
-#   Loop [Disabled]         c h m n w = . - , ⎋ ← →
-#   Rectangle               ⎵ , . = + - ← → ↑ ↓ b c m n t y
-#   skhd                    0 6 g h
-#   System Settings         ;
-#
-
 meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'

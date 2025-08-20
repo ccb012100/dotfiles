@@ -8,6 +8,21 @@
 
 The `zsh` [script](/macOS/install.zsh) can be used to set up a fresh **Mac**.
 
+## Meh key combos
+
+The Meh key chords reserved by programs:
+
+| App                    | Assigned Keys                                           |
+|------------------------|---------------------------------------------------------|
+| **1Password**          | `1` `p`                                                 |
+| **HazeOver**           | `d` `[` `]`                                             |
+| **Ice**                | `/`                                                     |
+| **Karabiner-Elements** | `8`                                                     |
+| **Loop** [Disabled]    | `c` `h` `m` `n` `w` `=` `.` `-` `,` `⎋` `←` `→`         |
+| **Rectangle**          | `⎵` `=` `+` `-` `←` `→` `↑` `↓` `b` `c` `m` `n` `t` `y` |
+| **skhd**               | `0` `6` `g` `h`                                         |
+| **System Settings**    | `;`                                                     |
+
 ## AltTab
 
 [**AltTab**](https://github.com/lwouis/alt-tab-macos) window switcher for **macOS**
