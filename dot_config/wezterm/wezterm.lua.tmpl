@@ -122,15 +122,16 @@ config.keys = {
     { key = keycode.space, mods = keycode.shift,        action = act.ActivateCommandPalette },
     -- Function keys
     { key = 'F1',          mods = keycode.leader, action = act.ShowDebugOverlay },
+    { key = 'F5',          mods = keycode.leader,             action = act.ReloadConfiguration },
+    { key = 'F11',         mods = keycode.leader,             action = act.ToggleFullScreen },
+    -- theme switcher
     {
-        key = 'l',
+        key = 's',
         mods = keycode.leader,
         action = wezterm.action_callback(function(window, pane)
             helpers.theme_switcher(window, pane)
         end)
     },
-    { key = 'F5',          mods = keycode.leader,             action = act.ReloadConfiguration },
-    { key = 'F11',         mods = keycode.leader,             action = act.ToggleFullScreen },
     -- Windows
     { key = keycode.space, mods = keycode.leader,           action = act.SpawnWindow },
     { key = 'n',           mods = keycode.super,            action = act.SpawnWindow },
@@ -189,7 +190,7 @@ config.keys = {
     { key = 'c',           mods = keycode.super,            action = act.ActivateCopyMode },
     { key = 'c',           mods = keycode.ctrl_shift,       action = act.CopyTo 'Clipboard' },
     {
-        key = "s",
+        key = 's',
         mods = keycode.ctrl_shift,
         action = act.QuickSelectArgs { patterns = { '\\b\\S*\\b', }, }
     },
