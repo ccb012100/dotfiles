@@ -1,0 +1,6 @@
+Package Id                Version      Commands       
+------------------------------------------------------
+csharprepl                0.6.7        csharprepl     
+dotnet-ef                 9.0.8        dotnet-ef      
+dotnet-outdated-tool      4.6.8        dotnet-outdated
+dotnet-script             1.6.0        dotnet-script  
