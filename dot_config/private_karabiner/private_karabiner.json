@@ -5,7 +5,7 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
                 "rules": [
                     {
-                        "description": "hold s+d for Navigation Layer (exclude Ergodox)",
+                        "description": "hold s+d for Navigation Layer (exclude QMK boards)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -25,7 +25,7 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "hold sd -> set 'nav_layer' variable (exclude Ergodox)",
+                                "description": "hold sd -> set 'nav_layer' variable (exclude QMK boards)",
                                 "from": {
                                     "simultaneous": [
                                         { "key_code": "d" },
@@ -42,6 +42,86 @@
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "quote" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "Ergodox",
+                                                "is_keyboard": true,
+                                                "vendor_id": 12951
+                                            },
+                                            {
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
+                                "description": "hold xc -> send Meh (exclude QMK boards)",
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "x"
+                                        },
+                                        {
+                                            "key_code": "c"
+                                        }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "description": "Ergodox",
+                                                "is_keyboard": true,
+                                                "vendor_id": 12951
+                                            },
+                                            {
+                                                "description": "Keychron",
+                                                "is_keyboard": true,
+                                                "vendor_id": 13364
+                                            }
+                                        ],
+                                        "type": "device_unless"
+                                    }
+                                ],
+                                "description": "hold ,. -> send Meh (exclude QMK boards)",
+                                "from": {
+                                    "simultaneous": [
+                                        {
+                                            "key_code": "comma"
+                                        },
+                                        {
+                                            "key_code": "period"
+                                        }
+                                    ]
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "modifiers": [
+                                            "left_control",
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
