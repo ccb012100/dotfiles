@@ -102,9 +102,6 @@ map f6 debug_config
 map f11 toggle_fullscreen
 
 # Clipboard
-
-map kitty_mod+c copy_from_clipboard
-map kitty_mod+v paste_from_clipboard
 map shift+ctrl+c copy_from_clipboard
 map shift+ctrl+v paste_from_clipboard
 map super+c copy_from_clipboard
@@ -113,19 +110,19 @@ map super+v paste_from_clipboard
 # Scrolling
 
 #: neighboring window
-map kitty_mod+h scroll_page_up
-map kitty_mod+l scroll_page_down
-map kitty_mod+j scroll_line_down
-map kitty_mod+k scroll_line_up
+map ctrl+j>h scroll_page_up
+map ctrl+j>l scroll_page_down
+map ctrl+j>j scroll_line_down
+map ctrl+j>k scroll_line_up
 
-map kitty_mod+p scroll_line_up
-map kitty_mod+n scroll_line_down
+map ctrl+j>p scroll_line_up
+map ctrl+j>n scroll_line_down
 
-map kitty_mod+page_up scroll_page_up
-map kitty_mod+page_down scroll_page_down
+map ctrl+j>page_up scroll_page_up
+map ctrl+j>page_down scroll_page_down
 
-map kitty_mod+home scroll_home
-map kitty_mod+end scroll_end
+map ctrl+j>home scroll_home
+map ctrl+j>end scroll_end
 
 #: Browse scrollback buffer in pager
 map ctrl+j>s show_scrollback
@@ -142,24 +139,24 @@ map ctrl+j>n new_os_window_with_cwd
 map ctrl+j>r start_resizing_window
 map ctrl+j>w close_os_window
 map ctrl+j>z toggle_maximized
-map kitty_mod+space launch --cwd=current
-map kitty_mod+w close_os_window
+map ctrl+j>space launch --cwd=current
+map ctrl+j>w close_os_window
 map super+n new_os_window_with_cwd
 map super+w close_os_window
 
 #: neighboring window
-map kitty_mod+h neighboring_window left
-map kitty_mod+l neighboring_window right
-map kitty_mod+j neighboring_window down
-map kitty_mod+k neighboring_window up
+map ctrl+j>h neighboring_window left
+map ctrl+j>l neighboring_window right
+map ctrl+j>j neighboring_window down
+map ctrl+j>k neighboring_window up
 
 #: move window
-map kitty_mod+b move_window_backward
-map kitty_mod+f move_window_forward
-map kitty_mod+t move_window_to_top
+map ctrl+j>b move_window_backward
+map ctrl+j>f move_window_forward
+map ctrl+j>t move_window_to_top
 
 #: Visually select and focus window
-map kitty_mod+; focus_visible_window
+map ctrl+j>; focus_visible_window
 #: Visually swap window with another
 map ctrl+j>; swap_with_window
 
@@ -180,8 +177,8 @@ map super+w close_tab
 
 # Layout management
 
-map kitty_mod+n next_layout
-map kitty_mod+p last_used_layout
+map ctrl+j>+n next_layout
+map ctrl+j>+p last_used_layout
 
 # Font sizes
 
@@ -202,5 +199,5 @@ map ctrl+j>f5 clear_terminal reset active
 map ctrl+j>f6 clear_terminal reset all
 
 # BEGIN_KITTY_THEME
-include Eldritch.conf
+include current-theme.conf
 # END_KITTY_THEME
