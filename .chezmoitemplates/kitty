@@ -3,7 +3,7 @@
 disable_ligatures cursor
 #enabled_layouts Grid,Fat,Horizontal,Vertical,Splits,Tall
 font_family JetBrainsMonoNL Nerd Font Mono
-font_size 14.0
+font_size 16.0
 
 tab_activity_symbol *
 tab_bar_edge top
