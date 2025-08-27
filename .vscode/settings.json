@@ -1,3 +1,6 @@
 {
-    "cmake.configureOnOpen": false
+    "files.associations": {
+        "*.fish.tmpl": "fish",
+        "wezterm.lua.tmpl": "lua"
+    }
 }
