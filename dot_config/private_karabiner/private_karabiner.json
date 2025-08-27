@@ -5,7 +5,7 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
                 "rules": [
                     {
-                        "description": "hold s+d for Navigation Layer (exclude QMK boards)",
+                        "description": "hold s+f for Navigation Layer (exclude QMK boards)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -25,11 +25,11 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "hold sd -> set 'nav_layer' variable (exclude QMK boards)",
+                                "description": "hold sf -> set 'nav_layer' variable (exclude QMK boards)",
                                 "from": {
                                     "simultaneous": [
-                                        { "key_code": "d" },
-                                        { "key_code": "s" }
+                                        { "key_code": "s" },
+                                        { "key_code": "f" }
                                     ]
                                 },
                                 "to": [
@@ -62,11 +62,11 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "hold xc -> send Meh (exclude QMK boards)",
+                                "description": "hold z+c -> send Meh (exclude QMK boards)",
                                 "from": {
                                     "simultaneous": [
                                         {
-                                            "key_code": "x"
+                                            "key_code": "z"
                                         },
                                         {
                                             "key_code": "c"
@@ -102,11 +102,11 @@
                                         "type": "device_unless"
                                     }
                                 ],
-                                "description": "hold ,. -> send Meh (exclude QMK boards)",
+                                "description": "hold m+. -> send Meh (exclude QMK boards)",
                                 "from": {
                                     "simultaneous": [
                                         {
-                                            "key_code": "comma"
+                                            "key_code": "m"
                                         },
                                         {
                                             "key_code": "period"
