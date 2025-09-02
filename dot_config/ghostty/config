@@ -1,0 +1,15 @@
+# Ghostty configuration file (https://ghostty.org/docs/config/reference)
+#
+# comments must be on stand-alone lines (not in-line with config options)
+font-family = Cascadia Mono NF
+# font-size setting seems to require restarting the app entirely
+font-size = 16
+
+theme = Blue Matrix
+# background = 000000
+
+window-padding-x = 10
+window-padding-y = 10
+
+window-height = 60
+window-width = 120
