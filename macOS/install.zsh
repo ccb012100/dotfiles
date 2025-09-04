@@ -36,6 +36,8 @@ echo 'Starting homebrew post-installation'
 ln -vs /opt/homebrew/bin/bash /usr/local/bin/ # use current version of bash over macOS's old version
 ln -vs /opt/homebrew/bin/gcc-14 "$HOME"/bin/gcc  # macOS links 'gcc' to 'clang', so we override that with a new link
 
+brew services start borders
+
 osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/MiddleClick.app", hidden:true}'
 
 skhd --install-service && skhd --start-service
