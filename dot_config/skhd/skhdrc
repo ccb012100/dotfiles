@@ -62,6 +62,7 @@ ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete wor
 shift + ctrl - a [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -74,6 +75,7 @@ shift + ctrl - a [
 ctrl - c [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -86,6 +88,7 @@ ctrl - c [
 alt - d [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -127,6 +130,7 @@ ctrl - r [
 ctrl - t [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -147,6 +151,7 @@ shift + ctrl - t [
 ctrl - v [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -159,6 +164,7 @@ ctrl - v [
 ctrl - w [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -171,6 +177,7 @@ ctrl - w [
 # alt - w [
 #     "code"              ~
 #     "iTerm2"            ~
+#     "Ghostty"           ~
 #     "JetBrains Rider"   ~
 #     "kitty"             ~
 #     "Terminal"          ~
@@ -181,6 +188,7 @@ ctrl - w [
 ctrl - x [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -203,6 +211,7 @@ ctrl - x [
 ctrl - z [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -215,6 +224,7 @@ ctrl - z [
 ctrl - 0x21 [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -228,6 +238,7 @@ ctrl - 0x21 [
 ctrl - 0x1E [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
@@ -251,6 +262,7 @@ cmd - 0x1E [
 ctrl - 0x2C [
     "code"              ~
     "DBeaver"           ~
+    "Ghostty"           ~
     "iTerm2"            ~
     "JetBrains Rider"   ~
     "kitty"             ~
