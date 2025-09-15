@@ -148,9 +148,6 @@ abbr --add vi vim
 abbr --add c code
 #: open directories in vscode
 abbr --add c. 'code .' # open current directory in VS Code
-abbr --add cconf code $HOME/.local/share/chezmoi # (c)ode (conf)ig
-abbr --add cconfig code $HOME/.local/share/chezmoi # (c)ode (config)
-abbr --add cnotes code $HOME/.local/notes.code-workspace # (e)dit notes
 # zoxide
 abbr --add ze zoxide edit
 abbr --add zq zoxide query
@@ -159,6 +156,6 @@ abbr --add zr zoxide remove
 {{ if .isWSL2 }}
 abbr --add open wslview # wslu
 {{- end }}
-abbr --add dsp 'datasette $HOME/playlister.sqlite3'
-# ~/bin/playlist-update.fish
-abbr --add spot 'cd "$HOME/src/spotify-playlists" && playlist-update.fish'
+# misc. personal stuff
+abbr --add spot 'cd "$HOME/src/spotify-playlists" && playlist-update.fish' # ~/bin/playlist-update.fish
+abbr --add flash-keychron 'cd "$HOME/src/qmk_firmware" && qmk flash -kb keychron/v6/ccb012100 -km default' # flash Keychron keyboard
