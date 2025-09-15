@@ -11,7 +11,6 @@
       "ctrl-h": null,
       "ctrl-i": ["workspace::SendKeystrokes", "alt-right"],
       "ctrl-j f": "file_finder::Toggle",
-      "ctrl-j o": "projects::OpenRecent",
       "ctrl-j": null,
       "ctrl-l": null,
       "ctrl-shift-f": "workspace::NewSearch",
@@ -21,6 +20,7 @@
       "ctrl-u": ["workspace::SendKeystrokes", "alt-left"],
       "ctrl-x ctrl-c": "zed::Quit",
       "ctrl-x": null,
+      "ctrl-x b": "projects::OpenRecent",
       "shift-space": "command_palette::Toggle"
     }
   },
