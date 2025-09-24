@@ -47,7 +47,7 @@ shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire s
 ###########
 
 meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
-meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
+# meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 # meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
 
