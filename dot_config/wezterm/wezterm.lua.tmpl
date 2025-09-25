@@ -37,12 +37,12 @@ config.pane_select_font_size = 36 -- default = 36
 -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
 -- config.color_scheme = 'GJM (terminal.sexy)'
 -- config.color_scheme = 'gooey (Gogh)'
--- config.color_scheme = 'GruvboxDarkHard'
+config.color_scheme = 'GruvboxDarkHard'
 -- config.color_scheme = 'Helios (base16)'
 -- config.color_scheme = 'Popping and Locking'
 -- config.color_scheme = 'Purpledream (base16)'
 -- config.color_scheme = 'Rosé Pine (base16)'
-config.color_scheme = 'Blue Matrix'
+-- config.color_scheme = 'Blue Matrix'
 
 config.window_frame = { font = wezterm.font { family = 'IBM Plex Mono' }, font_size = 13.0, }
 config.colors = {
@@ -144,10 +144,10 @@ config.keys = {
     { key = '0',           mods = keycode.leader,           action = act.MoveTab(0) },
     { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) }, -- activate previous
     { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },  -- activate next
-    { key = 'b',           mods = keycode.leader,           action = act.ActivateTabRelative(-1) }, -- activate previous
-    { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) },  -- activate next
-    { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) },      -- move forward 1
-    { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) },     -- move backward 1
+    -- { key = 'b',           mods = keycode.leader,           action = act.ActivateTabRelative(-1) }, -- activate previous
+    -- { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) },  -- activate next
+    -- { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) },      -- move forward 1
+    -- { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) },     -- move backward 1
     -- Panes
     -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
@@ -217,18 +217,18 @@ for i = 1, 8 do
         mods = keycode.alt_opt,
         action = act.ActivateTab(i - 1),
     })
-    --  Ctrl + Shift + [0-9] to activate that tab
-    table.insert(config.keys, {
-        key = tostring(i),
-        mods = keycode.ctrl_shift,
-        action = act.ActivateTab(i - 1),
-    })
-    -- Leader, number to move tab to that position
-    table.insert(config.keys, {
-        key = tostring(i),
-        mods = keycode.leader,
-        action = wezterm.action.MoveTab(i - 1),
-    })
+    -- --  Ctrl + Shift + [0-9] to activate that tab
+    -- table.insert(config.keys, {
+    --     key = tostring(i),
+    --     mods = keycode.ctrl_shift,
+    --     action = act.ActivateTab(i - 1),
+    -- })
+    -- -- Leader, number to move tab to that position
+    -- table.insert(config.keys, {
+    --     key = tostring(i),
+    --     mods = keycode.leader,
+    --     action = wezterm.action.MoveTab(i - 1),
+    -- })
 end
 
 config.key_tables = {
