@@ -18,6 +18,7 @@ undo-timeout = 5m
 # macOS
 #
 macos-shortcuts = deny
+macos-titlebar-style = tabs
 
 #
 # theming
