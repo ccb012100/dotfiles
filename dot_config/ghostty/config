@@ -23,8 +23,9 @@ macos-titlebar-style = tabs
 #
 # theming
 #
-theme = Blue Matrix
+theme = Gruvbox Dark Hard
 # background = 000000
+foreground = "#FFBF00"
 
 #
 # Window UI
