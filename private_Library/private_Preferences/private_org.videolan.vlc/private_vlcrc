@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.20
+###  vlc 3.0.21
 ###
 
 ###
@@ -551,7 +551,7 @@ macosx-appleremote-sysvol=1
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.20 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.21 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
