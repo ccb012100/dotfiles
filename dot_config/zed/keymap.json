@@ -97,6 +97,7 @@
       "ctrl-j ctrl-j": "workspace::ActivateNextPane",
       "ctrl-j ctrl-shift-j": "workspace::ActivatePreviousPane",
       "ctrl-j k": "pane::CloseActiveItem",
+      "ctrl-l p": "pane::TogglePinTab",
       "ctrl-right": "pane::GoForward",
       "ctrl-shift-w": "pane::CloseActiveItem",
       "ctrl-x 0": "pane::CloseAllItems",
