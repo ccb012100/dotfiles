@@ -5,7 +5,7 @@
 # TODO: pane border? copy on select? rotate splits? swap splits? indicate zoomed pane in UI?
 
 font-family = Cascadia Mono NF
-font-size = 16
+font-size = 14
 # font-size setting seems to require restarting the app entirely
 window-title-font-family = Fixedsys Core
 
