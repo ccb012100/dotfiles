@@ -161,18 +161,18 @@ ctrl - v [
     *                   :   skhd -k "cmd - v"
 ]
 # Ctrl+w to Close tab
-ctrl - w [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
-    *                   :   skhd -k "cmd - w"
-]
+# ctrl - w [
+#     "code"              ~
+#     "DBeaver"           ~
+#     "Ghostty"           ~
+#     "iTerm2"            ~
+#     "JetBrains Rider"   ~
+#     "kitty"             ~
+#     "Terminal"          ~
+#     "WezTerm"           ~
+#     "zed"               ~
+#     *                   :   skhd -k "cmd - w"
+# ]
 # Alt+w to Copy
 # alt - w [
 #     "code"              ~
@@ -208,18 +208,18 @@ ctrl - x [
 #     *                   :   skhd -k "cmd - v"
 # ]
 # ctrl+z to Undo
-ctrl - z [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
-    *                   :   skhd -k "cmd - z"
-]
+# ctrl - z [
+#     "code"              ~
+#     "DBeaver"           ~
+#     "Ghostty"           ~
+#     "iTerm2"            ~
+#     "JetBrains Rider"   ~
+#     "kitty"             ~
+#     "Terminal"          ~
+#     "WezTerm"           ~
+#     "zed"               ~
+#     *                   :   skhd -k "cmd - z"
+# ]
 # Ctrl+[ (0x21) to Go backwards
 ctrl - 0x21 [
     "code"              ~
