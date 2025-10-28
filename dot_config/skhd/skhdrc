@@ -63,20 +63,15 @@ meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 #  Map ctrl chords to equivalent/similar cmd chords  #
 #                                                    #
 ######################################################
-ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete word left"
+ctrl - backspace : skhd -k "alt - backspace"    # map ctrl+backspace to "delete word left"
+shift + ctrl - a : skhd -k "cmd - a"            # Shift+Ctrl+a to Select all
+ctrl - c : skhd -k "cmd - c"                    # Ctrl+c to Copy
+alt - d : skhd -k "shift + alt - delete"        # Alt+w to Forward delete word
+ctrl - t : skhd -k "cmd - t"                    # Ctrl+t to Open a new tab
+ctrl - v : skhd -k "cmd - v"                    # Ctrl+v to Paste
+ctrl - x : skhd -k "cmd - x"                    # Ctrl+x to Cut
+ctrl - 0x2C : skhd -k "cmd - z"                 # ctrl+/ (0x2C) to Undo
 
-# Shift+Ctrl+a to Select all
-shift + ctrl - a [
-    *                   :   skhd -k "cmd - a"
-]
-# Ctrl+c to Copy
-ctrl - c [
-    *                   :   skhd -k "cmd - c"
-]
-# Alt+w to Forward delete word
-alt - d [
-    *                   :   skhd -k "shift + alt - delete"
-]
 # Ctrl+l
 ctrl - l [
     "Firefox"           :   skhd -k "cmd - l" # Focus in URL bar
@@ -106,10 +101,7 @@ ctrl - r [
     "Safari"            :   skhd -k "cmd - r"
     *                   ~
 ]
-# Ctrl+t to Open a new tab
-ctrl - t [
-    *                   :   skhd -k "cmd - t"
-]
+
 # Shift+Ctrl+t to Reopen last browser tab
 shift + ctrl - t [
     "Firefox"           :   skhd -k "shift + cmd - t"
@@ -118,13 +110,13 @@ shift + ctrl - t [
     "Safari"            :   skhd -k "shift + cmd - t"
     *                   ~
 ]
-# Ctrl+v to Paste
-ctrl - v [
-    *                   :   skhd -k "cmd - v"
-]
-# Ctrl+x to Cut
-ctrl - x [
-    *                   :   skhd -k "cmd - x"
+# Ctrl+w to close browser tab
+ctrl - w [
+    "Firefox"           :   skhd -k "cmd - w"
+    "Google Chrome"     :   skhd -k "cmd - w"
+    "Microsoft Edge"    :   skhd -k "cmd - w"
+    "Safari"            :   skhd -k "cmd - w"
+    *                   ~
 ]
 # Ctrl+[ (0x21) to Go backwards
 ctrl - 0x21 [
@@ -145,8 +137,4 @@ cmd - 0x21 [
 cmd - 0x1E [
     "Spotify"           :   skhd -k "alt - right"
     *           ~
-]
-# ctrl+/ (0x2C) to Undo
-ctrl - 0x2C [
-    *                   :   skhd -k "cmd - z"
 ]
