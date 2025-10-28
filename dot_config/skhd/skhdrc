@@ -7,15 +7,33 @@
 # - SysRq (Print Screen) is interpreted as F13 in macOS
 
 # prevent skhd from monitoring events for specific applications.
-# .blacklist [
-#    "kitty"
-#    "terminal"
-#    "qutebrowser"
-# ]
+.blacklist [
+    "code"
+    "DBeaver"
+    "Ghostty"
+    "iTerm2"
+    "JetBrains Rider"
+    "kitty"
+    "terminal"
+    "Terminal"
+    "WezTerm"
+    "zed"
+]
 
 # map alt-f/b to alt-right/left (i.e. Emacs bindings)
 alt - f : skhd -k "alt - right"
 alt - b : skhd -k "alt - left"
+
+# F5 to mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
+f5 [
+    "Microsoft Teams"   : skhd -k "shift + cmd - m"
+    *                   ~
+]
+
+# PrntScrn (F13)
+f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
+cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
+shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
 
 # Remap alt+` and alt+shift+` on vscode [kVK_Grave == 0x32]
 #
@@ -30,17 +48,6 @@ alt + shift - 0x32 [
     "code"  :   skhd -k "ctrl + shift - 0x32"
     *       ~
 ]
-
-# F5 to mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
-# f5 [
-#     "Microsoft Teams"   : skhd -k "shift + cmd - m"
-#     *                   ~
-# ]
-
-# PrntScrn (F13)
-f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
-cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
-shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
 
 ###########
 # Meh key #
@@ -60,41 +67,14 @@ ctrl - backspace : skhd -k "alt - backspace" # map ctrl+backspace to "delete wor
 
 # Shift+Ctrl+a to Select all
 shift + ctrl - a [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - a"
 ]
 # Ctrl+c to Copy
 ctrl - c [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - c"
 ]
 # Alt+w to Forward delete word
 alt - d [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "shift + alt - delete"
 ]
 # Ctrl+l
@@ -128,15 +108,6 @@ ctrl - r [
 ]
 # Ctrl+t to Open a new tab
 ctrl - t [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - t"
 ]
 # Shift+Ctrl+t to Reopen last browser tab
@@ -149,125 +120,33 @@ shift + ctrl - t [
 ]
 # Ctrl+v to Paste
 ctrl - v [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - v"
 ]
-# Ctrl+w to Close tab
-# ctrl - w [
-#     "code"              ~
-#     "DBeaver"           ~
-#     "Ghostty"           ~
-#     "iTerm2"            ~
-#     "JetBrains Rider"   ~
-#     "kitty"             ~
-#     "Terminal"          ~
-#     "WezTerm"           ~
-#     "zed"               ~
-#     *                   :   skhd -k "cmd - w"
-# ]
-# Alt+w to Copy
-# alt - w [
-#     "code"              ~
-#     "iTerm2"            ~
-#     "Ghostty"           ~
-#     "JetBrains Rider"   ~
-#     "kitty"             ~
-#     "Terminal"          ~
-#     "zed"               ~
-#     *                   :   skhd -k "cmd - c"
-# ]
 # Ctrl+x to Cut
 ctrl - x [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - x"
 ]
-# Ctrl+y to Paste
-# ctrl - y [
-#     "code"              ~
-#     "iTerm2"            ~
-#     "JetBrains Rider"   ~
-#     "kitty"             ~
-#     "Terminal"          ~
-#     "zed"               ~
-#     *                   :   skhd -k "cmd - v"
-# ]
-# ctrl+z to Undo
-# ctrl - z [
-#     "code"              ~
-#     "DBeaver"           ~
-#     "Ghostty"           ~
-#     "iTerm2"            ~
-#     "JetBrains Rider"   ~
-#     "kitty"             ~
-#     "Terminal"          ~
-#     "WezTerm"           ~
-#     "zed"               ~
-#     *                   :   skhd -k "cmd - z"
-# ]
 # Ctrl+[ (0x21) to Go backwards
 ctrl - 0x21 [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
     "Spotify"           :   skhd -k "alt - left"
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - 0x21"
 ]
 # Ctrl+] (0x1E) to Go forwards
 ctrl - 0x1E [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
     "Spotify"           :   skhd -k "alt - right"
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - 0x1E"
 ]
 # map ⌘+[ to ⌥+← in Spotify
 cmd - 0x21 [
-    "Spotify"   :   skhd -k "alt - left"
-    *           ~
+    "Spotify"           :   skhd -k "alt - left"
+    *                   ~
 ]
 # map ⌘+] to ⌥+→ in Spotify
 cmd - 0x1E [
-    "Spotify"   :   skhd -k "alt - right"
+    "Spotify"           :   skhd -k "alt - right"
     *           ~
 ]
 # ctrl+/ (0x2C) to Undo
 ctrl - 0x2C [
-    "code"              ~
-    "DBeaver"           ~
-    "Ghostty"           ~
-    "iTerm2"            ~
-    "JetBrains Rider"   ~
-    "kitty"             ~
-    "Terminal"          ~
-    "WezTerm"           ~
-    "zed"               ~
     *                   :   skhd -k "cmd - z"
 ]
