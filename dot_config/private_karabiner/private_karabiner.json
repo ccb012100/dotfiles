@@ -485,14 +485,27 @@
                         ]
                     },
                     {
-                        "description": "Meh+8 -> Play/Pause ⏯️",
+                        "description": "Meh+Print Screen -> Previous Track ⏯️",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "8",
+                                    "key_code": "print_screen",
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
-                                "to": [{ "key_code": "play_or_pause" }],
+                                "to": [{ "consumer_key_code": "scan_previous_track" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Meh+Scroll Lock -> Next Track ⏯️",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "scroll_lock",
+                                    "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option" ] }
+                                },
+                                "to": [ { "consumer_key_code": "scan_next_track" } ],
                                 "type": "basic"
                             }
                         ]
