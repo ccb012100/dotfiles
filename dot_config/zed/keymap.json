@@ -5,6 +5,8 @@
 [
   {
     "bindings": {
+      "alt-b": ["workspace::SendKeystrokes", "alt-left"],
+      "alt-f": ["workspace::SendKeystrokes", "alt-right"],
       "alt-i": ["workspace::SendKeystrokes", "right"],
       "alt-u": ["workspace::SendKeystrokes", "left"],
       "ctrl-g": null,
@@ -30,7 +32,6 @@
       "alt-,": "editor::ScrollCursorCenterTopBottom",
       "alt-down": "editor::MoveLineDown",
       "alt-d": "editor::DeleteToNextWordEnd",
-      "alt-f": "editor::AcceptPartialEditPrediction",
       "alt-k": "editor::DuplicateLineDown",
       "alt-n": "editor::LineDown",
       "alt-o": "editor::Fold",
@@ -43,6 +44,13 @@
       "alt-shift-up": "editor::AddSelectionAbove",
       "alt-up": "editor::MoveLineUp",
       "alt-w": "editor::Copy",
+      "ctrl-backspace": [
+        "editor::DeleteToPreviousWordStart",
+        {
+          "ignore_newlines": false,
+          "ignore_brackets": false
+        }
+      ],
       "ctrl-,": "editor::MoveToEndOfParagraph",
       "ctrl-/": "editor::Undo",
       "ctrl-c": "editor::Copy",
@@ -128,6 +136,12 @@
       "ctrl-shift-r": ["workspace::SendKeystrokes", "ctrl-shift-f cmd-shift-h"], // global find and replace,
       "ctrl-x ctrl-z": "workspace::ToggleZoom",
       "ctrl-g f": "project_panel::ToggleFocus" // toggle focus between file browser and active editor
+    }
+  },
+  {
+    "context": "Editor",
+      "bindings": {
+      "ctrl-l u": "editor::ConvertToUpperCase"
     }
   }
 ]
