@@ -5,7 +5,7 @@
 --pager="less -FR --mouse" # same as --RAW-CONTROL-CHARS --no-init
 
 --style="snip,grid,header"
---theme="gruvbox-dark"
+# --theme="gruvbox-dark"
 
 # Set sqlite language to 'sql'
 --map-syntax *.sqlite3:SQL

@@ -32,7 +32,7 @@
     line-numbers-minus-style = red
     line-numbers-plus-style = green
     line-numbers-zero-style = white
-    syntax-theme = Dracula
+    # syntax-theme = Dracula
     whitespace-error-style = 22 reverse
     # keep-plus-minus-markers = true
 [delta "decorations"]
