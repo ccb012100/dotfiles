@@ -29,6 +29,7 @@
     file-decoration-style = yellow box
     file-style = brightyellow italic
     hyperlinks = true
+    line-numbers = true
     line-numbers-minus-style = red
     line-numbers-plus-style = green
     line-numbers-zero-style = white
