@@ -2,7 +2,7 @@
 #
 # comments must be on stand-alone lines (not in-line with config options)
 #
-# TODO: pane border? copy on select? rotate splits? swap splits? indicate zoomed pane in UI?
+# TODO: pane border? rotate splits? swap splits? indicate zoomed pane in UI?
 
 font-family = Cascadia Mono NF
 font-size = 14
