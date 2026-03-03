@@ -1,0 +1,47 @@
+{
+  // OpenCode Configuration
+  // Full documentation: https://opencode.ai/docs/config/
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "CLAUDE.md",
+    ".githut/copilot-instructions.md",
+    "AGENTS.md",
+    "docs/AGENTS.md",
+    "~/.config/opencode/AGENTS.md"
+  ],
+  "disabled_providers": [
+    "openai",
+    "gemini",
+    "opencode"
+  ],
+  "formatter": {
+    "csharp": {
+      "command": [
+        "dotnet",
+        "format",
+        "$FILE"
+      ],
+      "extensions": [
+        ".cs",
+        ".cshtml"
+      ]
+    }
+  },
+  "keybinds": {
+    "leader": "ctrl+q",
+    "app_exit": "ctrl+x,ctrl+c",
+    "command_list": "shift+ctrl+p",
+    "input_delete_line": "ctrl+shift+d,ctrl+k",
+    "input_delete_to_line_end": "ctrl+shift+k",
+    "input_move_down": "down,ctrl+n",
+    "input_move_left": "left,ctrl+b,alt+u",
+    "input_move_right": "right,ctrl+f,alt+i",
+    "input_move_up": "up,ctrl+p",
+    "input_newline": "shift+return,ctrl+return,alt+return,ctrl+j,ctrl+o",
+    "input_redo": "super+shift+z,ctrl+shift+/",
+    "input_undo": "super+z,ctrl+/",
+    "input_word_backward": "alt+b,alt+left,ctrl+left,ctrl+u",
+    "input_word_forward": "alt+f,alt+right,ctrl+right,ctrl+i",
+    "model_list": "<leader>m",
+  }
+}
