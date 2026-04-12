@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.tmpl": "go-template",
         "*.fish.tmpl": "fish",
         "wezterm.lua.tmpl": "lua"
     },
