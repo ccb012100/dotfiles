@@ -1,15 +1,17 @@
+{{- $isWorkMachine := promptBool "Is this a work machine?" }}
+
 [data]
 	isLinux = {{ eq .chezmoi.os "linux" }}
 	isMacOS = {{ eq .chezmoi.os "darwin" }}
 	isWSL2 = {{ (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
-	isWorkMachine = {{ (or (eq .chezmoi.hostname "F9GRXCQDGC") (hasSuffix "-dev" .chezmoi.hostname)) }}
+	isWorkMachine = {{ $isWorkMachine }}
 [diff]
 	command = "delta"
 	args = ["{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
 [merge]
 	command = "meld"
 {{- /* Run 1Password as a service account on WSL2 */ -}}
-{{- if .isWSL2 }}
+{{- if (and (eq .chezmoi.os "linux") (contains "-microsoft-standard-WSL2" .chezmoi.kernel.osrelease)) }}
 [onepassword]
 	mode = "service"
 {{- end }}
