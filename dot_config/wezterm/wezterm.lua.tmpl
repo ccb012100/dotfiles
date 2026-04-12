@@ -12,20 +12,23 @@ config.window_close_confirmation = 'NeverPrompt'
 config.initial_cols = 120
 config.initial_rows = 60
 config.inactive_pane_hsb = {
-    saturation = .6,
-    brightness = .6,
+    saturation = .4,
+    brightness = .9,
 }
 -- TODO: reduce font size on command palette
 config.window_frame = { font = wezterm.font('IBM Plex Sans') }
 -- place window management buttons (minimize, maximize, close) into the tab bar instead of showing a title bar
 config.window_decorations = 'INTEGRATED_BUTTONS|RESIZE'
-config.font = wezterm.font {
-    family = 'Cascadia Mono NF',
-    harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, -- disable ligatures
-}
+-- config.font = wezterm.font {
+--     family = 'Cascadia Mono NF',
+--     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }, -- disable ligatures
+-- }
 config.font_size = 16.0
 config.pane_select_font_size = 36 -- default = 36
-
+{{ if .isMacOS}}
+-- Spawn a fish shell in login mode
+config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
+{{ end}}
 --
 -- THEMING
 --
@@ -37,8 +40,8 @@ config.pane_select_font_size = 36 -- default = 36
 -- config.color_scheme = 'Oxocarbon Dark (Gogh)'
 -- config.color_scheme = 'GJM (terminal.sexy)'
 -- config.color_scheme = 'gooey (Gogh)'
--- config.color_scheme = 'GruvboxDarkHard'
-config.color_scheme = 'Gruvbox light, hard (base16)'
+config.color_scheme = 'GruvboxDarkHard'
+-- config.color_scheme = 'Gruvbox light, hard (base16)'
 -- config.color_scheme = 'Helios (base16)'
 -- config.color_scheme = 'Popping and Locking'
 -- config.color_scheme = 'Purpledream (base16)'
