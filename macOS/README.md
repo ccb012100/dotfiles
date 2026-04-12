@@ -96,6 +96,9 @@ Run the command `zsh xattr -dr com.apple.quarantine /Applications/Easy\ Move+Res
 
 macOS [menu bar manager](https://github.com/jordanbaird/Ice)
 
+> [!WARNING]
+> Ice seems to be unsupported, so I switched to [Thaw](https://github.com/stonerl/Thaw).
+
 Export the settings from your machine into this repository:
 
 ```zsh
@@ -108,17 +111,6 @@ Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to y
 defaults import com.jordanbair.Ice $HOME/.local/share/chezmoi/macOS/Ice.plist
 ```
 
-## iTerm2
-
-[iTerm2](https://iterm2.com/) terminal emulator
-
-To sync with [the file in this repo](/macOS/com.googlecode.iterm2.plist), in **iTerm2**:
-
-- Open **Settings ➤ General ➤ Preferences**
-- Check _Load preferences from a custom folder or URL_
-- Click _Browse_
-- Select [com.googlecode.iterm2.plist](/macOS/com.googlecode.iterm2.plist).
-
 ## Keyboard Layout
 
 The default Keyboard Layout for **macOS** uses the `Alt`/`Option`/`⌥` key to insert special characters. This prevents some applications (**Visual Studio Code**, **JetBrains Rider**) from using ⌥ chords.
@@ -130,37 +122,16 @@ To use the custom Keyboard Layout:
 1. Copy the [keyboard layout file](/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout) to the `Keyboard Layouts` folder
 
     ```zsh
-    cp $HOME/.local/share/chezmoi/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
+    cp $HOME/.local/share/chezmoi/private_Library/private_Keyboard\ Layouts/us_no_option.keylayout $HOME/Library/Keyboard\ Layouts/
     ```
 
 1. Go to `System Settings > Keyboard > Text Input > Input Sources > Edit`.
     1. Click `＋` in the bottom left.
     1. Scroll the list on the left to the very end and select `Others`.
     1. Select `US no ⌥` and click `Add`.
-1. In the menu bar, click the Input menu and select **QWERTY no option**
+1. In the menu bar, click the Input menu and select **US no ⌥**
 
 source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-1615127984>
-
-## Loop
-
-[Loop](https://github.com/MrKai77/Loop) window manager.
-
-## Keybinds
-
-It seems like there's some issue with the keybinds and UP/DOWN arrows. I can't bind by pressing either UP or DOWN arrow. I have to bind using PGUP and PGDN, and then either PGUP/PGDN or UP/DOWN will trigger the shortcuts.
-
-## Export keybinds
-
-1. Go to **Settings**.
-2. Go to **Advanced**.
-3. Click the button labeled _Export_ under **Keybinds**.
-
-## Import keybinds
-
-1. Go to **Settings**.
-2. Go to **Advanced**.
-3. Click the button labeled _Import_ under **Keybinds**.
-4. Select [`Loop-keybinds.json`](/macOS/Loop%20Keybinds.json).
 
 ## Rectangle
 
@@ -199,12 +170,3 @@ Import [the settings from this repository](/macOS/com.jordanbair.Ice.plist) to y
 ```zsh
 defaults import com.Martin-Fekete.Tuneful.plist $HOME/.local/share/chezmoi/macOS/Tuneful.plist
 ```
-
-## Trailer
-
-[**Trailer**](https://github.com/ptsochantaris/trailer) **GitHub** PR/Issues notification tool
-
-To export the settings:
-
-1. Open the settings
-2. Click the button labeled `Export...`

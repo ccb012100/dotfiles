@@ -34,7 +34,7 @@ brew bundle # uses Brewfile
 echo 'Starting homebrew post-installation'
 
 ln -vs /opt/homebrew/bin/bash /usr/local/bin/ # use current version of bash over macOS's old version
-ln -vs /opt/homebrew/bin/gcc-14 "$HOME"/bin/gcc  # macOS links 'gcc' to 'clang', so we override that with a new link
+ln -vs /opt/homebrew/bin/gcc-15 "$HOME"/bin/gcc  # macOS links 'gcc' to 'clang', so we override that with a new link
 
 brew services start borders
 
@@ -53,13 +53,6 @@ echo 'Finished homebrew post-installation!'
 
 # install Rust (I don't want to download via Homebrew because `rustup` handles updates itself)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh || (echo 'Error: Rust installation failed!' && exit)
-
-#
-# Import settings with "defaults import"
-#
-defaults import com.lwouis.alt-tab-macos "$HOME"/.local/share/chezmoi/macOS/alt-tab-macos.plist
-defaults import com.contextsformac.Contexts.plist "$HOME"/.local/share/chezmoi/macOS/Contexts.plist
-defaults import com.jordanbair.Ice "$HOME"/.local/share/chezmoi/macOS/com.jordanbair.Ice.plist
 
 # copy over custom Keyboard Layout
 cp -v "$HOME"/.local/share/chezmoi/private_Library/private_Keyboard%20Layouts/us_no_option.keylayout "$HOME"/Library/Keyboard\ Layouts/
