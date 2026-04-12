@@ -503,9 +503,9 @@
                             {
                                 "from": {
                                     "key_code": "scroll_lock",
-                                    "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option" ] }
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
-                                "to": [ { "consumer_key_code": "scan_next_track" } ],
+                                "to": [{ "consumer_key_code": "scan_next_track" }],
                                 "type": "basic"
                             }
                         ]
@@ -746,6 +746,10 @@
                             "to": [{ "key_code": "left_option" }]
                         },
                         {
+                            "from": { "key_code": "left_control" },
+                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                        },
+                        {
                             "from": { "key_code": "left_option" },
                             "to": [{ "key_code": "left_command" }]
                         },
@@ -756,10 +760,6 @@
                         {
                             "from": { "key_code": "right_option" },
                             "to": [{ "key_code": "right_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
                         }
                     ]
                 },
