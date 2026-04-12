@@ -1,0 +1,22 @@
+[core]
+{{- if .isWorkMachine }}
+    hooksPath = ~/.hooks/ccb012100
+{{- else}}
+    hooksPath = ~/.hooks
+{{- end}}
+{{- if .isWorkMachine }}
+[credential]
+    username = ccb012100
+[url "git@github-ccb012100:"]
+    insteadof = https://github.com/
+[url "git@github-ccb012100"]
+    insteadof = git@github.com
+{{- end}}
+[user]
+    name = Christopher Bocardo
+    email = 397636+ccb012100@users.noreply.github.com
+{{- if .isWorkMachine }}
+    signingkey = ~/.ssh/id_ed25519_ccb012100
+{{- else}}
+    signingkey = ~/.ssh/id_ed25519
+{{- end}}

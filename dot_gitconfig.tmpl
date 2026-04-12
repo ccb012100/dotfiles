@@ -1,18 +1,92 @@
 [include]
-    path = .config/git/git.gitconfig
-    path = .config/git/aliases.gitconfig
-    path = .config/git/tools.gitconfig
+    path = ~/.config/git/aliases.gitconfig
+    path = ~/.config/git/tools.gitconfig
 {{- if .isWorkMachine }}
-[includeIf "gitdir:~/src/"]
-    path = .config/git/personal.gitconfig
-[includeIf "gitdir:~/.local/share/chezmoi/"]
-    path = .config/git/personal.gitconfig
-[includeIf "gitdir:~/.dotfiles/"]
-    path = .config/git/personal.gitconfig
-[includeIf "gitdir:~/.hooks/"]
-    path = .config/git/personal.gitconfig
-[includeIf "gitdir:~/win/.config/ahk/"]
-    path = .config/git/personal.gitconfig
-[includeIf "gitdir:~/work/"]
-    path = .local/work.gitconfig
+    path = ~/.local/users.gitconfig
+{{- else }}
+    path = ~/.config/git/personal-user.gitconfig
+{{- end}}
+[advice]
+    addIgnoredFile = false
+[blame]
+    coloring = repeatedLines
+    markIgnoredLines = true
+    markUnblamableLines = true
+[branch]
+    sort = -committerdate
+[column]
+    ui = auto
+    branch = auto
+    status = auto
+    tag = auto
+[core]
+    attributesfile = ~/.config/git/attributes
+    autocrlf = input
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+    filemode = false
+    fsmonitor = true
+    pager = less -FRX --mouse # '-FRX' same as '--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
+    untrackedCache = true
+[commit]
+    gpgsign = true
+    verbose = true
+{{- if .isWSL2 }}
+[credential]
+    helper = wincred
+{{- else if .isWorkMachine}}
+[credential]
+    usehttpPath = true
+{{- else if .isMacOS }}
+[credential "https://github.com"]
+        helper =
+        helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+        helper =
+        helper = !/opt/homebrew/bin/gh auth git-credential
 {{- end }}
+[fetch]
+    all = true
+    parallel = 0
+    prune = true
+    #pruneTags = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+[help]
+    autoCorrect = prompt
+[http]
+    sslbackend = openssl
+[init]
+    defaultBranch = main
+[log]
+    follow = true
+[pull]
+    ff = only
+    rebase = true
+[push]
+    autoSetupRemote = true
+    default = simple
+    useForceIfIncludes = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+[rerere]
+    autoUpdate = true
+    enabled = true
+    updateRefs = true
+[status]
+    showUntrackedFiles = all
+[tag]
+    gpgsign = true
+    sort = version:refname
+[url "git@github.com:"]
+    insteadof = https://github.com/
+[user]
+    useConfigOnly = true
