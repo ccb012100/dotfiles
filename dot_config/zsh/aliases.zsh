@@ -77,24 +77,3 @@ alias vim=nvim
 
 ##git
 alias g=git
-alias ga='git add'
-alias gaa='git aa'
-alias gacm='git acm'
-alias gc='git c'
-alias gcm='git cm'
-alias gd='git d'
-alias gds='git ds'
-alias gf='git f'
-alias gl='git l'
-alias gp='git pull'
-alias gps='git push'
-alias gs='git s'
-alias gsl='git sl'
-alias gsvv='git status -vv'
-## npm
-alias nr='npm run'
-alias nrb='npm run build'
-alias nrl='npm run lint'
-alias nrestart='npm run build && npm run start'
-alias nrs='npm run start'
-alias nrt='npm run test'
