@@ -1,6 +1,0 @@
-[core]
-    hooksPath = ~/.hooks
-[user]
-    name = Christopher Bocardo
-    email = 397636+ccb012100@users.noreply.github.com
-    signingkey = ~/.ssh/id_ed25519
