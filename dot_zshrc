@@ -1,6 +1,13 @@
 # Zsh configuration file
 # $HOME/.zshrc
+# mise - runtime version manager
 CURRENTSHELL=🇿
+eval "$("$HOME"/.local/bin/mise activate zsh)"
+
+eval "$(atuin init zsh)"
+
+# .NET SDK location for IDEs (Rider, VS Code)
+export DOTNET_ROOT="$HOME/.local/share/mise/installs/dotnet/10.0.201"
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 export EDITOR="nvim" # $EDITOR opens in terminal
 
