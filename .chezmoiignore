@@ -3,13 +3,21 @@ README.md
 macOS/*
 miscellaneous/*
 **/.DS_Store
-{{/* IF NOT on work machine, THEN ignore these */ -}}
+.config/fish/completions
+.config/fish/conf.d
+.config/fish/fish_variables
+.config/fish/functions/_*
+.config/fish/functions/_fzf*
+.config/fish/functions/fisher.fish
+.config/fish/functions/fzf_configure_bindings.fish
+.config/kmonad/nohup.out
 {{- if not .isWorkMachine }}
 .local/work.gitconfig
 .config/git/personal.gitconfig
 {{- end}}
-{{- /* IF NOT on macOS, THEN ignore these */ -}}
-{{- if not .isMacOS -}}
+{{- if .isMacOS}}
+.config/tealdeer
+{{- else -}}
 .config/karabiner/*
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd
@@ -21,11 +29,3 @@ Library/*
 {{- if .isWSL2 }}
 .config/kitty/*
 {{- end -}}
-.config/fish/completions
-.config/fish/conf.d
-.config/fish/fish_variables
-.config/fish/functions/_*
-.config/fish/functions/_fzf*
-.config/fish/functions/fisher.fish
-.config/fish/functions/fzf_configure_bindings.fish
-.config/kmonad/nohup.out
