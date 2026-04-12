@@ -6,7 +6,6 @@ abbr --add up update_packages
 # jump to directory
 abbr --add config __zoxide_z $HOME/.config
 abbr --add cmj __zoxide_z $HOME/.local/share/chezmoi
-abbr --add dvn __zoxide_z $HOME/src/dev-notes
 abbr --add local __zoxide_z $HOME/.local
 
 # fish
@@ -58,22 +57,8 @@ abbr --add cmk 'chezmoi re-add $HOME/.config/karabiner/karabiner.json'
 {{- end}}
 abbr --add cmr chezmoi re-add
 abbr --add cms chezmoi status
-# cht.sh
-abbr --add ch cht.sh
-abbr --add cht cht.sh
-abbr --add cheat cht.sh
-# datasette
-abbr --add ds datasette
 # difftastic
 abbr --add difftastic difft
-# docker
-abbr --add do docker
-abbr --add doc docker compose
-abbr --add doi docker image
-abbr --add dois docker images
-abbr --add dop docker ps -a
-abbr --add dops docker ps
-abbr --add dor docker run
 # dotnet
 abbr --add dn dotnet
 abbr --add dnb dotnet build
@@ -91,44 +76,16 @@ abbr --add fdf 'fd --type file'
 # GitHub CLI
 #: TODO: can this be done inside the gh cli app?
 abbr --add ghv 'gh pr view --web || gh repo view --web'
-# glow
-abbr --add md glow
-abbr --add mdp glow --tui
-# golang
-abbr --add gg go
-abbr --add ggb go build
-abbr --add ggr go run
-# jless
-abbr --add jl jless
-# kubectl
-abbr --add kub kubectl
-# npm
-abbr --add nil 'npm install --legacy-peer-deps'
-abbr --add nr 'npm run'
-abbr --add nrb 'npm run build'
-abbr --add nrl 'npm run lint'
-abbr --add nrestart 'npm run build && npm run start'
-abbr --add nrs 'npm run start'
-abbr --add nrt 'npm run test'
 # pinfo
 abbr --add info pinfo
 # python
 abbr --add py python3
 abbr --add pym python3 -m
 abbr --add python python3
-# ranger
-abbr --add ra ranger
 # ripgrep
 abbr --add rgf rg --fixed-strings # verbatim search (i.e. disable regex)
 abbr --add rgi rg --ignore-case # case-insensitive search
 abbr --add rguuu rg -uuu # same as `rg --no-ignore --hidden --binary` & equiv. to `grep -r`
-{{- if .isMacOS }}
-# Swift
-abbr --add sb swift build
-abbr --add sp swift package
-abbr --add spc swift package clean
-abbr --add sr swift run
-{{- end}}
 {{- if .isLinux }}
 # systemctl
 abbr --add sctl sysmtemctl
@@ -137,8 +94,6 @@ abbr --add sctl sysmtemctl
 # trash-cli
 abbr --add trash trash-put
 {{- end }}
-# ts-node
-abbr --add tsn 'npx ts-node' # run local version of ts-node
 # uuidgen
 abbr --add uuid uuidgen {{- if .isLinux }} --random {{- end }}
 # vim
@@ -157,5 +112,4 @@ abbr --add zr zoxide remove
 abbr --add open wslview # wslu
 {{- end }}
 # misc. personal stuff
-abbr --add spot 'cd "$HOME/src/spotify-playlists" && playlist-update.fish' # ~/bin/playlist-update.fish
 abbr --add flash-keychron 'cd "$HOME/src/qmk_firmware" && qmk flash -kb keychron/v6/ccb012100 -km default' # flash Keychron keyboard

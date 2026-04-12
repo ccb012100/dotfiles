@@ -54,9 +54,12 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     {{ if .isWSL2 }}
     eval $(keychain --eval ~/.ssh/*_ed25519) # get ssh key credentials from the running instance of ssh-agent
-    {{- end}}
-    {{- if .isMacOS }}
+    {{- else if .isMacOS }}
+    {{- if .isWorkMachine}}
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519_{work,ccb012100}
+    {{- else}}
     ssh-add --apple-use-keychain ~/.ssh/{id_ed25519,work_ed25519}
+    {{- end}}
     {{- end}}
     echo Loaded config.fish # DONE
 end

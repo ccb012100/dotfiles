@@ -12,7 +12,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{- end}}
 
 # atuin
-atuin init fish --disable-up-arrow | source # use --disable-up-arrow to prevent binding it to autin search
+atuin init fish | source # use --disable-up-arrow to prevent binding it to autin search
 
 # done (<https://github.com/franciscolourenco/done>)
 set -U __done_min_cmd_duration 20000 # default: 20_000 ms = 20 seconds
@@ -49,9 +49,6 @@ function __fish_pipe_to_fzf -d "Pipe the current command to fzf"
     set --local cmd fzf
     fish_commandline_append " &| $cmd"
 end
-
-# fnm
-fnm env --use-on-cd --version-file-strategy=recursive | source
 
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
