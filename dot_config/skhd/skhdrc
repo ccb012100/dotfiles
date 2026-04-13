@@ -31,15 +31,15 @@ f5 [
 ]
 
 # PrntScrn (F13)
-f13 : skhd -k "shift + cmd - 4"         # PrntScrn to select an area and save to file
-cmd - f13 : skhd -k "shift + cmd - 5"   # Cmd+PrntScrn to open the screenshot and recording options
-shift - f13 : skhd -k "shift + cmd - 3" # Shift+PrntScrn to capture the entire screen and save to file
+f13 : skhd -k "shift + cmd - 4"             # PrntScrn to select an area and save to file
+cmd - f13 : skhd -k "shift + cmd - 5"       # Cmd+PrntScrn to open the screenshot and recording options
+shift - f13 : skhd -k "shift + cmd - 3"     # Shift+PrntScrn to capture the entire screen and save to file
 
 # Remap alt+` and alt+shift+` on vscode [kVK_Grave == 0x32]
 #
-# Using native tabs instead of separate windows, alt+` is useless because I have
+# Using native tabs instead of separate windows, cmd+` and alt+` is useless because I have
 # only have a single vscode window. I have "Show Next Window Tab" mapped to Ctrl+`
-# in vscode, so to have consistent muscle memory across apps I remap alt+` here.
+# in vscode, so to have consistent muscle memory across apps I remap cmd+` and alt+` here.
 alt - 0x32 [
     "code"  :   skhd -k "ctrl - 0x32"
     *       ~
@@ -48,12 +48,20 @@ alt + shift - 0x32 [
     "code"  :   skhd -k "ctrl + shift - 0x32"
     *       ~
 ]
+cmd - 0x32 [
+    "code"  :   skhd -k "ctrl - 0x32"
+    *       ~
+]
+cmd + shift - 0x32 [
+    "code"  :   skhd -k "ctrl + shift - 0x32"
+    *       ~
+]
 
 ###########
 # Meh key #
 ###########
 
-meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
+# meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 # meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 # meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
@@ -63,14 +71,20 @@ meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 #  Map ctrl chords to equivalent/similar cmd chords  #
 #                                                    #
 ######################################################
-ctrl - backspace : skhd -k "alt - backspace"    # map ctrl+backspace to "delete word left"
-shift + ctrl - a : skhd -k "cmd - a"            # Shift+Ctrl+a to Select all
-ctrl - c : skhd -k "cmd - c"                    # Ctrl+c to Copy
-alt - d : skhd -k "shift + alt - delete"        # Alt+w to Forward delete word
-ctrl - t : skhd -k "cmd - t"                    # Ctrl+t to Open a new tab
-ctrl - v : skhd -k "cmd - v"                    # Ctrl+v to Paste
-ctrl - x : skhd -k "cmd - x"                    # Ctrl+x to Cut
-ctrl - 0x2C : skhd -k "cmd - z"                 # ctrl+/ (0x2C) to Undo
+ctrl - backspace        :   skhd -k "alt - backspace"         # map ctrl+backspace to "delete word left"
+ctrl - w                :   skhd -k "alt - backspace"         # map ctrl+w to "delete word left"
+shift + ctrl - a        :   skhd -k "cmd - a"                 # Shift+Ctrl+a to Select all
+ctrl - c                :   skhd -k "cmd - c"                 # Ctrl+c to Copy
+alt - d                 :   skhd -k "shift + alt - delete"    # Alt+d to Forward delete word
+ctrl - t                :   skhd -k "cmd - t"                 # Ctrl+t to Open a new tab
+ctrl - v                :   skhd -k "cmd - v"                 # Ctrl+v to Paste
+ctrl - x                :   skhd -k "cmd - x"                 # Ctrl+x to Cut
+ctrl - 0x2C             :   skhd -k "cmd - z"                 # ctrl+/ (0x2C) to Undo
+shift + ctrl - 0x2C     :   skhd -k "shift + cmd - z"         # Shift+Ctrl+/ (0x2C) to Redo
+ctrl - 0x21             :   skhd -k "cmd - 0x21"              # Ctrl+[ (0x21) to Go backwards
+
+# Ctrl+] (0x1E) to Go forwards
+ctrl - 0x1E             :   skhd -k "cmd - 0x1E"
 
 # Ctrl+l
 ctrl - l [
@@ -78,14 +92,9 @@ ctrl - l [
     "Google Chrome"     :   skhd -k "cmd - l" # Focus in URL bar
     "Microsoft Edge"    :   skhd -k "cmd - l" # Focus in URL bar
     "Safari"            :   skhd -k "cmd - l" # Focus in URL bar
-    "Spotify"           :   skhd -k "cmd - l" # Search in Spotify
     *                   ~
 ]
-# Ctrl+k to Quick search in Spotify
-ctrl - k [
-    "Spotify"   :   skhd -k "cmd - k"
-    *           ~
-]
+
 # Shift+Ctrl+l to Search open tabs in chromium browsers
 shift + ctrl - l [
     "Google Chrome"     :   skhd -k "cmd + shift - a"       # Search open tabs
@@ -93,12 +102,22 @@ shift + ctrl - l [
     "Safari"            :   skhd -k "cmd + shift - 0x2A"    # Show tab overview
     *                   ~
 ]
+
 # Ctrl+r to Reload browser tab
 ctrl - r [
     "Firefox"           :   skhd -k "cmd - r"
     "Google Chrome"     :   skhd -k "cmd - r"
     "Microsoft Edge"    :   skhd -k "cmd - r"
     "Safari"            :   skhd -k "cmd - r"
+    *                   ~
+]
+
+# Shift+Ctrl+t to open new browser tab
+ctrl - t [
+    "Firefox"           :   skhd -k "cmd - t"
+    "Google Chrome"     :   skhd -k "cmd - t"
+    "Microsoft Edge"    :   skhd -k "cmd - t"
+    "Safari"            :   skhd -k "cmd - t"
     *                   ~
 ]
 
@@ -110,31 +129,13 @@ shift + ctrl - t [
     "Safari"            :   skhd -k "shift + cmd - t"
     *                   ~
 ]
-# Ctrl+w to close browser tab
-ctrl - w [
+
+# Shift+Ctrl+w to close browser tab
+shift + ctrl - w [
     "Firefox"           :   skhd -k "cmd - w"
     "Google Chrome"     :   skhd -k "cmd - w"
     "Microsoft Edge"    :   skhd -k "cmd - w"
     "Safari"            :   skhd -k "cmd - w"
     *                   ~
 ]
-# Ctrl+[ (0x21) to Go backwards
-ctrl - 0x21 [
-    "Spotify"           :   skhd -k "alt - left"
-    *                   :   skhd -k "cmd - 0x21"
-]
-# Ctrl+] (0x1E) to Go forwards
-ctrl - 0x1E [
-    "Spotify"           :   skhd -k "alt - right"
-    *                   :   skhd -k "cmd - 0x1E"
-]
-# map ⌘+[ to ⌥+← in Spotify
-cmd - 0x21 [
-    "Spotify"           :   skhd -k "alt - left"
-    *                   ~
-]
-# map ⌘+] to ⌥+→ in Spotify
-cmd - 0x1E [
-    "Spotify"           :   skhd -k "alt - right"
-    *           ~
-]
+
