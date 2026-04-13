@@ -1,0 +1,19 @@
+[display]
+compact = false
+use_pager = true
+
+[style.command_name]
+foreground = "purple"
+
+[style.example_text]
+foreground = "green"
+
+[style.example_code]
+foreground = "cyan"
+
+[style.example_variable]
+foreground = "yellow"
+underline = false
+
+[updates]
+auto_update = true
