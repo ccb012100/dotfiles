@@ -1,5 +1,6 @@
 if status is-interactive # Commands to run in interactive sessions can go here
-    echo Loading config.fish...
+    set_color -r green
+    echo '░ Loading ~/.config/config.fish' (set_color --reset)
     set --global --export EDITOR nvim
 
     fish_add_path $HOME/bin
@@ -39,8 +40,6 @@ if status is-interactive # Commands to run in interactive sessions can go here
         source $x
     end
 
-    source $HOME/.local/config-local.fish # local config unique to the machine
-
     # keyboard bindings
     #: use command `fish_key_reader` to get input codes
     bind \cx\ce edit_command_buffer # edit command in $EDITOR
@@ -61,5 +60,9 @@ if status is-interactive # Commands to run in interactive sessions can go here
     ssh-add --apple-use-keychain ~/.ssh/{id_ed25519,work_ed25519}
     {{- end}}
     {{- end}}
-    echo Loaded config.fish # DONE
+
+    source $HOME/.local/config-local.fish # local config unique to the machine
+
+    set_color -r green
+    echo '░ Loaded ~/.config/config.fish' (set_color --reset)
 end
