@@ -6,6 +6,9 @@
 export PATH="/opt/homebrew/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)" # homebrew
 
+# mise
+eval "$("$HOME"/.local/bin/mise activate bash)"
+
 # starship
 eval "$(starship init bash)"
 
