@@ -51,7 +51,7 @@
     dts = difftool --staged
 
     ## fetch
-    f   = fetch --all --verbose
+    f   = fetch --all
     fm  = fetch --verbose origin main:main # update local main branch to match origin
 
     ## forgit
