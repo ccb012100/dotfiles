@@ -50,6 +50,10 @@ function __fish_pipe_to_fzf -d "Pipe the current command to fzf"
     fish_commandline_append " &| $cmd"
 end
 
+# forgit
+[ -f $HOMEBREW_PREFIX/share/forgit/forgit.plugin.fish ]; and source $HOMEBREW_PREFIX/share/forgit/forgit.plugin.fish
+fish_add_path "$FORGIT_INSTALL_DIR/bin"
+
 # fzf
 #: using https://github.com/PatrickF1/fzf.fish
 #: IMPORTANT: must not have other fzf plugins installed (see: <https://github.com/PatrickF1/fzf.fish/wiki/Uninstalling-other-fzf-plugins>)
