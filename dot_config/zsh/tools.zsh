@@ -11,6 +11,12 @@ fpath=($HOME/.zsh/zsh-completions $fpath)       # activate zsh-completions## hom
 set PATH /opt/homebrew/bin $PATH
 eval "$(/opt/homebrew/bin/brew shellenv)" # homebrew
 
+# mise
+eval "$("$HOME"/.local/bin/mise activate zsh)"
+
+# ripgrep configuration file
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+
 # starship
 eval "$(starship init zsh)"
 
@@ -20,10 +26,3 @@ function set_win_title() {
 }
 
 precmd_functions+=(set_win_title)
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
-
-# ripgrep configuration file
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
