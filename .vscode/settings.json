@@ -1,4 +1,5 @@
 {
+    "editor.formatOnPaste": false,
     "files.associations": {
         "*.tmpl": "go-template",
         "*.fish.tmpl": "fish",
