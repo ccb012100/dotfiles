@@ -1,3 +1,5 @@
+# NOTE: actually using https://github.com/jackielii/skhd.zig now and some of these settings aren't supported by the original skhd
+#
 # - A list of all built-in modifier and literal keywords can be found at <https://github.com/koekeishiya/skhd/issues/1>
 # - To specify a NOP, use "true" or ":"
 # - To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
@@ -7,16 +9,16 @@
 # - SysRq (Print Screen) is interpreted as F13 in macOS
 
 # prevent skhd from monitoring events for specific applications.
+# IMPORTANT: I had to convert these to all lowercase to make them work
 .blacklist [
     "code"
-    "DBeaver"
-    "Ghostty"
-    "iTerm2"
-    "JetBrains Rider"
+    "dbeaver"
+    "ghostty"
+    "iterm2"
+    "jetbrains rider"
     "kitty"
     "terminal"
-    "Terminal"
-    "WezTerm"
+    "wezterm"
     "zed"
 ]
 
@@ -35,25 +37,25 @@ f13 : skhd -k "shift + cmd - 4"             # PrntScrn to select an area and sav
 cmd - f13 : skhd -k "shift + cmd - 5"       # Cmd+PrntScrn to open the screenshot and recording options
 shift - f13 : skhd -k "shift + cmd - 3"     # Shift+PrntScrn to capture the entire screen and save to file
 
-# Remap alt+` and alt+shift+` on vscode [kVK_Grave == 0x32]
+# Remap alt+` and alt+shift+` on vscode
 #
 # Using native tabs instead of separate windows, cmd+` and alt+` is useless because I have
 # only have a single vscode window. I have "Show Next Window Tab" mapped to Ctrl+`
 # in vscode, so to have consistent muscle memory across apps I remap cmd+` and alt+` here.
-alt - 0x32 [
-    "code"  :   skhd -k "ctrl - 0x32"
+alt - backtick [
+    "code"  :   skhd -k "ctrl - backtick"
     *       ~
 ]
-alt + shift - 0x32 [
-    "code"  :   skhd -k "ctrl + shift - 0x32"
+alt + shift - backtick [
+    "code"  :   skhd -k "ctrl + shift - backtick"
     *       ~
 ]
-cmd - 0x32 [
-    "code"  :   skhd -k "ctrl - 0x32"
+cmd - backtick [
+    "code"  :   skhd -k "ctrl - backtick"
     *       ~
 ]
-cmd + shift - 0x32 [
-    "code"  :   skhd -k "ctrl + shift - 0x32"
+cmd + shift - backtick [
+    "code"  :   skhd -k "ctrl + shift - backtick"
     *       ~
 ]
 
@@ -76,7 +78,6 @@ ctrl - w                :   skhd -k "alt - backspace"         # map ctrl+w to "d
 shift + ctrl - a        :   skhd -k "cmd - a"                 # Shift+Ctrl+a to Select all
 ctrl - c                :   skhd -k "cmd - c"                 # Ctrl+c to Copy
 alt - d                 :   skhd -k "shift + alt - delete"    # Alt+d to Forward delete word
-ctrl - t                :   skhd -k "cmd - t"                 # Ctrl+t to Open a new tab
 ctrl - v                :   skhd -k "cmd - v"                 # Ctrl+v to Paste
 ctrl - x                :   skhd -k "cmd - x"                 # Ctrl+x to Cut
 ctrl - 0x2C             :   skhd -k "cmd - z"                 # ctrl+/ (0x2C) to Undo
