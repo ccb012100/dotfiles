@@ -514,12 +514,12 @@
                         "description": "M+w -> Call toggle-wezterm.scpt",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
-                                "to": [{ "shell_command": "/usr/bin/osascript ~/bin/toggle-wezterm.scpt" }]
+                                "to": [{ "shell_command": "/usr/bin/osascript ~/bin/toggle-wezterm.scpt" }],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -527,12 +527,12 @@
                         "description": "M+1 -> Call toggle-privileges",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "1",
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
-                                "to": [{ "shell_command": "/bin/sh ~/bin/toggle-privileges" }]
+                                "to": [{ "shell_command": "/bin/sh ~/bin/toggle-privileges" }],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -540,12 +540,12 @@
                         "description": "M+k -> Call toggle-vscode",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "v",
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
-                                "to": [{ "shell_command": "/usr/bin/osascript ~/bin/toggle-vscode.scpt" }]
+                                "to": [{ "shell_command": "/usr/bin/osascript ~/bin/toggle-vscode.scpt" }],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -818,6 +818,14 @@
                             "to": [{ "apple_vendor_keyboard_key_code": "function" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 64097,
+                        "vendor_id": 9639
+                    },
+                    "ignore": false
                 }
             ],
             "name": "MacBook_ErgodoxEZ_MX_Master_3S",
