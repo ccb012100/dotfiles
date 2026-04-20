@@ -537,7 +537,7 @@
                         ]
                     },
                     {
-                        "description": "M+k -> Call toggle-vscode",
+                        "description": "M+v -> Call toggle-vscode",
                         "manipulators": [
                             {
                                 "from": {
