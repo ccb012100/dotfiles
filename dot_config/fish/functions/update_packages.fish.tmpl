@@ -1,20 +1,22 @@
 function update_packages --description 'Update various system packages'
-    {{- if eq .chezmoi.os "linux" }}
+    {{- if (eq .chezmoi.os "linux") }}
     set_color purple
-    echo 'Updating *apt* packages...'
+    echo '░ Updating *apt* packages...'
     set_color normal
     sudo apt update and sudo apt upgrade --yes
     sudo -k
     {{- end }}
     set_color purple
-    echo 'Updating *brew* and *fisher* packages...'
+    echo '░ Updating *brew* and packages...'
     set_color normal
 
     brew upgrade
-    fisher update
     rustup update
     #gh extension upgrade --all
 
+    set_color purple
+    echo '░ Updating dotnet tools...'
+    set_color normal
     # list globally installed dotnet tools
     dotnet tool list -g |
         # skip first 2 lines, then print just the first field (the tool's name)
@@ -29,6 +31,6 @@ function update_packages --description 'Update various system packages'
     end
 
     set_color brgreen
-    echo \n\t--- Updated packages! ---
+    echo \n░ Finished updating packages!
     set_color normal
 end
