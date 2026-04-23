@@ -13,6 +13,7 @@
 .blacklist [
     "code"
     "dbeaver"
+    "datagrip"
     "ghostty"
     "iterm2"
     "jetbrains rider"
