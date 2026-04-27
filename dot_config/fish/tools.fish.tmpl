@@ -66,13 +66,12 @@ set FZF_ALT_C_OPTS "--preview 'tree -C {}'"
 #: use eza and bat for previews
 set fzf_preview_dir_cmd eza --all --color=always
 set fzf_preview_file_cmd bat --color=always
+fzf --fish | source # Set up fzf key bindings
 
-# {{if eq .chezmoi.os "darwin" -}}
-# #: iTerm2
+{{if eq .chezmoi.os "darwin" -}}
+#: iTerm2
 # test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish
-# {{ end}}
 
-{{ if eq .chezmoi.os "darwin" -}}
 fish_add_path /opt/homebrew/opt/lsof/bin
 {{- end}}
 

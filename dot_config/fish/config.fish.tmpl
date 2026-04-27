@@ -65,4 +65,6 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     set_color -r green
     echo '░ Loaded ~/.config/config.fish' (set_color --reset)
+else
+    mise activate fish --shims | source
 end
