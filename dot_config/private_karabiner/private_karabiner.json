@@ -537,11 +537,11 @@
                         ]
                     },
                     {
-                        "description": "M+v -> Call toggle-vscode",
+                        "description": "M+e -> Call toggle-vscode",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "e",
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option"] }
                                 },
                                 "to": [{ "shell_command": "/usr/bin/osascript ~/bin/toggle-vscode.scpt" }],
