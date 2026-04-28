@@ -88,7 +88,7 @@ defaults import com.contextsformac.Contexts.plist $HOME/.local/share/chezmoi/mac
 
 ### "malicious software" warning
 
-Run the command `zsh xattr -dr com.apple.quarantine /Applications/Easy\ Move+Resize.app`.
+Run the command `xattr -dr com.apple.quarantine /Applications/Easy\ Move+Resize.app`.
 
 ([source](https://github.com/dmarcotte/easy-move-resize/issues/84#issuecomment-1184946746))
 
