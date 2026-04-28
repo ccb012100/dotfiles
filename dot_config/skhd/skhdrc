@@ -27,9 +27,15 @@
 alt - f : skhd -k "alt - right"
 alt - b : skhd -k "alt - left"
 
-# F5 to mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
+# F5
+#   -   mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
+#   -   reload browser tab
 f5 [
     "Microsoft Teams"   : skhd -k "shift + cmd - m"
+    "Firefox"           :   skhd -k "cmd - r"
+    "Google Chrome"     :   skhd -k "cmd - r"
+    "Microsoft Edge"    :   skhd -k "cmd - r"
+    "Safari"            :   skhd -k "cmd - r"
     *                   ~
 ]
 
