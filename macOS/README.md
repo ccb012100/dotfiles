@@ -144,6 +144,16 @@ To import the settings from [the file in this repo](/macOS/Stats.plist):
 3. Click _Import_ on the bottom.
 4. Select [`Stats.plist`](/macOS/Stats.plist).
 
+## skhd
+
+Using the [skhd-zig](https://github.com/jackielii/skhd.zig) port now.
+
+### Registering skhd-zig
+
+1. In **System Settings > Accessibilty**, add `/opt/homebrew/opt/skhd-zig/skhd.app`.
+2. In Terminal, run `/opt/homebrew/opt/skhd-zig/skhd.app/Contents/MacOS/skhd --install-service`.
+3. In Terminal, run `skhd --restart-service`
+
 ## Stats
 
 [**Stats**](https://github.com/exelban/stats) menu bar system monitor
