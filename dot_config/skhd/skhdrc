@@ -70,7 +70,17 @@ cmd + shift - backtick [
 # Meh key #
 ###########
 
+# Meh combos mapped in other applications:
+#   1 - karabiner
+#   2 - 1Password
+#   9 - Thaw
+#   e - karabiner
+#   w - karabiner
+
 # meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
+meh - 3 : skhd -k "shift + cmd - 3" # Capture the entire screen
+meh - 4 : skhd -k "shift + cmd - 4" # Capture a portion of the screen
+meh - 5 : skhd -k "shift + cmd - 5" # Capture using the Screenshot app
 # meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
 # meh - j : MacOSUtility toggle 'com.github.wez.wezterm'
 # meh - k : MacOSUtility toggle 'com.microsoft.VSCode'
