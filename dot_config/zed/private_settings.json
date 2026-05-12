@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "title_bar": {
+    "show_sign_in": false
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "terminal": {
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "cursor_shape": "bar",
+    "blinking": "on",
+    "option_as_meta": true,
+    "copy_on_select": true,
+    "bell": "system"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+  "base_keymap": "VSCode",
+  "show_signature_help_after_edits": false,
+  "auto_signature_help": false,
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "mouse_wheel_zoom": true,
+  "vertical_scroll_margin": 5.0,
+  "minimap": {
+    "show": "never",
+    "thumb": "always",
+    "max_width_columns": 60
+  },
+  "use_system_window_tabs": true,
+  "active_pane_modifiers": {
+    "inactive_opacity": 0.9
+  },
+  "buffer_font_fallbacks": [
+    "Fantasque Sans Mono",
+    "IBM Plex Mono",
+    "Hack",
+    "Cascadia Code",
+    "Consolas"
+  ],
+  "buffer_font_family": "JetBrains Mono",
+  "file_types": {
+    "jsonc": [
+      "appsettings*.json"
+    ],
+    "editorconfig": [
+      "*.conf"
+    ],
+    "xml": [
+      "*.DotSettings",
+      "*.snippet",
+      "*.vssettings"
+    ],
+    "asciidoc": [
+      "*.adoc"
+    ],
+    "properties": [
+      "attributes"
+    ],
+    "c": [
+      "*.h"
+    ],
+    "txt": [
+      ".gitignore_global"
+    ],
+    "plaintext": [
+      "LICENSE"
+    ],
+    "go-template": [
+      "*.tmpl"
+    ],
+    "sql": [
+      "*.sqlite"
+    ]
+  },
+  "colorize_brackets": true,
+  "completions": {
+    "words": "disabled"
+  },
+  "auto_indent_on_paste": true,
+  "use_on_type_format": true,
+  "semantic_tokens": "full",
+  "wrap_guides": [
+    150
+  ],
+  "soft_wrap": "editor_width",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "Catppuccin Frappé",
+  },
+}
