@@ -163,5 +163,22 @@
     "unbind": {
       "cmd-?": "agent::ToggleFocus"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-g ctrl-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-x space": "terminal_panel::ToggleFocus"
+    }
   }
 ]

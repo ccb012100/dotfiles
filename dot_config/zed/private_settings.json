@@ -7,6 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "git_panel": {
+    "tree_view": true
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
+      "enable_thinking": false
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "title_bar": {
     "show_sign_in": false
   },
@@ -22,6 +35,9 @@
     }
   },
   "terminal": {
+    "shell": {
+      "program": "fish"
+    },
     "font_family": "JetBrainsMonoNL Nerd Font Mono",
     "cursor_shape": "bar",
     "blinking": "on",
