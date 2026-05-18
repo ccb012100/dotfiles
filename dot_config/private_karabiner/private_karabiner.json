@@ -826,6 +826,15 @@
                         "vendor_id": 9639
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 4128,
+                        "vendor_id": 1149
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
                 }
             ],
             "name": "MacBook_ErgodoxEZ_MX_Master_3S",
