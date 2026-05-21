@@ -103,7 +103,7 @@ symbol = " "
 [shell]
 disabled = false
 format = '[$indicator]($style) '
-zsh_indicator = '󰰶'
+zsh_indicator = 'Ζ'
 bash_indicator = ''
 fish_indicator = '󰈺'
 
