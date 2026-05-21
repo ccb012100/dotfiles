@@ -19,7 +19,7 @@
     ## checkout
     back    = switch - # checkout previous branch
     co      = checkout
-    cof     = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
+    coz     = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
     main    = checkout main
     master  = checkout master
 
