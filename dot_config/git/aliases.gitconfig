@@ -22,6 +22,7 @@
     coz     = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
     main    = checkout main
     master  = checkout master
+    z       = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
 
     ## cherry-pick
     cherry  = cherry-pick
