@@ -636,11 +636,11 @@
                         ]
                     },
                     {
-                        "description": "Control + Left mouse Click to ⌘-] (forward)",
+                        "description": "Shift + Left mouse Click to ⌘-] (forward)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "modifiers": { "mandatory": ["control"] },
+                                    "modifiers": { "mandatory": ["shift"] },
                                     "pointing_button": "button4"
                                 },
                                 "to": [
@@ -899,6 +899,23 @@
                         "product_id": 865,
                         "vendor_id": 13364
                     },
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50495,
+                        "vendor_id": 1133
+                    },
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 50495,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
                     "ignore_vendor_events": true
                 }
             ],
