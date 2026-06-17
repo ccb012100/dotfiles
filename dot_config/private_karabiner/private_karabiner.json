@@ -808,7 +808,13 @@
                         "product_id": 45108,
                         "vendor_id": 1133
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "pointing_button": "button6" },
+                            "to": [{ "key_code": "vk_mission_control" }]
+                        }
+                    ]
                 },
                 {
                     "identifiers": {
