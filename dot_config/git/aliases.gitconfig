@@ -117,6 +117,7 @@
     stsp        = stash show -p
     stl         = stash list
     stps        = stash push --include-untracked # *not* stash push --all, which includes ignored files
+    stu         = stash push --include-untracked # *not* stash push --all, which includes ignored files
 
     ## status
     s   = ss
