@@ -5,6 +5,23 @@
                 "parameters": { "basic.to_if_alone_timeout_milliseconds": 500 },
                 "rules": [
                     {
+                        "description": "PRTSCR -> desktop screenshot",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "print_screen"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": ["left_shift", "command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Ctrl+Enter to Ctrl+NumpadEnter for VS Code (vscode/Electron bug workaround)",
                         "manipulators": [
                             {
