@@ -13,7 +13,7 @@
     bv      = branch -v
     br      = branch --remote
     brv     = branch --remote -v
-    delete  = delete-merged-branches    # <https://github.com/hartwork/git-delete-merged-branches>
+    # delete  = delete-merged-branches    # <https://github.com/hartwork/git-delete-merged-branches>
     swc     = switch --create           # create new branch and switch to it
 
     ## checkout
