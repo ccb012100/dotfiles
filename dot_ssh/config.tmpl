@@ -1,18 +1,4 @@
-{{- if .isWorkMachine }}
-Host github.com
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_work
-    IdentitiesOnly yes
-    AddKeysToAgent yes
-
-Host github-ccb012100
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519_ccb012100
-    IdentitiesOnly yes
-    AddKeysToAgent yes
-{{- else }}
+{{- if not .isWorkMachine }}
 Host github.com
     HostName github.com
     User git
