@@ -1,4 +1,4 @@
-function sm --description 'Find matches in starred albums for search text'
+function s --description 'Find matches in starred albums for search text'
     set pldb $HOME/playlister.sqlite3
     set playlister_script $HOME/bin/playlister.sh
 
