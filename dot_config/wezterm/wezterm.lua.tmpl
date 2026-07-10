@@ -150,10 +150,6 @@ config.keys = {
     { key = '0',           mods = keycode.leader,           action = act.MoveTab(0) },
     { key = 'Tab',         mods = keycode.ctrl_shift,       action = act.ActivateTabRelative(-1) }, -- activate previous
     { key = 'Tab',         mods = keycode.ctrl,             action = act.ActivateTabRelative(1) },  -- activate next
-    -- { key = 'b',           mods = keycode.leader,           action = act.ActivateTabRelative(-1) }, -- activate previous
-    -- { key = 'f',           mods = keycode.leader,           action = act.ActivateTabRelative(1) },  -- activate next
-    -- { key = 'Tab',         mods = keycode.leader,           action = act.MoveTabRelative(1) },      -- move forward 1
-    -- { key = 'Tab',         mods = keycode.leader_shift,     action = act.MoveTabRelative(-1) },     -- move backward 1
     -- Panes
     -- :: Split
     { key = keycode.space, mods = keycode.leader,           action = act.SplitVertical },   -- actually a horizontal split
@@ -193,7 +189,8 @@ config.keys = {
     { key = 'PageUp',      mods = keycode.ctrl_shift,       action = act.ScrollByPage(-1) },
     { key = 'u',           mods = keycode.leader,           action = act.ClearScrollback 'ScrollbackOnly' },
     -- Copy/paste/select
-    { key = 'c',           mods = keycode.super,            action = act.ActivateCopyMode },
+    { key = 'c',           mods = keycode.leader,           action = act.ActivateCopyMode },
+    { key = 'c',           mods = keycode.super,            action = act.CopyTo 'Clipboard' },
     { key = 'c',           mods = keycode.ctrl_shift,       action = act.CopyTo 'Clipboard' },
     {
         key = 's',
