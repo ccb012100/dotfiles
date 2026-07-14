@@ -766,6 +766,42 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Change F13 to Mouse Scroll Down",
+                        "manipulators": [
+                            {
+                            "type": "basic",
+                            "from": {
+                                "key_code": "f13"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": -128
+                                    }
+                                }
+                            ]
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change F16 to Mouse Scroll Up",
+                        "manipulators": [
+                            {
+                            "type": "basic",
+                            "from": {
+                                "key_code": "f16"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": 128
+                                    }
+                                }
+                            ]
+                            }
+                        ]
                     }
                 ]
             },
