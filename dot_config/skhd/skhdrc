@@ -40,36 +40,37 @@ f5 [
 ]
 
 # F15 - mute Teams
-f13 [
-    "Microsoft Teams"   : skhd -k "shift + cmd - m"
-    *                   ~
-]
-# F16 - mute Teams
-f16 [
-    "Microsoft Teams"   : skhd -k "shift + cmd - m"
-    *                   ~
-]
+#f13 [
+#    "Microsoft Teams"   : skhd -k "shift + cmd - m"
+#    *                   ~
+#]
+## F16 - mute Teams
+#f16 [
+#    "Microsoft Teams"   : skhd -k "shift + cmd - m"
+#    *                   ~
+#]
+
 # Remap alt+` and alt+shift+` on vscode
 #
 # Using native tabs instead of separate windows, cmd+` and alt+` is useless because I have
 # only have a single vscode window. I have "Show Next Window Tab" mapped to Ctrl+`
 # in vscode, so to have consistent muscle memory across apps I remap cmd+` and alt+` here.
-alt - backtick [
-    "code"  :   skhd -k "ctrl - backtick"
-    *       ~
-]
-alt + shift - backtick [
-    "code"  :   skhd -k "ctrl + shift - backtick"
-    *       ~
-]
-cmd - backtick [
-    "code"  :   skhd -k "ctrl - backtick"
-    *       ~
-]
-cmd + shift - backtick [
-    "code"  :   skhd -k "ctrl + shift - backtick"
-    *       ~
-]
+#alt - backtick [
+#    "code"  :   skhd -k "ctrl - backtick"
+#    *       ~
+#]
+#alt + shift - backtick [
+#    "code"  :   skhd -k "ctrl + shift - backtick"
+#    *       ~
+#]
+#cmd - backtick [
+#    "code"  :   skhd -k "ctrl - backtick"
+#    *       ~
+#]
+#cmd + shift - backtick [
+#    "code"  :   skhd -k "ctrl + shift - backtick"
+#    *       ~
+#]
 
 # Screenshot tool
 #
