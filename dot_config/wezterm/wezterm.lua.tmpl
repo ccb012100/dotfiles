@@ -363,7 +363,7 @@ wezterm.on(
             if tab.active_pane.is_zoomed then
                 return {
                     { Foreground = { Color = '#ffbf00' } }, -- amber
-                    { Text = '🧿 ' .. title .. ' [Z]' },
+                    { Text = '<ZOOMED> ' .. title },
                 }
             else
                 return {
