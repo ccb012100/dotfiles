@@ -2,7 +2,7 @@
   "bundleId" : "com.knollsoft.Rectangle",
   "defaults" : {
     "SUEnableAutomaticChecks" : {
-      "bool" : false
+      "bool" : true
     },
     "allowAnyShortcut" : {
       "bool" : true
@@ -43,6 +43,12 @@
     "centeredDirectionalMove" : {
       "int" : 0
     },
+    "cooperativeCornerResize" : {
+      "bool" : false
+    },
+    "cornerCycleExpansionAxis" : {
+      "int" : 0
+    },
     "cornerSnapAreaSize" : {
       "float" : 20
     },
@@ -51,6 +57,15 @@
     },
     "cycleSizesIsChanged" : {
       "bool" : false
+    },
+    "cyclingOverlapMaxCascade" : {
+      "int" : 1
+    },
+    "cyclingOverlapOffset" : {
+      "int" : 0
+    },
+    "cyclingOverlapOffsetSize" : {
+      "float" : 11
     },
     "disabledApps" : {
 
@@ -74,7 +89,7 @@
       "float" : 0.3
     },
     "footprintAnimationDurationMultiplier" : {
-      "float" : 0
+      "float" : 0.75
     },
     "footprintBorderWidth" : {
       "float" : 2
@@ -91,8 +106,11 @@
     "gapSize" : {
       "float" : 0
     },
+    "greenButtonOverride" : {
+      "bool" : false
+    },
     "hapticFeedbackOnSnap" : {
-      "int" : 0
+      "int" : 1
     },
     "hideMenubarIcon" : {
       "bool" : false
@@ -133,6 +151,9 @@
     "moveCursorAcrossDisplays" : {
       "int" : 0
     },
+    "moveFixedSizeToEdge" : {
+      "int" : 1
+    },
     "notifiedOfProblemApps" : {
       "bool" : false
     },
@@ -167,7 +188,7 @@
       "bool" : false
     },
     "screensOrderedByX" : {
-      "int" : 0
+      "int" : 3
     },
     "selectedCycleSizes" : {
       "int" : 0
@@ -186,6 +207,9 @@
     },
     "sizeOffset" : {
       "float" : 0
+    },
+    "skipGapTopEdge" : {
+      "bool" : false
     },
     "snapEdgeMarginBottom" : {
       "float" : 5
@@ -260,53 +284,57 @@
       "keyCode" : 11,
       "modifierFlags" : 917504
     },
+    "bottomLeft" : {
+      "keyCode" : 99,
+      "modifierFlags" : 1572864
+    },
+    "bottomRight" : {
+      "keyCode" : 118,
+      "modifierFlags" : 1572864
+    },
     "center" : {
       "keyCode" : 8,
       "modifierFlags" : 917504
-    },
-    "centerThird" : {
-      "keyCode" : 3,
-      "modifierFlags" : 786432
-    },
-    "centerTwoThirds" : {
-      "keyCode" : 15,
-      "modifierFlags" : 786432
-    },
-    "firstThird" : {
-      "keyCode" : 2,
-      "modifierFlags" : 786432
-    },
-    "firstTwoThirds" : {
-      "keyCode" : 14,
-      "modifierFlags" : 786432
     },
     "larger" : {
       "keyCode" : 24,
       "modifierFlags" : 917504
     },
-    "lastThird" : {
-      "keyCode" : 5,
-      "modifierFlags" : 786432
-    },
-    "lastTwoThirds" : {
-      "keyCode" : 17,
-      "modifierFlags" : 786432
-    },
     "leftHalf" : {
-      "keyCode" : 37,
-      "modifierFlags" : 917504
+      "keyCode" : 123,
+      "modifierFlags" : 1572864
+    },
+    "maximize" : {
+      "keyCode" : 103,
+      "modifierFlags" : 1572864
     },
     "maximizeHeight" : {
       "keyCode" : 9,
       "modifierFlags" : 917504
     },
+    "moveDown" : {
+      "keyCode" : 125,
+      "modifierFlags" : 1572864
+    },
+    "moveLeft" : {
+      "keyCode" : 123,
+      "modifierFlags" : 917504
+    },
+    "moveRight" : {
+      "keyCode" : 124,
+      "modifierFlags" : 917504
+    },
+    "moveUp" : {
+      "keyCode" : 126,
+      "modifierFlags" : 1572864
+    },
     "nextDisplay" : {
       "keyCode" : 124,
-      "modifierFlags" : 1048576
+      "modifierFlags" : 1179648
     },
     "previousDisplay" : {
       "keyCode" : 123,
-      "modifierFlags" : 1048576
+      "modifierFlags" : 1179648
     },
     "reflowTodo" : {
       "keyCode" : 45,
@@ -317,8 +345,8 @@
       "modifierFlags" : 917504
     },
     "rightHalf" : {
-      "keyCode" : 15,
-      "modifierFlags" : 917504
+      "keyCode" : 124,
+      "modifierFlags" : 1572864
     },
     "smaller" : {
       "keyCode" : 27,
@@ -331,7 +359,15 @@
     "topHalf" : {
       "keyCode" : 17,
       "modifierFlags" : 917504
+    },
+    "topLeft" : {
+      "keyCode" : 122,
+      "modifierFlags" : 1572864
+    },
+    "topRight" : {
+      "keyCode" : 120,
+      "modifierFlags" : 1572864
     }
   },
-  "version" : "101"
+  "version" : "104"
 }
