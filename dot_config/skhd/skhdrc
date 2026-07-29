@@ -76,8 +76,8 @@ f5 [
 #
 # PrtScrn has to be configured in Karabiner because MacOS has made it F13 by the time skhd sees it.
 #
-f14 : skhd -k "shift + cmd - 4" # Select and capture an area
-f15 : skhd -k "shift + cmd - 5" # Open the Screenshot app
+f13 : skhd -k "shift + cmd - 4" # Select and capture an area
+f14 : skhd -k "shift + cmd - 5" # Open the Screenshot app
 #f16 : skhd -k "shift + cmd - 3" # Capture the entire screen
 
 ###########
