@@ -10,18 +10,18 @@
 
 # prevent skhd from monitoring events for specific applications.
 # IMPORTANT: I had to convert these to all lowercase to make them work
-.blacklist [
-    "code"
-    "dbeaver"
-    "datagrip"
-    "ghostty"
-    "iterm2"
-    "jetbrains rider"
-    "kitty"
-    "terminal"
-    "wezterm"
-    "zed"
-]
+#.blacklist [
+#    "code"
+#    "dbeaver"
+#    "datagrip"
+#    "ghostty"
+#    "iterm2"
+#    "jetbrains rider"
+#    "kitty"
+#    "terminal"
+#    "wezterm"
+#    "zed"
+#]
 
 # map alt-f/b to alt-right/left (i.e. Emacs bindings)
 alt - f : skhd -k "alt - right"
@@ -101,19 +101,140 @@ f14 : skhd -k "shift + cmd - 5" # Open the Screenshot app
 #  Map ctrl chords to equivalent/similar cmd chords  #
 #                                                    #
 ######################################################
-ctrl - backspace        :   skhd -k "alt - backspace"         # map ctrl+backspace to "delete word left"
-ctrl - w                :   skhd -k "alt - backspace"         # map ctrl+w to "delete word left"
-shift + ctrl - a        :   skhd -k "cmd - a"                 # Shift+Ctrl+a to Select all
-ctrl - c                :   skhd -k "cmd - c"                 # Ctrl+c to Copy
-alt - d                 :   skhd -k "shift + alt - delete"    # Alt+d to Forward delete word
-ctrl - v                :   skhd -k "cmd - v"                 # Ctrl+v to Paste
-ctrl - x                :   skhd -k "cmd - x"                 # Ctrl+x to Cut
-ctrl - 0x2C             :   skhd -k "cmd - z"                 # ctrl+/ (0x2C) to Undo
-shift + ctrl - 0x2C     :   skhd -k "shift + cmd - z"         # Shift+Ctrl+/ (0x2C) to Redo
-ctrl - 0x21             :   skhd -k "cmd - 0x21"              # Ctrl+[ (0x21) to Go backwards
+
+# Ctrl+Backspace to Forward delete word
+ctrl - backspace [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "alt - backspace"
+]
+
+# Ctrl+w to Forward delete word
+ctrl - w [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "alt - backspace"
+]
+
+# Shift+Ctrl+a to Select all
+shift + ctrl - a [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - a"
+]
+
+# Ctrl+c to Copy
+ctrl - c [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - c"
+]
+
+# Alt+d to Forward delete word
+alt - d [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "shift + alt - delete"
+]
+
+# Ctrl+v to Paste
+ctrl - v [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - v"
+]
+
+# Ctrl+x to Cut
+ctrl - x [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - x"
+]
+
+# Ctrl+/ (0x2C) to Undo
+ctrl - 0x2C [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - z"
+]
+
+# Shift+Ctrl+/ (0x2C) to Redo
+shift + ctrl - 0x2C [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "zed"               ~
+    *                   :   skhd -k "shift + cmd - z"
+]
+
+# Ctrl+[ (0x21) to Go backwards
+ctrl - 0x21 [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "ghostty"           ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - 0x21"
+]
 
 # Ctrl+] (0x1E) to Go forwards
-ctrl - 0x1E             :   skhd -k "cmd - 0x1E"
+ctrl - 0x1E [
+    "code"              ~
+    "jetbrains rider"   ~
+    "terminal"          ~
+    "wezterm"           ~
+    "iterm2"            ~
+    "datagrip"          ~
+    "ghostty"           ~
+    "zed"               ~
+    *                   :   skhd -k "cmd - 0x1E"
+]
 
 # Ctrl+l
 ctrl - l [
