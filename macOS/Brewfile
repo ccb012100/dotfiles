@@ -38,8 +38,6 @@ brew "gcc"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Command-line tool to delete merged Git branches
-brew "git-delete-merged-branches"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Git extension for versioning large files
@@ -64,6 +62,8 @@ brew "nano"
 brew "neovim"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
+# Object-relational database system
+brew "postgresql@15", link: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
@@ -88,6 +88,8 @@ brew "yazi"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# A window border system for macOS
+brew "felixkratz/formulae/borders", trusted: true
 # Simple hotkey daemon for macOS, written in Zig
 brew "jackielii/tap/skhd-zig"
 # Open source IDE for exploring and testing APIs
@@ -105,6 +107,8 @@ cask "font-ibm-plex-sans"
 cask "font-ibm-plex-serif"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+# Utility for comparing and merging files and directories
+cask "kdiff3"
 # Clipboard manager
 cask "maccy"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -131,6 +135,7 @@ mas "Pages", id: 409201541
 mas "uBlock Origin Lite", id: 6745342698
 vscode "alefragnani.bookmarks"
 vscode "alexandernanberg.horizon-theme-vscode"
+vscode "antfu.theme-vitesse"
 vscode "atlassian.atlascode"
 vscode "aykutsarac.jsoncrack-vscode"
 vscode "b5261b62-5943-495a-a2cd-2b281ddb7a76.vscode-nier-automata-theme"
@@ -156,12 +161,12 @@ vscode "esbenp.prettier-vscode"
 vscode "fabiospampinato.vscode-markdown-todo"
 vscode "fabiospampinato.vscode-open-in-github"
 vscode "github.github-vscode-theme"
+vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "hirofumii.rubyblue-theme"
 vscode "hverlin.mise-vscode"
 vscode "jdinhlife.gruvbox"
 vscode "johnpapa.vscode-peacock"
-vscode "jwsandeman.cyberpunk2077-theme"
 vscode "kuba-p.theme-pink-candy"
 vscode "maher-cshub.orangy-one-light-theme"
 vscode "max-ss.cyberpunk"
