@@ -89,6 +89,7 @@ local keycode = {
     shift = 'SHIFT',
     space = 'phys:Space',
     super = 'SUPER', -- equivalent to 'CMD' and 'WIN'
+    super_shift = 'SHIFT|SUPER',
     -- leader
     leader = 'LEADER',
     leader_ctrl = 'LEADER|CTRL',
@@ -197,14 +198,17 @@ config.keys = {
         mods = keycode.ctrl_shift,
         action = act.QuickSelectArgs { patterns = { '\\b\\S*\\b', }, }
     },
-    { key = 'v',      mods = keycode.ctrl_shift, action = act.PasteFrom 'Clipboard' },
-    { key = 'v',      mods = keycode.super,      action = act.PasteFrom 'Clipboard' },
-    { key = 'Copy',   mods = keycode.none,       action = act.CopyTo 'Clipboard' },
-    { key = 'Insert', mods = keycode.ctrl,       action = act.CopyTo 'PrimarySelection' },
-    { key = 'Insert', mods = keycode.shift,      action = act.PasteFrom 'PrimarySelection' },
-    { key = 'Paste',  mods = keycode.none,       action = act.PasteFrom 'Clipboard' },
+    { key = 'v',      mods = keycode.ctrl_shift,    action = act.PasteFrom 'Clipboard' },
+    { key = 'v',      mods = keycode.super,         action = act.PasteFrom 'Clipboard' },
+    { key = 'y',      mods = keycode.super,         action = act.PasteFrom 'Clipboard' },
+    { key = 'y',      mods = keycode.ctrl_shift,    action = act.PasteFrom 'Clipboard' },
+    { key = 'y',      mods = keycode.super_shift,   action = act.PasteFrom 'PrimarySelection' },
+    { key = 'Copy',   mods = keycode.none,          action = act.CopyTo 'Clipboard' },
+    { key = 'Insert', mods = keycode.ctrl,          action = act.CopyTo 'PrimarySelection' },
+    { key = 'Insert', mods = keycode.shift,         action = act.PasteFrom 'PrimarySelection' },
+    { key = 'Paste',  mods = keycode.none,          action = act.PasteFrom 'Clipboard' },
     -- Search
-    { key = 'f',      mods = keycode.ctrl_shift, action = act.Search 'CurrentSelectionOrEmptyString' },
+    { key = 'f',      mods = keycode.ctrl_shift,    action = act.Search 'CurrentSelectionOrEmptyString' },
 }
 
 for i = 1, 8 do
