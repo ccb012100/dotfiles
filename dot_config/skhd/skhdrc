@@ -92,8 +92,7 @@ f14 : skhd -k "shift + cmd - 5" # Open the Screenshot app
 #   9 - Thaw
 #   c - Rectangle
 #   e - karabiner
-#   f - System Settings
-#   m - ??? (moves the window to center)
+#   m - Rectangle
 #   n - Rectangle
 #   v - Rectangle
 #   w - karabiner
