@@ -33,7 +33,7 @@ abbr --add kstu git stu
 abbr --add ka gita
 
 # git-forgit
-abbr --add kf git-forgit
+abbr --add jf git-forgit
 # abbr --add kja git-forgit add
 # abbr --add kjb git-forgit blame
 # abbr --add kjd git-forgit diff
