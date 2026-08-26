@@ -5,7 +5,7 @@ abbr --add root 'cd $(git rev-parse --show-toplevel)'
 
 #: k is easier to type than g
 abbr --add k git
-abbr --add ka git a
+# abbr --add ka git a
 abbr --add kaa git aa
 abbr --add kaac git aac
 abbr --add kaaf git aaf
@@ -29,18 +29,21 @@ abbr --add kse git se
 abbr --add ksl git sl
 abbr --add kstu git stu
 
+#gita
+abbr --add ka gita
+
 # git-forgit
-abbr --add kj git-forgit
-abbr --add kja git-forgit add
-abbr --add kjb git-forgit blame
-abbr --add kjd git-forgit diff
-abbr --add kjl git-forgit log
-abbr --add kjr git-forgit rebase
-abbr --add kjsp git-forgit stash_push
-abbr --add kjss git-forgit stash_show
+abbr --add kf git-forgit
+# abbr --add kja git-forgit add
+# abbr --add kjb git-forgit blame
+# abbr --add kjd git-forgit diff
+# abbr --add kjl git-forgit log
+# abbr --add kjr git-forgit rebase
+# abbr --add kjsp git-forgit stash_push
+# abbr --add kjss git-forgit stash_show
 
 # gitu
-abbr --add kk gitu
+abbr --add ku gitu
 
 # lazygit
 abbr --add lk lazygit
