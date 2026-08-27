@@ -151,3 +151,4 @@
     nuke    = clean -fdx
     sbs     = ! DELTA_FEATURES=sbs git # use delta in side-by-side mode
     se      = ! serie
+    unlock  = ! trash '.git/index.lock' # delete index lock file

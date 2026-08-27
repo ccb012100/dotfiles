@@ -28,6 +28,7 @@ abbr --add ks git s
 abbr --add kse git se
 abbr --add ksl git sl
 abbr --add kstu git stu
+abbr --add ku git unlock
 
 #gita
 abbr --add ka gita
@@ -41,9 +42,6 @@ abbr --add jf git-forgit
 # abbr --add kjr git-forgit rebase
 # abbr --add kjsp git-forgit stash_push
 # abbr --add kjss git-forgit stash_show
-
-# gitu
-abbr --add ku gitu
 
 # lazygit
 abbr --add lk lazygit
