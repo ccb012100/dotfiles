@@ -120,6 +120,7 @@ ctrl - backspace [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "alt - backspace"
 ]
 
@@ -132,6 +133,7 @@ ctrl - w [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "alt - backspace"
 ]
 
@@ -144,6 +146,7 @@ shift + ctrl - a [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - a"
 ]
 
@@ -156,6 +159,7 @@ ctrl - c [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - c"
 ]
 
@@ -168,6 +172,7 @@ alt - d [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "shift + alt - delete"
 ]
 
@@ -180,6 +185,7 @@ ctrl - v [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - v"
 ]
 
@@ -192,6 +198,7 @@ ctrl - x [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - x"
 ]
 
@@ -204,6 +211,7 @@ ctrl - 0x2C [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - z"
 ]
 
@@ -216,6 +224,7 @@ shift + ctrl - 0x2C [
     "iterm2"            ~
     "datagrip"          ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "shift + cmd - z"
 ]
 
@@ -229,6 +238,7 @@ ctrl - 0x21 [
     "datagrip"          ~
     "ghostty"           ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - 0x21"
 ]
 
@@ -242,6 +252,7 @@ ctrl - 0x1E [
     "datagrip"          ~
     "ghostty"           ~
     "zed"               ~
+    "emacs"             ~
     *                   :   skhd -k "cmd - 0x1E"
 ]
 
