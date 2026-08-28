@@ -21,6 +21,7 @@ abbr --add bce 'bc --expression=\''
 {{- if .isMacOS }}
 abbr --add caf caffeinate -u -t 3600 # 1 hour
 abbr --add half-caf caffeinate -u -t 1800 # half hour
+abbr --add trust --set-cursor xattr -dr com.apple.quarantine /Applications/% # remove app from quarantine
 {{- end}}
 abbr --add chx chmod +x # make file executable
 abbr --add cls clear
