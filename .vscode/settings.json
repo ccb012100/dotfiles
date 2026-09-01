@@ -33,5 +33,6 @@
         "commandCenter.foreground": "#000000",
         "statusBar.debuggingBackground": "#b8e8ff",
         "statusBar.debuggingForeground": "#000000"
-    }
+    },
+    "workbench.colorTheme": "Abyss"
 }
