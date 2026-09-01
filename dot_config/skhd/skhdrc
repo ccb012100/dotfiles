@@ -27,6 +27,13 @@
 alt - f : skhd -k "alt - right"
 alt - b : skhd -k "alt - left"
 
+# yabai
+shift + cmd + alt - 1 : yabai -m window --space 1 # Move the focused window to Space 1
+shift + cmd + alt - 2 : yabai -m window --space 2 # Move the focused window to Space 2
+shift + cmd + alt - 3 : yabai -m window --space 3 # Move the focused window to Space 3
+shift + cmd - right : yabai -m window --space next # Move the focused window to the next Space
+shift + cmd - left  : yabai -m window --space prev # Move the focused window to the previous Space
+
 # F5
 #   -   mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
 #   -   reload browser tab
