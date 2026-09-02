@@ -1,3 +1,4 @@
+tap "asmvik/formulae"
 tap "djetelina/tap"
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "jackielii/tap"
@@ -16,6 +17,8 @@ brew "bat"
 brew "binutils"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# C implementation of GitHub Flavored Markdown
+brew "cmark-gfm"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Diff that understands syntax
@@ -46,8 +49,8 @@ brew "git"
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
-# TUI Git client inspired by Magit
-brew "gitu"
+# Manage multiple git repos with sanity
+brew "gita"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Task is a task runner/build tool that aims to be simpler and easier to use
@@ -94,6 +97,8 @@ brew "yazi"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "asmvik/formulae/yabai", trusted: true
 # TUI for chezmoi
 brew "djetelina/tap/cheznav", trusted: true
 # A window border system for macOS
@@ -176,11 +181,13 @@ vscode "github.vscode-pull-request-github"
 vscode "hirofumii.rubyblue-theme"
 vscode "hverlin.mise-vscode"
 vscode "jdinhlife.gruvbox"
+vscode "jetbrains.resharper-code"
 vscode "johnpapa.vscode-peacock"
 vscode "kuba-p.theme-pink-candy"
 vscode "maher-cshub.orangy-one-light-theme"
 vscode "max-ss.cyberpunk"
 vscode "mechatroner.rainbow-csv"
+vscode "mishkinf.goto-next-previous-member"
 vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
