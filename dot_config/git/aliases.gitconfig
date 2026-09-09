@@ -1,28 +1,30 @@
 ## aliases
 [alias]
     ## add
-    af  = ! git --no-pager ls-files --modified --others --exclude-standard | fzf -m | xargs --no-run-if-empty git add # add files interactively
+    af  = ! git --no-pager ls-files --modified --others --exclude-standard | fzf --multi | xargs --no-run-if-empty git add # add files interactively
 
     ## branch
     b       = branch
     bd      = branch --delete
     bdf     = branch --delete --force
-    bdz     = ! git branch --no-color | fzf -m | xargs --no-run-if-empty git branch --delete # delete branch(es) with fzf
-    bdfz    = ! git branch --no-color | fzf -m | xargs --no-run-if-empty git branch --delete --force # force delete branch(es) with fzf
+    bdz     = ! git branch --no-color | fzf --reverse --multi | xargs --no-run-if-empty git branch --delete # delete branch(es) with fzf
+    bdfz    = ! git branch --no-color | fzf --reverse --multi | xargs --no-run-if-empty git branch --delete --force # force delete branch(es) with fzf
     bl      = branch --list
     bv      = branch -v
     br      = branch --remote
     brv     = branch --remote -v
+    bz      = ! git branch --no-color | fzf --reverse --multi | xargs --no-run-if-empty git branch --delete --force # same as `bdfz`
     # delete  = delete-merged-branches    # <https://github.com/hartwork/git-delete-merged-branches>
     swc     = switch --create           # create new branch and switch to it
 
     ## checkout
     back    = switch - # checkout previous branch
     co      = checkout
-    coz     = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
+    coz     = ! git --no-pager branch --no-color | fzf --reverse | xargs --no-run-if-empty git checkout # checkout local branch
+    cz      = ! git --no-pager branch --no-color | fzf --reverse | xargs --no-run-if-empty git checkout # same as `coz`
     main    = checkout main
     master  = checkout master
-    z       = ! git --no-pager branch --no-color | fzf | xargs --no-run-if-empty git checkout # checkout local branch
+    z       = ! git --no-pager branch --no-color | fzf --reverse | xargs --no-run-if-empty git checkout # checkout local branch
 
     ## cherry-pick
     cherry  = cherry-pick

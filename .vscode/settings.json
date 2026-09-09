@@ -32,7 +32,9 @@
         "activityBarTop.inactiveForeground": "#00000099",
         "commandCenter.foreground": "#000000",
         "statusBar.debuggingBackground": "#b8e8ff",
-        "statusBar.debuggingForeground": "#000000"
+        "statusBar.debuggingForeground": "#000000",
+        "activityBar.activeBorder": "#000000",
+        "activityBarTop.activeBorder": "#000000"
     },
     "workbench.colorTheme": "Activate UMBRA protocol"
 }
