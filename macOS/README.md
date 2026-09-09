@@ -133,6 +133,16 @@ To use the custom Keyboard Layout:
 
 source: <https://github.com/microsoft/vscode/issues/41024#issuecomment-1615127984>
 
+## LinearMouse
+
+[LinearMouse](https://github.com/linearmouse/linearmouse) mouse and trackpad utility.
+
+To update the settings file in this repo, run the command:
+
+```bash
+rsync --times --progress --protect-args "$HOME/.config/linearmouse/linearmouse.json" "$HOME/.local/share/chezmoi/macOS/"
+```
+
 ## Rectangle
 
 [**Rectangle**](https://rectangleapp.com/) window manager.

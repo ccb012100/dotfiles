@@ -1,0 +1,62 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x27da",
+          "productName" : "Karabiner DriverKit VirtualHIDPointing 1.8.0",
+          "serialNumber" : "pqrs.org:Karabiner-DriverKit-VirtualHIDPointing",
+          "vendorID" : "0x16c0"
+        }
+      },
+      "pointer" : {
+        "acceleration" : "unset",
+        "disableAcceleration" : false,
+        "redirectsToScroll" : false,
+        "speed" : 0.236
+      }
+    },
+    {
+      "buttons" : {
+        "gesture" : {
+          "actions" : {
+            "down" : "appExpose",
+            "left" : "missionControl.spaceLeft",
+            "right" : "missionControl.spaceRight",
+            "up" : "missionControl"
+          },
+          "enabled" : false,
+          "threshold" : 50,
+          "trigger" : {
+            "button" : 2
+          }
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0x1020",
+          "productName" : "Kensington Expert Mouse",
+          "vendorID" : "0x47d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 16.5259,
+        "speed" : 0.2975
+      },
+      "scrolling" : {
+        "acceleration" : 1,
+        "distance" : {
+          "horizontal" : 3,
+          "vertical" : 5
+        },
+        "smoothed" : {
+          "enabled" : false
+        },
+        "speed" : 0
+      }
+    }
+  ]
+}
