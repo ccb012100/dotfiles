@@ -18,6 +18,7 @@ miscellaneous/*
 {{- if .isMacOS}}
 .config/tealdeer
 {{- else -}}
+.config/fish/functions/format-cliboard-json.fish
 .config/karabiner/*
 .config/kmonad/apple.kbd
 .config/kmonad/logi_mx_keys.kbd

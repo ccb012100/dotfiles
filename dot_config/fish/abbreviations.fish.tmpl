@@ -36,6 +36,8 @@ abbr --add lns ln -s
 abbr --add mv mv -iv
 abbr --add sctl systemctl
 
+abbr --add fj format_clipboard_json
+
 # bat
 abbr --add b bat
 # brew
@@ -113,5 +115,3 @@ abbr --add zr zoxide remove
 {{ if .isWSL2 }}
 abbr --add open wslview # wslu
 {{- end }}
-# misc. personal stuff
-abbr --add flash-keychron 'cd "$HOME/src/qmk_firmware" && qmk flash -kb keychron/v6/ccb012100 -km default' # flash Keychron keyboard
