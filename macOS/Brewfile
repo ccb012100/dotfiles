@@ -124,6 +124,8 @@ cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 # Utility for comparing and merging files and directories
 cask "kdiff3"
+# Customise mouse behavior
+cask "linearmouse"
 # Clipboard manager
 cask "maccy"
 # Move and resize windows using keyboard shortcuts or snap areas
