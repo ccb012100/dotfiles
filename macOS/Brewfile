@@ -89,6 +89,8 @@ brew "starship"
 brew "tlrc"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Blazing fast terminal file manager written in Rust, based on async I/O
@@ -128,6 +130,8 @@ cask "kdiff3"
 cask "linearmouse"
 # Clipboard manager
 cask "maccy"
+# Disk space analyzer
+cask "radix"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # System monitor for the menu bar
