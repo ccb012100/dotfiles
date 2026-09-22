@@ -8,9 +8,7 @@
                         "description": "PRTSCR -> desktop screenshot",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "print_screen"
-                                },
+                                "from": { "key_code": "print_screen" },
                                 "to": [
                                     {
                                         "key_code": "4",
@@ -771,17 +769,9 @@
                         "description": "Change F13 to Mouse Scroll Down",
                         "manipulators": [
                             {
-                            "type": "basic",
-                            "from": {
-                                "key_code": "f15"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "vertical_wheel": -128
-                                    }
-                                }
-                            ]
+                                "from": { "key_code": "f15" },
+                                "to": [{ "mouse_key": { "vertical_wheel": -128 } }],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -789,17 +779,9 @@
                         "description": "Change F16 to Mouse Scroll Up",
                         "manipulators": [
                             {
-                            "type": "basic",
-                            "from": {
-                                "key_code": "f16"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "vertical_wheel": 128
-                                    }
-                                }
-                            ]
+                                "from": { "key_code": "f16" },
+                                "to": [{ "mouse_key": { "vertical_wheel": 128 } }],
+                                "type": "basic"
                             }
                         ]
                     }
@@ -973,6 +955,16 @@
                         "is_pointing_device": true,
                         "product_id": 50495,
                         "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 4784,
+                        "vendor_id": 13364
                     },
                     "ignore": false,
                     "ignore_vendor_events": true
