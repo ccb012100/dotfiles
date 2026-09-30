@@ -34,7 +34,8 @@
         "statusBar.debuggingBackground": "#b8e8ff",
         "statusBar.debuggingForeground": "#000000",
         "activityBar.activeBorder": "#000000",
-        "activityBarTop.activeBorder": "#000000"
+        "activityBarTop.activeBorder": "#000000",
+        "statusBar.inactiveBackground": "#b8e8ff"
     },
     "workbench.colorTheme": "Vitesse Light Soft"
 }
