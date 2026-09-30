@@ -2,6 +2,44 @@
   "$schema" : "https:\/\/schema.linearmouse.app\/0.11.4",
   "schemes" : [
     {
+      "buttons" : {
+        "gesture" : {
+          "actions" : {
+            "down" : "appExpose",
+            "left" : "missionControl.spaceLeft",
+            "right" : "missionControl.spaceRight",
+            "up" : "missionControl"
+          },
+          "enabled" : false,
+          "threshold" : 50,
+          "trigger" : {
+            "button" : 2
+          }
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "smoothed" : {
+          "vertical" : {
+            "enabled" : false
+          }
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
       "if" : {
         "device" : {
           "category" : "mouse",
@@ -43,8 +81,10 @@
         }
       },
       "pointer" : {
-        "acceleration" : 16.5259,
-        "speed" : 0.2975
+        "acceleration" : "unset",
+        "disableAcceleration" : false,
+        "redirectsToScroll" : false,
+        "speed" : "unset"
       },
       "scrolling" : {
         "acceleration" : 1,
@@ -56,6 +96,32 @@
           "enabled" : false
         },
         "speed" : 0
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xd028",
+          "productName" : "Keychron Ultra-Link 8K",
+          "vendorID" : "0x3434"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "smoothed" : {
+          "vertical" : {
+            "enabled" : false
+          }
+        },
+        "speed" : {
+          "vertical" : 32
+        }
       }
     }
   ]
