@@ -1,12 +1,13 @@
 # NOTE: actually using https://github.com/jackielii/skhd.zig now and some of these settings aren't supported by the original skhd
 #
 # - A list of all built-in modifier and literal keywords can be found at <https://github.com/koekeishiya/skhd/issues/1>
+#   - Arrow keys are just "up", "left", "right", "down"
+#   - quote (') = 0x27
+# - SysRq (Print Screen) is interpreted as F13 in macOS
 # - To specify a NOP, use "true" or ":"
 # - To pass through a keypress to an application, use the format `"PROCESS_NAME" ~`, e.g. `"terminal" ~`
 # - Contexts 3 intercepts keys before skhd, so I can't map any chords that use the Apple 'fn' key
-# - TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
-# - quote (') = 0x27
-# - SysRq (Print Screen) is interpreted as F13 in macOS
+#   - TODO: figure out if/how to map a shortcut to emit the keypress that is mapped to Contexts 3's search (for some reason, Contexts doesn't pick it up)
 
 # prevent skhd from monitoring events for specific applications.
 # IMPORTANT: I had to convert these to all lowercase to make them work
@@ -31,8 +32,15 @@ alt - b : skhd -k "alt - left"
 shift + cmd - 1 : yabai -m window --space 1 # Move the focused window to Space 1
 shift + cmd - 2 : yabai -m window --space 2 # Move the focused window to Space 2
 shift + cmd - 3 : yabai -m window --space 3 # Move the focused window to Space 3
-shift + cmd - right : yabai -m window --space next --focus # Move the focused window to the next Space and focus it
-shift + cmd - left  : yabai -m window --space prev --focus # Move the focused window to the previous Space and focus it
+# Move the focused window to the next Space and focus it
+shift + cmd - right : yabai -m window --space next --focus
+shift + cmd - 0x2f : yabai -m window --space next --focus # 0x2f = period (.)
+# Move the focused window to the previous Space and focus it
+shift + cmd - left : yabai -m window --space prev --focus
+shift + cmd - 0x2b : yabai -m window --space prev --focus # 0x2b = comma (,)
+
+shift + cmd - p  : skhd -k "cmd - left" # Move to previous space
+shift + cmd - n  : skhd -k "cmd - right" # Move to next space
 
 # F5
 #   -   mute MS Teams (⌘⇧M) (F5 has a MIC symbol on MacOS keyboards)
