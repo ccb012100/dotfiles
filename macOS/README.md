@@ -42,7 +42,7 @@ defaults import com.lwouis.alt-tab-macos $HOME/.local/share/chezmoi/macOS/alt-ta
 ## Bartender 5
 
 > [!WARNING]
-> Bartender was sold by the original developer to a new owner, so I've moved to [Ice](https://github.com/jordanbaird/Ice), which seems to
+> Bartender was sold by the original developer to a new owner, so I've moved to ~~[Ice](https://github.com/jordanbaird/Ice)~~ **Thaw**, which seems to
 > be feature-complete for my requirements
 
 ## Brewfile
