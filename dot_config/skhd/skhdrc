@@ -29,9 +29,9 @@ alt - f : skhd -k "alt - right"
 alt - b : skhd -k "alt - left"
 
 # yabai
-shift + cmd - 1 : yabai -m window --space 1 # Move the focused window to Space 1
-shift + cmd - 2 : yabai -m window --space 2 # Move the focused window to Space 2
-shift + cmd - 3 : yabai -m window --space 3 # Move the focused window to Space 3
+#shift + cmd - 1 : yabai -m window --space 1 # Move the focused window to Space 1
+#shift + cmd - 2 : yabai -m window --space 2 # Move the focused window to Space 2
+#shift + cmd - 3 : yabai -m window --space 3 # Move the focused window to Space 3
 # Move the focused window to the next Space and focus it
 shift + cmd - right : yabai -m window --space next --focus
 shift + cmd - 0x2f : yabai -m window --space next --focus # 0x2f = period (.)
