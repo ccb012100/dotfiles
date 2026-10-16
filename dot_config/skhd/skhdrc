@@ -100,20 +100,24 @@ f14 : skhd -k "shift + cmd - 5" # Open the Screenshot app
 ###########
 
 # Meh combos mapped in other applications:
-#   - - Rectangle
-#   = - Rectangle
-#   1 - karabiner
-#   2 - 1Password
-#   9 - Thaw
-#   c - Rectangle
-#   e - karabiner
-#   m - Rectangle
-#   n - Rectangle
-#   v - Rectangle
-#   w - karabiner
-#   backspace - Rectangle
+#   -           - Rectangle
+#   =           - Rectangle
+#   1           - karabiner
+#   2           - 1Password
+#   9           - Thaw
+#   c           - Rectangle
+#   e           - karabiner
+#   m           - Rectangle
+#   n           - Rectangle
+#   v           - Rectangle
+#   w           - karabiner
+#   z           - GridSnap
+#   space       - GridSnap
+#   backspace   - Rectangle
 #   right arrow - Rectangle
-#   left arrow - Rectangle
+#   left arrow  - Rectangle
+#   down arrow  - Rectangle
+#   up arrow    - Rectangle
 
 # meh - 0 : MacOSUtility toggle 'com.apple.systempreferences'
 # meh - h : skhd -k "cmd - h" # cmd+h (hide front app)
