@@ -114,8 +114,8 @@ config.keys = {
     },
     -- Launcher
     {
-        key = 'Enter',
-        mods = keycode.ctrl,
+        key = 'b',
+        mods = keycode.leader,
         action = act.ShowLauncherArgs { flags = 'FUZZY|TABS|LAUNCH_MENU_ITEMS' }
     },
     -- Enter resize_pane mode until we cancel out of it
@@ -164,9 +164,9 @@ config.keys = {
     { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
     { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
     -- :: activate next Pane with 'Leader, f'
-    { key = 'f',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Next' },
+    --{ key = 'f',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane with 'Leader, b'
-    { key = 'b',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Prev' },
+    --{ key = 'b',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Prev' },
     -- :: swap the active and selected panes
     { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActiveKeepFocus', } },
     -- :: rotate panes
