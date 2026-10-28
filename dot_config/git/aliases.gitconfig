@@ -38,6 +38,7 @@
     call    = commit --all
     can     = ca --no-edit
     cm      = commit -m
+    cn      = c --no-verify
     cnv     = c --no-verify
     contrib = shortlog -s
     date    = commit --amend --no-edit --date=now

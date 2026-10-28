@@ -18,6 +18,7 @@ abbr --add kb git b
 abbr --add kbr git br
 abbr --add kc git c
 abbr --add kcb git cb
+abbr --add kcn git commit --no-verify
 abbr --add kd git diff
 abbr --add kds git ds
 abbr --add kf git f
