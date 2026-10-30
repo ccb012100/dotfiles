@@ -79,23 +79,16 @@ autocmd InsertEnter * set cursorline cursorcolumn norelativenumber
 autocmd InsertLeave * set nocursorline nocursorcolumn relativenumber
 
 syntax enable
-colorscheme murphy
+colorscheme darkblue
 
 "" use https://github.com/nickeb96/fish.vim on fish scripts
 autocmd FileType fish colorscheme fish-default
 
-"" vim-specific
-if !has('nvim')
-    set viminfo+=n~/.vim/viminfo
-    set ttymouse=xterm2
-    "" set tmp file directories
-    set backupdir=~/.vim/.backup/,/tmp//
-    set undodir=~/.vim/.undo/,/tmp//
-else
-    "" set tmp file directories
-    set backupdir=~/.local/share/nvim//
-    set undodir=~/.local/share/nvim//
-endif
+set viminfo+=n~/.vim/viminfo
+set ttymouse=xterm2
+"" set tmp file directories
+set backupdir=~/.vim/.backup/,/tmp//
+set undodir=~/.vim/.undo/,/tmp//
 
 "" The rest of these are copied straight from
 """ https://github.com/vim/vim/blob/master/runtime/defaults.vim
