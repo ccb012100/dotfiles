@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AUTO_HIDE_POPOUT_CHROME</key>
+	<true/>
+	<key>KeyboardShortcuts_propsShortcut</key>
+	<string>{"carbonKeyCode":43,"carbonModifiers":4864}</string>
+	<key>MEDIA_CONTROLS_ENABLED</key>
+	<true/>
+	<key>MEDIA_CONTROLS_ICON_COLOUR</key>
+	<string>colorSystem</string>
+	<key>MEDIA_CONTROLS_ICON_COLOUR_ALPHA</key>
+	<real>1</real>
+	<key>MEDIA_CONTROLS_ICON_SHADOW_COLOUR</key>
+	<string>colorDisabled</string>
+	<key>MEDIA_CONTROLS_ICON_SHADOW_COLOUR_ALPHA</key>
+	<real>1</real>
+	<key>MEDIA_CONTROLS_TEXT_SHADOW_ENABLED</key>
+	<false/>
+	<key>MEDIA_CONTROLS_THEME</key>
+	<string>phosphor</string>
+	<key>MENU_BAR_LAYOUT_ITEMS</key>
+	<string>[{"kind":"artwork","id":"FC53F8B5-9723-4C15-8269-B5EC756D933A","artworkSettings":{"opacity":1,"preferredImage":0,"scale":0,"position":0,"location":3}},{"widthType":1,"kind":"trackText","customWidth":160,"id":"7FF24801-E2C9-4546-8049-E6B4DE511E54","trackTextSettings":{"animationEnabled":true,"animationType":4,"scrollingTimingFunction":"default","maximumWidth":100,"scrollSpeed":35,"font":{"fontName":"IBMPlexSans","pointSize":13},"textAlignment":0,"verticalAlignment":0,"customFormatString":"\"{song}\"{ - artist}"}}]</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{880, 448}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
+	<key>NSOSPLastRootDirectory</key>
+	<data>
+	Ym9vayADAAAAAAUQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAACAAAEAAAAAwMAAAAAACAFAAAAAQEAAFVzZXJzAAAACAAAAAEB
+	AABDQm9jYXJkbwYAAAABAQAALmxvY2FsAAAFAAAAAQEAAHNoYXJlAAAABwAAAAEBAABj
+	aGV6bW9pAAUAAAABAQAAbWFjT1MAAAAYAAAAAQYAABAAAAAgAAAAMAAAAEAAAABQAAAA
+	YAAAAAgAAAAEAwAALUcAAAAAAAAIAAAABAMAAPrJBAAAAAAACAAAAAQDAACJxhgAAAAA
+	AAgAAAAEAwAAnXhDAAAAAAAIAAAABAMAAMF4LQAAAAAACAAAAAQDAACQeS0AAAAAABgA
+	AAABBgAAkAAAAKAAAACwAAAAwAAAANAAAADgAAAACAAAAAAEAABBx8Nx9IXWeRgAAAAB
+	AgAAAgAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAEFAAAIAAAABAMAAAQAAAAAAAAA
+	BAAAAAMDAAD2AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAA
+	AAQDAAAAIEWM0AEAAAgAAAAABAAAQcgygjaAAAAkAAAAAQEAADcwRTIzNDRGLTUxMDIt
+	NEE3NS04QTc1LUI4N0E2MkFFREU1MRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAA
+	AAAAAQAAAAEBAAAvAAAA2AAAAP7///8BAAAAAAAAABEAAAAEEAAAcAAAAAAAAAAFEAAA
+	8AAAAAAAAAAQEAAAIAEAAAAAAABAEAAAEAEAAAAAAAACIAAA9AEAAAAAAAAFIAAAZAEA
+	AAAAAAAQIAAAdAEAAAAAAAARIAAAqAEAAAAAAAASIAAAiAEAAAAAAAATIAAAmAEAAAAA
+	AAAgIAAA1AEAAAAAAAAwIAAAQAEAAAAAAAABwAAASAEAAAAAAAARwAAAIAAAAAAAAAAS
+	wAAAWAEAAAAAAAAB0AAAQAEAAAAAAAAQ0AAABAAAAAAAAAA=
+	</data>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 266.000000, 300.000000, NO, NO</string>
+		<string>0.000000, 320.000000, 266.000000, 77.000000, NO, NO</string>
+	</array>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<true/>
+	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 131 266 366 0 0 3840 2130 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>3325 126 470 270 0 0 3840 2130 </string>
+	<key>POPOUT_TYPE</key>
+	<integer>0</integer>
+	<key>POPUP_ANIMATION_TYPE</key>
+	<integer>0</integer>
+	<key>POPUP_TYPE</key>
+	<integer>0</integer>
+	<key>SHOW_DOCK_ICON</key>
+	<false/>
+	<key>SHOW_SPLASH_SCREEN</key>
+	<false/>
+	<key>SKIP_BACK_TIME</key>
+	<integer>10000</integer>
+	<key>SKIP_FORWARD_TIME</key>
+	<integer>10000</integer>
+	<key>SKTransactionUpdatesLastChecked</key>
+	<real>815002809.74677396</real>
+	<key>SNAP_POPOUT_TO_EDGES</key>
+	<false/>
+	<key>TEXT_SHADOW_ENABLED</key>
+	<false/>
+	<key>appleMusicHeartTarget</key>
+	<integer>2</integer>
+	<key>backgroundColor</key>
+	<string>colorSystem</string>
+	<key>backgroundColorAlpha</key>
+	<real>1</real>
+	<key>boundingLinesColor</key>
+	<string>colorDisabled</string>
+	<key>boundingLinesColorAlpha</key>
+	<real>1</real>
+	<key>cleanTrackTitles</key>
+	<true/>
+	<key>com.spoticamenu.analytics.lastHeartbeatDay</key>
+	<string>2026-10-29</string>
+	<key>enableAnalytics</key>
+	<true/>
+	<key>enableAnalyticsAlertShown</key>
+	<true/>
+	<key>foregroundColor</key>
+	<string>colorSystem</string>
+	<key>foregroundColorAlpha</key>
+	<real>1</real>
+	<key>foregroundShadowColorAlpha</key>
+	<real>1</real>
+	<key>menuBarCornerRadius</key>
+	<real>0.0</real>
+	<key>menuBarOutlineEnabled</key>
+	<false/>
+	<key>menuBarOutlineWidth</key>
+	<real>1</real>
+	<key>menuBarSmartSizing</key>
+	<true/>
+	<key>noPlayerBehavior</key>
+	<integer>0</integer>
+	<key>noPlayerCustomText</key>
+	<string>a</string>
+	<key>popup_h_0</key>
+	<real>555</real>
+	<key>popup_h_1</key>
+	<real>520</real>
+	<key>popup_h_2</key>
+	<real>504</real>
+	<key>popup_h_3</key>
+	<real>232</real>
+	<key>popup_h_4</key>
+	<real>300</real>
+	<key>popup_w_0</key>
+	<real>324</real>
+	<key>popup_w_1</key>
+	<real>300</real>
+	<key>popup_w_2</key>
+	<real>620</real>
+	<key>popup_w_3</key>
+	<real>550</real>
+	<key>popup_w_4</key>
+	<real>632</real>
+	<key>progressBarColorAlpha</key>
+	<real>1</real>
+	<key>progressColor</key>
+	<string>colorSystem</string>
+	<key>shadowColor</key>
+	<string>colorDisabled</string>
+	<key>shouldStartSpoticaMenuAtStartup</key>
+	<true/>
+	<key>showPrefsOnStartup2.9.4</key>
+	<false/>
+	<key>spotifyEnabled</key>
+	<false/>
+	<key>spotifyNotificationOnChange</key>
+	<true/>
+	<key>unregisteredLaunchCount</key>
+	<integer>2</integer>
+</dict>
+</plist>
