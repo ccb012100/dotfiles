@@ -12,7 +12,7 @@ function update_abbrevs --description 'Update $HOME/.config/fish/abbreviations.f
     echo updating $abbrfile...
     set_color normal
 
-    nvim $abbrfile
+    vim $abbrfile
 
     if test $status -eq 0
         set_color green

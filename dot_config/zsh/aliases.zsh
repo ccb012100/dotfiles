@@ -71,9 +71,9 @@ alias rgf='rg -F'
 # case-insensitive search
 alias rgi='rg -i'
 alias sesh='tmux new-session -A -s sesh'
-alias v=nvim
-alias vi=nvim
-alias vim=nvim
+alias v=vim
+alias vi=vim
+alias vim=vim
 
 ##git
 alias g=git

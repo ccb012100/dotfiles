@@ -1,7 +1,7 @@
 if status is-interactive # Commands to run in interactive sessions can go here
     set_color -r green
     echo '░ Loading ~/.config/config.fish' (set_color --reset)
-    set --global --export EDITOR nvim
+    set --global --export EDITOR vim
 
     fish_add_path $HOME/bin
     fish_add_path --append $HOME/.local/bin

@@ -8,7 +8,7 @@ stty -ixon
 # less configuration
 export LESS="-XR --mouse" # '-XR' same as '--no-init --RAW-CONTROL-CHARS'
 
-export EDITOR="nvim"
+export EDITOR="vim"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 bashcompdir="$HOME/.local/share/bash-completion/completions"

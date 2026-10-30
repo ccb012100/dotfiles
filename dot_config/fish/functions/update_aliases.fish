@@ -13,7 +13,7 @@ function update_aliases --description 'Update $HOME/.config/fish/aliases.fish an
     echo updating $aliasfile...
     set_color normal
 
-    nvim $aliasfile
+    vim $aliasfile
 
     if test $status -eq 0
         set_color green

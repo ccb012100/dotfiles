@@ -72,8 +72,8 @@ alias b=bat
 alias ghv='gh pr view --web || gh repo view --web'
 alias ku=kubectl
 alias lk=lazygit # easier than typing 'lg'
-alias v=nvim
-alias vim=nvim
+alias v=vim
+alias vim=vim
 alias zq='zoxide query'
 
 #: vs code
