@@ -4,6 +4,10 @@
 <dict>
 	<key>AUTO_HIDE_POPOUT_CHROME</key>
 	<true/>
+	<key>ENABLE_HOT_KEYS</key>
+	<true/>
+	<key>KeyboardShortcuts_openPopup</key>
+	<string>{"carbonModifiers":6656,"carbonKeyCode":18}</string>
 	<key>KeyboardShortcuts_propsShortcut</key>
 	<string>{"carbonKeyCode":43,"carbonModifiers":4864}</string>
 	<key>MEDIA_CONTROLS_ENABLED</key>
@@ -74,7 +78,7 @@
 	<key>SKIP_FORWARD_TIME</key>
 	<integer>10000</integer>
 	<key>SKTransactionUpdatesLastChecked</key>
-	<real>815002809.74677396</real>
+	<real>815002879.22600603</real>
 	<key>SNAP_POPOUT_TO_EDGES</key>
 	<false/>
 	<key>TEXT_SHADOW_ENABLED</key>
@@ -150,6 +154,6 @@
 	<key>spotifyNotificationOnChange</key>
 	<true/>
 	<key>unregisteredLaunchCount</key>
-	<integer>2</integer>
+	<integer>3</integer>
 </dict>
 </plist>
