@@ -79,7 +79,10 @@ autocmd InsertEnter * set cursorline cursorcolumn norelativenumber
 autocmd InsertLeave * set nocursorline nocursorcolumn relativenumber
 
 syntax enable
-colorscheme darkblue
+"" colorscheme retrobox
+"" colorscheme slate
+"" colorscheme unokai
+colorscheme zaibatsu
 
 "" use https://github.com/nickeb96/fish.vim on fish scripts
 autocmd FileType fish colorscheme fish-default
