@@ -65,8 +65,6 @@ brew "mas"
 brew "moreutils"
 # Free (GNU) replacement for the Pico text editor
 brew "nano"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
 # Object-relational database system
@@ -157,6 +155,7 @@ mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
+mas "Spotica Menu", id: 570549457
 mas "uBlock Origin Lite", id: 6745342698
 vscode "alefragnani.bookmarks"
 vscode "antfu.theme-vitesse"
