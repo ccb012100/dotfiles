@@ -141,7 +141,7 @@ config.keys = {
     },
     -- Windows
     { key = keycode.space, mods = keycode.leader,           action = act.SpawnWindow },
-    { key = 'n',           mods = keycode.super,            action = act.SpawnWindow },
+    -- { key = 'n',           mods = keycode.super,            action = act.SpawnWindow },
     -- Tabs
     { key = 't',           mods = keycode.leader,           action = act.SpawnTab 'CurrentPaneDomain' },
     { key = 't',           mods = keycode.super,            action = act.SpawnTab 'CurrentPaneDomain' },
@@ -161,12 +161,12 @@ config.keys = {
     -- :: Pane selection with 'Leader, Leader'
     { key = 'j',           mods = keycode.leader_ctrl,      action = act.PaneSelect },
     -- :: Select and move
-    { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
-    { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
-    -- :: activate next Pane with 'Leader, f'
-    --{ key = 'f',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Next' },
-    -- :: activate prev Pane with 'Leader, b'
-    --{ key = 'b',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Prev' },
+    -- { key = 'd',           mods = keycode.leader,           action = act.PaneSelect { mode = 'MoveToNewWindow', } }, -- (d)etach
+    -- { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
+    -- :: activate next Pane with 'Leader, n'
+    { key = 'n',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Next' },
+    -- :: activate prev Pane with 'Leader, p'
+    { key = 'p',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Prev' },
     -- :: swap the active and selected panes
     { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActiveKeepFocus', } },
     -- :: rotate panes
