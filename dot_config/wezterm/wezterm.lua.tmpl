@@ -38,13 +38,13 @@ config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 -- config.color_scheme = 'AyuDark (Gogh)'
 -- config.color_scheme = 'Blue Matrix'
 -- config.color_scheme = 'flexoki-dark'
-config.color_scheme = 'Dracula (Official)'
+-- config.color_scheme = 'Dracula (Official)'
 -- config.color_scheme = 'GJM (terminal.sexy)'
 -- config.color_scheme = 'gooey (Gogh)'
 -- config.color_scheme = 'Gruvbox light, hard (base16)'
 -- config.color_scheme = 'GruvboxDarkHard'
 -- config.color_scheme = 'Helios (base16)'
--- config.color_scheme = 'Oxocarbon Dark (Gogh)'
+config.color_scheme = 'Oxocarbon Dark (Gogh)'
 -- config.color_scheme = 'Popping and Locking'
 -- config.color_scheme = 'Purpledream (base16)'
 -- config.color_scheme = 'Rosé Pine (base16)'
@@ -165,8 +165,12 @@ config.keys = {
     -- { key = 'd',           mods = keycode.leader_shift,     action = act.PaneSelect { mode = 'MoveToNewTab', } },    -- (D)etach
     -- :: activate next Pane with 'Leader, n'
     { key = 'n',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Next' },
+    -- :: activate next Pane with 'Ctrl+Shift+n'
+    { key = 'n',           mods = keycode.ctrl_shift,       action = act.ActivatePaneDirection 'Next' },
     -- :: activate prev Pane with 'Leader, p'
     { key = 'p',           mods = keycode.leader,           action = act.ActivatePaneDirection 'Prev' },
+    -- :: activate prev Pane with 'Ctrl+Shift+p'
+    { key = 'p',           mods = keycode.ctrl_shift,       action = act.ActivatePaneDirection 'Prev' },
     -- :: swap the active and selected panes
     { key = 'm',           mods = keycode.leader,           action = act.PaneSelect { mode = 'SwapWithActiveKeepFocus', } },
     -- :: rotate panes
