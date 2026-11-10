@@ -145,6 +145,7 @@
     wm  = worktree move
     wp  = worktree prune
     wr  = worktree remove
+    wrf = worktree remove --force
 
     ## misc
     chx     = update-index --chmod=+x
