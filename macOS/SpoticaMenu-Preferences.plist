@@ -23,9 +23,9 @@
 	<key>MEDIA_CONTROLS_TEXT_SHADOW_ENABLED</key>
 	<false/>
 	<key>MEDIA_CONTROLS_THEME</key>
-	<string>phosphor</string>
+	<string>default</string>
 	<key>MENU_BAR_LAYOUT_ITEMS</key>
-	<string>[{"kind":"artwork","id":"FC53F8B5-9723-4C15-8269-B5EC756D933A","artworkSettings":{"opacity":1,"preferredImage":0,"scale":0,"position":0,"location":3}},{"widthType":1,"kind":"trackText","customWidth":160,"id":"7FF24801-E2C9-4546-8049-E6B4DE511E54","trackTextSettings":{"animationEnabled":true,"animationType":4,"scrollingTimingFunction":"default","maximumWidth":100,"scrollSpeed":35,"font":{"fontName":"IBMPlexSans","pointSize":13},"textAlignment":0,"verticalAlignment":0,"customFormatString":"\"{song}\"{ - artist}"}}]</string>
+	<string>[{"artworkSettings":{"position":0,"location":3,"scale":0,"opacity":1,"preferredImage":0},"kind":"artwork","id":"FC53F8B5-9723-4C15-8269-B5EC756D933A"},{"customWidth":160,"kind":"trackText","id":"7FF24801-E2C9-4546-8049-E6B4DE511E54","trackTextSettings":{"animationType":4,"scrollingTimingFunction":"default","maximumWidth":200,"animationEnabled":true,"customFormatString":"{song}","textAlignment":0,"scrollSpeed":35,"font":{"pointSize":13,"fontName":"IBMPlexSans"},"verticalAlignment":0,"rightPadding":5},"widthType":1}]</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{880, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -81,6 +81,8 @@
 	<real>815002879.22600603</real>
 	<key>SNAP_POPOUT_TO_EDGES</key>
 	<false/>
+	<key>SPOTIFY_LOGIN_NOTIFICATION_SHOWN</key>
+	<true/>
 	<key>TEXT_SHADOW_ENABLED</key>
 	<false/>
 	<key>appleMusicHeartTarget</key>
@@ -96,7 +98,7 @@
 	<key>cleanTrackTitles</key>
 	<true/>
 	<key>com.spoticamenu.analytics.lastHeartbeatDay</key>
-	<string>2026-10-29</string>
+	<string>2026-11-11</string>
 	<key>enableAnalytics</key>
 	<true/>
 	<key>enableAnalyticsAlertShown</key>
@@ -152,7 +154,7 @@
 	<key>spotifyEnabled</key>
 	<false/>
 	<key>spotifyNotificationOnChange</key>
-	<true/>
+	<false/>
 	<key>unregisteredLaunchCount</key>
 	<integer>3</integer>
 </dict>
