@@ -25,7 +25,7 @@
     editor = vim
     excludesfile = ~/.config/git/ignore
     filemode = false
-    fsmonitor = true
+    {{/* fsmonitor = true # this causes cache staleness issues in macOS and isn't worth using */ -}}
     pager = less -FRX --mouse # '-FRX' same as '--quit-if-one-screen --RAW-CONTROL-CHARS --no-init'
     untrackedCache = true
 [commit]
